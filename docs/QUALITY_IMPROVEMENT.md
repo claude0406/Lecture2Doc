@@ -124,4 +124,4 @@ python -m pytest -q
 - [원래 기준선 보존 해시](../experiments/accessmath-improvement/preserved-baseline.json), [평가 계약 해시](../experiments/accessmath-improvement/evaluation-contract.json)
 - [웹 뷰어 캡처](../experiments/accessmath-improvement/viewer-after-607.png)
 
-현재 [종합 보고서](http://127.0.0.1:8771/)와 [개선된 원본 연결 뷰어](http://127.0.0.1:8770/)를 로컬에서 실행 중입니다. 강의 두 개의 13개 GT로 전체 데이터셋 일반화, 모든 중간 판서 회수율, 사람 분할 완전성이나 실제 가림 복원 성공을 보증하지 않습니다.
+결과는 [종합 비교 HTML](../experiments/accessmath-improvement/index.html)과 [607초 후보·선정 근거](../experiments/accessmath-improvement/diagnosis/candidates-607.html)에서 확인할 수 있습니다. 수치는 두 강의의 GT 13개를 사용한 평가 범위입니다.

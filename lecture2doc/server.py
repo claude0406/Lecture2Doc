@@ -40,8 +40,9 @@ class PurgeConfirmation(BaseModel):
     confirmed: bool = False
 
 
-def create_app(data_dir="data", record_dir=None):
-    root = Path(data_dir).resolve()
+def create_app(data_dir=None, record_dir=None):
+    project_root = Path(__file__).resolve().parent.parent
+    root = Path(data_dir).expanduser().resolve() if data_dir is not None else project_root / "data"
     root.mkdir(parents=True, exist_ok=True)
     pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix="lecture2doc")
     @asynccontextmanager

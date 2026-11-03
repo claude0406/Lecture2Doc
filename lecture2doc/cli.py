@@ -9,7 +9,7 @@ def main():
     parser = argparse.ArgumentParser(description="로컬 판서 기록 및 근거 기반 복원")
     sub = parser.add_subparsers(dest="command", required=True)
     serve = sub.add_parser("serve", help="로컬 웹 앱")
-    serve.add_argument("--data", default="data")
+    serve.add_argument("--data", type=Path, help="업로드 및 라이브러리 폴더 (기본값: 저장소의 data/)")
     serve.add_argument("--port", type=int, default=8765)
     serve.add_argument("--record", type=Path, help="CLI로 분석한 결과 폴더를 웹 라이브러리에서 열기")
     models = sub.add_parser("ocr-models", help="로컬 OCR 모델 준비 (첫 다운로드)")

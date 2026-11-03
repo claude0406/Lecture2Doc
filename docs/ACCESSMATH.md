@@ -68,7 +68,7 @@ GT 원본과 가장 가까운 영상 관측의 위치 차이는 960×540 축소 
 - [출처·입력 해시·설정](../experiments/accessmath/dataset-provenance.json)
 - [웹 뷰어 캡처](../experiments/accessmath/viewer-607s.png)
 
-현재 보고서는 [localhost:8767](http://127.0.0.1:8767/), 원본 영상과 연결된 기본 결과 뷰어는 [localhost:8766](http://127.0.0.1:8766/)에서도 볼 수 있습니다.
+비교 화면은 위의 저장소 내 HTML 파일로 열 수 있습니다. 기본 결과의 영상 연결 화면은 [607초 웹 뷰어 캡처](../experiments/accessmath/viewer-607s.png)에서 확인할 수 있습니다.
 
 ## 재현
 

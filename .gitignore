@@ -18,4 +18,10 @@ experiments/**/models/
 datasets/
 
 models/ocr/
+!models/ocr/
+models/ocr/*
+!models/ocr/*.json
 models/whisper/
+!models/whisper/
+models/whisper/*
+!models/whisper/index.json

@@ -35,7 +35,11 @@ class OCRConfig:
 
 
 def models_dir():
-    return Path(os.environ.get("LECTURE2DOC_OCR_MODELS", "models/ocr")).resolve()
+    configured = os.environ.get("LECTURE2DOC_OCR_MODELS")
+    if configured:
+        return Path(configured).expanduser().resolve()
+    project_root = Path(__file__).resolve().parent.parent
+    return project_root / "models" / "ocr"
 
 
 def prepare_models(language="en", directory=None):

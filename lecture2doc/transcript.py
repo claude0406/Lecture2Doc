@@ -8,7 +8,11 @@ from .storage import digest, read, stage
 
 
 def whisper_models_dir():
-    return Path(os.environ.get("LECTURE2DOC_WHISPER_MODELS", "models/whisper")).expanduser().resolve()
+    configured = os.environ.get("LECTURE2DOC_WHISPER_MODELS")
+    if configured:
+        return Path(configured).expanduser().resolve()
+    project_root = Path(__file__).resolve().parent.parent
+    return project_root / "models" / "whisper"
 
 
 def resolve_whisper_model(model, local_only=True):

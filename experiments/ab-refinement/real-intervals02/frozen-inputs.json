@@ -1,6 +1,6 @@
 {
   "ground_truth_used": false,
-  "record": "/home/hwoo/Documents/ChatGPT/Lecture2Doc/experiments/ab-refinement/a-lecture02",
+  "record": "./experiments/ab-refinement/a-lecture02",
   "policy": "Continuous >=4s intervals, every sampled frame occludes >=2% of central terminal writing; stable co-visible content; at least 12 recoverable ink pixels. Ranked before restoration.",
   "proposals": [
     {
