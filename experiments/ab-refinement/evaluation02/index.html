@@ -1,0 +1,401 @@
+<!doctype html><meta charset="utf-8"><title>누적 판서 A 평가</title><style>body{font:16px sans-serif;max-width:1500px;margin:32px auto;background:#f4f6f2;color:#18332d}img{max-width:100%}section{background:white;padding:20px;margin:20px 0}a{color:#167358}.sources{display:flex;flex-wrap:wrap;gap:8px}.sources img{width:220px}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ddd}</style><h1>누적 판서 A — 원본과 선정 근거</h1>
+<p>기존 644개 중간 상태 → 누적 판서 17개. A는 원본 픽셀만 사용합니다. 페이지 B가 있으면 실제 결과를 비교하며, 원본 유지와 합성은 JSON의 상태·사유로 구분합니다.</p>
+<table><tr><th>출력</th><th>Recall</th><th>Precision</th><th>F1</th></tr>
+<tr><td>GT</td><td>99.99%</td><td>99.85%</td><td>99.92%</td></tr>
+<tr><td>nearest</td><td>100.00%</td><td>99.84%</td><td>99.92%</td></tr>
+<tr><td>baseline_A</td><td>100.00%</td><td>99.83%</td><td>99.91%</td></tr>
+<tr><td>baseline_B</td><td>100.00%</td><td>99.83%</td><td>99.91%</td></tr>
+<tr><td>previous_micro_A</td><td>99.99%</td><td>99.83%</td><td>99.91%</td></tr>
+<tr><td>page_A</td><td>99.99%</td><td>99.83%</td><td>99.91%</td></tr>
+<tr><td>page_B</td><td>99.99%</td><td>99.83%</td><td>99.91%</td></tr>
+</table><p>기존 이진화·회수율·정밀도·F1 계산을 그대로 사용했습니다. 완성 판서는 GT 스냅샷 이후의 추가 필기를 포함할 수 있습니다. GT는 평가에만 사용했습니다.</p>
+<section><h2>GT 140.374초 · p00000 · 선택 181.181초</h2><img src="gt-4207.jpg"></section>
+<section><h2>GT 441.708초 · p00002 · 선택 442.942초</h2><img src="gt-13238.jpg"></section>
+<section><h2>GT 513.613초 · p00003 · 선택 514.014초</h2><img src="gt-15393.jpg"></section>
+<section><h2>GT 743.576초 · p00006 · 선택 736.236초</h2><img src="gt-22285.jpg"></section>
+<section><h2>GT 1109.375초 · p00008 · 선택 1092.091초</h2><img src="gt-33248.jpg"></section>
+<section><h2>GT 1488.187초 · p00009 · 선택 1488.487초</h2><img src="gt-44601.jpg"></section>
+<section><h2>GT 1555.954초 · p00010 · 선택 1545.043초</h2><img src="gt-46632.jpg"></section>
+<section><h2>GT 1915.247초 · p00013 · 선택 1916.915초</h2><img src="gt-57400.jpg"></section>
+<section><h2>GT 2169.067초 · p00015 · 선택 2166.164초</h2><img src="gt-65007.jpg"></section>
+<section><h2>GT 2569.567초 · p00016 · 선택 2570.068초</h2><img src="gt-77010.jpg"></section>
+<section><h2>p00000 · 0.00–192.19초 · 대표 181.181초</h2><p>확인된 최종 판서 노출 추정 87.3% · 경계 confirmed_erasure_or_revision · 품질 표시 [&#x27;provisional_terminal_writing&#x27;, &#x27;complete_original_not_observed&#x27;]</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000362.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000362.png"></a><details><summary>대표 후보·원본 관측 (384개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000000.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000000.png"><br>0.000초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000032.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000032.png"><br>16.016초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000064.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000064.png"><br>32.032초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000096.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000096.png"><br>48.048초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000128.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000128.png"><br>64.064초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000160.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000160.png"><br>80.080초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000192.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000192.png"><br>96.096초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000224.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000224.png"><br>112.112초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000256.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000256.png"><br>128.128초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000283.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000283.png"><br>141.642초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000287.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000287.png"><br>143.643초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000288.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000288.png"><br>144.144초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000304.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000304.png"><br>152.152초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000305.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000305.png"><br>152.653초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000306.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000306.png"><br>153.153초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000320.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000320.png"><br>160.160초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000345.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000345.png"><br>172.673초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000352.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000352.png"><br>176.176초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000361.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000361.png"><br>180.680초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000362.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000362.png"><br>181.181초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00000.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00001 · 192.19–266.77초 · 대표 263.764초</h2><p>확인된 최종 판서 노출 추정 97.5% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000527.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000527.png"></a><details><summary>대표 후보·원본 관측 (149개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000384.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000384.png"><br>192.192초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000396.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000396.png"><br>198.198초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000408.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000408.png"><br>204.204초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000420.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000420.png"><br>210.210초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000432.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000432.png"><br>216.216초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000444.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000444.png"><br>222.222초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000456.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000456.png"><br>228.228초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000468.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000468.png"><br>234.234초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000480.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000480.png"><br>240.240초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000492.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000492.png"><br>246.246초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000504.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000504.png"><br>252.252초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000516.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000516.png"><br>258.258초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000524.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000524.png"><br>262.262초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000525.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000525.png"><br>262.762초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000526.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000526.png"><br>263.263초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000527.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000527.png"><br>263.764초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000528.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000528.png"><br>264.264초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000529.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000529.png"><br>264.764초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000530.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000530.png"><br>265.265초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000531.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000531.png"><br>265.765초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00001.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00002 · 266.77–491.49초 · 대표 442.942초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000885.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000885.png"></a><details><summary>대표 후보·원본 관측 (449개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000533.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000533.png"><br>266.767초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000570.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000570.png"><br>285.285초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000607.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000607.png"><br>303.803초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000644.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000644.png"><br>322.322초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000681.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000681.png"><br>340.841초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000718.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000718.png"><br>359.359초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000755.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000755.png"><br>377.877초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000792.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000792.png"><br>396.396초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000829.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000829.png"><br>414.914초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000866.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000866.png"><br>433.433초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000881.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000881.png"><br>440.940초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000883.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000883.png"><br>441.942초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000884.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000884.png"><br>442.442초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000885.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000885.png"><br>442.942초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000886.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000886.png"><br>443.443초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000903.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000903.png"><br>451.952초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000905.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000905.png"><br>452.952초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000907.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000907.png"><br>453.954초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000908.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000908.png"><br>454.454초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000940.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000940.png"><br>470.470초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000977.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000977.png"><br>488.988초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00002.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00003 · 491.49–517.02초 · 대표 514.014초</h2><p>확인된 최종 판서 노출 추정 99.9% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001027.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001027.png"></a><details><summary>대표 후보·원본 관측 (51개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000982.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000982.png"><br>491.491초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000986.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000986.png"><br>493.493초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000990.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000990.png"><br>495.495초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000994.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000994.png"><br>497.497초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000998.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-000998.png"><br>499.499초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001002.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001002.png"><br>501.501초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001006.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001006.png"><br>503.503초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001010.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001010.png"><br>505.505초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001014.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001014.png"><br>507.507초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001018.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001018.png"><br>509.509초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001022.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001022.png"><br>511.511초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001023.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001023.png"><br>512.011초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001024.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001024.png"><br>512.512초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001025.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001025.png"><br>513.013초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001026.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001026.png"><br>513.513초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001027.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001027.png"><br>514.014초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001028.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001028.png"><br>514.514초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001029.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001029.png"><br>515.014초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001030.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001030.png"><br>515.515초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00003.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00004 · 517.02–576.58초 · 대표 551.051초</h2><p>확인된 최종 판서 노출 추정 90.4% · 경계 confirmed_erasure_or_revision · 품질 표시 [&#x27;complete_original_not_observed&#x27;]</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001101.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001101.png"></a><details><summary>대표 후보·원본 관측 (119개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001033.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001033.png"><br>517.016초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001042.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001042.png"><br>521.521초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001051.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001051.png"><br>526.025초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001060.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001060.png"><br>530.530초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001069.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001069.png"><br>535.034초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001071.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001071.png"><br>536.035초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001078.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001078.png"><br>539.539초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001087.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001087.png"><br>544.043초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001093.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001093.png"><br>547.047초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001094.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001094.png"><br>547.547초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001095.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001095.png"><br>548.048초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001096.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001096.png"><br>548.548초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001099.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001099.png"><br>550.049초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001101.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001101.png"><br>551.051초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001105.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001105.png"><br>553.053초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001114.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001114.png"><br>557.557초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001123.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001123.png"><br>562.062초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001132.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001132.png"><br>566.566초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001141.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001141.png"><br>571.071초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001150.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001150.png"><br>575.575초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00004.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00005 · 576.58–633.13초 · 대표 630.630초</h2><p>확인된 최종 판서 노출 추정 96.0% · 경계 confirmed_erasure_or_revision · 품질 표시 [&#x27;complete_original_not_observed&#x27;]</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001260.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001260.png"></a><details><summary>대표 후보·원본 관측 (113개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001152.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001152.png"><br>576.576초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001161.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001161.png"><br>581.081초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001170.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001170.png"><br>585.585초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001179.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001179.png"><br>590.090초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001188.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001188.png"><br>594.594초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001196.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001196.png"><br>598.598초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001197.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001197.png"><br>599.098초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001199.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001199.png"><br>600.100초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001206.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001206.png"><br>603.603초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001215.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001215.png"><br>608.107초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001224.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001224.png"><br>612.612초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001233.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001233.png"><br>617.116초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001242.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001242.png"><br>621.621초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001251.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001251.png"><br>626.125초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001256.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001256.png"><br>628.628초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001257.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001257.png"><br>629.129초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001258.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001258.png"><br>629.629초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001259.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001259.png"><br>630.130초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001260.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001260.png"><br>630.630초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001261.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001261.png"><br>631.130초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00005.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00006 · 633.13–759.26초 · 대표 736.236초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001471.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001471.png"></a><details><summary>대표 후보·원본 관측 (252개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001265.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001265.png"><br>633.133초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001286.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001286.png"><br>643.643초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001307.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001307.png"><br>654.154초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001328.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001328.png"><br>664.664초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001349.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001349.png"><br>675.174초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001370.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001370.png"><br>685.685초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001391.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001391.png"><br>696.196초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001412.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001412.png"><br>706.706초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001433.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001433.png"><br>717.216초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001454.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001454.png"><br>727.727초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001468.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001468.png"><br>734.734초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001469.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001469.png"><br>735.235초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001470.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001470.png"><br>735.735초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001471.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001471.png"><br>736.236초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001472.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001472.png"><br>736.736초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001475.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001475.png"><br>738.237초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001484.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001484.png"><br>742.742초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001486.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001486.png"><br>743.743초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001487.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001487.png"><br>744.244초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001496.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001496.png"><br>748.748초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00006.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00007 · 759.26–969.47초 · 대표 962.962초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001924.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001924.png"></a><details><summary>대표 후보·원본 관측 (420개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001517.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001517.png"><br>759.259초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001552.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001552.png"><br>776.776초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001587.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001587.png"><br>794.293초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001622.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001622.png"><br>811.811초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001657.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001657.png"><br>829.328초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001692.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001692.png"><br>846.846초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001727.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001727.png"><br>864.364초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001762.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001762.png"><br>881.881초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001797.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001797.png"><br>899.399초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001832.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001832.png"><br>916.916초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001867.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001867.png"><br>934.433초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001902.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001902.png"><br>951.951초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001922.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001922.png"><br>961.961초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001923.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001923.png"><br>962.462초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001924.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001924.png"><br>962.962초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001925.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001925.png"><br>963.462초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001926.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001926.png"><br>963.963초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001927.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001927.png"><br>964.463초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001928.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001928.png"><br>964.964초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001932.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001932.png"><br>966.966초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00007.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00008 · 969.47–1115.11초 · 대표 1092.091초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002182.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002182.png"></a><details><summary>대표 후보·원본 관측 (291개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001937.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001937.png"><br>969.468초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001961.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001961.png"><br>981.481초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001985.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-001985.png"><br>993.492초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002009.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002009.png"><br>1005.505초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002033.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002033.png"><br>1017.516초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002057.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002057.png"><br>1029.528초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002081.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002081.png"><br>1041.541초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002105.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002105.png"><br>1053.553초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002129.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002129.png"><br>1065.564초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002153.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002153.png"><br>1077.576초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002165.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002165.png"><br>1083.582초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002166.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002166.png"><br>1084.083초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002169.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002169.png"><br>1085.584초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002170.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002170.png"><br>1086.085초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002177.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002177.png"><br>1089.589초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002180.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002180.png"><br>1091.090초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002181.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002181.png"><br>1091.591초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002182.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002182.png"><br>1092.091초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002201.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002201.png"><br>1101.601초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002213.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002213.png"><br>1107.607초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002225.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002225.png"><br>1113.612초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00008.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00009 · 1115.11–1490.49초 · 대표 1488.487초</h2><p>확인된 최종 판서 노출 추정 99.8% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002974.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002974.png"></a><details><summary>대표 후보·원본 관측 (750개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002228.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002228.png"><br>1115.114초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002290.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002290.png"><br>1146.145초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002352.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002352.png"><br>1177.176초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002414.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002414.png"><br>1208.207초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002476.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002476.png"><br>1239.238초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002538.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002538.png"><br>1270.269초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002600.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002600.png"><br>1301.300초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002662.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002662.png"><br>1332.331초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002724.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002724.png"><br>1363.362초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002786.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002786.png"><br>1394.393초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002848.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002848.png"><br>1425.424초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002910.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002910.png"><br>1456.455초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002948.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002948.png"><br>1475.474초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002949.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002949.png"><br>1475.975초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002951.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002951.png"><br>1476.976초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002952.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002952.png"><br>1477.476초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002972.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002972.png"><br>1487.486초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002973.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002973.png"><br>1487.986초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002974.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002974.png"><br>1488.487초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002975.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002975.png"><br>1488.987초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002976.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002976.png"><br>1489.488초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00009.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00010 · 1490.49–1573.57초 · 대표 1545.043초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003087.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003087.png"></a><details><summary>대표 후보·원본 관측 (166개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002978.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002978.png"><br>1490.489초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002991.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-002991.png"><br>1496.995초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003004.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003004.png"><br>1503.502초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003017.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003017.png"><br>1510.008초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003030.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003030.png"><br>1516.515초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003043.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003043.png"><br>1523.022초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003056.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003056.png"><br>1529.528초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003069.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003069.png"><br>1536.034초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003082.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003082.png"><br>1542.541초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003083.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003083.png"><br>1543.042초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003085.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003085.png"><br>1544.043초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003087.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003087.png"><br>1545.043초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003095.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003095.png"><br>1549.047초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003108.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003108.png"><br>1555.554초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003118.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003118.png"><br>1560.559초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003121.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003121.png"><br>1562.061초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003122.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003122.png"><br>1562.561초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003133.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003133.png"><br>1568.066초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003134.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003134.png"><br>1568.567초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00010.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00011 · 1573.57–1629.63초 · 대표 1626.625초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003250.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003250.png"></a><details><summary>대표 후보·원본 관측 (112개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003144.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003144.png"><br>1573.572초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003153.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003153.png"><br>1578.076초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003162.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003162.png"><br>1582.581초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003171.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003171.png"><br>1587.085초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003180.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003180.png"><br>1591.590초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003189.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003189.png"><br>1596.094초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003198.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003198.png"><br>1600.599초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003207.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003207.png"><br>1605.103초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003216.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003216.png"><br>1609.608초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003225.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003225.png"><br>1614.112초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003234.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003234.png"><br>1618.617초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003243.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003243.png"><br>1623.121초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003247.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003247.png"><br>1625.123초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003248.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003248.png"><br>1625.624초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003249.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003249.png"><br>1626.124초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003250.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003250.png"><br>1626.625초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003251.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003251.png"><br>1627.126초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003252.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003252.png"><br>1627.626초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003253.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003253.png"><br>1628.127초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003254.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003254.png"><br>1628.627초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00011.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00012 · 1629.63–1885.88초 · 대표 1879.378초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003755.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003755.png"></a><details><summary>대표 후보·원본 관측 (512개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003256.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003256.png"><br>1629.628초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003298.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003298.png"><br>1650.649초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003340.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003340.png"><br>1671.670초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003382.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003382.png"><br>1692.691초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003424.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003424.png"><br>1713.712초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003466.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003466.png"><br>1734.733초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003508.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003508.png"><br>1755.754초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003550.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003550.png"><br>1776.775초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003592.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003592.png"><br>1797.796초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003634.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003634.png"><br>1818.817초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003676.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003676.png"><br>1839.838초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003718.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003718.png"><br>1860.859초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003749.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003749.png"><br>1876.374초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003752.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003752.png"><br>1877.876초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003753.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003753.png"><br>1878.377초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003754.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003754.png"><br>1878.877초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003755.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003755.png"><br>1879.378초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003756.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003756.png"><br>1879.878초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003757.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003757.png"><br>1880.379초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003760.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003760.png"><br>1881.880초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003761.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003761.png"><br>1882.380초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00012.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00013 · 1885.88–1921.42초 · 대표 1916.915초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003830.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003830.png"></a><details><summary>대표 후보·원본 관측 (71개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003768.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003768.png"><br>1885.884초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003773.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003773.png"><br>1888.387초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003778.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003778.png"><br>1890.889초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003783.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003783.png"><br>1893.391초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003788.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003788.png"><br>1895.894초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003793.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003793.png"><br>1898.397초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003798.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003798.png"><br>1900.899초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003803.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003803.png"><br>1903.401초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003808.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003808.png"><br>1905.904초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003813.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003813.png"><br>1908.407초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003818.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003818.png"><br>1910.909초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003819.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003819.png"><br>1911.409초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003820.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003820.png"><br>1911.910초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003821.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003821.png"><br>1912.410초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003822.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003822.png"><br>1912.911초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003823.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003823.png"><br>1913.411초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003825.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003825.png"><br>1914.412초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003827.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003827.png"><br>1915.414초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003828.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003828.png"><br>1915.914초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003830.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003830.png"><br>1916.915초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003833.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003833.png"><br>1918.417초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003838.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003838.png"><br>1920.919초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00013.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00014 · 1921.42–2090.59초 · 대표 2087.085초</h2><p>확인된 최종 판서 노출 추정 99.3% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004170.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004170.png"></a><details><summary>대표 후보·원본 관측 (338개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003839.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003839.png"><br>1921.419초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003867.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003867.png"><br>1935.434초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003895.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003895.png"><br>1949.447초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003923.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003923.png"><br>1963.461초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003951.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003951.png"><br>1977.476초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003979.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-003979.png"><br>1991.489초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004007.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004007.png"><br>2005.504초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004035.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004035.png"><br>2019.517초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004063.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004063.png"><br>2033.532초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004091.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004091.png"><br>2047.545초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004099.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004099.png"><br>2051.550초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004102.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004102.png"><br>2053.051초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004119.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004119.png"><br>2061.559초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004125.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004125.png"><br>2064.562초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004147.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004147.png"><br>2075.573초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004168.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004168.png"><br>2086.084초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004169.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004169.png"><br>2086.584초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004170.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004170.png"><br>2087.085초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004171.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004171.png"><br>2087.586초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004172.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004172.png"><br>2088.086초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004175.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004175.png"><br>2089.588초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00014.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00015 · 2090.59–2190.19초 · 대표 2166.164초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 confirmed_erasure_or_revision · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004328.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004328.png"></a><details><summary>대표 후보·원본 관측 (199개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004177.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004177.png"><br>2090.588초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004193.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004193.png"><br>2098.597초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004209.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004209.png"><br>2106.604초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004225.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004225.png"><br>2114.613초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004241.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004241.png"><br>2122.620초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004257.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004257.png"><br>2130.628초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004273.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004273.png"><br>2138.637초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004289.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004289.png"><br>2146.644초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004305.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004305.png"><br>2154.653초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004321.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004321.png"><br>2162.660초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004328.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004328.png"><br>2166.164초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004329.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004329.png"><br>2166.664초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004336.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004336.png"><br>2170.168초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004337.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004337.png"><br>2170.669초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004340.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004340.png"><br>2172.170초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004350.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004350.png"><br>2177.175초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004353.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004353.png"><br>2178.677초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004363.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004363.png"><br>2183.682초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004364.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004364.png"><br>2184.182초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004369.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004369.png"><br>2186.684초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00015.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>
+<section><h2>p00016 · 2190.19–2599.56초 · 대표 2570.068초</h2><p>확인된 최종 판서 노출 추정 100.0% · 경계 end_of_video · 품질 표시 []</p><a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005135.png"><img width="960" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005135.png"></a><details><summary>대표 후보·원본 관측 (818개 보존)</summary><div class="sources">
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004376.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004376.png"><br>2190.188초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004444.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004444.png"><br>2224.222초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004512.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004512.png"><br>2258.256초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004580.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004580.png"><br>2292.290초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004648.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004648.png"><br>2326.324초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004716.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004716.png"><br>2360.358초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004784.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004784.png"><br>2394.392초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004852.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004852.png"><br>2428.426초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004920.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004920.png"><br>2462.460초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004988.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-004988.png"><br>2496.494초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005016.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005016.png"><br>2510.508초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005034.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005034.png"><br>2519.517초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005056.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005056.png"><br>2530.528초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005071.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005071.png"><br>2538.035초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005096.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005096.png"><br>2550.548초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005098.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005098.png"><br>2551.549초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005124.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005124.png"><br>2564.562초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005135.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005135.png"><br>2570.068초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005175.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005175.png"><br>2590.088초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005176.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005176.png"><br>2590.588초</a>
+<a href="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005192.png"><img loading="lazy" src="../final-lecture02/cache/decode/b091b8b96fbdbb634b26/frame-005192.png"><br>2598.596초</a>
+</div><p><a href="../final-lecture02/page-decisions/41367a9b52f4/p00016.candidates.json">모든 후보의 선정 점수 JSON</a></p></details></section>

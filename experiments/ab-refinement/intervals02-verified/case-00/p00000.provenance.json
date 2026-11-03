@@ -1,0 +1,7031 @@
+{
+  "coordinate_system": "full_frame_pixels",
+  "width": 1920,
+  "height": 1080,
+  "roi": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "base_source_frame_id": "f003764",
+  "patches": [
+    {
+      "x": 138,
+      "y": 0,
+      "width": 6,
+      "height": 48,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        138,
+        0,
+        144,
+        48
+      ]
+    },
+    {
+      "x": 144,
+      "y": 0,
+      "width": 36,
+      "height": 48,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        144,
+        0,
+        180,
+        48
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 141,
+      "y": 48,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        141,
+        48,
+        144,
+        51
+      ]
+    },
+    {
+      "x": 144,
+      "y": 48,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        144,
+        48,
+        183,
+        51
+      ]
+    },
+    {
+      "x": 150,
+      "y": 51,
+      "width": 39,
+      "height": 6,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        150,
+        51,
+        189,
+        57
+      ]
+    },
+    {
+      "x": 150,
+      "y": 57,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        150,
+        57,
+        192,
+        60
+      ]
+    },
+    {
+      "x": 168,
+      "y": 60,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        168,
+        60,
+        192,
+        63
+      ]
+    },
+    {
+      "x": 174,
+      "y": 63,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        174,
+        63,
+        192,
+        66
+      ]
+    },
+    {
+      "x": 180,
+      "y": 66,
+      "width": 12,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        180,
+        66,
+        192,
+        69
+      ]
+    },
+    {
+      "x": 186,
+      "y": 69,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        186,
+        69,
+        192,
+        72
+      ]
+    },
+    {
+      "x": 192,
+      "y": 60,
+      "width": 24,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        192,
+        60,
+        216,
+        72
+      ]
+    },
+    {
+      "x": 216,
+      "y": 60,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        216,
+        60,
+        228,
+        72
+      ]
+    },
+    {
+      "x": 228,
+      "y": 60,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        228,
+        60,
+        240,
+        72
+      ]
+    },
+    {
+      "x": 195,
+      "y": 72,
+      "width": 21,
+      "height": 9,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        195,
+        72,
+        216,
+        81
+      ]
+    },
+    {
+      "x": 213,
+      "y": 81,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        213,
+        81,
+        216,
+        84
+      ]
+    },
+    {
+      "x": 216,
+      "y": 72,
+      "width": 24,
+      "height": 12,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        216,
+        72,
+        240,
+        84
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 219,
+      "y": 84,
+      "width": 21,
+      "height": 6,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        219,
+        84,
+        240,
+        90
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 240,
+      "y": 72,
+      "width": 24,
+      "height": 18,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        240,
+        72,
+        264,
+        90
+      ]
+    },
+    {
+      "x": 243,
+      "y": 90,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        243,
+        90,
+        264,
+        93
+      ]
+    },
+    {
+      "x": 249,
+      "y": 93,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        249,
+        93,
+        264,
+        96
+      ]
+    },
+    {
+      "x": 264,
+      "y": 84,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        264,
+        84,
+        276,
+        96
+      ]
+    },
+    {
+      "x": 624,
+      "y": 84,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        624,
+        84,
+        636,
+        96
+      ]
+    },
+    {
+      "x": 636,
+      "y": 84,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        636,
+        84,
+        648,
+        93
+      ]
+    },
+    {
+      "x": 636,
+      "y": 93,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        636,
+        93,
+        645,
+        96
+      ]
+    },
+    {
+      "x": 660,
+      "y": 72,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        660,
+        72,
+        672,
+        78
+      ]
+    },
+    {
+      "x": 660,
+      "y": 78,
+      "width": 6,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        660,
+        78,
+        666,
+        84
+      ]
+    },
+    {
+      "x": 648,
+      "y": 84,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        648,
+        84,
+        657,
+        87
+      ]
+    },
+    {
+      "x": 648,
+      "y": 87,
+      "width": 6,
+      "height": 6,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        648,
+        87,
+        654,
+        93
+      ]
+    },
+    {
+      "x": 735,
+      "y": 0,
+      "width": 9,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        735,
+        0,
+        744,
+        24
+      ]
+    },
+    {
+      "x": 744,
+      "y": 0,
+      "width": 3,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003767",
+      "source_box": [
+        744,
+        0,
+        747,
+        24
+      ]
+    },
+    {
+      "x": 735,
+      "y": 24,
+      "width": 9,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        735,
+        24,
+        744,
+        48
+      ]
+    },
+    {
+      "x": 744,
+      "y": 24,
+      "width": 3,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        744,
+        24,
+        747,
+        48
+      ]
+    },
+    {
+      "x": 672,
+      "y": 60,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        672,
+        60,
+        684,
+        72
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 684,
+      "y": 60,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        684,
+        60,
+        696,
+        69
+      ]
+    },
+    {
+      "x": 684,
+      "y": 69,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        684,
+        69,
+        693,
+        72
+      ]
+    },
+    {
+      "x": 702,
+      "y": 57,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        702,
+        57,
+        720,
+        60
+      ]
+    },
+    {
+      "x": 696,
+      "y": 60,
+      "width": 24,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        696,
+        60,
+        720,
+        66
+      ]
+    },
+    {
+      "x": 696,
+      "y": 66,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        696,
+        66,
+        717,
+        69
+      ]
+    },
+    {
+      "x": 672,
+      "y": 72,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        672,
+        72,
+        684,
+        78
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 729,
+      "y": 48,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        729,
+        48,
+        747,
+        51
+      ]
+    },
+    {
+      "x": 720,
+      "y": 57,
+      "width": 3,
+      "height": 9,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        720,
+        57,
+        723,
+        66
+      ]
+    },
+    {
+      "x": 1725,
+      "y": 51,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        1725,
+        51,
+        1728,
+        54
+      ]
+    },
+    {
+      "x": 1743,
+      "y": 60,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        1743,
+        60,
+        1749,
+        63
+      ]
+    },
+    {
+      "x": 249,
+      "y": 96,
+      "width": 15,
+      "height": 24,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        249,
+        96,
+        264,
+        120
+      ]
+    },
+    {
+      "x": 264,
+      "y": 96,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        264,
+        96,
+        276,
+        108
+      ]
+    },
+    {
+      "x": 264,
+      "y": 108,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        264,
+        108,
+        276,
+        120
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 249,
+      "y": 120,
+      "width": 15,
+      "height": 9,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        249,
+        120,
+        264,
+        129
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 264,
+      "y": 120,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        264,
+        120,
+        276,
+        129
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 411,
+      "y": 132,
+      "width": 9,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        411,
+        132,
+        420,
+        144
+      ]
+    },
+    {
+      "x": 420,
+      "y": 132,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        420,
+        132,
+        432,
+        144
+      ]
+    },
+    {
+      "x": 411,
+      "y": 144,
+      "width": 21,
+      "height": 9,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        411,
+        144,
+        432,
+        153
+      ]
+    },
+    {
+      "x": 420,
+      "y": 153,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        420,
+        153,
+        432,
+        159
+      ]
+    },
+    {
+      "x": 432,
+      "y": 144,
+      "width": 48,
+      "height": 15,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        432,
+        144,
+        480,
+        159
+      ]
+    },
+    {
+      "x": 552,
+      "y": 132,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        552,
+        132,
+        564,
+        141
+      ]
+    },
+    {
+      "x": 552,
+      "y": 141,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        552,
+        141,
+        555,
+        144
+      ]
+    },
+    {
+      "x": 564,
+      "y": 132,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        564,
+        132,
+        576,
+        141
+      ]
+    },
+    {
+      "x": 480,
+      "y": 144,
+      "width": 42,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        144,
+        522,
+        150
+      ]
+    },
+    {
+      "x": 480,
+      "y": 150,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        150,
+        519,
+        153
+      ]
+    },
+    {
+      "x": 480,
+      "y": 153,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        153,
+        510,
+        156
+      ]
+    },
+    {
+      "x": 480,
+      "y": 156,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        156,
+        501,
+        159
+      ]
+    },
+    {
+      "x": 600,
+      "y": 96,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        600,
+        96,
+        624,
+        99
+      ]
+    },
+    {
+      "x": 600,
+      "y": 99,
+      "width": 15,
+      "height": 21,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        600,
+        99,
+        615,
+        120
+      ]
+    },
+    {
+      "x": 576,
+      "y": 132,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        576,
+        132,
+        588,
+        141
+      ]
+    },
+    {
+      "x": 588,
+      "y": 132,
+      "width": 9,
+      "height": 9,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        588,
+        132,
+        597,
+        141
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 600,
+      "y": 120,
+      "width": 15,
+      "height": 12,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        600,
+        120,
+        615,
+        132
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 96,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        624,
+        96,
+        639,
+        99
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 273,
+      "y": 411,
+      "width": 15,
+      "height": 51,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        273,
+        411,
+        288,
+        462
+      ]
+    },
+    {
+      "x": 285,
+      "y": 462,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        285,
+        462,
+        288,
+        465
+      ]
+    },
+    {
+      "x": 288,
+      "y": 411,
+      "width": 57,
+      "height": 9,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        288,
+        411,
+        345,
+        420
+      ]
+    },
+    {
+      "x": 288,
+      "y": 420,
+      "width": 96,
+      "height": 45,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        288,
+        420,
+        384,
+        465
+      ]
+    },
+    {
+      "x": 291,
+      "y": 465,
+      "width": 93,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        291,
+        465,
+        384,
+        468
+      ]
+    },
+    {
+      "x": 303,
+      "y": 468,
+      "width": 81,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        303,
+        468,
+        384,
+        480
+      ]
+    },
+    {
+      "x": 384,
+      "y": 420,
+      "width": 15,
+      "height": 6,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        420,
+        399,
+        426
+      ]
+    },
+    {
+      "x": 384,
+      "y": 426,
+      "width": 72,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        426,
+        456,
+        429
+      ]
+    },
+    {
+      "x": 384,
+      "y": 429,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        429,
+        468,
+        432
+      ]
+    },
+    {
+      "x": 384,
+      "y": 432,
+      "width": 96,
+      "height": 48,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        432,
+        480,
+        480
+      ]
+    },
+    {
+      "x": 525,
+      "y": 429,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        525,
+        429,
+        528,
+        432
+      ]
+    },
+    {
+      "x": 528,
+      "y": 429,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        429,
+        564,
+        432
+      ]
+    },
+    {
+      "x": 480,
+      "y": 432,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        480,
+        432,
+        504,
+        456
+      ]
+    },
+    {
+      "x": 504,
+      "y": 435,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        435,
+        507,
+        438
+      ]
+    },
+    {
+      "x": 504,
+      "y": 438,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        438,
+        516,
+        444
+      ]
+    },
+    {
+      "x": 504,
+      "y": 444,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        444,
+        516,
+        456
+      ]
+    },
+    {
+      "x": 480,
+      "y": 456,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        480,
+        456,
+        504,
+        480
+      ]
+    },
+    {
+      "x": 504,
+      "y": 456,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        456,
+        516,
+        468
+      ]
+    },
+    {
+      "x": 504,
+      "y": 468,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        468,
+        516,
+        480
+      ]
+    },
+    {
+      "x": 528,
+      "y": 432,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        432,
+        576,
+        480
+      ]
+    },
+    {
+      "x": 576,
+      "y": 432,
+      "width": 30,
+      "height": 48,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        576,
+        432,
+        606,
+        480
+      ]
+    },
+    {
+      "x": 261,
+      "y": 501,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        261,
+        501,
+        288,
+        504
+      ]
+    },
+    {
+      "x": 258,
+      "y": 504,
+      "width": 30,
+      "height": 9,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        258,
+        504,
+        288,
+        513
+      ]
+    },
+    {
+      "x": 255,
+      "y": 513,
+      "width": 33,
+      "height": 39,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        255,
+        513,
+        288,
+        552
+      ]
+    },
+    {
+      "x": 258,
+      "y": 552,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        258,
+        552,
+        288,
+        555
+      ]
+    },
+    {
+      "x": 261,
+      "y": 555,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        261,
+        555,
+        288,
+        558
+      ]
+    },
+    {
+      "x": 267,
+      "y": 558,
+      "width": 21,
+      "height": 18,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        267,
+        558,
+        288,
+        576
+      ]
+    },
+    {
+      "x": 300,
+      "y": 480,
+      "width": 84,
+      "height": 21,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        300,
+        480,
+        384,
+        501
+      ]
+    },
+    {
+      "x": 288,
+      "y": 501,
+      "width": 96,
+      "height": 75,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        288,
+        501,
+        384,
+        576
+      ]
+    },
+    {
+      "x": 384,
+      "y": 480,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        480,
+        480,
+        576
+      ]
+    },
+    {
+      "x": 480,
+      "y": 480,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        480,
+        480,
+        504,
+        504
+      ]
+    },
+    {
+      "x": 504,
+      "y": 480,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        504,
+        480,
+        516,
+        492
+      ]
+    },
+    {
+      "x": 516,
+      "y": 480,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        516,
+        480,
+        528,
+        486
+      ]
+    },
+    {
+      "x": 516,
+      "y": 486,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        516,
+        486,
+        522,
+        489
+      ]
+    },
+    {
+      "x": 516,
+      "y": 489,
+      "width": 12,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        516,
+        489,
+        528,
+        492
+      ]
+    },
+    {
+      "x": 504,
+      "y": 492,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        504,
+        492,
+        516,
+        504
+      ]
+    },
+    {
+      "x": 516,
+      "y": 492,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        516,
+        492,
+        528,
+        504
+      ]
+    },
+    {
+      "x": 492,
+      "y": 504,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        504,
+        504,
+        516
+      ]
+    },
+    {
+      "x": 492,
+      "y": 516,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        516,
+        504,
+        528
+      ]
+    },
+    {
+      "x": 504,
+      "y": 504,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        504,
+        504,
+        528,
+        528
+      ]
+    },
+    {
+      "x": 528,
+      "y": 480,
+      "width": 48,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        480,
+        576,
+        483
+      ]
+    },
+    {
+      "x": 528,
+      "y": 483,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        483,
+        567,
+        486
+      ]
+    },
+    {
+      "x": 528,
+      "y": 489,
+      "width": 30,
+      "height": 18,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        489,
+        558,
+        507
+      ]
+    },
+    {
+      "x": 528,
+      "y": 507,
+      "width": 48,
+      "height": 21,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        507,
+        576,
+        528
+      ]
+    },
+    {
+      "x": 492,
+      "y": 528,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        528,
+        504,
+        540
+      ]
+    },
+    {
+      "x": 492,
+      "y": 540,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        540,
+        504,
+        552
+      ]
+    },
+    {
+      "x": 504,
+      "y": 528,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        504,
+        528,
+        528,
+        552
+      ]
+    },
+    {
+      "x": 492,
+      "y": 552,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        552,
+        504,
+        564
+      ]
+    },
+    {
+      "x": 480,
+      "y": 564,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        480,
+        564,
+        492,
+        576
+      ]
+    },
+    {
+      "x": 492,
+      "y": 564,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        492,
+        564,
+        504,
+        576
+      ]
+    },
+    {
+      "x": 504,
+      "y": 552,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        504,
+        552,
+        528,
+        576
+      ]
+    },
+    {
+      "x": 528,
+      "y": 528,
+      "width": 48,
+      "height": 30,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        528,
+        576,
+        558
+      ]
+    },
+    {
+      "x": 528,
+      "y": 558,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        528,
+        558,
+        570,
+        561
+      ]
+    },
+    {
+      "x": 576,
+      "y": 480,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        576,
+        480,
+        606,
+        483
+      ]
+    },
+    {
+      "x": 576,
+      "y": 507,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        576,
+        507,
+        618,
+        510
+      ]
+    },
+    {
+      "x": 576,
+      "y": 510,
+      "width": 60,
+      "height": 48,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        576,
+        510,
+        636,
+        558
+      ]
+    },
+    {
+      "x": 585,
+      "y": 558,
+      "width": 51,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        585,
+        558,
+        636,
+        561
+      ]
+    },
+    {
+      "x": 267,
+      "y": 576,
+      "width": 21,
+      "height": 36,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        267,
+        576,
+        288,
+        612
+      ]
+    },
+    {
+      "x": 285,
+      "y": 627,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        285,
+        627,
+        288,
+        630
+      ]
+    },
+    {
+      "x": 282,
+      "y": 630,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        282,
+        630,
+        288,
+        633
+      ]
+    },
+    {
+      "x": 276,
+      "y": 633,
+      "width": 12,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        276,
+        633,
+        288,
+        636
+      ]
+    },
+    {
+      "x": 273,
+      "y": 636,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        273,
+        636,
+        288,
+        639
+      ]
+    },
+    {
+      "x": 267,
+      "y": 639,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        267,
+        639,
+        288,
+        642
+      ]
+    },
+    {
+      "x": 261,
+      "y": 642,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        261,
+        642,
+        288,
+        645
+      ]
+    },
+    {
+      "x": 252,
+      "y": 645,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        252,
+        645,
+        288,
+        648
+      ]
+    },
+    {
+      "x": 243,
+      "y": 648,
+      "width": 45,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        243,
+        648,
+        288,
+        651
+      ]
+    },
+    {
+      "x": 234,
+      "y": 651,
+      "width": 54,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        234,
+        651,
+        288,
+        654
+      ]
+    },
+    {
+      "x": 228,
+      "y": 654,
+      "width": 60,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        228,
+        654,
+        288,
+        657
+      ]
+    },
+    {
+      "x": 222,
+      "y": 657,
+      "width": 66,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        222,
+        657,
+        288,
+        660
+      ]
+    },
+    {
+      "x": 219,
+      "y": 660,
+      "width": 69,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        219,
+        660,
+        288,
+        663
+      ]
+    },
+    {
+      "x": 213,
+      "y": 663,
+      "width": 75,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        213,
+        663,
+        288,
+        666
+      ]
+    },
+    {
+      "x": 210,
+      "y": 666,
+      "width": 78,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        210,
+        666,
+        288,
+        669
+      ]
+    },
+    {
+      "x": 204,
+      "y": 669,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        204,
+        669,
+        288,
+        672
+      ]
+    },
+    {
+      "x": 288,
+      "y": 576,
+      "width": 96,
+      "height": 36,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        288,
+        576,
+        384,
+        612
+      ]
+    },
+    {
+      "x": 297,
+      "y": 612,
+      "width": 87,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        297,
+        612,
+        384,
+        618
+      ]
+    },
+    {
+      "x": 300,
+      "y": 618,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        300,
+        618,
+        384,
+        621
+      ]
+    },
+    {
+      "x": 297,
+      "y": 621,
+      "width": 87,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        297,
+        621,
+        384,
+        624
+      ]
+    },
+    {
+      "x": 291,
+      "y": 624,
+      "width": 93,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        291,
+        624,
+        384,
+        627
+      ]
+    },
+    {
+      "x": 288,
+      "y": 627,
+      "width": 96,
+      "height": 45,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        288,
+        627,
+        384,
+        672
+      ]
+    },
+    {
+      "x": 384,
+      "y": 576,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        576,
+        480,
+        672
+      ]
+    },
+    {
+      "x": 480,
+      "y": 576,
+      "width": 48,
+      "height": 42,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        480,
+        576,
+        528,
+        618
+      ]
+    },
+    {
+      "x": 480,
+      "y": 618,
+      "width": 45,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        480,
+        618,
+        525,
+        624
+      ]
+    },
+    {
+      "x": 480,
+      "y": 624,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        624,
+        522,
+        627
+      ]
+    },
+    {
+      "x": 480,
+      "y": 627,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        627,
+        519,
+        630
+      ]
+    },
+    {
+      "x": 480,
+      "y": 630,
+      "width": 30,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        630,
+        510,
+        642
+      ]
+    },
+    {
+      "x": 480,
+      "y": 642,
+      "width": 27,
+      "height": 15,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        642,
+        507,
+        657
+      ]
+    },
+    {
+      "x": 480,
+      "y": 657,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        657,
+        510,
+        660
+      ]
+    },
+    {
+      "x": 480,
+      "y": 660,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        660,
+        513,
+        663
+      ]
+    },
+    {
+      "x": 480,
+      "y": 663,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        663,
+        522,
+        666
+      ]
+    },
+    {
+      "x": 480,
+      "y": 666,
+      "width": 48,
+      "height": 6,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        666,
+        528,
+        672
+      ]
+    },
+    {
+      "x": 528,
+      "y": 666,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        528,
+        666,
+        531,
+        669
+      ]
+    },
+    {
+      "x": 528,
+      "y": 669,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        528,
+        669,
+        543,
+        672
+      ]
+    },
+    {
+      "x": 189,
+      "y": 687,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        189,
+        687,
+        192,
+        690
+      ]
+    },
+    {
+      "x": 186,
+      "y": 690,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        186,
+        690,
+        192,
+        693
+      ]
+    },
+    {
+      "x": 183,
+      "y": 693,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        183,
+        693,
+        192,
+        696
+      ]
+    },
+    {
+      "x": 180,
+      "y": 696,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        180,
+        696,
+        192,
+        702
+      ]
+    },
+    {
+      "x": 177,
+      "y": 702,
+      "width": 15,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        177,
+        702,
+        192,
+        708
+      ]
+    },
+    {
+      "x": 174,
+      "y": 708,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        174,
+        708,
+        192,
+        711
+      ]
+    },
+    {
+      "x": 171,
+      "y": 711,
+      "width": 21,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        171,
+        711,
+        192,
+        717
+      ]
+    },
+    {
+      "x": 168,
+      "y": 717,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        168,
+        717,
+        192,
+        720
+      ]
+    },
+    {
+      "x": 165,
+      "y": 720,
+      "width": 27,
+      "height": 6,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        165,
+        720,
+        192,
+        726
+      ]
+    },
+    {
+      "x": 162,
+      "y": 726,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        162,
+        726,
+        192,
+        729
+      ]
+    },
+    {
+      "x": 159,
+      "y": 729,
+      "width": 33,
+      "height": 9,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        159,
+        729,
+        192,
+        738
+      ]
+    },
+    {
+      "x": 156,
+      "y": 738,
+      "width": 36,
+      "height": 9,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        156,
+        738,
+        192,
+        747
+      ]
+    },
+    {
+      "x": 153,
+      "y": 747,
+      "width": 39,
+      "height": 18,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        153,
+        747,
+        192,
+        765
+      ]
+    },
+    {
+      "x": 150,
+      "y": 765,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003762",
+      "source_box": [
+        150,
+        765,
+        192,
+        768
+      ]
+    },
+    {
+      "x": 201,
+      "y": 672,
+      "width": 87,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        201,
+        672,
+        288,
+        675
+      ]
+    },
+    {
+      "x": 198,
+      "y": 675,
+      "width": 90,
+      "height": 6,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        198,
+        675,
+        288,
+        681
+      ]
+    },
+    {
+      "x": 195,
+      "y": 681,
+      "width": 93,
+      "height": 3,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        195,
+        681,
+        288,
+        684
+      ]
+    },
+    {
+      "x": 192,
+      "y": 684,
+      "width": 96,
+      "height": 84,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        192,
+        684,
+        288,
+        768
+      ]
+    },
+    {
+      "x": 288,
+      "y": 672,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        288,
+        672,
+        384,
+        768
+      ]
+    },
+    {
+      "x": 384,
+      "y": 672,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        672,
+        432,
+        720
+      ]
+    },
+    {
+      "x": 432,
+      "y": 672,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        432,
+        672,
+        456,
+        696
+      ]
+    },
+    {
+      "x": 456,
+      "y": 672,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        456,
+        672,
+        480,
+        696
+      ]
+    },
+    {
+      "x": 432,
+      "y": 696,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        432,
+        696,
+        456,
+        720
+      ]
+    },
+    {
+      "x": 456,
+      "y": 696,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        456,
+        696,
+        468,
+        708
+      ]
+    },
+    {
+      "x": 468,
+      "y": 696,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        468,
+        696,
+        480,
+        708
+      ]
+    },
+    {
+      "x": 456,
+      "y": 708,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        456,
+        708,
+        468,
+        720
+      ]
+    },
+    {
+      "x": 468,
+      "y": 708,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        468,
+        708,
+        480,
+        720
+      ]
+    },
+    {
+      "x": 384,
+      "y": 720,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        720,
+        432,
+        768
+      ]
+    },
+    {
+      "x": 432,
+      "y": 720,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        432,
+        720,
+        456,
+        744
+      ]
+    },
+    {
+      "x": 456,
+      "y": 720,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        456,
+        720,
+        480,
+        744
+      ]
+    },
+    {
+      "x": 432,
+      "y": 744,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        432,
+        744,
+        444,
+        756
+      ]
+    },
+    {
+      "x": 444,
+      "y": 744,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        444,
+        744,
+        456,
+        756
+      ]
+    },
+    {
+      "x": 432,
+      "y": 756,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        432,
+        756,
+        444,
+        768
+      ]
+    },
+    {
+      "x": 444,
+      "y": 756,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        444,
+        756,
+        456,
+        768
+      ]
+    },
+    {
+      "x": 456,
+      "y": 744,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        456,
+        744,
+        480,
+        768
+      ]
+    },
+    {
+      "x": 480,
+      "y": 672,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        672,
+        528,
+        720
+      ]
+    },
+    {
+      "x": 528,
+      "y": 672,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        672,
+        549,
+        675
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 675,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        675,
+        555,
+        678
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 678,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        678,
+        561,
+        681
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 681,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        681,
+        567,
+        684
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 684,
+      "width": 45,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        684,
+        573,
+        687
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 687,
+      "width": 48,
+      "height": 33,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        687,
+        576,
+        720
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 480,
+      "y": 720,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        720,
+        528,
+        768
+      ]
+    },
+    {
+      "x": 528,
+      "y": 720,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        720,
+        552,
+        744
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 552,
+      "y": 720,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        552,
+        720,
+        576,
+        744
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 744,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        744,
+        552,
+        768
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 552,
+      "y": 744,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        552,
+        744,
+        564,
+        756
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 564,
+      "y": 744,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        564,
+        744,
+        576,
+        756
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 552,
+      "y": 756,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        552,
+        756,
+        564,
+        768
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 690,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        690,
+        579,
+        693
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 693,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        693,
+        585,
+        696
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 696,
+      "width": 12,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        696,
+        588,
+        699
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 699,
+      "width": 15,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        699,
+        591,
+        705
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 705,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        705,
+        594,
+        708
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 708,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        708,
+        597,
+        711
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 711,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        711,
+        600,
+        714
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 714,
+      "width": 27,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        714,
+        603,
+        720
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 720,
+      "width": 30,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        720,
+        606,
+        726
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 726,
+      "width": 33,
+      "height": 9,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        726,
+        609,
+        735
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 735,
+      "width": 36,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        735,
+        612,
+        747
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 747,
+      "width": 39,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        747,
+        615,
+        759
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 759,
+      "width": 42,
+      "height": 9,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        759,
+        618,
+        768
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 84,
+      "y": 843,
+      "width": 12,
+      "height": 21,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        84,
+        843,
+        96,
+        864
+      ]
+    },
+    {
+      "x": 150,
+      "y": 768,
+      "width": 42,
+      "height": 3,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        150,
+        768,
+        192,
+        771
+      ]
+    },
+    {
+      "x": 147,
+      "y": 771,
+      "width": 45,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        147,
+        771,
+        192,
+        777
+      ]
+    },
+    {
+      "x": 144,
+      "y": 777,
+      "width": 48,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        144,
+        777,
+        192,
+        783
+      ]
+    },
+    {
+      "x": 141,
+      "y": 783,
+      "width": 51,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        141,
+        783,
+        192,
+        789
+      ]
+    },
+    {
+      "x": 138,
+      "y": 789,
+      "width": 54,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        138,
+        789,
+        192,
+        801
+      ]
+    },
+    {
+      "x": 135,
+      "y": 801,
+      "width": 57,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        135,
+        801,
+        192,
+        807
+      ]
+    },
+    {
+      "x": 132,
+      "y": 807,
+      "width": 60,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        132,
+        807,
+        192,
+        813
+      ]
+    },
+    {
+      "x": 129,
+      "y": 813,
+      "width": 63,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        129,
+        813,
+        192,
+        819
+      ]
+    },
+    {
+      "x": 126,
+      "y": 819,
+      "width": 66,
+      "height": 6,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        126,
+        819,
+        192,
+        825
+      ]
+    },
+    {
+      "x": 123,
+      "y": 825,
+      "width": 69,
+      "height": 18,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        123,
+        825,
+        192,
+        843
+      ]
+    },
+    {
+      "x": 96,
+      "y": 843,
+      "width": 96,
+      "height": 21,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        96,
+        843,
+        192,
+        864
+      ]
+    },
+    {
+      "x": 192,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        192,
+        768,
+        288,
+        864
+      ]
+    },
+    {
+      "x": 288,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        288,
+        768,
+        384,
+        864
+      ]
+    },
+    {
+      "x": 384,
+      "y": 768,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        768,
+        408,
+        792
+      ]
+    },
+    {
+      "x": 408,
+      "y": 768,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        408,
+        768,
+        420,
+        780
+      ]
+    },
+    {
+      "x": 420,
+      "y": 768,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        420,
+        768,
+        432,
+        780
+      ]
+    },
+    {
+      "x": 408,
+      "y": 780,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        408,
+        780,
+        420,
+        792
+      ]
+    },
+    {
+      "x": 420,
+      "y": 780,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        420,
+        780,
+        432,
+        792
+      ]
+    },
+    {
+      "x": 384,
+      "y": 792,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        792,
+        408,
+        816
+      ]
+    },
+    {
+      "x": 408,
+      "y": 792,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        408,
+        792,
+        420,
+        804
+      ]
+    },
+    {
+      "x": 420,
+      "y": 792,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        420,
+        792,
+        432,
+        804
+      ]
+    },
+    {
+      "x": 408,
+      "y": 804,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        408,
+        804,
+        420,
+        816
+      ]
+    },
+    {
+      "x": 432,
+      "y": 768,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        432,
+        768,
+        480,
+        816
+      ]
+    },
+    {
+      "x": 384,
+      "y": 816,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        816,
+        408,
+        840
+      ]
+    },
+    {
+      "x": 384,
+      "y": 840,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        840,
+        408,
+        864
+      ]
+    },
+    {
+      "x": 432,
+      "y": 816,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        432,
+        816,
+        456,
+        840
+      ]
+    },
+    {
+      "x": 456,
+      "y": 816,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        456,
+        816,
+        480,
+        840
+      ]
+    },
+    {
+      "x": 480,
+      "y": 768,
+      "width": 48,
+      "height": 48,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        480,
+        768,
+        528,
+        816
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 768,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        768,
+        552,
+        792
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 528,
+      "y": 792,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        528,
+        792,
+        552,
+        816
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 480,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        480,
+        816,
+        492,
+        828
+      ]
+    },
+    {
+      "x": 492,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        492,
+        816,
+        504,
+        828
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 504,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        504,
+        816,
+        516,
+        828
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 540,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        540,
+        816,
+        552,
+        828
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 576,
+      "y": 768,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        576,
+        768,
+        588,
+        780
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 588,
+      "y": 768,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        588,
+        768,
+        600,
+        780
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 588,
+      "y": 780,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        588,
+        780,
+        600,
+        792
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 600,
+      "y": 768,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        600,
+        768,
+        618,
+        771
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 600,
+      "y": 771,
+      "width": 21,
+      "height": 21,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        600,
+        771,
+        621,
+        792
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 588,
+      "y": 792,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        588,
+        792,
+        600,
+        804
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 600,
+      "y": 792,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        600,
+        792,
+        624,
+        816
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 810,
+      "width": 3,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        810,
+        627,
+        816
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 600,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        600,
+        816,
+        612,
+        828
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 816,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        816,
+        624,
+        828
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 828,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        828,
+        624,
+        840
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 840,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        840,
+        624,
+        852
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 852,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        852,
+        624,
+        864
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 816,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        816,
+        627,
+        819
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 819,
+      "width": 6,
+      "height": 15,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        819,
+        630,
+        834
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 834,
+      "width": 9,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        834,
+        633,
+        840
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 840,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        840,
+        636,
+        849
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 849,
+      "width": 15,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        849,
+        639,
+        855
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 855,
+      "width": 18,
+      "height": 6,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        855,
+        642,
+        861
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 861,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        624,
+        861,
+        645,
+        864
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 84,
+      "y": 864,
+      "width": 12,
+      "height": 39,
+      "source_frame_id": "f003760",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        84,
+        864,
+        96,
+        903
+      ]
+    },
+    {
+      "x": 96,
+      "y": 864,
+      "width": 48,
+      "height": 39,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003759",
+      "source_box": [
+        96,
+        864,
+        144,
+        903
+      ]
+    },
+    {
+      "x": 144,
+      "y": 864,
+      "width": 48,
+      "height": 39,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        144,
+        864,
+        192,
+        903
+      ]
+    },
+    {
+      "x": 192,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003761",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        192,
+        864,
+        216,
+        888
+      ]
+    },
+    {
+      "x": 216,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        216,
+        864,
+        240,
+        888
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 192,
+      "y": 888,
+      "width": 24,
+      "height": 15,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        192,
+        888,
+        216,
+        903
+      ]
+    },
+    {
+      "x": 216,
+      "y": 888,
+      "width": 24,
+      "height": 15,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        216,
+        888,
+        240,
+        903
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 240,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        240,
+        864,
+        264,
+        888
+      ]
+    },
+    {
+      "x": 264,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        264,
+        864,
+        288,
+        888
+      ]
+    },
+    {
+      "x": 240,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003759",
+      "witness_frame_id": "f003763",
+      "source_box": [
+        240,
+        888,
+        252,
+        900
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            7.374821446595955,
+            6.074879080436438,
+            6.793247695105223
+          ],
+          [
+            0.6194046909882711,
+            0.5395140048011314,
+            0.6000488578097635
+          ],
+          [
+            -1.3053455850893543,
+            -1.2049481398762645,
+            -1.187907848938202
+          ],
+          [
+            0.6776949786088298,
+            0.9798607274644439,
+            1.0270091731071378
+          ],
+          [
+            -1.431100235176586,
+            -0.838533333508526,
+            -1.2065769545077933
+          ],
+          [
+            -2.329128066554985,
+            -1.8720270025357444,
+            -1.8114768187113084
+          ]
+        ],
+        "fit_p90_error": 3.331982996272715,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 252,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        252,
+        888,
+        264,
+        900
+      ]
+    },
+    {
+      "x": 264,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        264,
+        888,
+        276,
+        900
+      ]
+    },
+    {
+      "x": 276,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        276,
+        888,
+        288,
+        900
+      ]
+    },
+    {
+      "x": 288,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        288,
+        864,
+        312,
+        888
+      ]
+    },
+    {
+      "x": 312,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        312,
+        864,
+        336,
+        888
+      ]
+    },
+    {
+      "x": 288,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        288,
+        888,
+        300,
+        900
+      ]
+    },
+    {
+      "x": 300,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        300,
+        888,
+        312,
+        900
+      ]
+    },
+    {
+      "x": 312,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003763",
+      "witness_frame_id": "f003761",
+      "source_box": [
+        312,
+        888,
+        324,
+        900
+      ]
+    },
+    {
+      "x": 324,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        324,
+        888,
+        336,
+        900
+      ]
+    },
+    {
+      "x": 336,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        336,
+        864,
+        360,
+        888
+      ]
+    },
+    {
+      "x": 360,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        360,
+        864,
+        384,
+        888
+      ]
+    },
+    {
+      "x": 336,
+      "y": 888,
+      "width": 24,
+      "height": 15,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        336,
+        888,
+        360,
+        903
+      ]
+    },
+    {
+      "x": 360,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        360,
+        888,
+        372,
+        900
+      ]
+    },
+    {
+      "x": 372,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        372,
+        888,
+        384,
+        900
+      ]
+    },
+    {
+      "x": 384,
+      "y": 864,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        864,
+        396,
+        876
+      ]
+    },
+    {
+      "x": 384,
+      "y": 876,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        876,
+        396,
+        888
+      ]
+    },
+    {
+      "x": 384,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003762",
+      "witness_frame_id": "f003760",
+      "source_box": [
+        384,
+        888,
+        396,
+        900
+      ]
+    },
+    {
+      "x": 612,
+      "y": 864,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        864,
+        624,
+        876
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 876,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003766",
+      "source_box": [
+        612,
+        876,
+        624,
+        888
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 612,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        612,
+        888,
+        624,
+        900
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 624,
+      "y": 864,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        624,
+        864,
+        645,
+        867
+      ]
+    },
+    {
+      "x": 624,
+      "y": 867,
+      "width": 24,
+      "height": 21,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        624,
+        867,
+        648,
+        888
+      ]
+    },
+    {
+      "x": 648,
+      "y": 876,
+      "width": 3,
+      "height": 6,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        648,
+        876,
+        651,
+        882
+      ]
+    },
+    {
+      "x": 648,
+      "y": 882,
+      "width": 6,
+      "height": 6,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        648,
+        882,
+        654,
+        888
+      ]
+    },
+    {
+      "x": 624,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003758",
+      "witness_frame_id": "f003765",
+      "source_box": [
+        624,
+        888,
+        636,
+        900
+      ],
+      "photometric_correction": {
+        "coefficients": [
+          [
+            12.907736499347402,
+            11.609116949245774,
+            12.61197095029119
+          ],
+          [
+            0.12656193737171773,
+            -0.004449492222093454,
+            0.15694564741863215
+          ],
+          [
+            -2.1604488792037193,
+            -2.124075727591193,
+            -1.9815100143526605
+          ],
+          [
+            0.6300573269270338,
+            0.45140284143964127,
+            0.9805142217840976
+          ],
+          [
+            -2.0623893389603483,
+            -1.528224151811291,
+            -1.9040180030847769
+          ],
+          [
+            -3.299305266447535,
+            -2.77952091984018,
+            -2.5715613619468916
+          ]
+        ],
+        "fit_p90_error": 3.424146117120078,
+        "coordinate_system": "normalized_roi_-1_to_1",
+        "rule": "add smooth illumination offset fitted to co-visible blank board"
+      }
+    },
+    {
+      "x": 636,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        636,
+        888,
+        648,
+        900
+      ]
+    },
+    {
+      "x": 648,
+      "y": 888,
+      "width": 9,
+      "height": 12,
+      "source_frame_id": "f003765",
+      "witness_frame_id": "f003758",
+      "source_box": [
+        648,
+        888,
+        657,
+        900
+      ]
+    }
+  ],
+  "source_policy": {
+    "rule": "same accumulated page with terminal-target checks, no erasure boundary, mutually compatible writing. Without terminal target: same microstate and within 12 seconds.",
+    "barrier_origin": "accumulated_page",
+    "temporal_absence_evidence": "case-00/p00000.evidence.npz",
+    "terminal_target_used": true,
+    "terminal_target": "case-00/p00000.target.png",
+    "erasure_barriers": [],
+    "microstate_id": "interval",
+    "candidate_frame_ids": [
+      "f003764",
+      "f003765",
+      "f003763",
+      "f003766",
+      "f003762",
+      "f003767",
+      "f003761",
+      "f003760",
+      "f003759",
+      "f003758"
+    ],
+    "accepted_frame_ids": [
+      "f003764",
+      "f003765",
+      "f003763",
+      "f003766",
+      "f003762",
+      "f003767",
+      "f003761",
+      "f003760",
+      "f003759",
+      "f003758"
+    ],
+    "rejected": [],
+    "region_exclusions": [
+      {
+        "source_frame_id": "f003764",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 3
+      },
+      {
+        "source_frame_id": "f003765",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 7
+      },
+      {
+        "source_frame_id": "f003763",
+        "stale_ink_pixels": 12,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003766",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 10
+      },
+      {
+        "source_frame_id": "f003762",
+        "stale_ink_pixels": 14,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003767",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 4
+      },
+      {
+        "source_frame_id": "f003761",
+        "stale_ink_pixels": 14,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003760",
+        "stale_ink_pixels": 24,
+        "missing_terminal_ink_pixels": 4
+      },
+      {
+        "source_frame_id": "f003759",
+        "stale_ink_pixels": 31,
+        "missing_terminal_ink_pixels": 11
+      },
+      {
+        "source_frame_id": "f003758",
+        "stale_ink_pixels": 25,
+        "missing_terminal_ink_pixels": 20
+      }
+    ]
+  },
+  "inpainting": false,
+  "spatial_interpolation": false,
+  "roi_pixel_box": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "photometric_adjustment": true,
+  "unresolved_pixels": "retain selected original"
+}

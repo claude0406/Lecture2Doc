@@ -1,0 +1,84 @@
+{
+  "id": "pr00000",
+  "board_page_id": "p00000",
+  "status": "original",
+  "image": "f0000.png",
+  "source_frame_ids": [
+    "f0000"
+  ],
+  "provenance": null,
+  "quality_flags": [],
+  "reason": "no_repeatedly_observed_hidden_writing",
+  "coverage": null,
+  "diagnostics": [],
+  "estimated_added_ink_pixels": 0,
+  "lost_visible_ink_pixels": 0,
+  "occluded_board_fraction": 0.12504340277777778,
+  "source_policy": {
+    "rule": "page AND selected microstate AND within 12 seconds; visible-writing and background-alignment checks",
+    "microstate_id": "b00000",
+    "candidate_frame_ids": [
+      "f0000",
+      "f0001",
+      "f0002",
+      "f0003",
+      "f0004",
+      "f0005",
+      "f0006",
+      "f0007",
+      "f0008",
+      "f0009",
+      "f0010",
+      "f0011",
+      "f0012",
+      "f0013",
+      "f0014",
+      "f0015"
+    ],
+    "accepted_frame_ids": [
+      "f0000",
+      "f0001",
+      "f0002",
+      "f0003",
+      "f0008",
+      "f0009",
+      "f0010",
+      "f0011"
+    ],
+    "rejected": [
+      {
+        "source_frame_id": "f0004",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0005",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0006",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0007",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0012",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0013",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0014",
+        "reason": "unverified_or_changed_camera_geometry"
+      },
+      {
+        "source_frame_id": "f0015",
+        "reason": "unverified_or_changed_camera_geometry"
+      }
+    ]
+  },
+  "observed_hidden_ink_pixels": 0
+}

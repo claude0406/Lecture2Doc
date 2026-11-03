@@ -1,0 +1,2445 @@
+{
+  "schema_version": 1,
+  "source": {
+    "name": "two-occlusions.mp4",
+    "path": "source.mp4",
+    "sha256": "e487f65b69d70ebf70ebd1810632df1d3af679555ace6140f218ad7665b6ae53",
+    "width": 1280,
+    "height": 720,
+    "duration": 16.0,
+    "fps": 4.0,
+    "codec": "mpeg4",
+    "audio": false,
+    "audio_codec": null
+  },
+  "playback": "cache/playback/0802e1081b295f567520/playback.mp4",
+  "config": {
+    "sample_seconds": 0.5,
+    "analysis_width": 640,
+    "board": "auto",
+    "roi": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "confirm": 2,
+    "change_pixels": 35,
+    "change_fraction": 0.001,
+    "cut_fraction": 0.65,
+    "tile_size": 32,
+    "reconstruction": true
+  },
+  "source_frames": [
+    {
+      "id": "f000000",
+      "time": 0.0,
+      "pts": 0,
+      "time_base": "1/16384",
+      "decode_index": 0,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000000.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000001",
+      "time": 0.5,
+      "pts": 8192,
+      "time_base": "1/16384",
+      "decode_index": 2,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000001.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000002",
+      "time": 1.0,
+      "pts": 16384,
+      "time_base": "1/16384",
+      "decode_index": 4,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000002.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000003",
+      "time": 1.5,
+      "pts": 24576,
+      "time_base": "1/16384",
+      "decode_index": 6,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000003.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000004",
+      "time": 2.0,
+      "pts": 32768,
+      "time_base": "1/16384",
+      "decode_index": 8,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000004.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000005",
+      "time": 2.5,
+      "pts": 40960,
+      "time_base": "1/16384",
+      "decode_index": 10,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000005.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000006",
+      "time": 3.0,
+      "pts": 49152,
+      "time_base": "1/16384",
+      "decode_index": 12,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000006.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000007",
+      "time": 3.5,
+      "pts": 57344,
+      "time_base": "1/16384",
+      "decode_index": 14,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000007.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000008",
+      "time": 4.0,
+      "pts": 65536,
+      "time_base": "1/16384",
+      "decode_index": 16,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000008.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000009",
+      "time": 4.5,
+      "pts": 73728,
+      "time_base": "1/16384",
+      "decode_index": 18,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000009.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000010",
+      "time": 5.0,
+      "pts": 81920,
+      "time_base": "1/16384",
+      "decode_index": 20,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000010.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000011",
+      "time": 5.5,
+      "pts": 90112,
+      "time_base": "1/16384",
+      "decode_index": 22,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000011.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000012",
+      "time": 6.0,
+      "pts": 98304,
+      "time_base": "1/16384",
+      "decode_index": 24,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000012.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000013",
+      "time": 6.5,
+      "pts": 106496,
+      "time_base": "1/16384",
+      "decode_index": 26,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000013.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000014",
+      "time": 7.0,
+      "pts": 114688,
+      "time_base": "1/16384",
+      "decode_index": 28,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000014.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000015",
+      "time": 7.5,
+      "pts": 122880,
+      "time_base": "1/16384",
+      "decode_index": 30,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000015.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000016",
+      "time": 8.0,
+      "pts": 131072,
+      "time_base": "1/16384",
+      "decode_index": 32,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000016.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000017",
+      "time": 8.5,
+      "pts": 139264,
+      "time_base": "1/16384",
+      "decode_index": 34,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000017.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000018",
+      "time": 9.0,
+      "pts": 147456,
+      "time_base": "1/16384",
+      "decode_index": 36,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000018.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000019",
+      "time": 9.5,
+      "pts": 155648,
+      "time_base": "1/16384",
+      "decode_index": 38,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000019.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000020",
+      "time": 10.0,
+      "pts": 163840,
+      "time_base": "1/16384",
+      "decode_index": 40,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000020.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000021",
+      "time": 10.5,
+      "pts": 172032,
+      "time_base": "1/16384",
+      "decode_index": 42,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000021.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000022",
+      "time": 11.0,
+      "pts": 180224,
+      "time_base": "1/16384",
+      "decode_index": 44,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000022.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000023",
+      "time": 11.5,
+      "pts": 188416,
+      "time_base": "1/16384",
+      "decode_index": 46,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000023.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000024",
+      "time": 12.0,
+      "pts": 196608,
+      "time_base": "1/16384",
+      "decode_index": 48,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000024.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000025",
+      "time": 12.5,
+      "pts": 204800,
+      "time_base": "1/16384",
+      "decode_index": 50,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000025.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000026",
+      "time": 13.0,
+      "pts": 212992,
+      "time_base": "1/16384",
+      "decode_index": 52,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000026.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000027",
+      "time": 13.5,
+      "pts": 221184,
+      "time_base": "1/16384",
+      "decode_index": 54,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000027.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000028",
+      "time": 14.0,
+      "pts": 229376,
+      "time_base": "1/16384",
+      "decode_index": 56,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000028.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000029",
+      "time": 14.5,
+      "pts": 237568,
+      "time_base": "1/16384",
+      "decode_index": 58,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000029.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000030",
+      "time": 15.0,
+      "pts": 245760,
+      "time_base": "1/16384",
+      "decode_index": 60,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000030.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "f000031",
+      "time": 15.5,
+      "pts": 253952,
+      "time_base": "1/16384",
+      "decode_index": 62,
+      "image": "cache/decode/18545d9008e123831d7b/frame-000031.png",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "primary_output": "board_pages",
+  "page_reconstruction_status": "complete",
+  "page_reconstructions": [
+    {
+      "id": "pr00000",
+      "board_page_id": "p00000",
+      "status": "composited",
+      "image": "cache/page-restoration/0ae180373de03610e690/p00000.png",
+      "source_frame_ids": [
+        "f000027",
+        "f000031"
+      ],
+      "provenance": "cache/page-restoration/0ae180373de03610e690/p00000.provenance.json",
+      "quality_flags": [
+        "heuristic_restoration_requires_review"
+      ],
+      "reason": "observed_hidden_writing_recovered",
+      "coverage": 1.0,
+      "diagnostics": [
+        "cache/page-restoration/0ae180373de03610e690/p00000.regions.png"
+      ],
+      "estimated_added_ink_pixels": 516,
+      "lost_visible_ink_pixels": 0,
+      "mask_context": {
+        "image": "cache/pages/267caefb791a09ff6749/p00000.board.png",
+        "rule": "A source-aligned board geometry and persistent border structures",
+        "supplies_output_pixels": false
+      },
+      "occluded_board_fraction": 0.12502604166666667,
+      "board_occluder_core_pixels": 23342,
+      "source_policy": {
+        "rule": "same accumulated page with terminal-target checks, no erasure boundary, mutually compatible writing. Without terminal target: same microstate and within 12 seconds.",
+        "barrier_origin": "accumulated_page",
+        "temporal_absence_evidence": "cache/pages/267caefb791a09ff6749/p00000.evidence.npz",
+        "terminal_target_used": true,
+        "terminal_target": "cache/pages/267caefb791a09ff6749/p00000.target.png",
+        "erasure_barriers": [],
+        "microstate_id": "b00000",
+        "candidate_frame_ids": [
+          "f000031",
+          "f000030",
+          "f000029",
+          "f000028",
+          "f000027",
+          "f000026",
+          "f000025",
+          "f000024",
+          "f000023",
+          "f000022",
+          "f000021",
+          "f000020",
+          "f000019",
+          "f000018",
+          "f000017",
+          "f000016",
+          "f000015",
+          "f000014",
+          "f000013",
+          "f000012",
+          "f000011",
+          "f000010",
+          "f000009",
+          "f000008",
+          "f000007",
+          "f000006",
+          "f000005",
+          "f000004",
+          "f000003",
+          "f000002",
+          "f000001",
+          "f000000"
+        ],
+        "accepted_frame_ids": [
+          "f000031",
+          "f000030",
+          "f000029",
+          "f000028",
+          "f000027",
+          "f000026",
+          "f000025",
+          "f000024",
+          "f000023",
+          "f000022",
+          "f000021",
+          "f000020",
+          "f000019",
+          "f000018",
+          "f000017",
+          "f000016",
+          "f000015",
+          "f000014",
+          "f000013",
+          "f000012",
+          "f000011",
+          "f000010",
+          "f000009",
+          "f000008",
+          "f000007",
+          "f000006",
+          "f000005",
+          "f000004",
+          "f000003",
+          "f000002",
+          "f000001",
+          "f000000"
+        ],
+        "rejected": [],
+        "region_exclusions": [
+          {
+            "source_frame_id": "f000031",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000030",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000029",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000028",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000027",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000026",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000025",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000024",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000023",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000022",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000021",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000020",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000019",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000018",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000017",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000016",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000015",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000014",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000013",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000012",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000011",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000010",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000009",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000008",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000007",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000006",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000005",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000004",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000003",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000002",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000001",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          },
+          {
+            "source_frame_id": "f000000",
+            "stale_ink_pixels": 0,
+            "missing_terminal_ink_pixels": 0
+          }
+        ]
+      },
+      "observed_hidden_ink_pixels": 516,
+      "attempted_added_ink_pixels": 516,
+      "residual_margin_overlap_pixels": 0,
+      "pruned_rectangles": 0,
+      "residual_foreground_pixels": 0,
+      "feature_lost_visible_ink_pixels": 0,
+      "verification_frame_ids": [
+        "f000025"
+      ],
+      "photometric_adjusted": false
+    }
+  ],
+  "board_pages": [
+    {
+      "id": "p00000",
+      "scene": 0,
+      "start": 0.0,
+      "end": 16.0,
+      "source_frame_ids": [
+        "f000000",
+        "f000001",
+        "f000002",
+        "f000003",
+        "f000004",
+        "f000005",
+        "f000006",
+        "f000007",
+        "f000008",
+        "f000009",
+        "f000010",
+        "f000011",
+        "f000012",
+        "f000013",
+        "f000014",
+        "f000015",
+        "f000016",
+        "f000017",
+        "f000018",
+        "f000019",
+        "f000020",
+        "f000021",
+        "f000022",
+        "f000023",
+        "f000024",
+        "f000025",
+        "f000026",
+        "f000027",
+        "f000028",
+        "f000029",
+        "f000030",
+        "f000031"
+      ],
+      "selected_frame_id": "f000031",
+      "selection_reason": "terminal_readable_writing",
+      "selection_tolerance_ink_pixels": 5,
+      "content_equivalent_candidate_ids": [
+        "f000031",
+        "f000030",
+        "f000015",
+        "f000014",
+        "f000013",
+        "f000012",
+        "f000007",
+        "f000006",
+        "f000004",
+        "f000005",
+        "f000028",
+        "f000020",
+        "f000029",
+        "f000023",
+        "f000022",
+        "f000021"
+      ],
+      "selection_candidates": [
+        {
+          "source_frame_id": "f000031",
+          "time": 15.5,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000030",
+          "time": 15.0,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000015",
+          "time": 7.5,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000014",
+          "time": 7.0,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000013",
+          "time": 6.5,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000012",
+          "time": 6.0,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000007",
+          "time": 3.5,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000006",
+          "time": 3.0,
+          "score": 0.7883286318758814,
+          "readable_fraction": 0.8159379407616361,
+          "hidden_fraction": 0.18406205923836388,
+          "extra_fraction": 0.0,
+          "foreground_fraction": 0.12502604166666667,
+          "ink_sharpness": 122.85276794433594
+        }
+      ],
+      "boundary_reason": "end_of_video",
+      "quality_flags": [
+        "complete_original_not_observed",
+        "foreground_present_original_used"
+      ],
+      "transcript_ids": [],
+      "target_ink_pixels": 2836,
+      "original_complete_estimate": false,
+      "provisional_ink_pixels": 0,
+      "terminal_target_coordinate_system": "selected_frame_analysis_roi",
+      "analysis_to_selected_transform": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "writing_loss_barriers": [],
+      "terminal_ink_mask": "cache/pages/267caefb791a09ff6749/p00000.target.png",
+      "analysis_board_mask": "cache/pages/267caefb791a09ff6749/p00000.board.png",
+      "terminal_absence_evidence": "cache/pages/267caefb791a09ff6749/p00000.evidence.npz"
+    }
+  ],
+  "page_policy": {
+    "version": "2026-11-02.pages-15",
+    "addition_confirmation_seconds": 3,
+    "visible_absence_seconds": 2,
+    "erasure_fraction": 0.08,
+    "minimum_erasure_pixels": 60,
+    "localized_erasure_minimum": 12,
+    "localized_absence_seconds": 3,
+    "localized_min_quiet_seconds": 6,
+    "localized_erasure_fraction": 0.5,
+    "erasure_settle_seconds": 4,
+    "uses_ground_truth": false,
+    "output_pixels": "selected_original_only",
+    "source_inferred_board_bounds": [
+      0,
+      0,
+      640,
+      360
+    ],
+    "persistent_unknown_fraction": 0.0
+  },
+  "page_events": [],
+  "board_states": [
+    {
+      "id": "b00000",
+      "scene": 0,
+      "start": 0.0,
+      "end": 16.0,
+      "source_frame_ids": [
+        "f000000",
+        "f000001",
+        "f000002",
+        "f000003",
+        "f000004",
+        "f000005",
+        "f000006",
+        "f000007",
+        "f000008",
+        "f000009",
+        "f000010",
+        "f000011",
+        "f000012",
+        "f000013",
+        "f000014",
+        "f000015",
+        "f000016",
+        "f000017",
+        "f000018",
+        "f000019",
+        "f000020",
+        "f000021",
+        "f000022",
+        "f000023",
+        "f000024",
+        "f000025",
+        "f000026",
+        "f000027",
+        "f000028",
+        "f000029",
+        "f000030",
+        "f000031"
+      ],
+      "selected_frame_id": "f000031",
+      "selection_reason": "persistent_visible_strokes_foreground_and_stability",
+      "selection_candidates": [
+        {
+          "source_frame_id": "f000031",
+          "time": 15.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000030",
+          "time": 15.0,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000015",
+          "time": 7.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000014",
+          "time": 7.0,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000013",
+          "time": 6.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        }
+      ],
+      "boundary_reason": "end_of_video",
+      "quality_flags": [
+        "foreground_heuristic"
+      ],
+      "transcript_ids": []
+    }
+  ],
+  "selected_frames": [
+    {
+      "board_state_id": "b00000",
+      "source_frame_id": "f000031",
+      "reason": "persistent_visible_strokes_foreground_and_stability",
+      "alternatives": [
+        {
+          "source_frame_id": "f000031",
+          "time": 15.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000030",
+          "time": 15.0,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000015",
+          "time": 7.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000014",
+          "time": 7.0,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        },
+        {
+          "source_frame_id": "f000013",
+          "time": 6.5,
+          "score": 0.7459655477031802,
+          "readable_support_fraction": 0.8332155477031802,
+          "obscured_support_fraction": 0.1667844522968198,
+          "support_pixels": 2830,
+          "foreground_fraction": 0.1153125,
+          "motion_fraction": 0.0,
+          "ink_sharpness": 122.85276794433594
+        }
+      ]
+    }
+  ],
+  "reconstructed_boards": [
+    {
+      "id": "r00000",
+      "board_state_id": "b00000",
+      "status": "composited",
+      "image": "cache/reconstruction/5839958cc477ec3a434f/b00000.png",
+      "source_frame_ids": [
+        "f000017",
+        "f000027",
+        "f000031"
+      ],
+      "provenance": "cache/reconstruction/5839958cc477ec3a434f/b00000.json",
+      "quality_flags": [
+        "model_free_masks_require_review"
+      ],
+      "coverage": 1.0,
+      "occluded_fraction": 0.1153125,
+      "observed_hidden_ink_pixels": 474,
+      "source_policy": {
+        "max_time_distance_seconds": 12.0,
+        "rejected_frame_ids": [],
+        "accepted_frame_ids": [
+          "f000031",
+          "f000030",
+          "f000015",
+          "f000014",
+          "f000013",
+          "f000007",
+          "f000008",
+          "f000009",
+          "f000010",
+          "f000011",
+          "f000012",
+          "f000016",
+          "f000017",
+          "f000018",
+          "f000019",
+          "f000020",
+          "f000021",
+          "f000022",
+          "f000023",
+          "f000024",
+          "f000025",
+          "f000026",
+          "f000027",
+          "f000028",
+          "f000029"
+        ]
+      },
+      "foreground_coverage": 1.0,
+      "residual_foreground_pixels": 0,
+      "lost_visible_ink_pixels": 0
+    }
+  ],
+  "transcript": {
+    "status": "skipped",
+    "origin": null,
+    "segments": [],
+    "message": "자막 또는 Whisper 모델을 지정하세요"
+  },
+  "quality_flags": [
+    "fixed_camera_and_board_roi_require_review",
+    "sampling_can_miss_short_lived_writing",
+    "persistence_can_miss_short_lived_writing"
+  ],
+  "analysis_metrics": [
+    {
+      "id": "f000000",
+      "time": 0.0,
+      "occlusion": 0.1153125,
+      "sharpness": 297.24067700127495,
+      "ink_pixels": 1667,
+      "cut": 0.0,
+      "shift": [
+        0,
+        0,
+        1
+      ],
+      "camera": {
+        "phase": [
+          0,
+          0,
+          1
+        ],
+        "verified": true,
+        "reason": "initial"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13671960171560701,
+      "dark_detail": 110193.59375,
+      "light_detail": 83686.3984375,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.64307403564453,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 0,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.64307403564453
+      }
+    },
+    {
+      "id": "f000001",
+      "time": 0.5,
+      "occlusion": 0.11531684027777778,
+      "sharpness": 299.1040017360357,
+      "ink_pixels": 1656,
+      "cut": 0.0,
+      "shift": [
+        -0.001339740104356224,
+        -2.4161882436146698e-05,
+        1.0004455234855414
+      ],
+      "camera": {
+        "phase": [
+          -0.001339740104356224,
+          -2.4161882436146698e-05,
+          1.0004455234855414
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13638996557603278,
+      "dark_detail": 110239.375,
+      "light_detail": 83777.4296875,
+      "surface_median": 233.9947770267239,
+      "ink_sharpness": 123.93478393554688,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 0,
+      "event": "none",
+      "selection": {
+        "score": 0.49825889526894385,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11531684027777778,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.93478393554688
+      }
+    },
+    {
+      "id": "f000002",
+      "time": 1.0,
+      "occlusion": 0.11531684027777778,
+      "sharpness": 299.06851562492466,
+      "ink_pixels": 1656,
+      "cut": 0.0,
+      "shift": [
+        0.000579762804306938,
+        -0.00018666536027467373,
+        1.000132659079714
+      ],
+      "camera": {
+        "phase": [
+          0.000579762804306938,
+          -0.00018666536027467373,
+          1.000132659079714
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13638997791629065,
+      "dark_detail": 110241.3515625,
+      "light_detail": 83778.9296875,
+      "surface_median": 233.9947770267239,
+      "ink_sharpness": 123.93236541748047,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825889526894385,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11531684027777778,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.93236541748047
+      }
+    },
+    {
+      "id": "f000003",
+      "time": 1.5,
+      "occlusion": 0.11531684027777778,
+      "sharpness": 299.08808159714687,
+      "ink_pixels": 1656,
+      "cut": 0.0,
+      "shift": [
+        -0.00029440195237384614,
+        -0.00054530312110046,
+        1.0000847277402256
+      ],
+      "camera": {
+        "phase": [
+          -0.00029440195237384614,
+          -0.00054530312110046,
+          1.0000847277402256
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13638956609134714,
+      "dark_detail": 110241.3515625,
+      "light_detail": 83779.0,
+      "surface_median": 233.9947770267239,
+      "ink_sharpness": 123.93236541748047,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825889526894385,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11531684027777778,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.93236541748047
+      }
+    },
+    {
+      "id": "f000004",
+      "time": 2.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 402.0740103243604,
+      "ink_pixels": 2361,
+      "cut": 0.20151475694444446,
+      "shift": [
+        -0.048589742925969404,
+        0.029509266054247973,
+        0.39597226275338065
+      ],
+      "camera": {
+        "phase": [
+          -0.048589742925969404,
+          0.029509266054247973,
+          0.39597226275338065
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1243667801409924,
+      "dark_detail": 164164.65625,
+      "light_detail": 127847.984375,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.90003967285156,
+      "motion_fraction": 0.20272135416666667,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7155504001337357,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.20272135416666667,
+        "ink_sharpness": 122.90003967285156
+      }
+    },
+    {
+      "id": "f000005",
+      "time": 2.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.90428810213814,
+      "ink_pixels": 2359,
+      "cut": 0.0,
+      "shift": [
+        -0.00033648350648718406,
+        0.0006247654675917147,
+        0.9994064934179187
+      ],
+      "camera": {
+        "phase": [
+          -0.00033648350648718406,
+          0.0006247654675917147,
+          0.9994064934179187
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12437539028909887,
+      "dark_detail": 164159.421875,
+      "light_detail": 127841.671875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.79737091064453,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459586032587358,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.79737091064453
+      }
+    },
+    {
+      "id": "f000006",
+      "time": 3.0,
+      "occlusion": 0.1153125,
+      "sharpness": 405.0642360188049,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        0.0027630670844587257,
+        -0.0015400659551687568,
+        1.0005212381150987
+      ],
+      "camera": {
+        "phase": [
+          0.0027630670844587257,
+          -0.0015400659551687568,
+          1.0005212381150987
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1240831731054532,
+      "dark_detail": 164412.734375,
+      "light_detail": 128114.96875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000007",
+      "time": 3.5,
+      "occlusion": 0.1153125,
+      "sharpness": 405.01132803269377,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        5.025420358606425e-05,
+        -0.0002477304070964692,
+        0.9997527962441867
+      ],
+      "camera": {
+        "phase": [
+          5.025420358606425e-05,
+          -0.0002477304070964692,
+          0.9997527962441867
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12408305302248318,
+      "dark_detail": 164412.734375,
+      "light_detail": 128115.0,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000008",
+      "time": 4.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.9606857626832,
+      "ink_pixels": 1658,
+      "cut": 0.20153211805555554,
+      "shift": [
+        0.046573994137020236,
+        -0.025025371265115837,
+        0.39607782165209454
+      ],
+      "camera": {
+        "phase": [
+          0.046573994137020236,
+          -0.025025371265115837,
+          0.39607782165209454
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1368053674902656,
+      "dark_detail": 110092.1484375,
+      "light_detail": 83594.7421875,
+      "surface_median": 233.99999727248309,
+      "ink_sharpness": 123.60615539550781,
+      "motion_fraction": 0.20274305555555555,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.46784396471338835,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.20274305555555555,
+        "ink_sharpness": 123.60615539550781
+      }
+    },
+    {
+      "id": "f000009",
+      "time": 4.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.93272134872245,
+      "ink_pixels": 1657,
+      "cut": 0.0,
+      "shift": [
+        -0.000484472936648217,
+        0.0001706129793319633,
+        0.9999701199639175
+      ],
+      "camera": {
+        "phase": [
+          -0.000484472936648217,
+          0.0001706129793319633,
+          0.9999701199639175
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13679534543567812,
+      "dark_detail": 110096.90625,
+      "light_detail": 83600.0625,
+      "surface_median": 233.99999727497624,
+      "ink_sharpness": 123.50030517578125,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825542304672166,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.50030517578125
+      }
+    },
+    {
+      "id": "f000010",
+      "time": 5.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.8516275987224,
+      "ink_pixels": 1657,
+      "cut": 0.0,
+      "shift": [
+        -0.0002807195627951842,
+        -0.0003304569654574152,
+        1.0003625432836514
+      ],
+      "camera": {
+        "phase": [
+          -0.0002807195627951842,
+          -0.0003304569654574152,
+          1.0003625432836514
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13679525373354176,
+      "dark_detail": 110096.90625,
+      "light_detail": 83600.078125,
+      "surface_median": 233.99999727497624,
+      "ink_sharpness": 123.50030517578125,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825542304672166,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.50030517578125
+      }
+    },
+    {
+      "id": "f000011",
+      "time": 5.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.858901904278,
+      "ink_pixels": 1657,
+      "cut": 0.0,
+      "shift": [
+        7.88704093679371e-05,
+        -1.1982664119614128e-05,
+        1.0000066191553034
+      ],
+      "camera": {
+        "phase": [
+          7.88704093679371e-05,
+          -1.1982664119614128e-05,
+          1.0000066191553034
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1367952995846081,
+      "dark_detail": 110096.90625,
+      "light_detail": 83600.0703125,
+      "surface_median": 233.99999727497624,
+      "ink_sharpness": 123.50030517578125,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825542304672166,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.50030517578125
+      }
+    },
+    {
+      "id": "f000012",
+      "time": 6.0,
+      "occlusion": 0.1153125,
+      "sharpness": 405.0642360188049,
+      "ink_pixels": 2350,
+      "cut": 0.20153211805555554,
+      "shift": [
+        -0.048265761053755796,
+        0.029393407213319733,
+        0.3965480695830451
+      ],
+      "camera": {
+        "phase": [
+          -0.048265761053755796,
+          0.029393407213319733,
+          0.3965480695830451
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1240831731054532,
+      "dark_detail": 164412.734375,
+      "light_detail": 128114.96875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.20274739583333334,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7155534383281802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.20274739583333334,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000013",
+      "time": 6.5,
+      "occlusion": 0.1153125,
+      "sharpness": 405.01132803269377,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        5.025420358606425e-05,
+        -0.0002477304070964692,
+        0.9997527962441867
+      ],
+      "camera": {
+        "phase": [
+          5.025420358606425e-05,
+          -0.0002477304070964692,
+          0.9997527962441867
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12408305302248318,
+      "dark_detail": 164412.734375,
+      "light_detail": 128115.0,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000014",
+      "time": 7.0,
+      "occlusion": 0.1153125,
+      "sharpness": 405.0138106715827,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        -0.000341152812211476,
+        -4.1516050998779974e-05,
+        1.0000146177987983
+      ],
+      "camera": {
+        "phase": [
+          -0.000341152812211476,
+          -4.1516050998779974e-05,
+          1.0000146177987983
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12408260271157408,
+      "dark_detail": 164412.734375,
+      "light_detail": 128115.1171875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000015",
+      "time": 7.5,
+      "occlusion": 0.1153125,
+      "sharpness": 405.0138106715827,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        0.0,
+        -2.842170943040401e-14,
+        0.9999999999999926
+      ],
+      "camera": {
+        "phase": [
+          0.0,
+          -2.842170943040401e-14,
+          0.9999999999999926
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12408260271157408,
+      "dark_detail": 164412.734375,
+      "light_detail": 128115.1171875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000016",
+      "time": 8.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.9606857626832,
+      "ink_pixels": 1658,
+      "cut": 0.20153211805555554,
+      "shift": [
+        0.04691630471558028,
+        -0.025775204871138158,
+        0.3959546024269528
+      ],
+      "camera": {
+        "phase": [
+          0.04691630471558028,
+          -0.025775204871138158,
+          0.3959546024269528
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1368053674902656,
+      "dark_detail": 110092.1484375,
+      "light_detail": 83594.7421875,
+      "surface_median": 233.99999727248309,
+      "ink_sharpness": 123.60615539550781,
+      "motion_fraction": 0.20274305555555555,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.46784396471338835,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.20274305555555555,
+        "ink_sharpness": 123.60615539550781
+      }
+    },
+    {
+      "id": "f000017",
+      "time": 8.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 299.93272134872245,
+      "ink_pixels": 1657,
+      "cut": 0.0,
+      "shift": [
+        -0.000484472936648217,
+        0.0001706129793319633,
+        0.9999701199639175
+      ],
+      "camera": {
+        "phase": [
+          -0.000484472936648217,
+          0.0001706129793319633,
+          0.9999701199639175
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13679534543567812,
+      "dark_detail": 110096.90625,
+      "light_detail": 83600.0625,
+      "surface_median": 233.99999727497624,
+      "ink_sharpness": 123.50030517578125,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.49825542304672166,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.50030517578125
+      }
+    },
+    {
+      "id": "f000018",
+      "time": 9.0,
+      "occlusion": 0.1153125,
+      "sharpness": 301.63356761602705,
+      "ink_pixels": 1653,
+      "cut": 0.0,
+      "shift": [
+        -0.0016193756679854232,
+        0.0039143485225565655,
+        1.0004356914261976
+      ],
+      "camera": {
+        "phase": [
+          -0.0016193756679854232,
+          0.0039143485225565655,
+          1.0004356914261976
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1365897883268006,
+      "dark_detail": 110235.1796875,
+      "light_detail": 83740.1328125,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.54083251953125,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.54083251953125
+      }
+    },
+    {
+      "id": "f000019",
+      "time": 9.5,
+      "occlusion": 0.1153125,
+      "sharpness": 301.6311804632493,
+      "ink_pixels": 1653,
+      "cut": 0.0,
+      "shift": [
+        0.00036569069862935066,
+        -0.000252233952323877,
+        0.9998554521799088
+      ],
+      "camera": {
+        "phase": [
+          0.00036569069862935066,
+          -0.000252233952323877,
+          0.9998554521799088
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13658266873718536,
+      "dark_detail": 110241.828125,
+      "light_detail": 83746.3984375,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.5456771850586,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.5456771850586
+      }
+    },
+    {
+      "id": "f000020",
+      "time": 10.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.4440884493604,
+      "ink_pixels": 2361,
+      "cut": 0.20152777777777778,
+      "shift": [
+        -0.048616526350485856,
+        0.02697946640418536,
+        0.3958129111925761
+      ],
+      "camera": {
+        "phase": [
+          -0.048616526350485856,
+          0.02697946640418536,
+          0.3958129111925761
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12432345986060765,
+      "dark_detail": 164113.15625,
+      "light_detail": 127819.125,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.7365493774414,
+      "motion_fraction": 0.20272569444444444,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7155497490920691,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.20272569444444444,
+        "ink_sharpness": 122.7365493774414
+      }
+    },
+    {
+      "id": "f000021",
+      "time": 10.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.37325511602705,
+      "ink_pixels": 2359,
+      "cut": 0.0,
+      "shift": [
+        -0.0009821625504855547,
+        0.0006429020985763145,
+        1.00000357846419
+      ],
+      "camera": {
+        "phase": [
+          -0.0009821625504855547,
+          0.0006429020985763145,
+          1.00000357846419
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12433742364831453,
+      "dark_detail": 164109.65625,
+      "light_detail": 127812.7734375,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.64942932128906,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459586032587358,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.64942932128906
+      }
+    },
+    {
+      "id": "f000022",
+      "time": 11.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.39680546324934,
+      "ink_pixels": 2359,
+      "cut": 0.0,
+      "shift": [
+        0.00034785300914563777,
+        6.984619633954026e-05,
+        0.9999518938911044
+      ],
+      "camera": {
+        "phase": [
+          0.00034785300914563777,
+          6.984619633954026e-05,
+          0.9999518938911044
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12433736346872737,
+      "dark_detail": 164109.65625,
+      "light_detail": 127812.7890625,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.64942932128906,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459586032587358,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.64942932128906
+      }
+    },
+    {
+      "id": "f000023",
+      "time": 11.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.3595485188049,
+      "ink_pixels": 2359,
+      "cut": 0.0,
+      "shift": [
+        1.2773314949754422e-05,
+        -6.0175927728778333e-05,
+        0.9999561519442229
+      ],
+      "camera": {
+        "phase": [
+          1.2773314949754422e-05,
+          -6.0175927728778333e-05,
+          0.9999561519442229
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12433736346872737,
+      "dark_detail": 164109.65625,
+      "light_detail": 127812.7890625,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.64942932128906,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459586032587358,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.64942932128906
+      }
+    },
+    {
+      "id": "f000024",
+      "time": 12.0,
+      "occlusion": 0.1153125,
+      "sharpness": 301.63356761602705,
+      "ink_pixels": 1653,
+      "cut": 0.2015234375,
+      "shift": [
+        0.05005365074924839,
+        -0.02477299740829153,
+        0.39599768135282726
+      ],
+      "camera": {
+        "phase": [
+          0.05005365074924839,
+          -0.02477299740829153,
+          0.39599768135282726
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1365897883268006,
+      "dark_detail": 110235.1796875,
+      "light_detail": 83740.1328125,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.54083251953125,
+      "motion_fraction": 0.20273003472222223,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.46785286228283274,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.20273003472222223,
+        "ink_sharpness": 123.54083251953125
+      }
+    },
+    {
+      "id": "f000025",
+      "time": 12.5,
+      "occlusion": 0.1153125,
+      "sharpness": 301.6311804632493,
+      "ink_pixels": 1653,
+      "cut": 0.0,
+      "shift": [
+        0.00036569069862935066,
+        -0.000252233952323877,
+        0.9998554521799088
+      ],
+      "camera": {
+        "phase": [
+          0.00036569069862935066,
+          -0.000252233952323877,
+          0.9998554521799088
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.13658266873718536,
+      "dark_detail": 110241.828125,
+      "light_detail": 83746.3984375,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.5456771850586,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.5456771850586
+      }
+    },
+    {
+      "id": "f000026",
+      "time": 13.0,
+      "occlusion": 0.1153125,
+      "sharpness": 301.63366310213814,
+      "ink_pixels": 1653,
+      "cut": 0.0,
+      "shift": [
+        -0.000161708436905883,
+        0.00011204291732269667,
+        1.0000107710508424
+      ],
+      "camera": {
+        "phase": [
+          -0.000161708436905883,
+          0.00011204291732269667,
+          1.0000107710508424
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1365819821326249,
+      "dark_detail": 110241.828125,
+      "light_detail": 83746.515625,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.5456771850586,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.5456771850586
+      }
+    },
+    {
+      "id": "f000027",
+      "time": 13.5,
+      "occlusion": 0.1153125,
+      "sharpness": 301.63366310213814,
+      "ink_pixels": 1653,
+      "cut": 0.0,
+      "shift": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "camera": {
+        "phase": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1365819821326249,
+      "dark_detail": 110241.828125,
+      "light_detail": 83746.515625,
+      "surface_median": 233.9999974811612,
+      "ink_sharpness": 123.5456771850586,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.4982623674911661,
+        "readable_support_fraction": 0.5855123674911661,
+        "obscured_support_fraction": 0.4144876325088339,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 123.5456771850586
+      }
+    },
+    {
+      "id": "f000028",
+      "time": 14.0,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.4440884493604,
+      "ink_pixels": 2361,
+      "cut": 0.20152777777777778,
+      "shift": [
+        -0.04878778683780638,
+        0.026936996545515512,
+        0.3959443930784861
+      ],
+      "camera": {
+        "phase": [
+          -0.04878778683780638,
+          0.026936996545515512,
+          0.3959443930784861
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12432345986060765,
+      "dark_detail": 164113.15625,
+      "light_detail": 127819.125,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.7365493774414,
+      "motion_fraction": 0.20272569444444444,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7155497490920691,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.20272569444444444,
+        "ink_sharpness": 122.7365493774414
+      }
+    },
+    {
+      "id": "f000029",
+      "time": 14.5,
+      "occlusion": 0.11532118055555556,
+      "sharpness": 401.37325511602705,
+      "ink_pixels": 2359,
+      "cut": 0.0,
+      "shift": [
+        -0.0009821625504855547,
+        0.0006429020985763145,
+        1.00000357846419
+      ],
+      "camera": {
+        "phase": [
+          -0.0009821625504855547,
+          0.0006429020985763145,
+          1.00000357846419
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12433742364831453,
+      "dark_detail": 164109.65625,
+      "light_detail": 127812.7734375,
+      "surface_median": 233.9962236026285,
+      "ink_sharpness": 122.64942932128906,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459586032587358,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.11532118055555556,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.64942932128906
+      }
+    },
+    {
+      "id": "f000030",
+      "time": 15.0,
+      "occlusion": 0.1153125,
+      "sharpness": 405.0642360188049,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        0.0008068892749406587,
+        -0.0003373341337180591,
+        1.0001670510321856
+      ],
+      "camera": {
+        "phase": [
+          0.0008068892749406587,
+          -0.0003373341337180591,
+          1.0001670510321856
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.1240831731054532,
+      "dark_detail": 164412.734375,
+      "light_detail": 128114.96875,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    },
+    {
+      "id": "f000031",
+      "time": 15.5,
+      "occlusion": 0.1153125,
+      "sharpness": 405.01132803269377,
+      "ink_pixels": 2350,
+      "cut": 0.0,
+      "shift": [
+        5.025420358606425e-05,
+        -0.0002477304070964692,
+        0.9997527962441867
+      ],
+      "camera": {
+        "phase": [
+          5.025420358606425e-05,
+          -0.0002477304070964692,
+          0.9997527962441867
+        ],
+        "verified": false,
+        "background_matches": 0,
+        "inliers": 0,
+        "reason": "no_large_shift"
+      },
+      "board": "whiteboard",
+      "board_confidence": 0.12408305302248318,
+      "dark_detail": 164412.734375,
+      "light_detail": 128115.0,
+      "surface_median": 233.9999977204872,
+      "ink_sharpness": 122.85276794433594,
+      "motion_fraction": 0.0,
+      "additions": 0,
+      "removals": 1,
+      "event": "none",
+      "selection": {
+        "score": 0.7459655477031802,
+        "readable_support_fraction": 0.8332155477031802,
+        "obscured_support_fraction": 0.1667844522968198,
+        "support_pixels": 2830,
+        "foreground_fraction": 0.1153125,
+        "motion_fraction": 0.0,
+        "ink_sharpness": 122.85276794433594
+      }
+    }
+  ],
+  "elapsed_seconds": 9.39,
+  "future_annotations": [],
+  "temporal_links_only": true,
+  "visual_error": null
+}

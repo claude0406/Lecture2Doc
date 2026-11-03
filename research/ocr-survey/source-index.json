@@ -1,0 +1,470 @@
+[
+  {
+    "repo": "BFlameSwift/Uni-MuMER",
+    "sha": "85732e04f60fcf7b26bcea9234fdb43c90ab1591",
+    "commit_date": "2026-05-11T02:54:42Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "scripts/eval_metrics_calculator.py",
+      "scripts/vllm_infer.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/BFlameSwift/Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/README.md",
+        "local_path": "sources/BFlameSwift--Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/README.md",
+        "sha256": "39944369558f4425281fbac3c7f7e74e42b248126685eb9c21dce25e61d9dcf4"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/BFlameSwift/Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/LICENSE",
+        "local_path": "sources/BFlameSwift--Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "path": "requirements.txt",
+        "url": "https://raw.githubusercontent.com/BFlameSwift/Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/requirements.txt",
+        "local_path": "sources/BFlameSwift--Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/requirements.txt",
+        "sha256": "da3b329f9836b06006136888d66f6cdd718a323aa8d89581e9660891e0c95b94"
+      },
+      {
+        "path": "scripts/vllm_infer.py",
+        "url": "https://raw.githubusercontent.com/BFlameSwift/Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/scripts/vllm_infer.py",
+        "local_path": "sources/BFlameSwift--Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/scripts/vllm_infer.py",
+        "sha256": "3930b29c71581ed1cc147084a56bfd3a1b082fd0e2057562517d1e385f29a096"
+      },
+      {
+        "path": "scripts/eval_metrics_calculator.py",
+        "url": "https://raw.githubusercontent.com/BFlameSwift/Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/scripts/eval_metrics_calculator.py",
+        "local_path": "sources/BFlameSwift--Uni-MuMER/85732e04f60fcf7b26bcea9234fdb43c90ab1591/scripts/eval_metrics_calculator.py",
+        "sha256": "7cee2215b1e4127afaf954d1c756b0a4eaf8016cf25f241f23ffd202fd9e5d8c"
+      }
+    ]
+  },
+  {
+    "repo": "lukas-blecher/LaTeX-OCR",
+    "sha": "5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80",
+    "commit_date": "2025-01-18T15:23:43Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "pix2tex/eval.py",
+      "pix2tex/model/__init__.py",
+      "pix2tex/model/checkpoints/__init__.py",
+      "pix2tex/model/checkpoints/get_latest_checkpoint.py",
+      "pix2tex/models/__init__.py",
+      "pix2tex/models/hybrid.py",
+      "pix2tex/models/transformer.py",
+      "pix2tex/models/utils.py",
+      "pix2tex/models/vit.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/lukas-blecher/LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/README.md",
+        "local_path": "sources/lukas-blecher--LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/README.md",
+        "sha256": "04467957dab6d4ccc1819b18ba7fcb32d64619bc8eca9f2eb4db3977cf77c1ac"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/lukas-blecher/LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/LICENSE",
+        "local_path": "sources/lukas-blecher--LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/LICENSE",
+        "sha256": "632b1eeba526bd5a0f298b865c8a13f57567f32891f5d36ed4be6d9815556403"
+      },
+      {
+        "path": "pix2tex/cli.py",
+        "url": "https://raw.githubusercontent.com/lukas-blecher/LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/pix2tex/cli.py",
+        "local_path": "sources/lukas-blecher--LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/pix2tex/cli.py",
+        "sha256": "ef4b33d0bd73a7b7c5dde403bc4351d29994ea7a322286f990db8f42d7c5cf9a"
+      },
+      {
+        "path": "setup.cfg",
+        "url": "https://raw.githubusercontent.com/lukas-blecher/LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/setup.cfg",
+        "local_path": "sources/lukas-blecher--LaTeX-OCR/5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80/setup.cfg",
+        "sha256": "316f7011b70bf7c17653ee184cc482f348a942cc540e2118fedee0edccdd5bf3"
+      }
+    ]
+  },
+  {
+    "repo": "opendatalab/UniMERNet",
+    "sha": "5a2c80d96b1d2dba447ff18d873e5fb73ba03c35",
+    "commit_date": "2025-09-28T11:15:13Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "cdm/evaluation.py",
+      "unimernet/models/__init__.py",
+      "unimernet/models/base_model.py",
+      "unimernet/models/blip2_models/Qformer.py",
+      "unimernet/models/blip2_models/__init__.py",
+      "unimernet/models/blip2_models/blip2.py",
+      "unimernet/models/blip2_models/blip2_vicuna_instruct.py",
+      "unimernet/models/blip2_models/modeling_llama.py",
+      "unimernet/models/blip2_models/modeling_llama_.py",
+      "unimernet/models/clip_vit.py",
+      "unimernet/models/eva_vit.py",
+      "unimernet/models/unimernet/__init__.py",
+      "unimernet/models/unimernet/configuration_unimernet_decoder.py",
+      "unimernet/models/unimernet/configuration_unimernet_encoder.py",
+      "unimernet/models/unimernet/encoder_decoder.py",
+      "unimernet/models/unimernet/modeling_unimernet_decoder.py",
+      "unimernet/models/unimernet/modeling_unimernet_encoder.py",
+      "unimernet/models/unimernet/processor.py",
+      "unimernet/models/unimernet/unimernet.py",
+      "unimernet/models/unimernet/utils.py",
+      "unimernet/models/vit.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/README.md",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/README.md",
+        "sha256": "35e79b9d17be0dad3f423b6e7a3fdf3f0a55f6e316070e7e310b6749fdb8106c"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/LICENSE",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/LICENSE",
+        "sha256": "974f8af8e77f0e7b3149a75e8b7870407abf760ca449ce3d792b76691887c271"
+      },
+      {
+        "path": "demo.py",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/demo.py",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/demo.py",
+        "sha256": "7d7d242171d5e113af43a16a1f53afcc43814c3d91abdfa27087705877fb10d3"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/pyproject.toml",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/pyproject.toml",
+        "sha256": "9e516164ed0391ad8135e58011d95459e3aa8d4ceb758a0c44686ebb5add4f48"
+      },
+      {
+        "path": "unimernet/models/unimernet/__init__.py",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/__init__.py",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "unimernet/models/unimernet/encoder_decoder.py",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/encoder_decoder.py",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/encoder_decoder.py",
+        "sha256": "3ead7c29a9dfa4c5f971b9aba614ea8e89b60014e8149bc02d3d04f517555ec9"
+      },
+      {
+        "path": "unimernet/models/unimernet/processor.py",
+        "url": "https://raw.githubusercontent.com/opendatalab/UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/processor.py",
+        "local_path": "sources/opendatalab--UniMERNet/5a2c80d96b1d2dba447ff18d873e5fb73ba03c35/unimernet/models/unimernet/processor.py",
+        "sha256": "802d79c3f0235bb8700e59503fb547903147954b3d3f9f92c6a3ece873f8516a"
+      }
+    ]
+  },
+  {
+    "repo": "PaddlePaddle/PaddleOCR",
+    "sha": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+    "commit_date": "2026-09-16T03:30:53Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "benchmark/PaddleOCR_DBNet/models/__init__.py",
+      "benchmark/PaddleOCR_DBNet/models/backbone/__init__.py",
+      "benchmark/PaddleOCR_DBNet/models/backbone/resnet.py",
+      "benchmark/PaddleOCR_DBNet/models/basic.py",
+      "benchmark/PaddleOCR_DBNet/models/head/DBHead.py",
+      "benchmark/PaddleOCR_DBNet/models/head/__init__.py",
+      "benchmark/PaddleOCR_DBNet/models/losses/DB_loss.py",
+      "benchmark/PaddleOCR_DBNet/models/losses/__init__.py",
+      "benchmark/PaddleOCR_DBNet/models/losses/basic_loss.py",
+      "benchmark/PaddleOCR_DBNet/models/model.py",
+      "benchmark/PaddleOCR_DBNet/models/neck/FPN.py",
+      "benchmark/PaddleOCR_DBNet/models/neck/__init__.py",
+      "benchmark/PaddleOCR_DBNet/tools/eval.py",
+      "benchmark/PaddleOCR_DBNet/tools/export_model.py",
+      "benchmark/PaddleOCR_DBNet/tools/infer.py",
+      "benchmark/PaddleOCR_DBNet/tools/predict.py",
+      "benchmark/PaddleOCR_DBNet/utils/cal_recall/rrc_evaluation_funcs.py",
+      "benchmark/PaddleOCR_DBNet/utils/ocr_metric/icdar2015/detection/deteval.py",
+      "deploy/ios_demo/scripts/quantize_onnx_model.py",
+      "deploy/slim/prune/export_prune_model.py",
+      "deploy/slim/quantization/export_model.py",
+      "mcp_server/paddleocr_mcp/inference/__init__.py",
+      "mcp_server/paddleocr_mcp/inference/base.py",
+      "mcp_server/paddleocr_mcp/inference/errors.py",
+      "mcp_server/paddleocr_mcp/inference/factory.py",
+      "mcp_server/paddleocr_mcp/inference/ocr/aistudio.py",
+      "mcp_server/paddleocr_mcp/inference/ocr/local.py",
+      "mcp_server/paddleocr_mcp/inference/ocr/params.py",
+      "mcp_server/paddleocr_mcp/inference/ocr/self_hosted.py",
+      "mcp_server/paddleocr_mcp/inference/paddleocr_vl/aistudio.py",
+      "mcp_server/paddleocr_mcp/inference/paddleocr_vl/local.py",
+      "mcp_server/paddleocr_mcp/inference/paddleocr_vl/params.py",
+      "mcp_server/paddleocr_mcp/inference/paddleocr_vl/qianfan.py",
+      "mcp_server/paddleocr_mcp/inference/paddleocr_vl/self_hosted.py",
+      "mcp_server/paddleocr_mcp/inference/pp_structurev3/aistudio.py",
+      "mcp_server/paddleocr_mcp/inference/pp_structurev3/local.py",
+      "mcp_server/paddleocr_mcp/inference/pp_structurev3/params.py",
+      "mcp_server/paddleocr_mcp/inference/pp_structurev3/qianfan.py",
+      "mcp_server/paddleocr_mcp/inference/pp_structurev3/self_hosted.py",
+      "mcp_server/paddleocr_mcp/inference/shared/async_http_client.py",
+      "mcp_server/paddleocr_mcp/inference/shared/doc_parsing_result_adapters.py",
+      "mcp_server/paddleocr_mcp/inference/shared/http_base.py",
+      "mcp_server/paddleocr_mcp/inference/shared/http_result_parsers.py",
+      "mcp_server/paddleocr_mcp/inference/shared/input_adapters.py",
+      "mcp_server/paddleocr_mcp/inference/shared/input_contract.py",
+      "mcp_server/paddleocr_mcp/inference/shared/local_sync_runner.py",
+      "mcp_server/paddleocr_mcp/inference/shared/paddleocr_api_sdk.py",
+      "mcp_server/paddleocr_mcp/inference/shared/param_mapping.py",
+      "mcp_server/paddleocr_mcp/inference/types.py",
+      "paddleocr/_api_client/models.py",
+      "paddleocr/_models/__init__.py",
+      "paddleocr/_models/_doc_vlm.py",
+      "paddleocr/_models/_image_classification.py",
+      "paddleocr/_models/_object_detection.py",
+      "paddleocr/_models/_text_detection.py",
+      "paddleocr/_models/base.py",
+      "paddleocr/_models/chart_parsing.py",
+      "paddleocr/_models/doc_img_orientation_classification.py",
+      "paddleocr/_models/doc_vlm.py",
+      "paddleocr/_models/formula_recognition.py"
+    ],
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE",
+        "local_path": "sources/PaddlePaddle--PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE",
+        "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"
+      },
+      {
+        "path": "paddleocr/_pipelines/ocr.py",
+        "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/ocr.py",
+        "local_path": "sources/PaddlePaddle--PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/ocr.py",
+        "sha256": "fc870f7a7f1b33756020d75c63c6dc0dc04981df1ff46627a040336ead9a9b88"
+      },
+      {
+        "path": "paddleocr/_pipelines/formula_recognition.py",
+        "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/formula_recognition.py",
+        "local_path": "sources/PaddlePaddle--PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/formula_recognition.py",
+        "sha256": "b38a90b1acb2228fd627e13eefbffd338fd69dfc7bfc0498508c91bd3331f06e"
+      },
+      {
+        "path": "paddleocr/_pipelines/paddleocr_vl.py",
+        "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/paddleocr_vl.py",
+        "local_path": "sources/PaddlePaddle--PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/paddleocr/_pipelines/paddleocr_vl.py",
+        "sha256": "2a411338b652ca6534861f52b380bae03d4ebcdbd20d9806bfbc3c8d3ecb0c2b"
+      },
+      {
+        "path": "docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.en.md",
+        "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.en.md",
+        "local_path": "sources/PaddlePaddle--PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/docs/version3.x/algorithm/PP-OCRv6/PP-OCRv6.en.md",
+        "sha256": "3c5b4d8e701b3f945ad60340cdc679d4db815f04d3176f34b750b96ce5b2468e"
+      }
+    ]
+  },
+  {
+    "repo": "zai-org/GLM-OCR",
+    "sha": "0288f96bb9e78cb439883eaa725eeae90bd177c5",
+    "commit_date": "2026-10-14T01:46:02Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "apps/backend/app/models/__init__.py",
+      "apps/backend/app/models/base.py",
+      "apps/backend/app/models/task.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/zai-org/GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/README.md",
+        "local_path": "sources/zai-org--GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/README.md",
+        "sha256": "9ac38aea0e14e24e9b49b3bcd33ab673e15999f546ea10de37e80ad69072de8d"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/zai-org/GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/LICENSE",
+        "local_path": "sources/zai-org--GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/LICENSE",
+        "sha256": "7cfe2db2477ee1e98b57ea1d8655aa8c39416022bab61aa4303e09af05495797"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/zai-org/GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/pyproject.toml",
+        "local_path": "sources/zai-org--GLM-OCR/0288f96bb9e78cb439883eaa725eeae90bd177c5/pyproject.toml",
+        "sha256": "c78281989e2d65a55d22684280ba2f223d440c847aa07550e8418e8ac8dd7d4a"
+      }
+    ]
+  },
+  {
+    "repo": "datalab-to/surya",
+    "sha": "9d5aadfebb07939755c24e8a80d0e61b3be80895",
+    "commit_date": "2026-10-29T17:01:23Z",
+    "checked_date": "2026-11-02",
+    "code_candidates": [
+      "surya/common/order/predictor.py",
+      "surya/common/predictor.py",
+      "surya/common/rfdetr/models/__init__.py",
+      "surya/common/rfdetr/models/backbone/__init__.py",
+      "surya/common/rfdetr/models/backbone/backbone.py",
+      "surya/common/rfdetr/models/backbone/base.py",
+      "surya/common/rfdetr/models/backbone/dinov2.py",
+      "surya/common/rfdetr/models/backbone/dinov2_with_windowed_attn.py",
+      "surya/common/rfdetr/models/backbone/projector.py",
+      "surya/common/rfdetr/models/lwdetr.py",
+      "surya/common/rfdetr/models/ops/__init__.py",
+      "surya/common/rfdetr/models/ops/functions/__init__.py",
+      "surya/common/rfdetr/models/ops/functions/ms_deform_attn_func.py",
+      "surya/common/rfdetr/models/ops/modules/__init__.py",
+      "surya/common/rfdetr/models/ops/modules/ms_deform_attn.py",
+      "surya/common/rfdetr/models/position_encoding.py",
+      "surya/common/rfdetr/models/transformer.py",
+      "surya/common/rfdetr/predictor.py",
+      "surya/detection/model/__init__.py",
+      "surya/detection/model/config.py",
+      "surya/detection/model/encoderdecoder.py",
+      "surya/inference/__init__.py",
+      "surya/inference/backends/__init__.py",
+      "surya/inference/backends/base.py",
+      "surya/inference/backends/llamacpp.py",
+      "surya/inference/backends/mlx.py",
+      "surya/inference/backends/openai_client.py",
+      "surya/inference/backends/spawn.py",
+      "surya/inference/backends/vllm.py",
+      "surya/inference/compact.py",
+      "surya/inference/merged_cells.py",
+      "surya/inference/parsers.py",
+      "surya/inference/prompts.py",
+      "surya/inference/schema.py",
+      "surya/inference/util.py",
+      "surya/ocr_error/model/__init__.py",
+      "surya/ocr_error/model/config.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/README.md",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/README.md",
+        "sha256": "792666a102411917fc8644ca09df201eb30662d6fc0ecacd026c54f91ed6891d"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/LICENSE",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/LICENSE",
+        "sha256": "5228cdd1e10f251cfb4e1644f341e88c204129e8a2c64573c256d448cb6504ad"
+      },
+      {
+        "path": "MODEL_LICENSE",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/MODEL_LICENSE",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/MODEL_LICENSE",
+        "sha256": "636dfb8eb19efc5835ed6efb878f8b694a93f028c715d2547d831e2a55440276"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/pyproject.toml",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/pyproject.toml",
+        "sha256": "7656b7e5f2c5c54de1377e47741c75cddd7ad24e3b22d8a34bd0b05d7a8c520b"
+      },
+      {
+        "path": "surya/inference/backends/llamacpp.py",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/backends/llamacpp.py",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/backends/llamacpp.py",
+        "sha256": "8765d3723aea3847e0068d9672de22ff9be596edc768d672b75b3b7b343aa04b"
+      },
+      {
+        "path": "surya/inference/parsers.py",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/parsers.py",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/parsers.py",
+        "sha256": "102596d33d387171e0e1ad705529ccd3dfa5b8f10a57c5ef5535c5ef94ea0ad9"
+      },
+      {
+        "path": "surya/inference/prompts.py",
+        "url": "https://raw.githubusercontent.com/datalab-to/surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/prompts.py",
+        "local_path": "sources/datalab-to--surya/9d5aadfebb07939755c24e8a80d0e61b3be80895/surya/inference/prompts.py",
+        "sha256": "e5557f0fb72283f86aea36e7a2bfeab885f962d324251e241983f87365b015d2"
+      }
+    ]
+  },
+  {
+    "repo": "RapidAI/RapidOCR",
+    "sha": "80b427d69bfc5b91a12913394875910296c6f315",
+    "commit_date": "2026-10-25T14:47:58Z",
+    "checked_date": "2026-11-02",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/README.md",
+        "local_path": "sources/RapidAI--RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/README.md",
+        "sha256": "7bc89a454369b04f055731f1a66266de1ba1c6627af372884f37e4bccb84e90b"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/LICENSE",
+        "local_path": "sources/RapidAI--RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/LICENSE",
+        "sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333"
+      },
+      {
+        "path": "python/rapidocr/default_models.yaml",
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/python/rapidocr/default_models.yaml",
+        "local_path": "sources/RapidAI--RapidOCR/80b427d69bfc5b91a12913394875910296c6f315/python/rapidocr/default_models.yaml",
+        "sha256": "90e0159dead16c21adbf000014a46043c981ae097f041d92d8b19a52c2f2ed9a"
+      }
+    ]
+  },
+  {
+    "repo": "OleehyO/TexTeller",
+    "sha": "9b88cec77bda735aa16f9fc7e4ccb4eb1500a8b2",
+    "commit_date": "2025-08-22T13:45:41Z",
+    "checked_date": "2026-11-02",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/OleehyO/TexTeller/9b88cec77bda735aa16f9fc7e4ccb4eb1500a8b2/README.md",
+        "local_path": "sources/OleehyO--TexTeller/9b88cec77bda735aa16f9fc7e4ccb4eb1500a8b2/README.md",
+        "sha256": "710f5d72f10456cf0e0ad6e77988f9a17cdce4a9ca21a19d9e4e835afec982fb"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/OleehyO/TexTeller/9b88cec77bda735aa16f9fc7e4ccb4eb1500a8b2/LICENSE",
+        "local_path": "sources/OleehyO--TexTeller/9b88cec77bda735aa16f9fc7e4ccb4eb1500a8b2/LICENSE",
+        "sha256": "229eec032b2c84c01aa27d9aaf43bf9c93fa47144b97386ca832d9ac21b78317"
+      }
+    ]
+  },
+  {
+    "repo": "breezedeus/Pix2Text",
+    "sha": "f52e671247c14a29aa59b44e99849e00aee984cd",
+    "commit_date": "2026-08-23T09:23:06Z",
+    "checked_date": "2026-11-02",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/README.md",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/README.md",
+        "sha256": "54874132c39e7bf06ffa5876b1c5b7a3aada19ec60db42e592551bee65df57e1"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/LICENSE",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/LICENSE",
+        "sha256": "416a9f7130fa7f1800ab3d766e3e9535a8e8951eee7abbffd2974b8e9947e47b"
+      },
+      {
+        "path": "pix2text/text_formula_ocr.py",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/text_formula_ocr.py",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/text_formula_ocr.py",
+        "sha256": "350b74906d1feeb4c6cd196c8847bcad4d9d613dca1f1d3cba231575e9c2e0b7"
+      },
+      {
+        "path": "pix2text/pix_to_text.py",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/pix_to_text.py",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/pix_to_text.py",
+        "sha256": "1eee78cabb0e2f4c448ef06b7ea450253b2e9fed856175c1019784935b6d19d9"
+      },
+      {
+        "path": "pix2text/latex_ocr.py",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/latex_ocr.py",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/pix2text/latex_ocr.py",
+        "sha256": "c3a02a9f8a5fbdb9d3d0977e0702114738aab1ffd5e725ffb7fcb788ae6d6b1c"
+      },
+      {
+        "path": "setup.py",
+        "url": "https://raw.githubusercontent.com/breezedeus/Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/setup.py",
+        "local_path": "sources/breezedeus--Pix2Text/f52e671247c14a29aa59b44e99849e00aee984cd/setup.py",
+        "sha256": "2a1b26120c94bf7232b19c35ae501d611801eb133f0c95e9ec03b0e39215f5d5"
+      }
+    ]
+  }
+]

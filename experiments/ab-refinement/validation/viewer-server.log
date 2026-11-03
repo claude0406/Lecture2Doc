@@ -1,0 +1,51 @@
+INFO:     Started server process [19168]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8884 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35976 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35976 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35986 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35976 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35986 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35992 - "GET /api/jobs/000000000000000000000001/manifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35992 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000684.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36044 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000127.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36026 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000063.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36000 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000000.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36016 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000032.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36034 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000095.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35992 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-001570.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36000 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-001279.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36026 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000190.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36044 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000159.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36016 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000222.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36034 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-002063.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35992 - "GET /api/jobs/000000000000000000000001/files/source.mp4 HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:36034 - "GET /api/jobs/000000000000000000000001/files/source.mp4 HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:36034 - "GET /api/jobs/000000000000000000000001/files/source.mp4 HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:36366 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36382 - "GET /api/jobs/000000000000000000000001/manifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36366 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36382 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000254.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36366 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000286.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36416 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000381.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36400 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000349.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36386 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000317.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36430 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000413.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36366 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000444.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36386 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000476.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36416 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000508.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36382 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000540.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36430 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000603.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36400 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000571.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36366 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000635.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36416 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000667.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36386 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000682.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36382 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000697.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36400 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000698.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36430 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000707.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36386 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000716.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36366 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000708.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36382 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000720.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36416 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000719.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36400 - "GET /api/jobs/000000000000000000000001/files/cache/decode/ef04c180dd0c4b7b5280/frame-000730.png HTTP/1.1" 200 OK

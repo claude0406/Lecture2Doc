@@ -1,0 +1,149 @@
+[
+  {
+    "model": "microsoft/trocr-base-handwritten",
+    "revision": "eaacaf452b06415df8f10bb6fad3a4c11e609406",
+    "checked_date": "2026-11-02",
+    "license": "mit",
+    "languages": null,
+    "url": "https://huggingface.co/microsoft/trocr-base-handwritten/raw/eaacaf452b06415df8f10bb6fad3a4c11e609406/README.md",
+    "local_path": "model-cards/microsoft--trocr-base-handwritten/eaacaf452b06415df8f10bb6fad3a4c11e609406/README.md",
+    "sha256": "9f808e1fc12dcb61c89a38f00303506dbc85db8ea988cec441a9324e0c8f2843"
+  },
+  {
+    "model": "PaddlePaddle/PP-OCRv6_small_rec",
+    "revision": "bd619643acac4b9650c040234da8d944476ee3f1",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec/raw/bd619643acac4b9650c040234da8d944476ee3f1/README.md",
+    "local_path": "model-cards/PaddlePaddle--PP-OCRv6_small_rec/bd619643acac4b9650c040234da8d944476ee3f1/README.md",
+    "sha256": "832f68feddefeffd63ba133b961b7c44a9603d5cde20c14c87383c9440694f7a"
+  },
+  {
+    "model": "PaddlePaddle/korean_PP-OCRv5_mobile_rec",
+    "revision": "c02ecaf1f22bfd1c618cce154fd19185b47e663a",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "zh",
+      "ko"
+    ],
+    "url": "https://huggingface.co/PaddlePaddle/korean_PP-OCRv5_mobile_rec/raw/c02ecaf1f22bfd1c618cce154fd19185b47e663a/README.md",
+    "local_path": "model-cards/PaddlePaddle--korean_PP-OCRv5_mobile_rec/c02ecaf1f22bfd1c618cce154fd19185b47e663a/README.md",
+    "sha256": "0524f6bd8681b9b37f817a11a0bdd8cc99d5a4968b65b693baf532fb73f8a99b"
+  },
+  {
+    "model": "wanderkid/unimernet_small",
+    "revision": "82cb85440138c2038680fca410c8f70bb7343d6d",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": null,
+    "url": "https://huggingface.co/wanderkid/unimernet_small/raw/82cb85440138c2038680fca410c8f70bb7343d6d/README.md",
+    "local_path": "model-cards/wanderkid--unimernet_small/82cb85440138c2038680fca410c8f70bb7343d6d/README.md",
+    "sha256": "1bb14e76ecf4029bf1e50429acc1f7ae10e69ea0bcc409df1e9cf637c616a5fb"
+  },
+  {
+    "model": "PaddlePaddle/PP-FormulaNet_plus-M",
+    "revision": "712e6e2e4c313b1ea163be5c350127b82662c58d",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "url": "https://huggingface.co/PaddlePaddle/PP-FormulaNet_plus-M/raw/712e6e2e4c313b1ea163be5c350127b82662c58d/README.md",
+    "local_path": "model-cards/PaddlePaddle--PP-FormulaNet_plus-M/712e6e2e4c313b1ea163be5c350127b82662c58d/README.md",
+    "sha256": "20ecf881e6fdbc0f8bc3091d1197d30bcdbea143dc015ee05a8e039d6441346d"
+  },
+  {
+    "model": "phxember/Uni-MuMER-Qwen3-VL-2B",
+    "revision": "26d57451c9182b68c60aef78634bfea20c41a866",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en"
+    ],
+    "url": "https://huggingface.co/phxember/Uni-MuMER-Qwen3-VL-2B/raw/26d57451c9182b68c60aef78634bfea20c41a866/README.md",
+    "local_path": "model-cards/phxember--Uni-MuMER-Qwen3-VL-2B/26d57451c9182b68c60aef78634bfea20c41a866/README.md",
+    "sha256": "1388bde3ada831f9e0310e640ad038e70fb708aca6fd32f8587ff04f3b97737e"
+  },
+  {
+    "model": "PaddlePaddle/PaddleOCR-VL-1.6",
+    "revision": "c5630abae1d940eafe0697512a0325494b02ab42",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "zh",
+      "multilingual"
+    ],
+    "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6/raw/c5630abae1d940eafe0697512a0325494b02ab42/README.md",
+    "local_path": "model-cards/PaddlePaddle--PaddleOCR-VL-1.6/c5630abae1d940eafe0697512a0325494b02ab42/README.md",
+    "sha256": "d6c5b77a660577f6e18021defccd835bdc93a8c6538f5a479d597f3e94288abf"
+  },
+  {
+    "model": "zai-org/GLM-OCR",
+    "revision": "2e85a62840ccac27daa451df36c736c4636b8628",
+    "checked_date": "2026-11-02",
+    "license": "mit",
+    "languages": [
+      "zh",
+      "en",
+      "fr",
+      "es",
+      "ru",
+      "de",
+      "ja",
+      "ko"
+    ],
+    "url": "https://huggingface.co/zai-org/GLM-OCR/raw/2e85a62840ccac27daa451df36c736c4636b8628/README.md",
+    "local_path": "model-cards/zai-org--GLM-OCR/2e85a62840ccac27daa451df36c736c4636b8628/README.md",
+    "sha256": "172334449c3df98650bc9a42781c254c64c9d466b440e2ca8ce31f99829212b2"
+  },
+  {
+    "model": "lightonai/LightOnOCR-2-1B",
+    "revision": "be7c41313c30e940fe5571de59e5fabc779e00c8",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "it",
+      "nl",
+      "pt",
+      "sv",
+      "da",
+      "zh",
+      "ja"
+    ],
+    "url": "https://huggingface.co/lightonai/LightOnOCR-2-1B/raw/be7c41313c30e940fe5571de59e5fabc779e00c8/README.md",
+    "local_path": "model-cards/lightonai--LightOnOCR-2-1B/be7c41313c30e940fe5571de59e5fabc779e00c8/README.md",
+    "sha256": "d1f6210e238042fa858dc7a8449b40f7e973c7ceca20b2de9f0b0e5523f68394"
+  },
+  {
+    "model": "lightonai/LightOnOCR-3-4B",
+    "revision": "b71010f095dc3735de7ee6b9969bff8f8f50b39a",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": null,
+    "url": "https://huggingface.co/lightonai/LightOnOCR-3-4B/raw/b71010f095dc3735de7ee6b9969bff8f8f50b39a/README.md",
+    "local_path": "model-cards/lightonai--LightOnOCR-3-4B/b71010f095dc3735de7ee6b9969bff8f8f50b39a/README.md",
+    "sha256": "4c56af1be12a620d0cadbb09976c0cd02fac5557f0f780be747d35bd6689fc54"
+  },
+  {
+    "model": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "checked_date": "2026-11-02",
+    "license": "apache-2.0",
+    "languages": null,
+    "url": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct/raw/89644892e4d85e24eaac8bacfd4f463576704203/README.md",
+    "local_path": "model-cards/Qwen--Qwen3-VL-2B-Instruct/89644892e4d85e24eaac8bacfd4f463576704203/README.md",
+    "sha256": "5fc5be1ca9a3910399bd6239ee5086ab5d82a2a59c5d2b00e887a8835cc110e4"
+  }
+]

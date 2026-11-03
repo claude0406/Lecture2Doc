@@ -1,0 +1,138 @@
+{
+  "scope": "Original selected functions with IO adapters; not complete upstream applications",
+  "results": {
+    "cut": {
+      "analysis_video_event_count": 1,
+      "analysis_video_event_times": [
+        6.0
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.37167891067517467,
+      "lecture_capture_first_last_change_fraction": 1.0,
+      "lecture_capture_first_last_is_change": true,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "long_hold": {
+      "analysis_video_event_count": 0,
+      "analysis_video_event_times": [],
+      "lecture_capture_default_scan_times": [
+        0.0,
+        20.0
+      ],
+      "lecture_capture_first_last_ssim": 0.9999619346572514,
+      "lecture_capture_first_last_change_fraction": 0.0,
+      "lecture_capture_first_last_is_change": false,
+      "lecture_to_notes_extracted": 3,
+      "lecture_to_notes_unique": 1
+    },
+    "motion_only": {
+      "analysis_video_event_count": 13,
+      "analysis_video_event_times": [
+        0.3333333333333333,
+        1.3333333333333333,
+        2.3333333333333335,
+        3.0,
+        3.8333333333333335,
+        4.666666666666667,
+        5.333333333333333,
+        6.333333333333333,
+        7.333333333333333,
+        8.333333333333334,
+        9.333333333333334,
+        10.333333333333334,
+        11.333333333333334
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.8456234416997956,
+      "lecture_capture_first_last_change_fraction": 0.3252951388888889,
+      "lecture_capture_first_last_is_change": true,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "never_visible": {
+      "analysis_video_event_count": 0,
+      "analysis_video_event_times": [],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 1.0,
+      "lecture_capture_first_last_change_fraction": 0.0,
+      "lecture_capture_first_last_is_change": false,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "occlusion": {
+      "analysis_video_event_count": 5,
+      "analysis_video_event_times": [
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.8683508311814799,
+      "lecture_capture_first_last_change_fraction": 0.2388715277777778,
+      "lecture_capture_first_last_is_change": true,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "partial_erase": {
+      "analysis_video_event_count": 1,
+      "analysis_video_event_times": [
+        6.0
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.9846551563524927,
+      "lecture_capture_first_last_change_fraction": 0.014878472222222222,
+      "lecture_capture_first_last_is_change": false,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "progressive": {
+      "analysis_video_event_count": 3,
+      "analysis_video_event_times": [
+        3.0,
+        6.0,
+        9.0
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.9517972120763195,
+      "lecture_capture_first_last_change_fraction": 0.04732638888888889,
+      "lecture_capture_first_last_is_change": false,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    },
+    "rewrite": {
+      "analysis_video_event_count": 1,
+      "analysis_video_event_times": [
+        6.0
+      ],
+      "lecture_capture_default_scan_times": [
+        0.0
+      ],
+      "lecture_capture_first_last_ssim": 0.9889953798800685,
+      "lecture_capture_first_last_change_fraction": 0.014756944444444444,
+      "lecture_capture_first_last_is_change": false,
+      "lecture_to_notes_extracted": 1,
+      "lecture_to_notes_unique": 1
+    }
+  },
+  "sources": {
+    "hwanyong/analysis-video": "c0fc97080d3febd35f938e39a26fac25e31ef35f",
+    "eric-lf02/lecture-capture": "9b8b4004888a0d6812f3e39608e45eb9db7a8642",
+    "drpwchen/lecture-to-notes": "cc06141939ce56def13a15410d8d07e861028d94",
+    "kdavila/lecturemath": "245d58a20393166addacb9ece75326ef3455b16f"
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "page": {
+    "id": "p00004",
+    "scene": 0,
+    "start": 239.7395,
+    "end": 259.7595,
+    "source_frame_ids": [
+      "f000479",
+      "f000480",
+      "f000481",
+      "f000482",
+      "f000483",
+      "f000484",
+      "f000485",
+      "f000486",
+      "f000487",
+      "f000488",
+      "f000489",
+      "f000490",
+      "f000491",
+      "f000492",
+      "f000493",
+      "f000494",
+      "f000495",
+      "f000496",
+      "f000497",
+      "f000498",
+      "f000499",
+      "f000500",
+      "f000501",
+      "f000502",
+      "f000503",
+      "f000504",
+      "f000505",
+      "f000506",
+      "f000507",
+      "f000508",
+      "f000509",
+      "f000510",
+      "f000511",
+      "f000512",
+      "f000513",
+      "f000514",
+      "f000515",
+      "f000516",
+      "f000517",
+      "f000518"
+    ],
+    "selected_frame_id": "f000512",
+    "selection_reason": "terminal_readable_writing",
+    "selection_candidates": [
+      {
+        "source_frame_id": "f000512",
+        "time": 256.256,
+        "score": 0.7471131049807149,
+        "readable_fraction": 0.7908709827666511,
+        "hidden_fraction": 0.20843036795528644,
+        "extra_fraction": 0.017466231951560315,
+        "foreground_fraction": 0.08783854166666667
+      },
+      {
+        "source_frame_id": "f000511",
+        "time": 255.7555,
+        "score": 0.7276934022894854,
+        "readable_fraction": 0.768048439683279,
+        "hidden_fraction": 0.23008849557522124,
+        "extra_fraction": 0.006287843502561714,
+        "foreground_fraction": 0.09045138888888889
+      },
+      {
+        "source_frame_id": "f000507",
+        "time": 253.7535,
+        "score": 0.7260557092611917,
+        "readable_fraction": 0.7643223102002794,
+        "hidden_fraction": 0.21262226362366093,
+        "extra_fraction": 0.008150908244061481,
+        "foreground_fraction": 0.06963975694444445
+      },
+      {
+        "source_frame_id": "f000513",
+        "time": 256.7565,
+        "score": 0.7259817598285224,
+        "readable_fraction": 0.7738705170004657,
+        "hidden_fraction": 0.22543083372147182,
+        "extra_fraction": 0.019562179785747556,
+        "foreground_fraction": 0.09912326388888888
+      },
+      {
+        "source_frame_id": "f000508",
+        "time": 254.254,
+        "score": 0.7223585941320694,
+        "readable_fraction": 0.7573358174196554,
+        "hidden_fraction": 0.22007452258965998,
+        "extra_fraction": 0.0004657661853749418,
+        "foreground_fraction": 0.07680989583333334
+      },
+      {
+        "source_frame_id": "f000509",
+        "time": 254.7545,
+        "score": 0.7056921527952126,
+        "readable_fraction": 0.7456916627852818,
+        "hidden_fraction": 0.251746623195156,
+        "extra_fraction": 0.0004657661853749418,
+        "foreground_fraction": 0.08661024305555555
+      },
+      {
+        "source_frame_id": "f000510",
+        "time": 255.255,
+        "score": 0.696517079863469,
+        "readable_fraction": 0.7382394038192828,
+        "hidden_fraction": 0.25733581741965533,
+        "extra_fraction": 0.0018630647414997672,
+        "foreground_fraction": 0.08788628472222222
+      },
+      {
+        "source_frame_id": "f000502",
+        "time": 251.251,
+        "score": 0.6272597746577363,
+        "readable_fraction": 0.695388914764788,
+        "hidden_fraction": 0.23148579413134607,
+        "extra_fraction": 0.05472752678155566,
+        "foreground_fraction": 0.04141059027777778
+      }
+    ],
+    "boundary_reason": "confirmed_erasure_or_revision",
+    "quality_flags": [
+      "complete_original_not_observed",
+      "foreground_present_original_used"
+    ],
+    "transcript_ids": [],
+    "target_ink_pixels": 4294,
+    "original_complete_estimate": false
+  },
+  "candidates": [
+    {
+      "source_frame_id": "f000479",
+      "time": 239.7395,
+      "score": 0.5779319697032267,
+      "readable_fraction": 0.6187703772706101,
+      "hidden_fraction": 0.24289706567303213,
+      "extra_fraction": 0.0032603632976245926,
+      "foreground_fraction": 0.10075520833333333
+    },
+    {
+      "source_frame_id": "f000480",
+      "time": 240.24,
+      "score": 0.18587284435903115,
+      "readable_fraction": 0.2713088029809036,
+      "hidden_fraction": 0.5687005123428039,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.028259548611111112
+    },
+    {
+      "source_frame_id": "f000481",
+      "time": 240.7405,
+      "score": 0.21641773190915892,
+      "readable_fraction": 0.29785747554727526,
+      "hidden_fraction": 0.5423847228691197,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.0249609375
+    },
+    {
+      "source_frame_id": "f000482",
+      "time": 241.241,
+      "score": 0.26036477304984834,
+      "readable_fraction": 0.3360503027480205,
+      "hidden_fraction": 0.504424778761062,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.02280815972222222
+    },
+    {
+      "source_frame_id": "f000483",
+      "time": 241.7415,
+      "score": 0.23357619306776506,
+      "readable_fraction": 0.3127619934792734,
+      "hidden_fraction": 0.528178854215184,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.020568576388888888
+    },
+    {
+      "source_frame_id": "f000484",
+      "time": 242.242,
+      "score": 0.3273281949275955,
+      "readable_fraction": 0.39496972519795065,
+      "hidden_fraction": 0.4459711224965068,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.04875434027777778
+    },
+    {
+      "source_frame_id": "f000485",
+      "time": 242.7425,
+      "score": 0.4994119403610132,
+      "readable_fraction": 0.5551932929669307,
+      "hidden_fraction": 0.35235211923614346,
+      "extra_fraction": 0.0002328830926874709,
+      "foreground_fraction": 0.11205729166666667
+    },
+    {
+      "source_frame_id": "f000486",
+      "time": 243.243,
+      "score": 0.4773122880135462,
+      "readable_fraction": 0.5384257102934327,
+      "hidden_fraction": 0.38821611551001395,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.11485677083333333
+    },
+    {
+      "source_frame_id": "f000487",
+      "time": 243.7435,
+      "score": 0.42373034072994276,
+      "readable_fraction": 0.492081974848626,
+      "hidden_fraction": 0.4354913833255706,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.12154079861111111
+    },
+    {
+      "source_frame_id": "f000488",
+      "time": 244.244,
+      "score": 0.4840638795444525,
+      "readable_fraction": 0.5447135537959944,
+      "hidden_fraction": 0.38542151839776434,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.11507378472222222
+    },
+    {
+      "source_frame_id": "f000489",
+      "time": 244.7445,
+      "score": 0.405537501867416,
+      "readable_fraction": 0.4764788076385654,
+      "hidden_fraction": 0.45016301816488125,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.13600260416666668
+    },
+    {
+      "source_frame_id": "f000490",
+      "time": 245.245,
+      "score": 0.43797443102342964,
+      "readable_fraction": 0.5046576618537494,
+      "hidden_fraction": 0.4226828132277597,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.13176649305555554
+    },
+    {
+      "source_frame_id": "f000491",
+      "time": 245.7455,
+      "score": 0.41878293338307604,
+      "readable_fraction": 0.48672566371681414,
+      "hidden_fraction": 0.43013507219375874,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.13555121527777778
+    },
+    {
+      "source_frame_id": "f000492",
+      "time": 246.246,
+      "score": 0.13713720669456936,
+      "readable_fraction": 0.23707498835584537,
+      "hidden_fraction": 0.643921751280857,
+      "extra_fraction": 0.0037261294829995344,
+      "foreground_fraction": 0.06499131944444445
+    },
+    {
+      "source_frame_id": "f000493",
+      "time": 246.7465,
+      "score": 0.4398040673193512,
+      "readable_fraction": 0.49720540288775034,
+      "hidden_fraction": 0.38425710293432697,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.013190104166666666
+    },
+    {
+      "source_frame_id": "f000494",
+      "time": 247.247,
+      "score": 0.38301045414738505,
+      "readable_fraction": 0.4473684210526316,
+      "hidden_fraction": 0.43060083837913365,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.012473958333333333
+    },
+    {
+      "source_frame_id": "f000495",
+      "time": 247.7475,
+      "score": 0.2698568752719163,
+      "readable_fraction": 0.3493246390312063,
+      "hidden_fraction": 0.5305076851420587,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.018194444444444444
+    },
+    {
+      "source_frame_id": "f000496",
+      "time": 248.248,
+      "score": 0.5170284821686658,
+      "readable_fraction": 0.5901257568700512,
+      "hidden_fraction": 0.29552864462040057,
+      "extra_fraction": 0.04750815090824406,
+      "foreground_fraction": 0.030520833333333334
+    },
+    {
+      "source_frame_id": "f000497",
+      "time": 248.7485,
+      "score": 0.6238932968671417,
+      "readable_fraction": 0.7042384722869119,
+      "hidden_fraction": 0.20982766651141127,
+      "extra_fraction": 0.0808104331625524,
+      "foreground_fraction": 0.03429253472222222
+    },
+    {
+      "source_frame_id": "f000498",
+      "time": 249.249,
+      "score": 0.5386493948161796,
+      "readable_fraction": 0.6313460642757336,
+      "hidden_fraction": 0.26571960875640427,
+      "extra_fraction": 0.08733115975780158,
+      "foreground_fraction": 0.03626302083333333
+    },
+    {
+      "source_frame_id": "f000499",
+      "time": 249.7495,
+      "score": 0.5398688083742257,
+      "readable_fraction": 0.6334420121099208,
+      "hidden_fraction": 0.27969259431765253,
+      "extra_fraction": 0.08523521192361434,
+      "foreground_fraction": 0.037469618055555556
+    },
+    {
+      "source_frame_id": "f000500",
+      "time": 250.25,
+      "score": 0.5972581304250344,
+      "readable_fraction": 0.6802515137401025,
+      "hidden_fraction": 0.23800652072659526,
+      "extra_fraction": 0.07801583605030275,
+      "foreground_fraction": 0.0378125
+    },
+    {
+      "source_frame_id": "f000501",
+      "time": 250.7505,
+      "score": 0.6095326649755707,
+      "readable_fraction": 0.6858407079646017,
+      "hidden_fraction": 0.24895202608290637,
+      "extra_fraction": 0.06404285048905449,
+      "foreground_fraction": 0.03975694444444444
+    },
+    {
+      "source_frame_id": "f000502",
+      "time": 251.251,
+      "score": 0.6272597746577363,
+      "readable_fraction": 0.695388914764788,
+      "hidden_fraction": 0.23148579413134607,
+      "extra_fraction": 0.05472752678155566,
+      "foreground_fraction": 0.04141059027777778
+    },
+    {
+      "source_frame_id": "f000503",
+      "time": 251.7515,
+      "score": 0.566734434099594,
+      "readable_fraction": 0.6278528178854215,
+      "hidden_fraction": 0.30857009781089895,
+      "extra_fraction": 0.02352119236143456,
+      "foreground_fraction": 0.04729600694444445
+    },
+    {
+      "source_frame_id": "f000504",
+      "time": 252.252,
+      "score": 0.548366519996132,
+      "readable_fraction": 0.615742897065673,
+      "hidden_fraction": 0.33558453656264553,
+      "extra_fraction": 0.02701443875174662,
+      "foreground_fraction": 0.05130642361111111
+    },
+    {
+      "source_frame_id": "f000505",
+      "time": 252.7525,
+      "score": 0.624209261858158,
+      "readable_fraction": 0.6732650209594784,
+      "hidden_fraction": 0.2834187238006521,
+      "extra_fraction": 0.009548206800186306,
+      "foreground_fraction": 0.05088541666666667
+    },
+    {
+      "source_frame_id": "f000506",
+      "time": 253.253,
+      "score": 0.539466401468673,
+      "readable_fraction": 0.6075919888216116,
+      "hidden_fraction": 0.35491383325570564,
+      "extra_fraction": 0.02328830926874709,
+      "foreground_fraction": 0.055577256944444445
+    },
+    {
+      "source_frame_id": "f000507",
+      "time": 253.7535,
+      "score": 0.7260557092611917,
+      "readable_fraction": 0.7643223102002794,
+      "hidden_fraction": 0.21262226362366093,
+      "extra_fraction": 0.008150908244061481,
+      "foreground_fraction": 0.06963975694444445
+    },
+    {
+      "source_frame_id": "f000508",
+      "time": 254.254,
+      "score": 0.7223585941320694,
+      "readable_fraction": 0.7573358174196554,
+      "hidden_fraction": 0.22007452258965998,
+      "extra_fraction": 0.0004657661853749418,
+      "foreground_fraction": 0.07680989583333334
+    },
+    {
+      "source_frame_id": "f000509",
+      "time": 254.7545,
+      "score": 0.7056921527952126,
+      "readable_fraction": 0.7456916627852818,
+      "hidden_fraction": 0.251746623195156,
+      "extra_fraction": 0.0004657661853749418,
+      "foreground_fraction": 0.08661024305555555
+    },
+    {
+      "source_frame_id": "f000510",
+      "time": 255.255,
+      "score": 0.696517079863469,
+      "readable_fraction": 0.7382394038192828,
+      "hidden_fraction": 0.25733581741965533,
+      "extra_fraction": 0.0018630647414997672,
+      "foreground_fraction": 0.08788628472222222
+    },
+    {
+      "source_frame_id": "f000511",
+      "time": 255.7555,
+      "score": 0.7276934022894854,
+      "readable_fraction": 0.768048439683279,
+      "hidden_fraction": 0.23008849557522124,
+      "extra_fraction": 0.006287843502561714,
+      "foreground_fraction": 0.09045138888888889
+    },
+    {
+      "source_frame_id": "f000512",
+      "time": 256.256,
+      "score": 0.7471131049807149,
+      "readable_fraction": 0.7908709827666511,
+      "hidden_fraction": 0.20843036795528644,
+      "extra_fraction": 0.017466231951560315,
+      "foreground_fraction": 0.08783854166666667
+    },
+    {
+      "source_frame_id": "f000513",
+      "time": 256.7565,
+      "score": 0.7259817598285224,
+      "readable_fraction": 0.7738705170004657,
+      "hidden_fraction": 0.22543083372147182,
+      "extra_fraction": 0.019562179785747556,
+      "foreground_fraction": 0.09912326388888888
+    },
+    {
+      "source_frame_id": "f000514",
+      "time": 257.257,
+      "score": 0.5475466218810887,
+      "readable_fraction": 0.615742897065673,
+      "hidden_fraction": 0.3830926874708896,
+      "extra_fraction": 0.012808570097810898,
+      "foreground_fraction": 0.12256510416666666
+    },
+    {
+      "source_frame_id": "f000515",
+      "time": 257.7575,
+      "score": 0.3794392991317613,
+      "readable_fraction": 0.4874243129948766,
+      "hidden_fraction": 0.5121099208197485,
+      "extra_fraction": 0.045877969259431765,
+      "foreground_fraction": 0.1426171875
+    },
+    {
+      "source_frame_id": "f000516",
+      "time": 258.258,
+      "score": 0.3449903690665059,
+      "readable_fraction": 0.45482068001863063,
+      "hidden_fraction": 0.5423847228691197,
+      "extra_fraction": 0.040987424312994875,
+      "foreground_fraction": 0.15141927083333334
+    },
+    {
+      "source_frame_id": "f000517",
+      "time": 258.7585,
+      "score": 0.2955496074969901,
+      "readable_fraction": 0.4233814625058221,
+      "hidden_fraction": 0.5728924080111784,
+      "extra_fraction": 0.06311131811830462,
+      "foreground_fraction": 0.15516927083333334
+    },
+    {
+      "source_frame_id": "f000518",
+      "time": 259.259,
+      "score": 0.29003979364137367,
+      "readable_fraction": 0.4129017233348859,
+      "hidden_fraction": 0.5857009781089892,
+      "extra_fraction": 0.051467163483931065,
+      "foreground_fraction": 0.15856336805555554
+    }
+  ]
+}

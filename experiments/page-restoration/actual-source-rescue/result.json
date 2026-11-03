@@ -1,0 +1,256 @@
+{
+  "normal_A_B_run": false,
+  "selection_uses_ground_truth": false,
+  "anchor_frame_id": "f001231",
+  "result": {
+    "id": "pr00001",
+    "board_page_id": "p00001",
+    "status": "original",
+    "image": "cache/decode/ef04c180dd0c4b7b5280/frame-001217.png",
+    "source_frame_ids": [
+      "f001217"
+    ],
+    "provenance": null,
+    "quality_flags": [],
+    "reason": "clear_compatible_original_preferred",
+    "coverage": null,
+    "diagnostics": [],
+    "estimated_added_ink_pixels": 2363,
+    "lost_visible_ink_pixels": 0,
+    "occluded_board_fraction": 0.12880969022321115,
+    "source_policy": {
+      "rule": "same accumulated page with terminal-target checks, no erasure boundary, mutually compatible writing. Without terminal target: same microstate and within 12 seconds.",
+      "microstate_id": "b00161",
+      "candidate_frame_ids": [
+        "f001231",
+        "f001232",
+        "f001230",
+        "f001233",
+        "f001229",
+        "f001234",
+        "f001228",
+        "f001235",
+        "f001227",
+        "f001226",
+        "f001236",
+        "f001237",
+        "f001225",
+        "f001238",
+        "f001224",
+        "f001239",
+        "f001223",
+        "f001240",
+        "f001222",
+        "f001241",
+        "f001221",
+        "f001242",
+        "f001220",
+        "f001243",
+        "f001219",
+        "f001244",
+        "f001218",
+        "f001245",
+        "f001217",
+        "f001246",
+        "f001216",
+        "f001215",
+        "f001259",
+        "f001201",
+        "f001273",
+        "f001187",
+        "f001287",
+        "f001173",
+        "f001302",
+        "f001158",
+        "f001144",
+        "f001130",
+        "f001115",
+        "f001101",
+        "f001087",
+        "f001072",
+        "f001058",
+        "f001044",
+        "f001029",
+        "f001015",
+        "f001001",
+        "f000986",
+        "f000972",
+        "f000958",
+        "f000943",
+        "f000929",
+        "f000915",
+        "f000900",
+        "f000886",
+        "f000872",
+        "f000858"
+      ],
+      "accepted_frame_ids": [
+        "f001231",
+        "f001232",
+        "f001230",
+        "f001229",
+        "f001234",
+        "f001228",
+        "f001235",
+        "f001227",
+        "f001226",
+        "f001236",
+        "f001237",
+        "f001225",
+        "f001238",
+        "f001224",
+        "f001239",
+        "f001223",
+        "f001240",
+        "f001222",
+        "f001241",
+        "f001221",
+        "f001242",
+        "f001220",
+        "f001243",
+        "f001219",
+        "f001244",
+        "f001218",
+        "f001245",
+        "f001217",
+        "f001246",
+        "f001216",
+        "f001215",
+        "f001259",
+        "f001201",
+        "f001273",
+        "f001187",
+        "f001287",
+        "f001173"
+      ],
+      "rejected": [
+        {
+          "source_frame_id": "f001233",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001302",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001158",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001144",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001130",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001115",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001101",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001087",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001072",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001058",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001044",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001029",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001015",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f001001",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000986",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000972",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000958",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000943",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000929",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000915",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000900",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000886",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000872",
+          "reason": "different_visible_writing"
+        },
+        {
+          "source_frame_id": "f000858",
+          "reason": "different_visible_writing"
+        }
+      ]
+    },
+    "observed_hidden_ink_pixels": 2367
+  },
+  "metrics": {
+    "GT": {
+      "precision": 0.9357095321374955,
+      "recall": 0.9948515992700029,
+      "f1": 0.9643746674009703,
+      "gt_pixels": 52055,
+      "predicted_pixels": 64613,
+      "gt_components_area_ge_10": 155,
+      "component_coverage_at_80pct": 0.9870967741935484
+    },
+    "A_anchor": {
+      "precision": 0.6042941144737551,
+      "recall": 0.9302468542887331,
+      "f1": 0.7326525788460889,
+      "gt_pixels": 52055,
+      "predicted_pixels": 92685,
+      "gt_components_area_ge_10": 155,
+      "component_coverage_at_80pct": 0.864516129032258
+    },
+    "B": {
+      "precision": 0.9349918004888765,
+      "recall": 0.9946979156661224,
+      "f1": 0.9639211810325023,
+      "gt_pixels": 52055,
+      "predicted_pixels": 64638,
+      "gt_components_area_ge_10": 155,
+      "component_coverage_at_80pct": 0.9870967741935484
+    }
+  }
+}

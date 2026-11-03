@@ -1,0 +1,10 @@
+=== frozen default auto baseline ===
+Using completed run; preserving its original elapsed time
+GT 10423 @ 347.781s: A=0.996, B=0.996
+GT 18212 @ 607.674s: A=0.930, B=0.930
+GT 21894 @ 730.530s: A=0.967, B=0.967
+=== same algorithm, board=whiteboard only ===
+Using completed run; preserving its original elapsed time
+GT 10423 @ 347.781s: A=0.977, B=0.977
+GT 18212 @ 607.674s: A=0.858, B=0.860
+GT 21894 @ 730.530s: A=0.910, B=0.911

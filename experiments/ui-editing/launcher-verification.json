@@ -1,0 +1,13 @@
+{
+  "entrypoint": "serve.sh",
+  "default_url": "http://127.0.0.1:8765",
+  "tested_from_other_directory": "/tmp",
+  "duplicate_launch": "existing instance reused",
+  "code_reload": "server.py mtime change: worker 63590 replaced by 64254",
+  "deletion_route_validation": 422,
+  "trash_endpoint": 200,
+  "frontend_cache_control": "no-store",
+  "tests": "10 passed",
+  "test_log": "launcher-tests.txt",
+  "browser_console_errors": []
+}

@@ -1,0 +1,67 @@
+{
+  "mode": "warm",
+  "wall_seconds": 1.3249045540014777,
+  "pipeline_seconds": 1.161,
+  "duration_seconds": 1046.0783666666666,
+  "frames": 2090,
+  "pages": 4,
+  "ocr_regions": 52,
+  "timings": {
+    "input": {
+      "elapsed_seconds": 0.858,
+      "cache_hit": false
+    },
+    "decode": {
+      "elapsed_seconds": 0.003,
+      "cache_hit": true
+    },
+    "analysis": {
+      "elapsed_seconds": 0.022,
+      "cache_hit": true
+    },
+    "pages": {
+      "elapsed_seconds": 0.001,
+      "cache_hit": true
+    },
+    "transcript": {
+      "elapsed_seconds": 0.0,
+      "status": "skipped"
+    },
+    "reconstruction": {
+      "elapsed_seconds": 0.005,
+      "cache_hit": true
+    },
+    "page-restoration": {
+      "elapsed_seconds": 0.005,
+      "cache_hit": true
+    },
+    "ocr": {
+      "elapsed_seconds": 0.084,
+      "status": "complete",
+      "cache_hits": 4
+    }
+  },
+  "ocr_cache_hits": 4,
+  "platform": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "cpu_model": "Intel(R) Core(TM) Ultra 7 268V",
+  "max_rss_kib": 600700,
+  "model_download_included": false,
+  "asr": false,
+  "config": {
+    "sample_seconds": 0.5,
+    "analysis_width": 640,
+    "board": "auto",
+    "roi": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "confirm": 2,
+    "change_pixels": 35,
+    "change_fraction": 0.001,
+    "cut_fraction": 0.65,
+    "tile_size": 32,
+    "reconstruction": true
+  }
+}

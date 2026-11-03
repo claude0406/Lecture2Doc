@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>누적 판서 B 구현·검증</title><style>body{font:17px sans-serif;max-width:1450px;margin:35px auto;background:#f4f6f1;color:#173b31}section{background:white;padding:20px;margin:20px 0}img{max-width:100%}a{color:#167455}</style>
+<h1>누적 판서 B — 구현과 실제 한계</h1>
+<p>원본 우선·같은 판서의 영역 합성·출처 재현을 구현했습니다. 정상 AccessMath 4+15개 판서에서는 추가 합성을 채택하지 않았습니다. 실영상 합성의 일반적 개선은 아직 입증하지 못했습니다.</p>
+<p><a href="evaluation-lecture01/index.html">Lecture 01 GT·원본·A/B 비교</a> · <a href="evaluation-lecture02-testing/index.html">testing 강의 비교</a> · <a href="../../docs/PAGE_RESTORATION.md">구현·한계 보고서</a></p>
+<section><h2>통제된 합성 영상: 모든 원본에 가림, B 영역 합성 성공</h2><p>실제 영상 성능과 구분합니다. F1 88.62% → 99.88%. 한 개 누적 판서를 유지하며 실제 원본의 상보적 영역으로 합성합니다.</p><img src="synthetic-complementary/comparison.jpg"><p><a href="synthetic-complementary/evaluation.json">정량 지표·출처 재현</a></p></section>
+<section><h2>실제 영상: 잘못 선택된 원본을 더 잘 보이는 원본으로 대체</h2><p>과거 616.1155초 실패 원본을 의도적으로 기준으로 지정한 별도 진단입니다. B가 609.1085초 원본을 선택해 F1 73.27% → 96.39%. 정상 A/B 개선이나 합성 성공으로 합산하지 않습니다.</p><img src="actual-source-rescue/comparison.jpg"></section>
+<section><h2>실제 악화 후보: 채택하지 않고 A 유지</h2><p>아래는 기각한 시도이며 제공되는 B 결과가 아닙니다. 참고 원본은 공식 GT와 구분합니다.</p><img src="b00054-rejected-comparison.jpg"><p>b00054: 후보를 채택하면 참고 원본 대비 F1 약 0.40%p 하락.</p><img src="b00112-rejected-comparison.jpg"><p>b00112: 픽셀 점수가 올라도 교수자 잔상과 영역 경계가 남아 기각했습니다.</p></section>
+<p><a href="stress/lecture01/index.html">실제 가림 관측 8개 시험</a> · <a href="stress/lecture02-testing/index.html">testing 11개 시험</a> · <a href="rejected-proposal-review.json">기각 후보 진단 JSON</a></p>

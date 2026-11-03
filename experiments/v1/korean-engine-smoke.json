@@ -1,0 +1,175 @@
+{
+  "input": "lecture02-page0.jpg",
+  "language": "ko",
+  "engine": {
+    "language": "ko",
+    "engine": "rapidocr",
+    "engine_version": "3.10.0",
+    "models": {
+      "det": "PP-OCRv6-small",
+      "rec": "korean-PP-OCRv5-mobile"
+    },
+    "files": {
+      "det": {
+        "path": "PP-OCRv6_det_small.onnx",
+        "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx"
+      },
+      "rec": {
+        "path": "korean_PP-OCRv5_rec_mobile.onnx",
+        "sha256": "cd6e2ea50f6943ca7271eb8c56a877a5a90720b7047fe9c41a2e541a25773c9b",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/korean_PP-OCRv5_rec_mobile.onnx"
+      }
+    },
+    "runtime": "onnxruntime",
+    "runtime_version": "1.31.1",
+    "installed_engine_version": "3.10.0",
+    "parameters": {
+      "Global.use_cls": false,
+      "Global.text_score": 0.5,
+      "Global.max_side_len": 4096,
+      "Global.log_level": "warning",
+      "Det.limit_side_len": 1600,
+      "Det.limit_type": "max",
+      "Rec.lang_type": "korean",
+      "Rec.ocr_version": "PP-OCRv5",
+      "Rec.model_type": "mobile",
+      "EngineConfig.onnxruntime.intra_op_num_threads": 4,
+      "EngineConfig.onnxruntime.inter_op_num_threads": 1
+    }
+  },
+  "regions": [
+    {
+      "polygon": [
+        [
+          252.0,
+          218.0
+        ],
+        [
+          744.0,
+          213.0
+        ],
+        [
+          746.0,
+          316.0
+        ],
+        [
+          253.0,
+          321.0
+        ]
+      ],
+      "text": "Lecture 2 (mimio)",
+      "score": 0.93135
+    },
+    {
+      "polygon": [
+        [
+          252.0,
+          324.0
+        ],
+        [
+          506.0,
+          324.0
+        ],
+        [
+          506.0,
+          432.0
+        ],
+        [
+          252.0,
+          432.0
+        ]
+      ],
+      "text": "Recall",
+      "score": 0.98834
+    },
+    {
+      "polygon": [
+        [
+          228.0,
+          415.0
+        ],
+        [
+          1133.0,
+          387.0
+        ],
+        [
+          1137.0,
+          527.0
+        ],
+        [
+          232.0,
+          555.0
+        ]
+      ],
+      "text": "System of linear Equations",
+      "score": 0.96102
+    },
+    {
+      "polygon": [
+        [
+          226.0,
+          532.0
+        ],
+        [
+          1012.0,
+          523.0
+        ],
+        [
+          1013.0,
+          640.0
+        ],
+        [
+          228.0,
+          649.0
+        ]
+      ],
+      "text": "2)Number of solutions",
+      "score": 0.93719
+    },
+    {
+      "polygon": [
+        [
+          204.0,
+          621.0
+        ],
+        [
+          908.0,
+          587.0
+        ],
+        [
+          917.0,
+          784.0
+        ],
+        [
+          214.0,
+          819.0
+        ]
+      ],
+      "text": "3 Row piture &",
+      "score": 0.89167
+    },
+    {
+      "polygon": [
+        [
+          880.0,
+          656.0
+        ],
+        [
+          1354.0,
+          664.0
+        ],
+        [
+          1352.0,
+          805.0
+        ],
+        [
+          878.0,
+          797.0
+        ]
+      ],
+      "text": "Column picture",
+      "score": 0.93275
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "synthetic": true,
+  "actual_video_claim": false,
+  "metrics": {
+    "A": {
+      "precision": 0.9094187526516758,
+      "recall": 0.8641338013627916,
+      "f1": 0.8861981360300761,
+      "gt_pixels": 9686,
+      "predicted_pixels": 9428,
+      "gt_components_area_ge_10": 32,
+      "component_coverage_at_80pct": 0.84375
+    },
+    "B": {
+      "precision": 0.9975084711979271,
+      "recall": 1.0,
+      "f1": 0.9987526817342712,
+      "gt_pixels": 9686,
+      "predicted_pixels": 10034,
+      "gt_components_area_ge_10": 32,
+      "component_coverage_at_80pct": 1.0
+    }
+  },
+  "result": {
+    "id": "pr00000",
+    "board_page_id": "p00000",
+    "status": "composited",
+    "image": "cache/page-restoration/0ae180373de03610e690/p00000.png",
+    "source_frame_ids": [
+      "f000027",
+      "f000031"
+    ],
+    "provenance": "cache/page-restoration/0ae180373de03610e690/p00000.provenance.json",
+    "quality_flags": [
+      "heuristic_restoration_requires_review"
+    ],
+    "reason": "observed_hidden_writing_recovered",
+    "coverage": 1.0,
+    "diagnostics": [
+      "cache/page-restoration/0ae180373de03610e690/p00000.regions.png"
+    ],
+    "estimated_added_ink_pixels": 516,
+    "lost_visible_ink_pixels": 0,
+    "mask_context": {
+      "image": "cache/pages/267caefb791a09ff6749/p00000.board.png",
+      "rule": "A source-aligned board geometry and persistent border structures",
+      "supplies_output_pixels": false
+    },
+    "occluded_board_fraction": 0.12502604166666667,
+    "board_occluder_core_pixels": 23342,
+    "source_policy": {
+      "rule": "same accumulated page with terminal-target checks, no erasure boundary, mutually compatible writing. Without terminal target: same microstate and within 12 seconds.",
+      "barrier_origin": "accumulated_page",
+      "temporal_absence_evidence": "cache/pages/267caefb791a09ff6749/p00000.evidence.npz",
+      "terminal_target_used": true,
+      "terminal_target": "cache/pages/267caefb791a09ff6749/p00000.target.png",
+      "erasure_barriers": [],
+      "microstate_id": "b00000",
+      "candidate_frame_ids": [
+        "f000031",
+        "f000030",
+        "f000029",
+        "f000028",
+        "f000027",
+        "f000026",
+        "f000025",
+        "f000024",
+        "f000023",
+        "f000022",
+        "f000021",
+        "f000020",
+        "f000019",
+        "f000018",
+        "f000017",
+        "f000016",
+        "f000015",
+        "f000014",
+        "f000013",
+        "f000012",
+        "f000011",
+        "f000010",
+        "f000009",
+        "f000008",
+        "f000007",
+        "f000006",
+        "f000005",
+        "f000004",
+        "f000003",
+        "f000002",
+        "f000001",
+        "f000000"
+      ],
+      "accepted_frame_ids": [
+        "f000031",
+        "f000030",
+        "f000029",
+        "f000028",
+        "f000027",
+        "f000026",
+        "f000025",
+        "f000024",
+        "f000023",
+        "f000022",
+        "f000021",
+        "f000020",
+        "f000019",
+        "f000018",
+        "f000017",
+        "f000016",
+        "f000015",
+        "f000014",
+        "f000013",
+        "f000012",
+        "f000011",
+        "f000010",
+        "f000009",
+        "f000008",
+        "f000007",
+        "f000006",
+        "f000005",
+        "f000004",
+        "f000003",
+        "f000002",
+        "f000001",
+        "f000000"
+      ],
+      "rejected": [],
+      "region_exclusions": [
+        {
+          "source_frame_id": "f000031",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000030",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000029",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000028",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000027",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000026",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000025",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000024",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000023",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000022",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000021",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000020",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000019",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000018",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000017",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000016",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000015",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000014",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000013",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000012",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000011",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000010",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000009",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000008",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000007",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000006",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000005",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000004",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000003",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000002",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000001",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        },
+        {
+          "source_frame_id": "f000000",
+          "stale_ink_pixels": 0,
+          "missing_terminal_ink_pixels": 0
+        }
+      ]
+    },
+    "observed_hidden_ink_pixels": 516,
+    "attempted_added_ink_pixels": 516,
+    "residual_margin_overlap_pixels": 0,
+    "pruned_rectangles": 0,
+    "residual_foreground_pixels": 0,
+    "feature_lost_visible_ink_pixels": 0,
+    "verification_frame_ids": [
+      "f000025"
+    ],
+    "photometric_adjusted": false
+  }
+}

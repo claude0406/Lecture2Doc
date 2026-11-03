@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lecture2doc"
+version = "1.0.0"
+description = "Local evidence-linked lecture board recorder"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "opencv-python-headless>=4.10,<6", "av>=13,<19", "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.18"]
+
+[project.optional-dependencies]
+stt = ["faster-whisper>=1.1,<2"]
+ocr = ["rapidocr==3.10.0", "onnxruntime>=1.23,<2"]
+test = ["pytest>=8", "httpx>=0.27", "pillow>=10"]
+research = ["scikit-image>=0.24", "scenedetect>=0.6.4,<0.7"]
+
+[project.scripts]
+lecture2doc = "lecture2doc.cli:main"
+
+[tool.setuptools.package-data]
+lecture2doc = ["static/*"]
+
+[tool.setuptools.packages.find]
+include = ["lecture2doc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

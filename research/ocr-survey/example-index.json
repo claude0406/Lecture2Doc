@@ -1,0 +1,143 @@
+{
+  "purpose": "Survey examples; no OCR inference, text labels, or accuracy measurement",
+  "examples": [
+    {
+      "id": "01-formula",
+      "title": "Equation and nearby prose",
+      "record": "experiments/ab-refinement/accepted/lecture01",
+      "board_page_id": "p00001",
+      "source_frame_id": "f001279",
+      "source_time": 640.1395,
+      "source_image": "experiments/ab-refinement/accepted/lecture01/cache/decode/ef04c180dd0c4b7b5280/frame-001279.png",
+      "source_image_sha256": "380ec7fa1579336418e03636cec4e1cfd83e9340b88d78dbb959d7fb2a85f214",
+      "source_box_pixels": [
+        115,
+        270,
+        960,
+        713
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/01-formula-rgb.png",
+        "examples/01-formula-gray.png",
+        "examples/01-formula-binary.png"
+      ]
+    },
+    {
+      "id": "01-prose",
+      "title": "Handwritten explanation / inline symbols",
+      "record": "experiments/ab-refinement/accepted/lecture01",
+      "board_page_id": "p00002",
+      "source_frame_id": "f001570",
+      "source_time": 785.785,
+      "source_image": "experiments/ab-refinement/accepted/lecture01/cache/decode/ef04c180dd0c4b7b5280/frame-001570.png",
+      "source_image_sha256": "5b9e2d6d8a9913b3e4443123b4e25914cda2ccbb4b046eef1bcdd8829e8d8948",
+      "source_box_pixels": [
+        768,
+        508,
+        1805,
+        896
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/01-prose-rgb.png",
+        "examples/01-prose-gray.png",
+        "examples/01-prose-binary.png"
+      ]
+    },
+    {
+      "id": "02-matrix",
+      "title": "Matrix / reduction arrows / labels",
+      "record": "experiments/ab-refinement/accepted/lecture02-testing",
+      "board_page_id": "p00002",
+      "source_frame_id": "f000885",
+      "source_time": 442.9425,
+      "source_image": "experiments/ab-refinement/accepted/lecture02-testing/cache/decode/b091b8b96fbdbb634b26/frame-000885.png",
+      "source_image_sha256": "052b3c289d3e9d5543e2753f8e33ae78a71ff48f27fe76411465a3250e0942e9",
+      "source_box_pixels": [
+        730,
+        356,
+        1843,
+        896
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/02-matrix-rgb.png",
+        "examples/02-matrix-gray.png",
+        "examples/02-matrix-binary.png"
+      ]
+    },
+    {
+      "id": "02-multiblock",
+      "title": "Multiple matrices / bracket grouping",
+      "record": "experiments/ab-refinement/accepted/lecture02-testing",
+      "board_page_id": "p00015",
+      "source_frame_id": "f005135",
+      "source_time": 2570.0675,
+      "source_image": "experiments/ab-refinement/accepted/lecture02-testing/cache/decode/b091b8b96fbdbb634b26/frame-005135.png",
+      "source_image_sha256": "c07e09e99be042883ef59c3ed8aa0a741d6c89a0fa2f66bf6a6560e506d7decc",
+      "source_box_pixels": [
+        115,
+        216,
+        1056,
+        918
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/02-multiblock-rgb.png",
+        "examples/02-multiblock-gray.png",
+        "examples/02-multiblock-binary.png"
+      ]
+    },
+    {
+      "id": "06-symbols",
+      "title": "Faint writing / coloured vectors",
+      "record": "experiments/ab-refinement/accepted/lecture06-additional",
+      "board_page_id": "p00005",
+      "source_frame_id": "f002088",
+      "source_time": 1045.044,
+      "source_image": "experiments/ab-refinement/accepted/lecture06-additional/cache/decode/3fa888a6f3eb4e9938f3/frame-002088.png",
+      "source_image_sha256": "c3ed7bb6941c77e3703e5208254462437ec43bda5695f8a923c452451988aec2",
+      "source_box_pixels": [
+        504,
+        216,
+        979,
+        918
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/06-symbols-rgb.png",
+        "examples/06-symbols-gray.png",
+        "examples/06-symbols-binary.png"
+      ]
+    },
+    {
+      "id": "01-diagram",
+      "title": "Graph with mathematical labels",
+      "record": "experiments/ab-refinement/accepted/lecture01",
+      "board_page_id": "p00001",
+      "source_frame_id": "f001279",
+      "source_time": 640.1395,
+      "source_image": "experiments/ab-refinement/accepted/lecture01/cache/decode/ef04c180dd0c4b7b5280/frame-001279.png",
+      "source_image_sha256": "380ec7fa1579336418e03636cec4e1cfd83e9340b88d78dbb959d7fb2a85f214",
+      "source_box_pixels": [
+        1018,
+        151,
+        1786,
+        626
+      ],
+      "recognition_run": false,
+      "ground_truth_annotation": null,
+      "variants": [
+        "examples/01-diagram-rgb.png",
+        "examples/01-diagram-gray.png",
+        "examples/01-diagram-binary.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "tests": "tests.txt",
+  "test_result": "9 passed",
+  "source_manifest_unchanged": true,
+  "browser_checks": [
+    "bulk delete two boards",
+    "delete all boards and empty state",
+    "restore a board",
+    "delete lecture",
+    "restore lecture"
+  ],
+  "screenshots": [
+    "board-delete.jpg",
+    "lecture-trash.jpg"
+  ],
+  "user_record_modified": false
+}

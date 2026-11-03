@@ -1,0 +1,44 @@
+{
+  "video_url": "https://www.cs.rit.edu/~accessmath/am_videos/lectures/Lecture_01/AccessMath_lecture_01_part_1.mp4",
+  "annotations_url": "https://www.cs.rit.edu/~rlaz/files/tangent-v/AccessMath_ICDAR_2017_data.zip",
+  "video_sha256": "f9dacbb0950737985408437fc8569a27478abef1f2d6370f54d960783a0762d2",
+  "annotations_sha256": "7bffabf04ecf5ee5c03fb36089dba81bbef8c6a0f310002207df6ed51bfd9fee",
+  "baseline_config": {
+    "sample_seconds": 0.5,
+    "analysis_width": 640,
+    "board": "auto",
+    "roi": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "confirm": 2,
+    "change_pixels": 35,
+    "change_fraction": 0.001,
+    "cut_fraction": 0.65,
+    "tile_size": 32,
+    "reconstruction": true
+  },
+  "configured_config": {
+    "sample_seconds": 0.5,
+    "analysis_width": 640,
+    "board": "whiteboard",
+    "roi": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "confirm": 2,
+    "change_pixels": 35,
+    "change_fraction": 0.001,
+    "cut_fraction": 0.65,
+    "tile_size": 32,
+    "reconstruction": true
+  },
+  "declared_scope": "lecture_01 training split, official part 1 entire file; 3 of 7 annotated keyframes",
+  "data_not_used_for_training": true,
+  "runtime_algorithm_modified": false,
+  "speech_evaluation": "not run; this experiment evaluates board extraction and reconstruction"
+}

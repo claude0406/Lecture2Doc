@@ -1,0 +1,950 @@
+{
+  "training": {
+    "old": {
+      "10": {
+        "gt_raw_calibration": {
+          "precision": 0.9431718405964826,
+          "recall": 0.9955759315875891,
+          "f1": 0.9686558136849174,
+          "component_coverage_at_80pct": 0.993815685559808
+        },
+        "nearest_source": {
+          "precision": 0.9430232045778558,
+          "recall": 0.9953059692112173,
+          "f1": 0.968449451997345,
+          "component_coverage_at_80pct": 0.9942025547638815
+        },
+        "selected_A": {
+          "precision": 0.7424385020960789,
+          "recall": 0.964174683241167,
+          "f1": 0.8328115709929037,
+          "component_coverage_at_80pct": 0.9300277809116883
+        },
+        "result_B": {
+          "precision": 0.7424453936642346,
+          "recall": 0.964174683241167,
+          "f1": 0.8328163628311396,
+          "component_coverage_at_80pct": 0.9300277809116883
+        }
+      },
+      "20": {
+        "gt_raw_calibration": {
+          "precision": 0.9298120030202974,
+          "recall": 0.9317451258961901,
+          "f1": 0.9307688315176023,
+          "component_coverage_at_80pct": 0.9265164511018348
+        },
+        "nearest_source": {
+          "precision": 0.9297069846572965,
+          "recall": 0.9315859353916083,
+          "f1": 0.9306402933407766,
+          "component_coverage_at_80pct": 0.9266360218428744
+        },
+        "selected_A": {
+          "precision": 0.7558359553696756,
+          "recall": 0.9004064105164988,
+          "f1": 0.8177986394318134,
+          "component_coverage_at_80pct": 0.8635707487539089
+        },
+        "result_B": {
+          "precision": 0.7558544794589005,
+          "recall": 0.9004064105164988,
+          "f1": 0.8178100997969091,
+          "component_coverage_at_80pct": 0.8635707487539089
+        }
+      },
+      "30": {
+        "gt_raw_calibration": {
+          "precision": 0.9024767819051877,
+          "recall": 0.79212245656633,
+          "f1": 0.8436755072167342,
+          "component_coverage_at_80pct": 0.8081497102820231
+        },
+        "nearest_source": {
+          "precision": 0.902823755908624,
+          "recall": 0.7894053064403027,
+          "f1": 0.8422851913385049,
+          "component_coverage_at_80pct": 0.8041159334762397
+        },
+        "selected_A": {
+          "precision": 0.7395693005117082,
+          "recall": 0.7584309947338532,
+          "f1": 0.7463470057035148,
+          "component_coverage_at_80pct": 0.7258088623133275
+        },
+        "result_B": {
+          "precision": 0.7395795904696282,
+          "recall": 0.7584370202821781,
+          "f1": 0.7463553327520542,
+          "component_coverage_at_80pct": 0.7258088623133275
+        }
+      }
+    },
+    "new": {
+      "10": {
+        "gt_raw_calibration": {
+          "precision": 0.9431718405964826,
+          "recall": 0.9955759315875891,
+          "f1": 0.9686558136849174,
+          "component_coverage_at_80pct": 0.993815685559808
+        },
+        "nearest_source": {
+          "precision": 0.9430232045778558,
+          "recall": 0.9953059692112173,
+          "f1": 0.968449451997345,
+          "component_coverage_at_80pct": 0.9942025547638815
+        },
+        "selected_A": {
+          "precision": 0.9416955587543163,
+          "recall": 0.9951178395458432,
+          "f1": 0.9676595511972677,
+          "component_coverage_at_80pct": 0.9942025547638815
+        },
+        "result_B": {
+          "precision": 0.9416955587543163,
+          "recall": 0.9951178395458432,
+          "f1": 0.9676595511972677,
+          "component_coverage_at_80pct": 0.9942025547638815
+        }
+      },
+      "20": {
+        "gt_raw_calibration": {
+          "precision": 0.9298120030202974,
+          "recall": 0.9317451258961901,
+          "f1": 0.9307688315176023,
+          "component_coverage_at_80pct": 0.9265164511018348
+        },
+        "nearest_source": {
+          "precision": 0.9297069846572965,
+          "recall": 0.9315859353916083,
+          "f1": 0.9306402933407766,
+          "component_coverage_at_80pct": 0.9266360218428744
+        },
+        "selected_A": {
+          "precision": 0.9271635773072499,
+          "recall": 0.9358739782266743,
+          "f1": 0.9314892534157466,
+          "component_coverage_at_80pct": 0.9251396518755731
+        },
+        "result_B": {
+          "precision": 0.9271635773072499,
+          "recall": 0.9358739782266743,
+          "f1": 0.9314892534157466,
+          "component_coverage_at_80pct": 0.9251396518755731
+        }
+      },
+      "30": {
+        "gt_raw_calibration": {
+          "precision": 0.9024767819051877,
+          "recall": 0.79212245656633,
+          "f1": 0.8436755072167342,
+          "component_coverage_at_80pct": 0.8081497102820231
+        },
+        "nearest_source": {
+          "precision": 0.902823755908624,
+          "recall": 0.7894053064403027,
+          "f1": 0.8422851913385049,
+          "component_coverage_at_80pct": 0.8041159334762397
+        },
+        "selected_A": {
+          "precision": 0.8966367068060497,
+          "recall": 0.7856903199146159,
+          "f1": 0.8374596212643102,
+          "component_coverage_at_80pct": 0.789380575347406
+        },
+        "result_B": {
+          "precision": 0.8966367068060497,
+          "recall": 0.7856903199146159,
+          "f1": 0.8374596212643102,
+          "component_coverage_at_80pct": 0.789380575347406
+        }
+      }
+    },
+    "old_counts": {
+      "source_frames": 2090,
+      "states": 141,
+      "board_type_predictions": {
+        "blackboard": 2087,
+        "whiteboard": 3
+      },
+      "status": {
+        "partial": 84,
+        "fallback": 57
+      },
+      "boundary_reasons": {
+        "camera_motion": 19,
+        "writing_progress": 89,
+        "erasure_or_revision": 31,
+        "unconfirmed_change": 1,
+        "end_of_video": 1
+      },
+      "quality_flags": {
+        "model_free_masks_require_review": 141,
+        "unverified_regions_original_retained": 97,
+        "unsafe_state_original_used": 20,
+        "inconsistent_writing_original_used": 24,
+        "no_verified_improvement": 13
+      }
+    },
+    "new_counts": {
+      "source_frames": 2090,
+      "states": 266,
+      "board_type_predictions": {
+        "whiteboard": 2090
+      },
+      "status": {
+        "fallback": 266
+      },
+      "boundary_reasons": {
+        "writing_progress": 198,
+        "erasure_or_revision": 65,
+        "camera_motion": 1,
+        "unconfirmed_change": 1,
+        "end_of_video": 1
+      },
+      "quality_flags": {
+        "model_free_masks_require_review": 266,
+        "unobserved_foreground_original_used": 87,
+        "inconsistent_visible_writing_original_used": 100,
+        "no_observed_hidden_writing": 77,
+        "unsafe_state_original_used": 2
+      }
+    },
+    "keyframes": [
+      {
+        "time": 347.78076666666664,
+        "index": 10423,
+        "old_A": {
+          "precision": 0.9503433129397,
+          "recall": 0.9957551419278985,
+          "f1": 0.9725193893346796,
+          "gt_pixels": 65491,
+          "predicted_pixels": 82869,
+          "gt_components_area_ge_10": 177,
+          "component_coverage_at_80pct": 0.9943502824858758
+        },
+        "old_B": {
+          "precision": 0.9503433129397,
+          "recall": 0.9957551419278985,
+          "f1": 0.9725193893346796,
+          "gt_pixels": 65491,
+          "predicted_pixels": 82869,
+          "gt_components_area_ge_10": 177,
+          "component_coverage_at_80pct": 0.9943502824858758
+        },
+        "new_A": {
+          "precision": 0.9496548240444519,
+          "recall": 0.99555664137057,
+          "f1": 0.9720641523006242,
+          "gt_pixels": 65491,
+          "predicted_pixels": 83146,
+          "gt_components_area_ge_10": 177,
+          "component_coverage_at_80pct": 0.9943502824858758
+        },
+        "new_B": {
+          "precision": 0.9496548240444519,
+          "recall": 0.99555664137057,
+          "f1": 0.9720641523006242,
+          "gt_pixels": 65491,
+          "predicted_pixels": 83146,
+          "gt_components_area_ge_10": 177,
+          "component_coverage_at_80pct": 0.9943502824858758
+        }
+      },
+      {
+        "time": 607.6737333333334,
+        "index": 18212,
+        "old_A": {
+          "precision": 0.6042941144737551,
+          "recall": 0.9302468542887331,
+          "f1": 0.7326525788460889,
+          "gt_pixels": 52055,
+          "predicted_pixels": 92685,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 0.864516129032258
+        },
+        "old_B": {
+          "precision": 0.6042941144737551,
+          "recall": 0.9302468542887331,
+          "f1": 0.7326525788460889,
+          "gt_pixels": 52055,
+          "predicted_pixels": 92685,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 0.864516129032258
+        },
+        "new_A": {
+          "precision": 0.9336865519478513,
+          "recall": 0.9946594947651523,
+          "f1": 0.9632090626187133,
+          "gt_pixels": 52055,
+          "predicted_pixels": 64738,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 0.9935483870967742
+        },
+        "new_B": {
+          "precision": 0.9336865519478513,
+          "recall": 0.9946594947651523,
+          "f1": 0.9632090626187133,
+          "gt_pixels": 52055,
+          "predicted_pixels": 64738,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 0.9935483870967742
+        }
+      },
+      {
+        "time": 730.5298,
+        "index": 21894,
+        "old_A": {
+          "precision": 0.6726780788747816,
+          "recall": 0.9665220535068691,
+          "f1": 0.7932627447979427,
+          "gt_pixels": 55320,
+          "predicted_pixels": 94986,
+          "gt_components_area_ge_10": 189,
+          "component_coverage_at_80pct": 0.9312169312169312
+        },
+        "old_B": {
+          "precision": 0.6726987535792488,
+          "recall": 0.9665220535068691,
+          "f1": 0.7932771203126502,
+          "gt_pixels": 55320,
+          "predicted_pixels": 94992,
+          "gt_components_area_ge_10": 189,
+          "component_coverage_at_80pct": 0.9312169312169312
+        },
+        "new_A": {
+          "precision": 0.9417453002706458,
+          "recall": 0.9951373825018076,
+          "f1": 0.9677054386724655,
+          "gt_pixels": 55320,
+          "predicted_pixels": 68355,
+          "gt_components_area_ge_10": 189,
+          "component_coverage_at_80pct": 0.9947089947089947
+        },
+        "new_B": {
+          "precision": 0.9417453002706458,
+          "recall": 0.9951373825018076,
+          "f1": 0.9677054386724655,
+          "gt_pixels": 55320,
+          "predicted_pixels": 68355,
+          "gt_components_area_ge_10": 189,
+          "component_coverage_at_80pct": 0.9947089947089947
+        }
+      }
+    ]
+  },
+  "testing": {
+    "old": {
+      "10": {
+        "gt_raw_calibration": {
+          "precision": 0.9984683358798065,
+          "recall": 0.9999286728452207,
+          "f1": 0.9991977944365891,
+          "component_coverage_at_80pct": 1.0
+        },
+        "nearest_source": {
+          "precision": 0.998449675335495,
+          "recall": 0.999951578959687,
+          "f1": 0.99919988807645,
+          "component_coverage_at_80pct": 1.0
+        },
+        "selected_A": {
+          "precision": 0.9982941300612594,
+          "recall": 0.9999688882743051,
+          "f1": 0.9991306379123038,
+          "component_coverage_at_80pct": 1.0
+        },
+        "result_B": {
+          "precision": 0.9982941300612594,
+          "recall": 0.9999688882743051,
+          "f1": 0.9991306379123038,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      "20": {
+        "gt_raw_calibration": {
+          "precision": 0.9998214839033202,
+          "recall": 0.9966321780495088,
+          "f1": 0.998223009574797,
+          "component_coverage_at_80pct": 1.0
+        },
+        "nearest_source": {
+          "precision": 0.9998018998311728,
+          "recall": 0.9965838813168271,
+          "f1": 0.9981889823691423,
+          "component_coverage_at_80pct": 1.0
+        },
+        "selected_A": {
+          "precision": 0.999785084982616,
+          "recall": 0.9966969539145861,
+          "f1": 0.9982371697133271,
+          "component_coverage_at_80pct": 1.0
+        },
+        "result_B": {
+          "precision": 0.999785084982616,
+          "recall": 0.9966969539145861,
+          "f1": 0.9982371697133271,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      "30": {
+        "gt_raw_calibration": {
+          "precision": 0.9999564209133842,
+          "recall": 0.9556363957924798,
+          "f1": 0.9772587207482974,
+          "component_coverage_at_80pct": 0.9734629064513671
+        },
+        "nearest_source": {
+          "precision": 0.9999448371242826,
+          "recall": 0.9558443199088188,
+          "f1": 0.9773619424337312,
+          "component_coverage_at_80pct": 0.9745579901597596
+        },
+        "selected_A": {
+          "precision": 0.999942750350933,
+          "recall": 0.9555558485745447,
+          "f1": 0.9772085982770872,
+          "component_coverage_at_80pct": 0.9746233555640076
+        },
+        "result_B": {
+          "precision": 0.999942750350933,
+          "recall": 0.9555558485745447,
+          "f1": 0.9772085982770872,
+          "component_coverage_at_80pct": 0.9746233555640076
+        }
+      }
+    },
+    "new": {
+      "10": {
+        "gt_raw_calibration": {
+          "precision": 0.9984683358798065,
+          "recall": 0.9999286728452207,
+          "f1": 0.9991977944365891,
+          "component_coverage_at_80pct": 1.0
+        },
+        "nearest_source": {
+          "precision": 0.998449675335495,
+          "recall": 0.999951578959687,
+          "f1": 0.99919988807645,
+          "component_coverage_at_80pct": 1.0
+        },
+        "selected_A": {
+          "precision": 0.9983255615531691,
+          "recall": 0.9999225557157182,
+          "f1": 0.9991232300314161,
+          "component_coverage_at_80pct": 1.0
+        },
+        "result_B": {
+          "precision": 0.9983255615531691,
+          "recall": 0.9999225557157182,
+          "f1": 0.9991232300314161,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      "20": {
+        "gt_raw_calibration": {
+          "precision": 0.9998214839033202,
+          "recall": 0.9966321780495088,
+          "f1": 0.998223009574797,
+          "component_coverage_at_80pct": 1.0
+        },
+        "nearest_source": {
+          "precision": 0.9998018998311728,
+          "recall": 0.9965838813168271,
+          "f1": 0.9981889823691423,
+          "component_coverage_at_80pct": 1.0
+        },
+        "selected_A": {
+          "precision": 0.999791973665683,
+          "recall": 0.9964804775913085,
+          "f1": 0.9981319445132041,
+          "component_coverage_at_80pct": 1.0
+        },
+        "result_B": {
+          "precision": 0.999791973665683,
+          "recall": 0.9964804775913085,
+          "f1": 0.9981319445132041,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      "30": {
+        "gt_raw_calibration": {
+          "precision": 0.9999564209133842,
+          "recall": 0.9556363957924798,
+          "f1": 0.9772587207482974,
+          "component_coverage_at_80pct": 0.9734629064513671
+        },
+        "nearest_source": {
+          "precision": 0.9999448371242826,
+          "recall": 0.9558443199088188,
+          "f1": 0.9773619424337312,
+          "component_coverage_at_80pct": 0.9745579901597596
+        },
+        "selected_A": {
+          "precision": 0.9999465191676686,
+          "recall": 0.9556716839741514,
+          "f1": 0.977269652699839,
+          "component_coverage_at_80pct": 0.9746233555640076
+        },
+        "result_B": {
+          "precision": 0.9999465191676686,
+          "recall": 0.9556716839741514,
+          "f1": 0.977269652699839,
+          "component_coverage_at_80pct": 0.9746233555640076
+        }
+      }
+    },
+    "old_counts": {
+      "source_frames": 5194,
+      "states": 644,
+      "board_type_predictions": {
+        "blackboard": 2430,
+        "whiteboard": 2764
+      },
+      "status": {
+        "fallback": 381,
+        "partial": 263
+      },
+      "boundary_reasons": {
+        "writing_progress": 264,
+        "erasure_or_revision": 368,
+        "camera_motion": 9,
+        "uncertain_transition": 2,
+        "end_of_video": 1
+      },
+      "quality_flags": {
+        "model_free_masks_require_review": 644,
+        "unverified_regions_original_retained": 525,
+        "no_verified_improvement": 262,
+        "inconsistent_writing_original_used": 108,
+        "unsafe_state_original_used": 11
+      }
+    },
+    "new_counts": {
+      "source_frames": 5194,
+      "states": 712,
+      "board_type_predictions": {
+        "whiteboard": 5194
+      },
+      "status": {
+        "fallback": 712
+      },
+      "boundary_reasons": {
+        "writing_progress": 524,
+        "erasure_or_revision": 182,
+        "uncertain_transition": 2,
+        "camera_motion": 3,
+        "end_of_video": 1
+      },
+      "quality_flags": {
+        "model_free_masks_require_review": 712,
+        "no_observed_hidden_writing": 167,
+        "inconsistent_visible_writing_original_used": 319,
+        "unobserved_foreground_original_used": 221,
+        "unsafe_state_original_used": 5
+      }
+    },
+    "keyframes": [
+      {
+        "time": 140.37356666666668,
+        "index": 4207,
+        "old_A": {
+          "precision": 0.9977608338963421,
+          "recall": 1.0,
+          "f1": 0.9988791620770285,
+          "gt_pixels": 33051,
+          "predicted_pixels": 51805,
+          "gt_components_area_ge_10": 100,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9977608338963421,
+          "recall": 1.0,
+          "f1": 0.9988791620770285,
+          "gt_pixels": 33051,
+          "predicted_pixels": 51805,
+          "gt_components_area_ge_10": 100,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9983936209332481,
+          "recall": 1.0,
+          "f1": 0.9991961648346327,
+          "gt_pixels": 33051,
+          "predicted_pixels": 51669,
+          "gt_components_area_ge_10": 100,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9983936209332481,
+          "recall": 1.0,
+          "f1": 0.9991961648346327,
+          "gt_pixels": 33051,
+          "predicted_pixels": 51669,
+          "gt_components_area_ge_10": 100,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 441.70793333333336,
+        "index": 13238,
+        "old_A": {
+          "precision": 0.9992104896512222,
+          "recall": 1.0,
+          "f1": 0.9996050889324237,
+          "gt_pixels": 46475,
+          "predicted_pixels": 64597,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9992104896512222,
+          "recall": 1.0,
+          "f1": 0.9996050889324237,
+          "gt_pixels": 46475,
+          "predicted_pixels": 64597,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9992183591795898,
+          "recall": 1.0,
+          "f1": 0.9996090267894844,
+          "gt_pixels": 46475,
+          "predicted_pixels": 63968,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9992183591795898,
+          "recall": 1.0,
+          "f1": 0.9996090267894844,
+          "gt_pixels": 46475,
+          "predicted_pixels": 63968,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 513.6131,
+        "index": 15393,
+        "old_A": {
+          "precision": 0.9990350044358667,
+          "recall": 1.0,
+          "f1": 0.9995172693014419,
+          "gt_pixels": 45956,
+          "predicted_pixels": 64249,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9990350044358667,
+          "recall": 1.0,
+          "f1": 0.9995172693014419,
+          "gt_pixels": 45956,
+          "predicted_pixels": 64249,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9989309121333726,
+          "recall": 1.0,
+          "f1": 0.9994651701766489,
+          "gt_pixels": 45956,
+          "predicted_pixels": 64541,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9989309121333726,
+          "recall": 1.0,
+          "f1": 0.9994651701766489,
+          "gt_pixels": 45956,
+          "predicted_pixels": 64541,
+          "gt_components_area_ge_10": 137,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 743.5761666666666,
+        "index": 22285,
+        "old_A": {
+          "precision": 0.9989715250594827,
+          "recall": 1.0,
+          "f1": 0.9994854979535106,
+          "gt_pixels": 43514,
+          "predicted_pixels": 65145,
+          "gt_components_area_ge_10": 146,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9989715250594827,
+          "recall": 1.0,
+          "f1": 0.9994854979535106,
+          "gt_pixels": 43514,
+          "predicted_pixels": 65145,
+          "gt_components_area_ge_10": 146,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9989715250594827,
+          "recall": 1.0,
+          "f1": 0.9994854979535106,
+          "gt_pixels": 43514,
+          "predicted_pixels": 65145,
+          "gt_components_area_ge_10": 146,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9989715250594827,
+          "recall": 1.0,
+          "f1": 0.9994854979535106,
+          "gt_pixels": 43514,
+          "predicted_pixels": 65145,
+          "gt_components_area_ge_10": 146,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 1109.3749333333333,
+        "index": 33248,
+        "old_A": {
+          "precision": 0.9971772118338765,
+          "recall": 1.0,
+          "f1": 0.9985866110681628,
+          "gt_pixels": 43280,
+          "predicted_pixels": 64121,
+          "gt_components_area_ge_10": 158,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9971772118338765,
+          "recall": 1.0,
+          "f1": 0.9985866110681628,
+          "gt_pixels": 43280,
+          "predicted_pixels": 64121,
+          "gt_components_area_ge_10": 158,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9971772118338765,
+          "recall": 1.0,
+          "f1": 0.9985866110681628,
+          "gt_pixels": 43280,
+          "predicted_pixels": 64121,
+          "gt_components_area_ge_10": 158,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9971772118338765,
+          "recall": 1.0,
+          "f1": 0.9985866110681628,
+          "gt_pixels": 43280,
+          "predicted_pixels": 64121,
+          "gt_components_area_ge_10": 158,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 1488.1867,
+        "index": 44601,
+        "old_A": {
+          "precision": 0.9988859530100692,
+          "recall": 0.9997690143211121,
+          "f1": 0.999327288585076,
+          "gt_pixels": 47622,
+          "predicted_pixels": 70015,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9988859530100692,
+          "recall": 0.9997690143211121,
+          "f1": 0.999327288585076,
+          "gt_pixels": 47622,
+          "predicted_pixels": 70015,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9988859530100692,
+          "recall": 0.9997690143211121,
+          "f1": 0.999327288585076,
+          "gt_pixels": 47622,
+          "predicted_pixels": 70015,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9988859530100692,
+          "recall": 0.9997690143211121,
+          "f1": 0.999327288585076,
+          "gt_pixels": 47622,
+          "predicted_pixels": 70015,
+          "gt_components_area_ge_10": 155,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 1555.9544,
+        "index": 46632,
+        "old_A": {
+          "precision": 0.9989528931175345,
+          "recall": 0.9999611816311479,
+          "f1": 0.9994567830748344,
+          "gt_pixels": 51522,
+          "predicted_pixels": 77356,
+          "gt_components_area_ge_10": 172,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9989528931175345,
+          "recall": 0.9999611816311479,
+          "f1": 0.9994567830748344,
+          "gt_pixels": 51522,
+          "predicted_pixels": 77356,
+          "gt_components_area_ge_10": 172,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.998876723648195,
+          "recall": 0.99945654283607,
+          "f1": 0.999166549124459,
+          "gt_pixels": 51522,
+          "predicted_pixels": 77452,
+          "gt_components_area_ge_10": 172,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.998876723648195,
+          "recall": 0.99945654283607,
+          "f1": 0.999166549124459,
+          "gt_pixels": 51522,
+          "predicted_pixels": 77452,
+          "gt_components_area_ge_10": 172,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 1915.2466666666667,
+        "index": 57400,
+        "old_A": {
+          "precision": 0.9982602410448639,
+          "recall": 1.0,
+          "f1": 0.999129363173324,
+          "gt_pixels": 78814,
+          "predicted_pixels": 118982,
+          "gt_components_area_ge_10": 251,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9982602410448639,
+          "recall": 1.0,
+          "f1": 0.999129363173324,
+          "gt_pixels": 78814,
+          "predicted_pixels": 118982,
+          "gt_components_area_ge_10": 251,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9982602410448639,
+          "recall": 1.0,
+          "f1": 0.999129363173324,
+          "gt_pixels": 78814,
+          "predicted_pixels": 118982,
+          "gt_components_area_ge_10": 251,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9982602410448639,
+          "recall": 1.0,
+          "f1": 0.999129363173324,
+          "gt_pixels": 78814,
+          "predicted_pixels": 118982,
+          "gt_components_area_ge_10": 251,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 2169.0669,
+        "index": 65007,
+        "old_A": {
+          "precision": 0.9968251152891097,
+          "recall": 0.9999586867907899,
+          "f1": 0.9983894422684128,
+          "gt_pixels": 72616,
+          "predicted_pixels": 112760,
+          "gt_components_area_ge_10": 247,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9968251152891097,
+          "recall": 0.9999586867907899,
+          "f1": 0.9983894422684128,
+          "gt_pixels": 72616,
+          "predicted_pixels": 112760,
+          "gt_components_area_ge_10": 247,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9966790354147663,
+          "recall": 1.0,
+          "f1": 0.9983367559200401,
+          "gt_pixels": 72616,
+          "predicted_pixels": 112919,
+          "gt_components_area_ge_10": 247,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9966790354147663,
+          "recall": 1.0,
+          "f1": 0.9983367559200401,
+          "gt_pixels": 72616,
+          "predicted_pixels": 112919,
+          "gt_components_area_ge_10": 247,
+          "component_coverage_at_80pct": 1.0
+        }
+      },
+      {
+        "time": 2569.567,
+        "index": 77010,
+        "old_A": {
+          "precision": 0.9978620332742282,
+          "recall": 1.0,
+          "f1": 0.9989298726888222,
+          "gt_pixels": 73202,
+          "predicted_pixels": 117869,
+          "gt_components_area_ge_10": 275,
+          "component_coverage_at_80pct": 1.0
+        },
+        "old_B": {
+          "precision": 0.9978620332742282,
+          "recall": 1.0,
+          "f1": 0.9989298726888222,
+          "gt_pixels": 73202,
+          "predicted_pixels": 117869,
+          "gt_components_area_ge_10": 275,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_A": {
+          "precision": 0.9978620332742282,
+          "recall": 1.0,
+          "f1": 0.9989298726888222,
+          "gt_pixels": 73202,
+          "predicted_pixels": 117869,
+          "gt_components_area_ge_10": 275,
+          "component_coverage_at_80pct": 1.0
+        },
+        "new_B": {
+          "precision": 0.9978620332742282,
+          "recall": 1.0,
+          "f1": 0.9989298726888222,
+          "gt_pixels": 73202,
+          "predicted_pixels": 117869,
+          "gt_components_area_ge_10": 275,
+          "component_coverage_at_80pct": 1.0
+        }
+      }
+    ]
+  }
+}

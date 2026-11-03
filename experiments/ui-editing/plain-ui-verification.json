@@ -1,0 +1,16 @@
+{
+  "test_result": "13 passed",
+  "test_log": "plain-ui-tests.txt",
+  "browser_checks": [
+    "intro, badge and footer removed",
+    "elapsed clock advances while stage stays the same",
+    "purge confirmation visible",
+    "cancel leaves trash item intact",
+    "main 8765 app shows simplified layout"
+  ],
+  "screenshots": [
+    "plain-ui-progress.jpg",
+    "permanent-delete-confirm.jpg"
+  ],
+  "destructive_api_tests": "temporary pytest records only; sibling records and shared models preserved"
+}

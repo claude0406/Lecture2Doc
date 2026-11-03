@@ -1,0 +1,66 @@
+[
+  {
+    "state": "b00000",
+    "start": 0.0,
+    "end": 3.0,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "clear_original_sufficient"
+    ],
+    "selected_ink_recall": 1.0,
+    "reconstruction_ink_recall": 1.0,
+    "state_truth_labels": [
+      "0"
+    ],
+    "mixed_truth_states": false
+  },
+  {
+    "state": "b00001",
+    "start": 3.0,
+    "end": 6.0,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "clear_original_sufficient"
+    ],
+    "selected_ink_recall": 1.0,
+    "reconstruction_ink_recall": 1.0,
+    "state_truth_labels": [
+      "1"
+    ],
+    "mixed_truth_states": false
+  },
+  {
+    "state": "b00002",
+    "start": 6.0,
+    "end": 9.0,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "clear_original_sufficient"
+    ],
+    "selected_ink_recall": 1.0,
+    "reconstruction_ink_recall": 1.0,
+    "state_truth_labels": [
+      "2"
+    ],
+    "mixed_truth_states": false
+  },
+  {
+    "state": "b00003",
+    "start": 9.0,
+    "end": 12.0,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "clear_original_sufficient"
+    ],
+    "selected_ink_recall": 1.0,
+    "reconstruction_ink_recall": 1.0,
+    "state_truth_labels": [
+      "3"
+    ],
+    "mixed_truth_states": false
+  }
+]

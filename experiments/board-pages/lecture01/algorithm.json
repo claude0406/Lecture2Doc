@@ -1,0 +1,26 @@
+{
+  "uses_ground_truth": false,
+  "primary_output": "board_pages",
+  "page_policy": {
+    "version": "2026-11-01.pages-3",
+    "addition_confirmation_seconds": 3,
+    "visible_absence_seconds": 2,
+    "erasure_fraction": 0.08,
+    "minimum_erasure_pixels": 60,
+    "erasure_settle_seconds": 4,
+    "uses_ground_truth": false,
+    "output_pixels": "selected_original_only",
+    "source_inferred_board_bounds": [
+      33,
+      49,
+      596,
+      326
+    ],
+    "persistent_unknown_fraction": 0.0121484375
+  },
+  "sources": {
+    "lecture2doc/pages.py": "32b8fe355ce54b0c4946e12442c171323b4312e7b0e107649a25e0b996181c0e",
+    "lecture2doc/pipeline.py": "819c4c249d18a0b83e646ac7de524e620707a48e34fbd2cc5a53629fa6c3f17f",
+    "lecture2doc/vision.py": "34139820f10046df0a11c0b925b9330942c6a52f7020bf0e1cd55f2cafb98923"
+  }
+}

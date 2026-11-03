@@ -1,0 +1,97 @@
+{
+  "ground_truth_used": false,
+  "record": "/home/hwoo/Documents/ChatGPT/Lecture2Doc/experiments/ab-refinement/a-lecture02",
+  "policy": "Continuous >=4s intervals, every sampled frame occludes >=2% of central terminal writing; stable co-visible content; at least 12 recoverable ink pixels. Ranked before restoration.",
+  "proposals": [
+    {
+      "parent_page_id": "p00012",
+      "frame_ids": [
+        "f003758",
+        "f003759",
+        "f003760",
+        "f003761",
+        "f003762",
+        "f003763",
+        "f003764",
+        "f003765",
+        "f003766",
+        "f003767"
+      ],
+      "start": 1880.879,
+      "end": 1885.8835,
+      "qualification_hidden_pixels": 904,
+      "qualification_recoverable_pixels": 904,
+      "score": 904,
+      "reference_frame_id": "f003755",
+      "parent_target": "page-decisions/83ab0e780573/p00012.target.png",
+      "parent_board": "page-decisions/83ab0e780573/p00012.board.png"
+    },
+    {
+      "parent_page_id": "p00013",
+      "frame_ids": [
+        "f003768",
+        "f003769",
+        "f003770",
+        "f003771",
+        "f003772",
+        "f003773",
+        "f003774",
+        "f003775",
+        "f003776",
+        "f003777",
+        "f003778",
+        "f003779"
+      ],
+      "start": 1885.884,
+      "end": 1891.8895,
+      "qualification_hidden_pixels": 693,
+      "qualification_recoverable_pixels": 693,
+      "score": 693,
+      "reference_frame_id": "f003830",
+      "parent_target": "page-decisions/83ab0e780573/p00013.target.png",
+      "parent_board": "page-decisions/83ab0e780573/p00013.board.png"
+    },
+    {
+      "parent_page_id": "p00015",
+      "frame_ids": [
+        "f004312",
+        "f004313",
+        "f004314",
+        "f004315",
+        "f004316",
+        "f004317",
+        "f004318",
+        "f004319"
+      ],
+      "start": 2158.156,
+      "end": 2162.1595,
+      "qualification_hidden_pixels": 1866,
+      "qualification_recoverable_pixels": 553,
+      "score": 553,
+      "reference_frame_id": "f004328",
+      "parent_target": "page-decisions/83ab0e780573/p00015.target.png",
+      "parent_board": "page-decisions/83ab0e780573/p00015.board.png"
+    },
+    {
+      "parent_page_id": "p00002",
+      "frame_ids": [
+        "f000867",
+        "f000868",
+        "f000869",
+        "f000870",
+        "f000871",
+        "f000872",
+        "f000873",
+        "f000874"
+      ],
+      "start": 433.9335,
+      "end": 437.937,
+      "qualification_hidden_pixels": 530,
+      "qualification_recoverable_pixels": 530,
+      "score": 530,
+      "reference_frame_id": "f000885",
+      "parent_target": "page-decisions/83ab0e780573/p00002.target.png",
+      "parent_board": "page-decisions/83ab0e780573/p00002.board.png"
+    }
+  ]
+}

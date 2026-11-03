@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-11-02",
+  "source_type": "author_reported",
+  "metric": "whole_expression_ExpRate_percent",
+  "results": [
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "CROHME 2014", "samples": 986, "ExpRate": 83.27, "CDM_ExpRate": 86.50},
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "CROHME 2023", "samples": 2300, "ExpRate": 70.96, "CDM_ExpRate": 78.70},
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "HME100K", "samples": 24607, "ExpRate": 69.31, "CDM_ExpRate": 72.40},
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "MathWriting", "samples": 7643, "ExpRate": 50.66, "CDM_ExpRate": 69.00},
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "MNE-N3", "samples": 1464, "ExpRate": 52.39, "CDM_ExpRate": 72.80},
+    {"model": "Uni-MuMER Qwen3-VL-2B", "dataset": "Im2LaTeXv2 printed", "samples": 10118, "ExpRate": 77.11, "CDM_ExpRate": 92.60}
+  ],
+  "source": "https://github.com/BFlameSwift/Uni-MuMER/blob/85732e04f60fcf7b26bcea9234fdb43c90ab1591/README.md",
+  "historical_specialist": {
+    "model": "PosFormer with scale augmentation", "CROHME_2014": 62.68, "CROHME_2016": 61.03, "CROHME_2019": 64.97, "HME100K": 69.51,
+    "source": "https://arxiv.org/html/2407.07764v1"
+  },
+  "metric_comparison_same_run": {
+    "model": "Uni-MuMER with external data (paper version)", "dataset": "HME100K", "ExpRate": 71.93, "CDM_ExpRate": 73.67, "mean_CDM": 97.33,
+    "source": "https://arxiv.org/html/2505.23566v2#A4.T12"
+  },
+  "per_symbol_factorial_or_matrix_specific_accuracy": "No dedicated values found in the reviewed sources"
+}

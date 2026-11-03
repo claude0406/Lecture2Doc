@@ -1,0 +1,120 @@
+{
+  "A_version": "2026-11-02.pages-17",
+  "B_version": "2026-11-02.page-restoration-19",
+  "official": {
+    "lecture01": {
+      "GT": {
+        "recall": 0.9955759315875891,
+        "precision": 0.9431718405964826,
+        "f1": 0.9686558136849174
+      },
+      "nearest": {
+        "recall": 0.9953059692112173,
+        "precision": 0.9430232045778558,
+        "f1": 0.968449451997345
+      },
+      "A": {
+        "recall": 0.9952999337045849,
+        "precision": 0.9412215254255644,
+        "f1": 0.9674964019067738
+      },
+      "B": {
+        "recall": 0.9952999337045849,
+        "precision": 0.9412215254255644,
+        "f1": 0.9674964019067738
+      },
+      "previous_A": {
+        "recall": 0.9950645379703467,
+        "precision": 0.9424713775993604,
+        "f1": 0.9680450834502602
+      }
+    },
+    "lecture02-testing": {
+      "GT": {
+        "recall": 0.9999286728452207,
+        "precision": 0.9984683358798065,
+        "f1": 0.9991977944365891
+      },
+      "nearest": {
+        "recall": 0.999951578959687,
+        "precision": 0.998449675335495,
+        "f1": 0.99919988807645
+      },
+      "A": {
+        "recall": 0.9998521380921936,
+        "precision": 0.9981469704837043,
+        "f1": 0.9989985106018434
+      },
+      "B": {
+        "recall": 0.9998521380921936,
+        "precision": 0.9981469704837043,
+        "f1": 0.9989985106018434
+      },
+      "previous_A": {
+        "recall": 0.9971287305610563,
+        "precision": 0.9946538619060711,
+        "f1": 0.9958880129712838
+      }
+    },
+    "lecture06-additional": {
+      "GT": {
+        "recall": 0.9997433188956385,
+        "precision": 0.9579019353953537,
+        "f1": 0.9783535112154848
+      },
+      "nearest": {
+        "recall": 0.9998474268115941,
+        "precision": 0.9520412618831258,
+        "f1": 0.9753449033694219
+      },
+      "A": {
+        "recall": 0.9997796391066672,
+        "precision": 0.9522752041231509,
+        "f1": 0.9754420192322604
+      },
+      "B": {
+        "recall": 0.9997796391066672,
+        "precision": 0.9522752041231509,
+        "f1": 0.9754420192322604
+      }
+    }
+  },
+  "real_intervals_reference_only": {
+    "A": {
+      "recall": 0.9671557105644257,
+      "precision": 0.48115507879334773,
+      "f1": 0.6348123049056908
+    },
+    "B": {
+      "recall": 0.9921714422780046,
+      "precision": 0.7348115335762628,
+      "f1": 0.8323081066047309
+    }
+  },
+  "synthetic": {
+    "A": {
+      "precision": 0.9094187526516758,
+      "recall": 0.8641338013627916,
+      "f1": 0.8861981360300761,
+      "gt_pixels": 9686,
+      "predicted_pixels": 9428,
+      "gt_components_area_ge_10": 32,
+      "component_coverage_at_80pct": 0.84375
+    },
+    "B": {
+      "precision": 0.9975084711979271,
+      "recall": 1.0,
+      "f1": 0.9987526817342712,
+      "gt_pixels": 9686,
+      "predicted_pixels": 10034,
+      "gt_components_area_ge_10": 32,
+      "component_coverage_at_80pct": 1.0
+    }
+  },
+  "software_tests_log": "../validation/A17-full-tests.log",
+  "code_sha256": {
+    "lecture2doc/pages.py": "bbcac2872e8ae3e48b137ea01d020c7aa46cab9ac3ff1b267ed04caf7ebc57c7",
+    "lecture2doc/page_restore.py": "4d16f01575bdc7fd6f4f4985e67c941ad223af1004af75558d7eae881618a6c4",
+    "lecture2doc/vision.py": "71b086297c37bec4a82d5bb012eed0af33a3657546aec08d1b7ed9a6f6dfe4be"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "accepted_outputs": false,
+  "reference": "withheld video observations, not official GT",
+  "cases": [
+    {
+      "experiment": "lecture01",
+      "state": "b00054",
+      "reason": "no_safe_hidden_writing_gain",
+      "proposal": "experiments/page-restoration/stress/lecture01/results/p00054.rejected.png",
+      "anchor": "cache/decode/ef04c180dd0c4b7b5280/frame-000297.png",
+      "reference": "cache/decode/ef04c180dd0c4b7b5280/frame-000313.png",
+      "A": {
+        "precision": 0.9866051822573562,
+        "recall": 0.9821605407810324,
+        "f1": 0.9843778444575851,
+        "gt_pixels": 69677,
+        "predicted_pixels": 68310,
+        "gt_components_area_ge_10": 106,
+        "component_coverage_at_80pct": 0.9905660377358491
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.97859704656667,
+        "recall": 0.9821605407810324,
+        "f1": 0.9803755555145045,
+        "gt_pixels": 69677,
+        "predicted_pixels": 68869,
+        "gt_components_area_ge_10": 106,
+        "component_coverage_at_80pct": 0.9905660377358491
+      },
+      "delta_f1": -0.004002288943080634
+    },
+    {
+      "experiment": "lecture01",
+      "state": "b00112",
+      "reason": "foreground_residual_original_used",
+      "proposal": "experiments/page-restoration/stress/lecture01/results/p00112.rejected.png",
+      "anchor": "cache/decode/ef04c180dd0c4b7b5280/frame-000774.png",
+      "reference": "cache/decode/ef04c180dd0c4b7b5280/frame-000784.png",
+      "A": {
+        "precision": 0.3788292667870426,
+        "recall": 0.9611146191921455,
+        "f1": 0.5434531256072663,
+        "gt_pixels": 49093,
+        "predicted_pixels": 129594,
+        "gt_components_area_ge_10": 62,
+        "component_coverage_at_80pct": 0.9516129032258065
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.49652192349241286,
+        "recall": 0.9707901330128531,
+        "f1": 0.6570089600422597,
+        "gt_pixels": 49093,
+        "predicted_pixels": 99049,
+        "gt_components_area_ge_10": 62,
+        "component_coverage_at_80pct": 0.9516129032258065
+      },
+      "delta_f1": 0.1135558344349934
+    },
+    {
+      "experiment": "lecture01",
+      "state": "b00186",
+      "reason": "no_safe_hidden_writing_gain",
+      "proposal": "experiments/page-restoration/stress/lecture01/results/p00186.rejected.png",
+      "anchor": "cache/decode/ef04c180dd0c4b7b5280/frame-001623.png",
+      "reference": "cache/decode/ef04c180dd0c4b7b5280/frame-001619.png",
+      "A": {
+        "precision": 0.9428803227645485,
+        "recall": 0.9990631462291636,
+        "f1": 0.9701590152537743,
+        "gt_pixels": 87527,
+        "predicted_pixels": 91212,
+        "gt_components_area_ge_10": 170,
+        "component_coverage_at_80pct": 1.0
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.9690912164065582,
+        "recall": 0.9990631462291636,
+        "f1": 0.9838489683803127,
+        "gt_pixels": 87527,
+        "predicted_pixels": 88745,
+        "gt_components_area_ge_10": 170,
+        "component_coverage_at_80pct": 1.0
+      },
+      "delta_f1": 0.013689953126538312
+    },
+    {
+      "experiment": "lecture02-testing",
+      "state": "b00472",
+      "reason": "foreground_residual_original_used",
+      "proposal": "experiments/page-restoration/stress/lecture02-testing/results/p00472.rejected.png",
+      "anchor": "cache/decode/b091b8b96fbdbb634b26/frame-003410.png",
+      "reference": "cache/decode/b091b8b96fbdbb634b26/frame-003387.png",
+      "A": {
+        "precision": 0.35226966664594855,
+        "recall": 0.9577300930713547,
+        "f1": 0.5150829351233553,
+        "gt_pixels": 69624,
+        "predicted_pixels": 193068,
+        "gt_components_area_ge_10": 99,
+        "component_coverage_at_80pct": 0.9292929292929293
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.3906250896139574,
+        "recall": 0.9577300930713547,
+        "f1": 0.5549181821468101,
+        "gt_pixels": 69624,
+        "predicted_pixels": 174359,
+        "gt_components_area_ge_10": 99,
+        "component_coverage_at_80pct": 0.9292929292929293
+      },
+      "delta_f1": 0.039835247023454756
+    },
+    {
+      "experiment": "lecture02-testing",
+      "state": "b00160",
+      "reason": "no_safe_hidden_writing_gain",
+      "proposal": "experiments/page-restoration/stress/lecture02-testing/results/p00160.rejected.png",
+      "anchor": "cache/decode/b091b8b96fbdbb634b26/frame-000931.png",
+      "reference": "cache/decode/b091b8b96fbdbb634b26/frame-000908.png",
+      "A": {
+        "precision": 0.5020102931907056,
+        "recall": 0.9785989842758082,
+        "f1": 0.6636008168921337,
+        "gt_pixels": 81912,
+        "predicted_pixels": 163409,
+        "gt_components_area_ge_10": 132,
+        "component_coverage_at_80pct": 0.9772727272727273
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.5028837186472291,
+        "recall": 0.9785989842758082,
+        "f1": 0.6643634722241982,
+        "gt_pixels": 81912,
+        "predicted_pixels": 162984,
+        "gt_components_area_ge_10": 132,
+        "component_coverage_at_80pct": 0.9772727272727273
+      },
+      "delta_f1": 0.0007626553320645435
+    },
+    {
+      "experiment": "lecture02-testing",
+      "state": "b00129",
+      "reason": "foreground_residual_original_used",
+      "proposal": "experiments/page-restoration/stress/lecture02-testing/results/p00129.rejected.png",
+      "anchor": "cache/decode/b091b8b96fbdbb634b26/frame-000633.png",
+      "reference": "cache/decode/b091b8b96fbdbb634b26/frame-000615.png",
+      "A": {
+        "precision": 0.3634195285329677,
+        "recall": 0.9944038831835686,
+        "f1": 0.532301604582097,
+        "gt_pixels": 49856,
+        "predicted_pixels": 140031,
+        "gt_components_area_ge_10": 72,
+        "component_coverage_at_80pct": 0.9861111111111112
+      },
+      "rejected_proposal_metrics": {
+        "precision": 0.5122058941620493,
+        "recall": 0.9993180359435173,
+        "f1": 0.6772722256761935,
+        "gt_pixels": 49856,
+        "predicted_pixels": 99624,
+        "gt_components_area_ge_10": 72,
+        "component_coverage_at_80pct": 1.0
+      },
+      "delta_f1": 0.14497062109409653
+    }
+  ]
+}

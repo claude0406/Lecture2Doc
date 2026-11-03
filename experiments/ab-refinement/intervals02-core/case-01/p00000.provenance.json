@@ -1,0 +1,3092 @@
+{
+  "coordinate_system": "full_frame_pixels",
+  "width": 1920,
+  "height": 1080,
+  "roi": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "base_source_frame_id": "f003776",
+  "patches": [
+    {
+      "x": 420,
+      "y": 138,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        420,
+        138,
+        426,
+        141
+      ]
+    },
+    {
+      "x": 426,
+      "y": 141,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        426,
+        141,
+        429,
+        144
+      ]
+    },
+    {
+      "x": 588,
+      "y": 120,
+      "width": 15,
+      "height": 12,
+      "source_frame_id": "f003771",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        588,
+        120,
+        603,
+        132
+      ]
+    },
+    {
+      "x": 930,
+      "y": 420,
+      "width": 30,
+      "height": 24,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        930,
+        420,
+        960,
+        444
+      ]
+    },
+    {
+      "x": 927,
+      "y": 444,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        927,
+        444,
+        960,
+        447
+      ]
+    },
+    {
+      "x": 924,
+      "y": 447,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        924,
+        447,
+        960,
+        450
+      ]
+    },
+    {
+      "x": 921,
+      "y": 450,
+      "width": 39,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        921,
+        450,
+        960,
+        456
+      ]
+    },
+    {
+      "x": 918,
+      "y": 456,
+      "width": 42,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        918,
+        456,
+        960,
+        462
+      ]
+    },
+    {
+      "x": 915,
+      "y": 462,
+      "width": 45,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        915,
+        462,
+        960,
+        468
+      ]
+    },
+    {
+      "x": 912,
+      "y": 468,
+      "width": 48,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        912,
+        468,
+        960,
+        477
+      ]
+    },
+    {
+      "x": 909,
+      "y": 477,
+      "width": 51,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        909,
+        477,
+        960,
+        480
+      ]
+    },
+    {
+      "x": 975,
+      "y": 414,
+      "width": 81,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        975,
+        414,
+        1056,
+        417
+      ]
+    },
+    {
+      "x": 963,
+      "y": 417,
+      "width": 93,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        963,
+        417,
+        1056,
+        420
+      ]
+    },
+    {
+      "x": 960,
+      "y": 420,
+      "width": 96,
+      "height": 60,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        960,
+        420,
+        1056,
+        480
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 414,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        414,
+        1077,
+        417
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 417,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        417,
+        1089,
+        420
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 420,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        420,
+        1095,
+        423
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 423,
+      "width": 45,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        423,
+        1101,
+        426
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 426,
+      "width": 51,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        426,
+        1107,
+        429
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 429,
+      "width": 57,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        429,
+        1113,
+        432
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 432,
+      "width": 63,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        432,
+        1119,
+        435
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 435,
+      "width": 66,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        435,
+        1122,
+        438
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 438,
+      "width": 69,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        438,
+        1125,
+        441
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 441,
+      "width": 75,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        441,
+        1131,
+        447
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 447,
+      "width": 78,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        447,
+        1134,
+        450
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 450,
+      "width": 81,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        450,
+        1137,
+        453
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 453,
+      "width": 84,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        453,
+        1140,
+        459
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 459,
+      "width": 87,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        459,
+        1143,
+        465
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 465,
+      "width": 90,
+      "height": 15,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1056,
+        465,
+        1146,
+        480
+      ]
+    },
+    {
+      "x": 909,
+      "y": 480,
+      "width": 51,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        909,
+        480,
+        960,
+        486
+      ]
+    },
+    {
+      "x": 906,
+      "y": 486,
+      "width": 54,
+      "height": 90,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        906,
+        486,
+        960,
+        576
+      ]
+    },
+    {
+      "x": 960,
+      "y": 480,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        960,
+        480,
+        1056,
+        576
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 480,
+      "width": 90,
+      "height": 75,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        480,
+        1146,
+        555
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 555,
+      "width": 87,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        555,
+        1143,
+        558
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 558,
+      "width": 84,
+      "height": 18,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        558,
+        1140,
+        576
+      ]
+    },
+    {
+      "x": 765,
+      "y": 657,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        765,
+        657,
+        768,
+        660
+      ]
+    },
+    {
+      "x": 762,
+      "y": 660,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        762,
+        660,
+        768,
+        663
+      ]
+    },
+    {
+      "x": 759,
+      "y": 663,
+      "width": 9,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        759,
+        663,
+        768,
+        666
+      ]
+    },
+    {
+      "x": 756,
+      "y": 666,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        756,
+        666,
+        768,
+        672
+      ]
+    },
+    {
+      "x": 849,
+      "y": 621,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        849,
+        621,
+        864,
+        624
+      ]
+    },
+    {
+      "x": 828,
+      "y": 624,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        828,
+        624,
+        864,
+        627
+      ]
+    },
+    {
+      "x": 813,
+      "y": 627,
+      "width": 51,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        813,
+        627,
+        864,
+        630
+      ]
+    },
+    {
+      "x": 804,
+      "y": 630,
+      "width": 60,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        804,
+        630,
+        864,
+        633
+      ]
+    },
+    {
+      "x": 795,
+      "y": 633,
+      "width": 69,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        795,
+        633,
+        864,
+        636
+      ]
+    },
+    {
+      "x": 789,
+      "y": 636,
+      "width": 75,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        789,
+        636,
+        864,
+        639
+      ]
+    },
+    {
+      "x": 783,
+      "y": 639,
+      "width": 81,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        783,
+        639,
+        864,
+        642
+      ]
+    },
+    {
+      "x": 780,
+      "y": 642,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        780,
+        642,
+        864,
+        645
+      ]
+    },
+    {
+      "x": 777,
+      "y": 645,
+      "width": 87,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        777,
+        645,
+        864,
+        648
+      ]
+    },
+    {
+      "x": 774,
+      "y": 648,
+      "width": 90,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        774,
+        648,
+        864,
+        651
+      ]
+    },
+    {
+      "x": 771,
+      "y": 651,
+      "width": 93,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        771,
+        651,
+        864,
+        654
+      ]
+    },
+    {
+      "x": 768,
+      "y": 654,
+      "width": 96,
+      "height": 18,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        768,
+        654,
+        864,
+        672
+      ]
+    },
+    {
+      "x": 906,
+      "y": 576,
+      "width": 54,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        906,
+        576,
+        960,
+        582
+      ]
+    },
+    {
+      "x": 909,
+      "y": 582,
+      "width": 51,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        909,
+        582,
+        960,
+        591
+      ]
+    },
+    {
+      "x": 906,
+      "y": 591,
+      "width": 54,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        906,
+        591,
+        960,
+        594
+      ]
+    },
+    {
+      "x": 903,
+      "y": 594,
+      "width": 57,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        903,
+        594,
+        960,
+        597
+      ]
+    },
+    {
+      "x": 900,
+      "y": 597,
+      "width": 60,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        900,
+        597,
+        960,
+        600
+      ]
+    },
+    {
+      "x": 897,
+      "y": 600,
+      "width": 63,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        897,
+        600,
+        960,
+        603
+      ]
+    },
+    {
+      "x": 894,
+      "y": 603,
+      "width": 66,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        894,
+        603,
+        960,
+        606
+      ]
+    },
+    {
+      "x": 891,
+      "y": 606,
+      "width": 69,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        891,
+        606,
+        960,
+        612
+      ]
+    },
+    {
+      "x": 888,
+      "y": 612,
+      "width": 72,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        888,
+        612,
+        960,
+        615
+      ]
+    },
+    {
+      "x": 876,
+      "y": 615,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        876,
+        615,
+        960,
+        618
+      ]
+    },
+    {
+      "x": 864,
+      "y": 618,
+      "width": 96,
+      "height": 54,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        864,
+        618,
+        960,
+        672
+      ]
+    },
+    {
+      "x": 960,
+      "y": 576,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        960,
+        576,
+        1056,
+        672
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 576,
+      "width": 84,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        576,
+        1140,
+        582
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 582,
+      "width": 81,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        582,
+        1137,
+        585
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 585,
+      "width": 75,
+      "height": 21,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        585,
+        1131,
+        606
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 606,
+      "width": 72,
+      "height": 15,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        606,
+        1128,
+        621
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 621,
+      "width": 69,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        621,
+        1125,
+        627
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 627,
+      "width": 66,
+      "height": 9,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        627,
+        1122,
+        636
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 636,
+      "width": 69,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        636,
+        1125,
+        639
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 639,
+      "width": 72,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        639,
+        1128,
+        642
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 642,
+      "width": 78,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        642,
+        1134,
+        645
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 645,
+      "width": 93,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        645,
+        1149,
+        651
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 651,
+      "width": 96,
+      "height": 21,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        651,
+        1152,
+        672
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 651,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        651,
+        1155,
+        654
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 654,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        654,
+        1158,
+        657
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 657,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        657,
+        1167,
+        660
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 660,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        660,
+        1173,
+        663
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 663,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        663,
+        1179,
+        666
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 666,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        666,
+        1185,
+        669
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 669,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003769",
+      "source_box": [
+        1152,
+        669,
+        1191,
+        672
+      ]
+    },
+    {
+      "x": 753,
+      "y": 672,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        753,
+        672,
+        768,
+        675
+      ]
+    },
+    {
+      "x": 750,
+      "y": 675,
+      "width": 18,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        750,
+        675,
+        768,
+        681
+      ]
+    },
+    {
+      "x": 747,
+      "y": 681,
+      "width": 21,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        747,
+        681,
+        768,
+        684
+      ]
+    },
+    {
+      "x": 744,
+      "y": 684,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        744,
+        684,
+        768,
+        687
+      ]
+    },
+    {
+      "x": 741,
+      "y": 687,
+      "width": 27,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        741,
+        687,
+        768,
+        693
+      ]
+    },
+    {
+      "x": 738,
+      "y": 693,
+      "width": 30,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        738,
+        693,
+        768,
+        702
+      ]
+    },
+    {
+      "x": 735,
+      "y": 702,
+      "width": 33,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        735,
+        702,
+        768,
+        705
+      ]
+    },
+    {
+      "x": 732,
+      "y": 705,
+      "width": 36,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        732,
+        705,
+        768,
+        714
+      ]
+    },
+    {
+      "x": 729,
+      "y": 714,
+      "width": 39,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        729,
+        714,
+        768,
+        723
+      ]
+    },
+    {
+      "x": 726,
+      "y": 723,
+      "width": 42,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        726,
+        723,
+        768,
+        729
+      ]
+    },
+    {
+      "x": 723,
+      "y": 729,
+      "width": 45,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        723,
+        729,
+        768,
+        738
+      ]
+    },
+    {
+      "x": 720,
+      "y": 738,
+      "width": 48,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        720,
+        738,
+        768,
+        744
+      ]
+    },
+    {
+      "x": 717,
+      "y": 744,
+      "width": 51,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        717,
+        744,
+        768,
+        750
+      ]
+    },
+    {
+      "x": 714,
+      "y": 750,
+      "width": 54,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        714,
+        750,
+        768,
+        753
+      ]
+    },
+    {
+      "x": 711,
+      "y": 753,
+      "width": 57,
+      "height": 9,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        711,
+        753,
+        768,
+        762
+      ]
+    },
+    {
+      "x": 708,
+      "y": 762,
+      "width": 60,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        708,
+        762,
+        768,
+        768
+      ]
+    },
+    {
+      "x": 768,
+      "y": 672,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        768,
+        672,
+        864,
+        768
+      ]
+    },
+    {
+      "x": 864,
+      "y": 672,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        864,
+        672,
+        960,
+        768
+      ]
+    },
+    {
+      "x": 960,
+      "y": 672,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        960,
+        672,
+        1056,
+        768
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 672,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        1056,
+        672,
+        1152,
+        768
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 672,
+      "width": 45,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        672,
+        1197,
+        675
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 675,
+      "width": 51,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        675,
+        1203,
+        678
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 678,
+      "width": 54,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        678,
+        1206,
+        681
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 681,
+      "width": 57,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        681,
+        1209,
+        684
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 684,
+      "width": 60,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        684,
+        1212,
+        687
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 687,
+      "width": 63,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        687,
+        1215,
+        690
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 690,
+      "width": 66,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        690,
+        1218,
+        693
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 693,
+      "width": 69,
+      "height": 6,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        693,
+        1221,
+        699
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 699,
+      "width": 75,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        699,
+        1227,
+        702
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 702,
+      "width": 78,
+      "height": 6,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        702,
+        1230,
+        708
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 708,
+      "width": 81,
+      "height": 6,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        708,
+        1233,
+        714
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 714,
+      "width": 84,
+      "height": 9,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        714,
+        1236,
+        723
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 723,
+      "width": 87,
+      "height": 6,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        723,
+        1239,
+        729
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 729,
+      "width": 90,
+      "height": 6,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        729,
+        1242,
+        735
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 735,
+      "width": 93,
+      "height": 9,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        735,
+        1245,
+        744
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 744,
+      "width": 96,
+      "height": 24,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        744,
+        1248,
+        768
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 753,
+      "width": 3,
+      "height": 15,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        753,
+        1251,
+        768
+      ]
+    },
+    {
+      "x": 669,
+      "y": 855,
+      "width": 3,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        669,
+        855,
+        672,
+        861
+      ]
+    },
+    {
+      "x": 666,
+      "y": 861,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        666,
+        861,
+        672,
+        864
+      ]
+    },
+    {
+      "x": 705,
+      "y": 768,
+      "width": 63,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        705,
+        768,
+        768,
+        771
+      ]
+    },
+    {
+      "x": 702,
+      "y": 771,
+      "width": 66,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        702,
+        771,
+        768,
+        777
+      ]
+    },
+    {
+      "x": 699,
+      "y": 777,
+      "width": 69,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        699,
+        777,
+        768,
+        786
+      ]
+    },
+    {
+      "x": 696,
+      "y": 786,
+      "width": 72,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        696,
+        786,
+        768,
+        789
+      ]
+    },
+    {
+      "x": 693,
+      "y": 789,
+      "width": 75,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        693,
+        789,
+        768,
+        795
+      ]
+    },
+    {
+      "x": 690,
+      "y": 795,
+      "width": 78,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        690,
+        795,
+        768,
+        801
+      ]
+    },
+    {
+      "x": 687,
+      "y": 801,
+      "width": 81,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        687,
+        801,
+        768,
+        810
+      ]
+    },
+    {
+      "x": 684,
+      "y": 810,
+      "width": 84,
+      "height": 3,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        684,
+        810,
+        768,
+        813
+      ]
+    },
+    {
+      "x": 681,
+      "y": 813,
+      "width": 87,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        681,
+        813,
+        768,
+        819
+      ]
+    },
+    {
+      "x": 678,
+      "y": 819,
+      "width": 90,
+      "height": 12,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        678,
+        819,
+        768,
+        831
+      ]
+    },
+    {
+      "x": 675,
+      "y": 831,
+      "width": 93,
+      "height": 15,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        675,
+        831,
+        768,
+        846
+      ]
+    },
+    {
+      "x": 672,
+      "y": 846,
+      "width": 96,
+      "height": 18,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        672,
+        846,
+        768,
+        864
+      ]
+    },
+    {
+      "x": 768,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        768,
+        768,
+        864,
+        864
+      ]
+    },
+    {
+      "x": 864,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        864,
+        768,
+        960,
+        864
+      ]
+    },
+    {
+      "x": 960,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        960,
+        768,
+        1056,
+        864
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1056,
+        768,
+        1152,
+        864
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 768,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        768,
+        1248,
+        864
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 768,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        768,
+        1251,
+        771
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 771,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        771,
+        1254,
+        774
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 774,
+      "width": 9,
+      "height": 12,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        774,
+        1257,
+        786
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 786,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        786,
+        1260,
+        792
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 792,
+      "width": 15,
+      "height": 18,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        792,
+        1263,
+        810
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 810,
+      "width": 18,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        810,
+        1266,
+        813
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 813,
+      "width": 21,
+      "height": 9,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        813,
+        1269,
+        822
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 822,
+      "width": 24,
+      "height": 12,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        822,
+        1272,
+        834
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 834,
+      "width": 27,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        834,
+        1275,
+        840
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 840,
+      "width": 30,
+      "height": 12,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        840,
+        1278,
+        852
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 852,
+      "width": 33,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        852,
+        1281,
+        858
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 858,
+      "width": 36,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        1248,
+        858,
+        1284,
+        864
+      ]
+    },
+    {
+      "x": 240,
+      "y": 909,
+      "width": 48,
+      "height": 51,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        240,
+        909,
+        288,
+        960
+      ]
+    },
+    {
+      "x": 288,
+      "y": 909,
+      "width": 33,
+      "height": 51,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003770",
+      "source_box": [
+        288,
+        909,
+        321,
+        960
+      ]
+    },
+    {
+      "x": 666,
+      "y": 864,
+      "width": 6,
+      "height": 15,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        666,
+        864,
+        672,
+        879
+      ]
+    },
+    {
+      "x": 663,
+      "y": 879,
+      "width": 9,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        663,
+        879,
+        672,
+        888
+      ]
+    },
+    {
+      "x": 663,
+      "y": 888,
+      "width": 9,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        663,
+        888,
+        672,
+        897
+      ]
+    },
+    {
+      "x": 672,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        672,
+        864,
+        696,
+        888
+      ]
+    },
+    {
+      "x": 696,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        696,
+        864,
+        720,
+        888
+      ]
+    },
+    {
+      "x": 672,
+      "y": 888,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        672,
+        888,
+        684,
+        897
+      ]
+    },
+    {
+      "x": 684,
+      "y": 888,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        684,
+        888,
+        696,
+        897
+      ]
+    },
+    {
+      "x": 696,
+      "y": 888,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        696,
+        888,
+        708,
+        897
+      ]
+    },
+    {
+      "x": 708,
+      "y": 888,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        708,
+        888,
+        720,
+        897
+      ]
+    },
+    {
+      "x": 720,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        720,
+        864,
+        744,
+        888
+      ]
+    },
+    {
+      "x": 744,
+      "y": 864,
+      "width": 24,
+      "height": 24,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        744,
+        864,
+        768,
+        888
+      ]
+    },
+    {
+      "x": 720,
+      "y": 888,
+      "width": 12,
+      "height": 9,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        720,
+        888,
+        732,
+        897
+      ]
+    },
+    {
+      "x": 732,
+      "y": 888,
+      "width": 12,
+      "height": 12,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        732,
+        888,
+        744,
+        900
+      ]
+    },
+    {
+      "x": 732,
+      "y": 900,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        732,
+        900,
+        744,
+        906
+      ]
+    },
+    {
+      "x": 744,
+      "y": 888,
+      "width": 24,
+      "height": 18,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        744,
+        888,
+        768,
+        906
+      ]
+    },
+    {
+      "x": 768,
+      "y": 864,
+      "width": 48,
+      "height": 24,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        768,
+        864,
+        816,
+        888
+      ]
+    },
+    {
+      "x": 768,
+      "y": 888,
+      "width": 39,
+      "height": 18,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        768,
+        888,
+        807,
+        906
+      ]
+    },
+    {
+      "x": 774,
+      "y": 906,
+      "width": 33,
+      "height": 6,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        774,
+        906,
+        807,
+        912
+      ]
+    },
+    {
+      "x": 816,
+      "y": 864,
+      "width": 48,
+      "height": 24,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        864,
+        864,
+        888
+      ]
+    },
+    {
+      "x": 774,
+      "y": 912,
+      "width": 33,
+      "height": 9,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        774,
+        912,
+        807,
+        921
+      ]
+    },
+    {
+      "x": 774,
+      "y": 921,
+      "width": 36,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        774,
+        921,
+        810,
+        927
+      ]
+    },
+    {
+      "x": 774,
+      "y": 927,
+      "width": 39,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        774,
+        927,
+        813,
+        933
+      ]
+    },
+    {
+      "x": 774,
+      "y": 933,
+      "width": 42,
+      "height": 27,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        774,
+        933,
+        816,
+        960
+      ]
+    },
+    {
+      "x": 816,
+      "y": 933,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        933,
+        819,
+        936
+      ]
+    },
+    {
+      "x": 816,
+      "y": 936,
+      "width": 6,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        936,
+        822,
+        939
+      ]
+    },
+    {
+      "x": 816,
+      "y": 939,
+      "width": 15,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        939,
+        831,
+        942
+      ]
+    },
+    {
+      "x": 816,
+      "y": 942,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        942,
+        840,
+        945
+      ]
+    },
+    {
+      "x": 816,
+      "y": 945,
+      "width": 30,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        945,
+        846,
+        948
+      ]
+    },
+    {
+      "x": 816,
+      "y": 948,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        948,
+        852,
+        951
+      ]
+    },
+    {
+      "x": 816,
+      "y": 951,
+      "width": 39,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        951,
+        855,
+        954
+      ]
+    },
+    {
+      "x": 816,
+      "y": 954,
+      "width": 45,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        954,
+        861,
+        957
+      ]
+    },
+    {
+      "x": 816,
+      "y": 957,
+      "width": 48,
+      "height": 3,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        816,
+        957,
+        864,
+        960
+      ]
+    },
+    {
+      "x": 864,
+      "y": 864,
+      "width": 96,
+      "height": 24,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        864,
+        864,
+        960,
+        888
+      ]
+    },
+    {
+      "x": 864,
+      "y": 957,
+      "width": 3,
+      "height": 3,
+      "source_frame_id": "f003778",
+      "witness_frame_id": "f003768",
+      "source_box": [
+        864,
+        957,
+        867,
+        960
+      ]
+    },
+    {
+      "x": 960,
+      "y": 864,
+      "width": 96,
+      "height": 24,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        960,
+        864,
+        1056,
+        888
+      ]
+    },
+    {
+      "x": 1041,
+      "y": 888,
+      "width": 15,
+      "height": 54,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1041,
+        888,
+        1056,
+        942
+      ]
+    },
+    {
+      "x": 1038,
+      "y": 942,
+      "width": 18,
+      "height": 6,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1038,
+        942,
+        1056,
+        948
+      ]
+    },
+    {
+      "x": 1035,
+      "y": 948,
+      "width": 21,
+      "height": 6,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1035,
+        948,
+        1056,
+        954
+      ]
+    },
+    {
+      "x": 1032,
+      "y": 954,
+      "width": 24,
+      "height": 3,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1032,
+        954,
+        1056,
+        957
+      ]
+    },
+    {
+      "x": 1029,
+      "y": 957,
+      "width": 27,
+      "height": 3,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1029,
+        957,
+        1056,
+        960
+      ]
+    },
+    {
+      "x": 1056,
+      "y": 864,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003777",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        1056,
+        864,
+        1152,
+        960
+      ]
+    },
+    {
+      "x": 1152,
+      "y": 864,
+      "width": 96,
+      "height": 96,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003777",
+      "source_box": [
+        1152,
+        864,
+        1248,
+        960
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 864,
+      "width": 36,
+      "height": 3,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        1248,
+        864,
+        1284,
+        867
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 867,
+      "width": 39,
+      "height": 15,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        1248,
+        867,
+        1287,
+        882
+      ]
+    },
+    {
+      "x": 1248,
+      "y": 882,
+      "width": 42,
+      "height": 78,
+      "source_frame_id": "f003768",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        1248,
+        882,
+        1290,
+        960
+      ]
+    },
+    {
+      "x": 240,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        240,
+        960,
+        252,
+        966
+      ]
+    },
+    {
+      "x": 252,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        252,
+        960,
+        264,
+        966
+      ]
+    },
+    {
+      "x": 264,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        264,
+        960,
+        276,
+        966
+      ]
+    },
+    {
+      "x": 276,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003773",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        276,
+        960,
+        288,
+        966
+      ]
+    },
+    {
+      "x": 288,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003771",
+      "source_box": [
+        288,
+        960,
+        300,
+        966
+      ]
+    },
+    {
+      "x": 300,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003772",
+      "source_box": [
+        300,
+        960,
+        312,
+        966
+      ]
+    },
+    {
+      "x": 312,
+      "y": 960,
+      "width": 9,
+      "height": 6,
+      "source_frame_id": "f003775",
+      "witness_frame_id": "f003773",
+      "source_box": [
+        312,
+        960,
+        321,
+        966
+      ]
+    },
+    {
+      "x": 774,
+      "y": 960,
+      "width": 6,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003772",
+      "source_box": [
+        774,
+        960,
+        780,
+        966
+      ]
+    },
+    {
+      "x": 780,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003774",
+      "witness_frame_id": "f003778",
+      "source_box": [
+        780,
+        960,
+        792,
+        966
+      ]
+    },
+    {
+      "x": 792,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003773",
+      "witness_frame_id": "f003779",
+      "source_box": [
+        792,
+        960,
+        804,
+        966
+      ]
+    },
+    {
+      "x": 804,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        804,
+        960,
+        816,
+        966
+      ]
+    },
+    {
+      "x": 816,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        816,
+        960,
+        828,
+        966
+      ]
+    },
+    {
+      "x": 828,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        828,
+        960,
+        840,
+        966
+      ]
+    },
+    {
+      "x": 840,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        840,
+        960,
+        852,
+        966
+      ]
+    },
+    {
+      "x": 852,
+      "y": 960,
+      "width": 12,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003775",
+      "source_box": [
+        852,
+        960,
+        864,
+        966
+      ]
+    },
+    {
+      "x": 864,
+      "y": 960,
+      "width": 6,
+      "height": 6,
+      "source_frame_id": "f003779",
+      "witness_frame_id": "f003774",
+      "source_box": [
+        864,
+        960,
+        870,
+        966
+      ]
+    }
+  ],
+  "source_policy": {
+    "rule": "same accumulated page with terminal-target checks, no erasure boundary, mutually compatible writing. Without terminal target: same microstate and within 12 seconds.",
+    "barrier_origin": "accumulated_page",
+    "temporal_absence_evidence": "case-01/p00000.evidence.npz",
+    "terminal_target_used": true,
+    "terminal_target": "case-01/p00000.target.png",
+    "erasure_barriers": [],
+    "microstate_id": "interval",
+    "candidate_frame_ids": [
+      "f003776",
+      "f003775",
+      "f003777",
+      "f003778",
+      "f003774",
+      "f003773",
+      "f003779",
+      "f003772",
+      "f003771",
+      "f003770",
+      "f003769",
+      "f003768"
+    ],
+    "accepted_frame_ids": [
+      "f003776",
+      "f003775",
+      "f003777",
+      "f003778",
+      "f003774",
+      "f003773",
+      "f003779",
+      "f003772",
+      "f003771",
+      "f003770",
+      "f003769",
+      "f003768"
+    ],
+    "rejected": [],
+    "region_exclusions": [
+      {
+        "source_frame_id": "f003776",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003775",
+        "stale_ink_pixels": 2,
+        "missing_terminal_ink_pixels": 7
+      },
+      {
+        "source_frame_id": "f003777",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003778",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 2
+      },
+      {
+        "source_frame_id": "f003774",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 1
+      },
+      {
+        "source_frame_id": "f003773",
+        "stale_ink_pixels": 4,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003779",
+        "stale_ink_pixels": 0,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003772",
+        "stale_ink_pixels": 8,
+        "missing_terminal_ink_pixels": 1
+      },
+      {
+        "source_frame_id": "f003771",
+        "stale_ink_pixels": 11,
+        "missing_terminal_ink_pixels": 0
+      },
+      {
+        "source_frame_id": "f003770",
+        "stale_ink_pixels": 43,
+        "missing_terminal_ink_pixels": 3
+      },
+      {
+        "source_frame_id": "f003769",
+        "stale_ink_pixels": 38,
+        "missing_terminal_ink_pixels": 2
+      },
+      {
+        "source_frame_id": "f003768",
+        "stale_ink_pixels": 52,
+        "missing_terminal_ink_pixels": 1
+      }
+    ]
+  },
+  "inpainting": false,
+  "spatial_interpolation": false,
+  "roi_pixel_box": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "photometric_adjustment": false,
+  "unresolved_pixels": "retain selected original"
+}

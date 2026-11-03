@@ -1,0 +1,1531 @@
+{
+  "uses_gt": false,
+  "used_as_algorithm_input": false,
+  "caveat": "Foreground heuristic on every decoded frame; absence of a completely clear frame is not a human segmentation proof.",
+  "results": [
+    {
+      "case": 1,
+      "start": 1885.884,
+      "end": 1891.8895,
+      "frames": 180,
+      "known_ink_pixels": 16970,
+      "best_time": 1891.8566333333333,
+      "best_hidden_pixels": 397,
+      "best_missing_visible_pixels": 55,
+      "observations": [
+        {
+          "time": 1885.884,
+          "hidden_known_ink_pixels": 2405,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1885.9173666666666,
+          "hidden_known_ink_pixels": 2179,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1885.9507333333333,
+          "hidden_known_ink_pixels": 2272,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1885.9841,
+          "hidden_known_ink_pixels": 2275,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.0174666666667,
+          "hidden_known_ink_pixels": 2284,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1886.0508333333332,
+          "hidden_known_ink_pixels": 2352,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.0842,
+          "hidden_known_ink_pixels": 2024,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1886.1175666666666,
+          "hidden_known_ink_pixels": 2044,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1886.1509333333333,
+          "hidden_known_ink_pixels": 2015,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1886.1843,
+          "hidden_known_ink_pixels": 2022,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.2176666666667,
+          "hidden_known_ink_pixels": 1970,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1886.2510333333332,
+          "hidden_known_ink_pixels": 1956,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.2844,
+          "hidden_known_ink_pixels": 1955,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1886.3177666666666,
+          "hidden_known_ink_pixels": 2002,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1886.3511333333333,
+          "hidden_known_ink_pixels": 1892,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1886.3845,
+          "hidden_known_ink_pixels": 2022,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1886.4178666666667,
+          "hidden_known_ink_pixels": 1345,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1886.4512333333332,
+          "hidden_known_ink_pixels": 1339,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1886.4846,
+          "hidden_known_ink_pixels": 1370,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1886.5179666666668,
+          "hidden_known_ink_pixels": 1408,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1886.5513333333333,
+          "hidden_known_ink_pixels": 1408,
+          "missing_visible_known_ink_pixels": 43
+        },
+        {
+          "time": 1886.5847,
+          "hidden_known_ink_pixels": 1381,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1886.6180666666667,
+          "hidden_known_ink_pixels": 1366,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1886.6514333333334,
+          "hidden_known_ink_pixels": 1355,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1886.6848,
+          "hidden_known_ink_pixels": 1336,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1886.7181666666668,
+          "hidden_known_ink_pixels": 1356,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 1886.7515333333333,
+          "hidden_known_ink_pixels": 1226,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1886.7849,
+          "hidden_known_ink_pixels": 1263,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1886.8182666666667,
+          "hidden_known_ink_pixels": 1306,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1886.8516333333334,
+          "hidden_known_ink_pixels": 1064,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1886.885,
+          "hidden_known_ink_pixels": 1120,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.9183666666668,
+          "hidden_known_ink_pixels": 1150,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1886.9517333333333,
+          "hidden_known_ink_pixels": 1002,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1886.9851,
+          "hidden_known_ink_pixels": 970,
+          "missing_visible_known_ink_pixels": 36
+        },
+        {
+          "time": 1887.0184666666667,
+          "hidden_known_ink_pixels": 949,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1887.0518333333334,
+          "hidden_known_ink_pixels": 957,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1887.0852,
+          "hidden_known_ink_pixels": 840,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1887.1185666666668,
+          "hidden_known_ink_pixels": 851,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1887.1519333333333,
+          "hidden_known_ink_pixels": 908,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1887.1853,
+          "hidden_known_ink_pixels": 843,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1887.2186666666666,
+          "hidden_known_ink_pixels": 882,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1887.2520333333334,
+          "hidden_known_ink_pixels": 891,
+          "missing_visible_known_ink_pixels": 31
+        },
+        {
+          "time": 1887.2854,
+          "hidden_known_ink_pixels": 898,
+          "missing_visible_known_ink_pixels": 29
+        },
+        {
+          "time": 1887.3187666666668,
+          "hidden_known_ink_pixels": 931,
+          "missing_visible_known_ink_pixels": 30
+        },
+        {
+          "time": 1887.3521333333333,
+          "hidden_known_ink_pixels": 924,
+          "missing_visible_known_ink_pixels": 31
+        },
+        {
+          "time": 1887.3855,
+          "hidden_known_ink_pixels": 921,
+          "missing_visible_known_ink_pixels": 30
+        },
+        {
+          "time": 1887.4188666666666,
+          "hidden_known_ink_pixels": 1109,
+          "missing_visible_known_ink_pixels": 29
+        },
+        {
+          "time": 1887.4522333333334,
+          "hidden_known_ink_pixels": 1218,
+          "missing_visible_known_ink_pixels": 28
+        },
+        {
+          "time": 1887.4856,
+          "hidden_known_ink_pixels": 1253,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1887.5189666666668,
+          "hidden_known_ink_pixels": 1340,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1887.5523333333333,
+          "hidden_known_ink_pixels": 1404,
+          "missing_visible_known_ink_pixels": 39
+        },
+        {
+          "time": 1887.5857,
+          "hidden_known_ink_pixels": 1438,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1887.6190666666666,
+          "hidden_known_ink_pixels": 1474,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1887.6524333333334,
+          "hidden_known_ink_pixels": 1528,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1887.6858,
+          "hidden_known_ink_pixels": 1595,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1887.7191666666668,
+          "hidden_known_ink_pixels": 1665,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1887.7525333333333,
+          "hidden_known_ink_pixels": 1700,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1887.7859,
+          "hidden_known_ink_pixels": 1729,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1887.8192666666666,
+          "hidden_known_ink_pixels": 1757,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1887.8526333333334,
+          "hidden_known_ink_pixels": 1764,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1887.886,
+          "hidden_known_ink_pixels": 1785,
+          "missing_visible_known_ink_pixels": 30
+        },
+        {
+          "time": 1887.9193666666667,
+          "hidden_known_ink_pixels": 1805,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1887.9527333333333,
+          "hidden_known_ink_pixels": 1809,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1887.9861,
+          "hidden_known_ink_pixels": 1817,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.0194666666666,
+          "hidden_known_ink_pixels": 1803,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1888.0528333333334,
+          "hidden_known_ink_pixels": 1806,
+          "missing_visible_known_ink_pixels": 31
+        },
+        {
+          "time": 1888.0862,
+          "hidden_known_ink_pixels": 1801,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.1195666666667,
+          "hidden_known_ink_pixels": 1825,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1888.1529333333333,
+          "hidden_known_ink_pixels": 1811,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 1888.1863,
+          "hidden_known_ink_pixels": 1785,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1888.2196666666666,
+          "hidden_known_ink_pixels": 1784,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1888.2530333333334,
+          "hidden_known_ink_pixels": 1759,
+          "missing_visible_known_ink_pixels": 39
+        },
+        {
+          "time": 1888.2864,
+          "hidden_known_ink_pixels": 1756,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 1888.3197666666667,
+          "hidden_known_ink_pixels": 1741,
+          "missing_visible_known_ink_pixels": 44
+        },
+        {
+          "time": 1888.3531333333333,
+          "hidden_known_ink_pixels": 1741,
+          "missing_visible_known_ink_pixels": 42
+        },
+        {
+          "time": 1888.3865,
+          "hidden_known_ink_pixels": 1743,
+          "missing_visible_known_ink_pixels": 44
+        },
+        {
+          "time": 1888.4198666666666,
+          "hidden_known_ink_pixels": 1785,
+          "missing_visible_known_ink_pixels": 39
+        },
+        {
+          "time": 1888.4532333333334,
+          "hidden_known_ink_pixels": 1809,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1888.4866,
+          "hidden_known_ink_pixels": 1824,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1888.5199666666667,
+          "hidden_known_ink_pixels": 1826,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1888.5533333333333,
+          "hidden_known_ink_pixels": 1825,
+          "missing_visible_known_ink_pixels": 46
+        },
+        {
+          "time": 1888.5867,
+          "hidden_known_ink_pixels": 1823,
+          "missing_visible_known_ink_pixels": 39
+        },
+        {
+          "time": 1888.6200666666666,
+          "hidden_known_ink_pixels": 1820,
+          "missing_visible_known_ink_pixels": 39
+        },
+        {
+          "time": 1888.6534333333334,
+          "hidden_known_ink_pixels": 1782,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1888.6868,
+          "hidden_known_ink_pixels": 1774,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 1888.7201666666667,
+          "hidden_known_ink_pixels": 1811,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1888.7535333333333,
+          "hidden_known_ink_pixels": 1826,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1888.7869,
+          "hidden_known_ink_pixels": 1837,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.8202666666666,
+          "hidden_known_ink_pixels": 1850,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.8536333333334,
+          "hidden_known_ink_pixels": 1851,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.887,
+          "hidden_known_ink_pixels": 1840,
+          "missing_visible_known_ink_pixels": 33
+        },
+        {
+          "time": 1888.9203666666667,
+          "hidden_known_ink_pixels": 1835,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1888.9537333333333,
+          "hidden_known_ink_pixels": 1817,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 1888.9871,
+          "hidden_known_ink_pixels": 1821,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1889.0204666666666,
+          "hidden_known_ink_pixels": 1833,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 1889.0538333333334,
+          "hidden_known_ink_pixels": 1846,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1889.0872,
+          "hidden_known_ink_pixels": 1846,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1889.1205666666667,
+          "hidden_known_ink_pixels": 1846,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1889.1539333333333,
+          "hidden_known_ink_pixels": 1845,
+          "missing_visible_known_ink_pixels": 37
+        },
+        {
+          "time": 1889.1873,
+          "hidden_known_ink_pixels": 1837,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 1889.2206666666666,
+          "hidden_known_ink_pixels": 1814,
+          "missing_visible_known_ink_pixels": 40
+        },
+        {
+          "time": 1889.2540333333334,
+          "hidden_known_ink_pixels": 1738,
+          "missing_visible_known_ink_pixels": 51
+        },
+        {
+          "time": 1889.2874,
+          "hidden_known_ink_pixels": 1682,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1889.3207666666667,
+          "hidden_known_ink_pixels": 1654,
+          "missing_visible_known_ink_pixels": 75
+        },
+        {
+          "time": 1889.3541333333333,
+          "hidden_known_ink_pixels": 1624,
+          "missing_visible_known_ink_pixels": 78
+        },
+        {
+          "time": 1889.3875,
+          "hidden_known_ink_pixels": 1621,
+          "missing_visible_known_ink_pixels": 68
+        },
+        {
+          "time": 1889.4208666666666,
+          "hidden_known_ink_pixels": 1626,
+          "missing_visible_known_ink_pixels": 60
+        },
+        {
+          "time": 1889.4542333333334,
+          "hidden_known_ink_pixels": 1681,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1889.4876,
+          "hidden_known_ink_pixels": 1657,
+          "missing_visible_known_ink_pixels": 31
+        },
+        {
+          "time": 1889.5209666666667,
+          "hidden_known_ink_pixels": 1586,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1889.5543333333333,
+          "hidden_known_ink_pixels": 1533,
+          "missing_visible_known_ink_pixels": 34
+        },
+        {
+          "time": 1889.5877,
+          "hidden_known_ink_pixels": 1488,
+          "missing_visible_known_ink_pixels": 32
+        },
+        {
+          "time": 1889.6210666666666,
+          "hidden_known_ink_pixels": 1371,
+          "missing_visible_known_ink_pixels": 43
+        },
+        {
+          "time": 1889.6544333333334,
+          "hidden_known_ink_pixels": 1249,
+          "missing_visible_known_ink_pixels": 64
+        },
+        {
+          "time": 1889.6878,
+          "hidden_known_ink_pixels": 1158,
+          "missing_visible_known_ink_pixels": 69
+        },
+        {
+          "time": 1889.7211666666667,
+          "hidden_known_ink_pixels": 1007,
+          "missing_visible_known_ink_pixels": 75
+        },
+        {
+          "time": 1889.7545333333333,
+          "hidden_known_ink_pixels": 856,
+          "missing_visible_known_ink_pixels": 70
+        },
+        {
+          "time": 1889.7879,
+          "hidden_known_ink_pixels": 806,
+          "missing_visible_known_ink_pixels": 74
+        },
+        {
+          "time": 1889.8212666666666,
+          "hidden_known_ink_pixels": 741,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1889.8546333333334,
+          "hidden_known_ink_pixels": 744,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1889.888,
+          "hidden_known_ink_pixels": 731,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1889.9213666666667,
+          "hidden_known_ink_pixels": 783,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1889.9547333333333,
+          "hidden_known_ink_pixels": 841,
+          "missing_visible_known_ink_pixels": 74
+        },
+        {
+          "time": 1889.9881,
+          "hidden_known_ink_pixels": 890,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1890.0214666666666,
+          "hidden_known_ink_pixels": 849,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1890.0548333333334,
+          "hidden_known_ink_pixels": 865,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1890.0882,
+          "hidden_known_ink_pixels": 837,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.1215666666667,
+          "hidden_known_ink_pixels": 936,
+          "missing_visible_known_ink_pixels": 79
+        },
+        {
+          "time": 1890.1549333333332,
+          "hidden_known_ink_pixels": 1048,
+          "missing_visible_known_ink_pixels": 76
+        },
+        {
+          "time": 1890.1883,
+          "hidden_known_ink_pixels": 1003,
+          "missing_visible_known_ink_pixels": 74
+        },
+        {
+          "time": 1890.2216666666666,
+          "hidden_known_ink_pixels": 1245,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1890.2550333333334,
+          "hidden_known_ink_pixels": 1220,
+          "missing_visible_known_ink_pixels": 79
+        },
+        {
+          "time": 1890.2884,
+          "hidden_known_ink_pixels": 1313,
+          "missing_visible_known_ink_pixels": 78
+        },
+        {
+          "time": 1890.3217666666667,
+          "hidden_known_ink_pixels": 1319,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.3551333333332,
+          "hidden_known_ink_pixels": 1215,
+          "missing_visible_known_ink_pixels": 76
+        },
+        {
+          "time": 1890.3885,
+          "hidden_known_ink_pixels": 1280,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1890.4218666666666,
+          "hidden_known_ink_pixels": 1256,
+          "missing_visible_known_ink_pixels": 76
+        },
+        {
+          "time": 1890.4552333333334,
+          "hidden_known_ink_pixels": 1636,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1890.4886,
+          "hidden_known_ink_pixels": 1814,
+          "missing_visible_known_ink_pixels": 76
+        },
+        {
+          "time": 1890.5219666666667,
+          "hidden_known_ink_pixels": 2073,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.5553333333332,
+          "hidden_known_ink_pixels": 2080,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.5887,
+          "hidden_known_ink_pixels": 1995,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.6220666666666,
+          "hidden_known_ink_pixels": 2283,
+          "missing_visible_known_ink_pixels": 80
+        },
+        {
+          "time": 1890.6554333333333,
+          "hidden_known_ink_pixels": 2208,
+          "missing_visible_known_ink_pixels": 75
+        },
+        {
+          "time": 1890.6888,
+          "hidden_known_ink_pixels": 2170,
+          "missing_visible_known_ink_pixels": 73
+        },
+        {
+          "time": 1890.7221666666667,
+          "hidden_known_ink_pixels": 2085,
+          "missing_visible_known_ink_pixels": 71
+        },
+        {
+          "time": 1890.7555333333332,
+          "hidden_known_ink_pixels": 2293,
+          "missing_visible_known_ink_pixels": 71
+        },
+        {
+          "time": 1890.7889,
+          "hidden_known_ink_pixels": 2274,
+          "missing_visible_known_ink_pixels": 70
+        },
+        {
+          "time": 1890.8222666666666,
+          "hidden_known_ink_pixels": 2182,
+          "missing_visible_known_ink_pixels": 72
+        },
+        {
+          "time": 1890.8556333333333,
+          "hidden_known_ink_pixels": 2161,
+          "missing_visible_known_ink_pixels": 77
+        },
+        {
+          "time": 1890.889,
+          "hidden_known_ink_pixels": 2212,
+          "missing_visible_known_ink_pixels": 75
+        },
+        {
+          "time": 1890.9223666666667,
+          "hidden_known_ink_pixels": 2210,
+          "missing_visible_known_ink_pixels": 90
+        },
+        {
+          "time": 1890.9557333333332,
+          "hidden_known_ink_pixels": 2215,
+          "missing_visible_known_ink_pixels": 87
+        },
+        {
+          "time": 1890.9891,
+          "hidden_known_ink_pixels": 2216,
+          "missing_visible_known_ink_pixels": 94
+        },
+        {
+          "time": 1891.0224666666666,
+          "hidden_known_ink_pixels": 2236,
+          "missing_visible_known_ink_pixels": 92
+        },
+        {
+          "time": 1891.0558333333333,
+          "hidden_known_ink_pixels": 2097,
+          "missing_visible_known_ink_pixels": 81
+        },
+        {
+          "time": 1891.0892,
+          "hidden_known_ink_pixels": 2213,
+          "missing_visible_known_ink_pixels": 76
+        },
+        {
+          "time": 1891.1225666666667,
+          "hidden_known_ink_pixels": 2199,
+          "missing_visible_known_ink_pixels": 83
+        },
+        {
+          "time": 1891.1559333333332,
+          "hidden_known_ink_pixels": 1927,
+          "missing_visible_known_ink_pixels": 87
+        },
+        {
+          "time": 1891.1893,
+          "hidden_known_ink_pixels": 1933,
+          "missing_visible_known_ink_pixels": 87
+        },
+        {
+          "time": 1891.2226666666666,
+          "hidden_known_ink_pixels": 1957,
+          "missing_visible_known_ink_pixels": 89
+        },
+        {
+          "time": 1891.2560333333333,
+          "hidden_known_ink_pixels": 1925,
+          "missing_visible_known_ink_pixels": 78
+        },
+        {
+          "time": 1891.2894,
+          "hidden_known_ink_pixels": 1818,
+          "missing_visible_known_ink_pixels": 50
+        },
+        {
+          "time": 1891.3227666666667,
+          "hidden_known_ink_pixels": 1665,
+          "missing_visible_known_ink_pixels": 48
+        },
+        {
+          "time": 1891.3561333333334,
+          "hidden_known_ink_pixels": 1663,
+          "missing_visible_known_ink_pixels": 49
+        },
+        {
+          "time": 1891.3895,
+          "hidden_known_ink_pixels": 1897,
+          "missing_visible_known_ink_pixels": 50
+        },
+        {
+          "time": 1891.4228666666668,
+          "hidden_known_ink_pixels": 1879,
+          "missing_visible_known_ink_pixels": 47
+        },
+        {
+          "time": 1891.4562333333333,
+          "hidden_known_ink_pixels": 1853,
+          "missing_visible_known_ink_pixels": 47
+        },
+        {
+          "time": 1891.4896,
+          "hidden_known_ink_pixels": 1858,
+          "missing_visible_known_ink_pixels": 45
+        },
+        {
+          "time": 1891.5229666666667,
+          "hidden_known_ink_pixels": 979,
+          "missing_visible_known_ink_pixels": 51
+        },
+        {
+          "time": 1891.5563333333334,
+          "hidden_known_ink_pixels": 816,
+          "missing_visible_known_ink_pixels": 48
+        },
+        {
+          "time": 1891.5897,
+          "hidden_known_ink_pixels": 808,
+          "missing_visible_known_ink_pixels": 50
+        },
+        {
+          "time": 1891.6230666666668,
+          "hidden_known_ink_pixels": 807,
+          "missing_visible_known_ink_pixels": 50
+        },
+        {
+          "time": 1891.6564333333333,
+          "hidden_known_ink_pixels": 662,
+          "missing_visible_known_ink_pixels": 49
+        },
+        {
+          "time": 1891.6898,
+          "hidden_known_ink_pixels": 586,
+          "missing_visible_known_ink_pixels": 47
+        },
+        {
+          "time": 1891.7231666666667,
+          "hidden_known_ink_pixels": 582,
+          "missing_visible_known_ink_pixels": 46
+        },
+        {
+          "time": 1891.7565333333334,
+          "hidden_known_ink_pixels": 582,
+          "missing_visible_known_ink_pixels": 47
+        },
+        {
+          "time": 1891.7899,
+          "hidden_known_ink_pixels": 529,
+          "missing_visible_known_ink_pixels": 48
+        },
+        {
+          "time": 1891.8232666666668,
+          "hidden_known_ink_pixels": 499,
+          "missing_visible_known_ink_pixels": 51
+        },
+        {
+          "time": 1891.8566333333333,
+          "hidden_known_ink_pixels": 397,
+          "missing_visible_known_ink_pixels": 55
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "start": 433.9335,
+      "end": 437.937,
+      "frames": 120,
+      "known_ink_pixels": 9276,
+      "best_time": 436.46936666666664,
+      "best_hidden_pixels": 532,
+      "best_missing_visible_pixels": 2,
+      "observations": [
+        {
+          "time": 433.9335,
+          "hidden_known_ink_pixels": 1175,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 433.96686666666665,
+          "hidden_known_ink_pixels": 1137,
+          "missing_visible_known_ink_pixels": 15
+        },
+        {
+          "time": 434.0002333333333,
+          "hidden_known_ink_pixels": 1099,
+          "missing_visible_known_ink_pixels": 46
+        },
+        {
+          "time": 434.0336,
+          "hidden_known_ink_pixels": 1091,
+          "missing_visible_known_ink_pixels": 54
+        },
+        {
+          "time": 434.06696666666664,
+          "hidden_known_ink_pixels": 1089,
+          "missing_visible_known_ink_pixels": 62
+        },
+        {
+          "time": 434.1003333333333,
+          "hidden_known_ink_pixels": 1083,
+          "missing_visible_known_ink_pixels": 57
+        },
+        {
+          "time": 434.1337,
+          "hidden_known_ink_pixels": 1075,
+          "missing_visible_known_ink_pixels": 42
+        },
+        {
+          "time": 434.16706666666664,
+          "hidden_known_ink_pixels": 1080,
+          "missing_visible_known_ink_pixels": 24
+        },
+        {
+          "time": 434.2004333333333,
+          "hidden_known_ink_pixels": 1080,
+          "missing_visible_known_ink_pixels": 20
+        },
+        {
+          "time": 434.2338,
+          "hidden_known_ink_pixels": 1086,
+          "missing_visible_known_ink_pixels": 19
+        },
+        {
+          "time": 434.26716666666664,
+          "hidden_known_ink_pixels": 1086,
+          "missing_visible_known_ink_pixels": 26
+        },
+        {
+          "time": 434.3005333333333,
+          "hidden_known_ink_pixels": 1078,
+          "missing_visible_known_ink_pixels": 35
+        },
+        {
+          "time": 434.3339,
+          "hidden_known_ink_pixels": 1073,
+          "missing_visible_known_ink_pixels": 45
+        },
+        {
+          "time": 434.3672666666667,
+          "hidden_known_ink_pixels": 1069,
+          "missing_visible_known_ink_pixels": 41
+        },
+        {
+          "time": 434.40063333333336,
+          "hidden_known_ink_pixels": 1088,
+          "missing_visible_known_ink_pixels": 38
+        },
+        {
+          "time": 434.434,
+          "hidden_known_ink_pixels": 1093,
+          "missing_visible_known_ink_pixels": 20
+        },
+        {
+          "time": 434.4673666666667,
+          "hidden_known_ink_pixels": 1104,
+          "missing_visible_known_ink_pixels": 14
+        },
+        {
+          "time": 434.50073333333336,
+          "hidden_known_ink_pixels": 1110,
+          "missing_visible_known_ink_pixels": 12
+        },
+        {
+          "time": 434.5341,
+          "hidden_known_ink_pixels": 1138,
+          "missing_visible_known_ink_pixels": 13
+        },
+        {
+          "time": 434.5674666666667,
+          "hidden_known_ink_pixels": 1126,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 434.60083333333336,
+          "hidden_known_ink_pixels": 1125,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 434.6342,
+          "hidden_known_ink_pixels": 1114,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 434.6675666666667,
+          "hidden_known_ink_pixels": 1111,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 434.70093333333335,
+          "hidden_known_ink_pixels": 1116,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 434.7343,
+          "hidden_known_ink_pixels": 1117,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 434.7676666666667,
+          "hidden_known_ink_pixels": 1121,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 434.80103333333335,
+          "hidden_known_ink_pixels": 1115,
+          "missing_visible_known_ink_pixels": 9
+        },
+        {
+          "time": 434.8344,
+          "hidden_known_ink_pixels": 1113,
+          "missing_visible_known_ink_pixels": 12
+        },
+        {
+          "time": 434.8677666666667,
+          "hidden_known_ink_pixels": 1111,
+          "missing_visible_known_ink_pixels": 11
+        },
+        {
+          "time": 434.90113333333335,
+          "hidden_known_ink_pixels": 1113,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 434.9345,
+          "hidden_known_ink_pixels": 1118,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 434.9678666666667,
+          "hidden_known_ink_pixels": 1124,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.00123333333335,
+          "hidden_known_ink_pixels": 1104,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.0346,
+          "hidden_known_ink_pixels": 1104,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 435.0679666666667,
+          "hidden_known_ink_pixels": 1084,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.10133333333334,
+          "hidden_known_ink_pixels": 1103,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.1347,
+          "hidden_known_ink_pixels": 1114,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 435.1680666666667,
+          "hidden_known_ink_pixels": 1114,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 435.20143333333334,
+          "hidden_known_ink_pixels": 1135,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 435.2348,
+          "hidden_known_ink_pixels": 1151,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.2681666666667,
+          "hidden_known_ink_pixels": 1171,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 435.30153333333334,
+          "hidden_known_ink_pixels": 1195,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 435.3349,
+          "hidden_known_ink_pixels": 1247,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 435.36826666666667,
+          "hidden_known_ink_pixels": 1312,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 435.40163333333334,
+          "hidden_known_ink_pixels": 1360,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 435.435,
+          "hidden_known_ink_pixels": 1389,
+          "missing_visible_known_ink_pixels": 15
+        },
+        {
+          "time": 435.46836666666667,
+          "hidden_known_ink_pixels": 1441,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 435.50173333333333,
+          "hidden_known_ink_pixels": 1482,
+          "missing_visible_known_ink_pixels": 8
+        },
+        {
+          "time": 435.5351,
+          "hidden_known_ink_pixels": 1572,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 435.56846666666667,
+          "hidden_known_ink_pixels": 1613,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 435.60183333333333,
+          "hidden_known_ink_pixels": 1677,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.6352,
+          "hidden_known_ink_pixels": 1660,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 435.66856666666666,
+          "hidden_known_ink_pixels": 1655,
+          "missing_visible_known_ink_pixels": 9
+        },
+        {
+          "time": 435.70193333333333,
+          "hidden_known_ink_pixels": 1685,
+          "missing_visible_known_ink_pixels": 14
+        },
+        {
+          "time": 435.7353,
+          "hidden_known_ink_pixels": 1656,
+          "missing_visible_known_ink_pixels": 8
+        },
+        {
+          "time": 435.76866666666666,
+          "hidden_known_ink_pixels": 1685,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.8020333333333,
+          "hidden_known_ink_pixels": 1572,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.8354,
+          "hidden_known_ink_pixels": 1522,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.86876666666666,
+          "hidden_known_ink_pixels": 1381,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 435.9021333333333,
+          "hidden_known_ink_pixels": 1356,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 435.9355,
+          "hidden_known_ink_pixels": 1359,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 435.96886666666666,
+          "hidden_known_ink_pixels": 1274,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 436.0022333333333,
+          "hidden_known_ink_pixels": 1192,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 436.0356,
+          "hidden_known_ink_pixels": 1123,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 436.06896666666665,
+          "hidden_known_ink_pixels": 1175,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.1023333333333,
+          "hidden_known_ink_pixels": 1248,
+          "missing_visible_known_ink_pixels": 7
+        },
+        {
+          "time": 436.1357,
+          "hidden_known_ink_pixels": 1177,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 436.16906666666665,
+          "hidden_known_ink_pixels": 1083,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 436.2024333333333,
+          "hidden_known_ink_pixels": 984,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 436.2358,
+          "hidden_known_ink_pixels": 881,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 436.26916666666665,
+          "hidden_known_ink_pixels": 833,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 436.3025333333333,
+          "hidden_known_ink_pixels": 806,
+          "missing_visible_known_ink_pixels": 8
+        },
+        {
+          "time": 436.3359,
+          "hidden_known_ink_pixels": 723,
+          "missing_visible_known_ink_pixels": 8
+        },
+        {
+          "time": 436.36926666666665,
+          "hidden_known_ink_pixels": 666,
+          "missing_visible_known_ink_pixels": 7
+        },
+        {
+          "time": 436.4026333333333,
+          "hidden_known_ink_pixels": 634,
+          "missing_visible_known_ink_pixels": 7
+        },
+        {
+          "time": 436.436,
+          "hidden_known_ink_pixels": 589,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 436.46936666666664,
+          "hidden_known_ink_pixels": 532,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 436.5027333333333,
+          "hidden_known_ink_pixels": 609,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 436.5361,
+          "hidden_known_ink_pixels": 603,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.56946666666664,
+          "hidden_known_ink_pixels": 577,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 436.6028333333333,
+          "hidden_known_ink_pixels": 660,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 436.6362,
+          "hidden_known_ink_pixels": 688,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.66956666666664,
+          "hidden_known_ink_pixels": 693,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.7029333333333,
+          "hidden_known_ink_pixels": 779,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.7363,
+          "hidden_known_ink_pixels": 772,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 436.7696666666667,
+          "hidden_known_ink_pixels": 878,
+          "missing_visible_known_ink_pixels": 2
+        },
+        {
+          "time": 436.80303333333336,
+          "hidden_known_ink_pixels": 1016,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 436.8364,
+          "hidden_known_ink_pixels": 1227,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.8697666666667,
+          "hidden_known_ink_pixels": 1193,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 436.90313333333336,
+          "hidden_known_ink_pixels": 1242,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.9365,
+          "hidden_known_ink_pixels": 1315,
+          "missing_visible_known_ink_pixels": 3
+        },
+        {
+          "time": 436.9698666666667,
+          "hidden_known_ink_pixels": 1375,
+          "missing_visible_known_ink_pixels": 1
+        },
+        {
+          "time": 437.00323333333336,
+          "hidden_known_ink_pixels": 1439,
+          "missing_visible_known_ink_pixels": 0
+        },
+        {
+          "time": 437.0366,
+          "hidden_known_ink_pixels": 1376,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.0699666666667,
+          "hidden_known_ink_pixels": 1410,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 437.10333333333335,
+          "hidden_known_ink_pixels": 1386,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.1367,
+          "hidden_known_ink_pixels": 1328,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 437.1700666666667,
+          "hidden_known_ink_pixels": 1283,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.20343333333335,
+          "hidden_known_ink_pixels": 1215,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.2368,
+          "hidden_known_ink_pixels": 1107,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 437.2701666666667,
+          "hidden_known_ink_pixels": 1031,
+          "missing_visible_known_ink_pixels": 9
+        },
+        {
+          "time": 437.30353333333335,
+          "hidden_known_ink_pixels": 917,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 437.3369,
+          "hidden_known_ink_pixels": 901,
+          "missing_visible_known_ink_pixels": 6
+        },
+        {
+          "time": 437.3702666666667,
+          "hidden_known_ink_pixels": 840,
+          "missing_visible_known_ink_pixels": 8
+        },
+        {
+          "time": 437.40363333333335,
+          "hidden_known_ink_pixels": 770,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.437,
+          "hidden_known_ink_pixels": 716,
+          "missing_visible_known_ink_pixels": 9
+        },
+        {
+          "time": 437.4703666666667,
+          "hidden_known_ink_pixels": 692,
+          "missing_visible_known_ink_pixels": 22
+        },
+        {
+          "time": 437.50373333333334,
+          "hidden_known_ink_pixels": 656,
+          "missing_visible_known_ink_pixels": 20
+        },
+        {
+          "time": 437.5371,
+          "hidden_known_ink_pixels": 622,
+          "missing_visible_known_ink_pixels": 25
+        },
+        {
+          "time": 437.5704666666667,
+          "hidden_known_ink_pixels": 613,
+          "missing_visible_known_ink_pixels": 21
+        },
+        {
+          "time": 437.60383333333334,
+          "hidden_known_ink_pixels": 575,
+          "missing_visible_known_ink_pixels": 23
+        },
+        {
+          "time": 437.6372,
+          "hidden_known_ink_pixels": 594,
+          "missing_visible_known_ink_pixels": 20
+        },
+        {
+          "time": 437.6705666666667,
+          "hidden_known_ink_pixels": 693,
+          "missing_visible_known_ink_pixels": 19
+        },
+        {
+          "time": 437.70393333333334,
+          "hidden_known_ink_pixels": 761,
+          "missing_visible_known_ink_pixels": 12
+        },
+        {
+          "time": 437.7373,
+          "hidden_known_ink_pixels": 780,
+          "missing_visible_known_ink_pixels": 13
+        },
+        {
+          "time": 437.77066666666667,
+          "hidden_known_ink_pixels": 777,
+          "missing_visible_known_ink_pixels": 9
+        },
+        {
+          "time": 437.80403333333334,
+          "hidden_known_ink_pixels": 762,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.8374,
+          "hidden_known_ink_pixels": 762,
+          "missing_visible_known_ink_pixels": 5
+        },
+        {
+          "time": 437.87076666666667,
+          "hidden_known_ink_pixels": 762,
+          "missing_visible_known_ink_pixels": 4
+        },
+        {
+          "time": 437.90413333333333,
+          "hidden_known_ink_pixels": 746,
+          "missing_visible_known_ink_pixels": 4
+        }
+      ]
+    }
+  ]
+}

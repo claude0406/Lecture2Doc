@@ -1,0 +1,46 @@
+{
+  "purpose": "Post-selection diagnosis only. Timestamps are not algorithm inputs.",
+  "page_id": "p00001",
+  "page_interval": [
+    371.8715,
+    654.1535
+  ],
+  "selected": {
+    "source_frame_id": "f001288",
+    "time": 644.644,
+    "score": 0.9983192869003678,
+    "readable_fraction": 0.9991301826616411,
+    "hidden_fraction": 0.0005798782255726297,
+    "extra_fraction": 0.0021262201604329758,
+    "foreground_fraction": 0.0012847222222222223
+  },
+  "candidates": {
+    "clean_observation": {
+      "source_frame_id": "f001214",
+      "time": 607.607,
+      "score": 0.9951617066199898,
+      "readable_fraction": 0.9964240842756354,
+      "hidden_fraction": 0.002512805644148062,
+      "extra_fraction": 0.0024161592732192907,
+      "foreground_fraction": 0.0017230902777777778
+    },
+    "old_representative": {
+      "source_frame_id": "f001231",
+      "time": 616.1155,
+      "score": 0.7085019193132177,
+      "readable_fraction": 0.7484294964724074,
+      "hidden_fraction": 0.25079733256016234,
+      "extra_fraction": 0.0010631100802164879,
+      "foreground_fraction": 0.07506510416666666
+    },
+    "new_page_representative": {
+      "source_frame_id": "f001288",
+      "time": 644.644,
+      "score": 0.9983192869003678,
+      "readable_fraction": 0.9991301826616411,
+      "hidden_fraction": 0.0005798782255726297,
+      "extra_fraction": 0.0021262201604329758,
+      "foreground_fraction": 0.0012847222222222223
+    }
+  }
+}

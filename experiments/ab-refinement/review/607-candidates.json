@@ -1,0 +1,43 @@
+{
+  "uses_gt_for_selection": false,
+  "page_id": "p00001",
+  "page_start": 365.8655,
+  "page_end": 652.1515,
+  "selected_time": 640.1395,
+  "selection_tolerance_ink_pixels": 5,
+  "focus_candidates": [
+    {
+      "source_frame_id": "f001214",
+      "time": 607.607,
+      "score": 0.9984452456061289,
+      "readable_fraction": 0.9986480396575034,
+      "hidden_fraction": 0.0,
+      "extra_fraction": 0.00033799008562415505,
+      "foreground_fraction": 0.0,
+      "ink_sharpness": 28.340744018554688
+    },
+    {
+      "source_frame_id": "f001231",
+      "time": 616.1155,
+      "score": 0.7981579540333484,
+      "readable_fraction": 0.8244704821991888,
+      "hidden_fraction": 0.17451554754393872,
+      "extra_fraction": 0.0002253267237494367,
+      "foreground_fraction": 0.06920572916666666,
+      "ink_sharpness": 26.751842498779297
+    },
+    {
+      "source_frame_id": "f001279",
+      "time": 640.1395,
+      "score": 1.0,
+      "readable_fraction": 1.0,
+      "hidden_fraction": 0.0,
+      "extra_fraction": 0.0,
+      "foreground_fraction": 0.0,
+      "ink_sharpness": 27.87920379638672
+    }
+  ],
+  "all_candidates_path": "experiments/ab-refinement/accepted/lecture01/page-decisions/bbcac2872e8a/p00001.candidates.json",
+  "legacy_selected_time": 616.1155,
+  "legacy_selection_reason": "least_foreground_then_sharpness"
+}

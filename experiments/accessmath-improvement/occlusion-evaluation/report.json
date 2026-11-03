@@ -1,0 +1,620 @@
+{
+  "dataset": "AccessMath ICDAR 2017 / AccessMath2015",
+  "lecture": "lecture_01",
+  "split": "training",
+  "scope": "Complete supplied video file; not the complete dataset",
+  "video_sha256": "f9dacbb0950737985408437fc8569a27478abef1f2d6370f54d960783a0762d2",
+  "annotation_xml_sha256": "3611ec6912d8ebb6f093c1cf93b6c839d23242bb2b0ed5f8572ebadac409cdda",
+  "source": {
+    "name": "AccessMath_lecture_01_part_1.mp4",
+    "path": "source.mp4",
+    "sha256": "f9dacbb0950737985408437fc8569a27478abef1f2d6370f54d960783a0762d2",
+    "width": 1920,
+    "height": 1080,
+    "duration": 1046.0783666666666,
+    "fps": 29.97002997002997,
+    "codec": "h264",
+    "audio": true,
+    "audio_codec": "aac"
+  },
+  "application_config": {
+    "sample_seconds": 0.5,
+    "analysis_width": 640,
+    "board": "auto",
+    "roi": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "confirm": 2,
+    "change_pixels": 35,
+    "change_fraction": 0.001,
+    "cut_fraction": 0.65,
+    "tile_size": 32,
+    "reconstruction": true
+  },
+  "gt_keyframes_total": 7,
+  "gt_keyframes_in_scope": 3,
+  "gt_segments_with_keyframe_in_scope": [
+    [
+      0,
+      11757
+    ],
+    [
+      11757,
+      19695
+    ],
+    [
+      19695,
+      26534
+    ]
+  ],
+  "prediction_policy": "State containing each GT timestamp; selected original and corresponding B output. No oracle/best-GT selection.",
+  "binarization": "whiteboard grayscale black-hat elliptical 31x31; thresholds 10,20,30; no person mask",
+  "scoring": "diagnostic tolerant pixel precision/recall/F1 at native GT size; 3px radius; CC coverage >=80%, GT components >=10px",
+  "excluded_regions": "only non-content rectangles from official exported keyframe annotations",
+  "official_unique_cc_metric": false,
+  "uses_gt_in_application": false,
+  "counts": {
+    "source_frames": 2090,
+    "states": 266,
+    "board_type_predictions": {
+      "whiteboard": 2090
+    },
+    "status": {
+      "fallback": 266
+    },
+    "boundary_reasons": {
+      "writing_progress": 198,
+      "erasure_or_revision": 65,
+      "camera_motion": 1,
+      "unconfirmed_change": 1,
+      "end_of_video": 1
+    },
+    "quality_flags": {
+      "model_free_masks_require_review": 38,
+      "unobserved_foreground_original_used": 36,
+      "not_an_occlusion_challenge": 228,
+      "inconsistent_visible_writing_original_used": 2
+    }
+  },
+  "elapsed_seconds": 141.713,
+  "aggregate_macro": {
+    "10": {
+      "gt_raw_calibration": {
+        "precision": 0.9431718405964826,
+        "recall": 0.9955759315875891,
+        "f1": 0.9686558136849174,
+        "component_coverage_at_80pct": 0.993815685559808
+      },
+      "nearest_source": {
+        "precision": 0.9430232045778558,
+        "recall": 0.9953059692112173,
+        "f1": 0.968449451997345,
+        "component_coverage_at_80pct": 0.9942025547638815
+      },
+      "selected_A": {
+        "precision": 0.9416955587543163,
+        "recall": 0.9951178395458432,
+        "f1": 0.9676595511972677,
+        "component_coverage_at_80pct": 0.9942025547638815
+      },
+      "result_B": {
+        "precision": 0.9416955587543163,
+        "recall": 0.9951178395458432,
+        "f1": 0.9676595511972677,
+        "component_coverage_at_80pct": 0.9942025547638815
+      }
+    },
+    "20": {
+      "gt_raw_calibration": {
+        "precision": 0.9298120030202974,
+        "recall": 0.9317451258961901,
+        "f1": 0.9307688315176023,
+        "component_coverage_at_80pct": 0.9265164511018348
+      },
+      "nearest_source": {
+        "precision": 0.9297069846572965,
+        "recall": 0.9315859353916083,
+        "f1": 0.9306402933407766,
+        "component_coverage_at_80pct": 0.9266360218428744
+      },
+      "selected_A": {
+        "precision": 0.9271635773072499,
+        "recall": 0.9358739782266743,
+        "f1": 0.9314892534157466,
+        "component_coverage_at_80pct": 0.9251396518755731
+      },
+      "result_B": {
+        "precision": 0.9271635773072499,
+        "recall": 0.9358739782266743,
+        "f1": 0.9314892534157466,
+        "component_coverage_at_80pct": 0.9251396518755731
+      }
+    },
+    "30": {
+      "gt_raw_calibration": {
+        "precision": 0.9024767819051877,
+        "recall": 0.79212245656633,
+        "f1": 0.8436755072167342,
+        "component_coverage_at_80pct": 0.8081497102820231
+      },
+      "nearest_source": {
+        "precision": 0.902823755908624,
+        "recall": 0.7894053064403027,
+        "f1": 0.8422851913385049,
+        "component_coverage_at_80pct": 0.8041159334762397
+      },
+      "selected_A": {
+        "precision": 0.8966367068060497,
+        "recall": 0.7856903199146159,
+        "f1": 0.8374596212643102,
+        "component_coverage_at_80pct": 0.789380575347406
+      },
+      "result_B": {
+        "precision": 0.8966367068060497,
+        "recall": 0.7856903199146159,
+        "f1": 0.8374596212643102,
+        "component_coverage_at_80pct": 0.789380575347406
+      }
+    }
+  },
+  "keyframes": [
+    {
+      "gt_index": 10423,
+      "gt_time": 347.78076666666664,
+      "state_id": "b00092",
+      "selected_frame_id": "f000685",
+      "selected_time": 342.8425,
+      "selected_time_delta": -4.938266666666664,
+      "nearest_source_time": 347.8475,
+      "reconstruction_status": "fallback",
+      "warnings": [
+        "model_free_masks_require_review",
+        "unobserved_foreground_original_used"
+      ],
+      "metrics": {
+        "gt_raw_calibration": {
+          "10": {
+            "precision": 0.9508627832414712,
+            "recall": 0.9954192179078041,
+            "f1": 0.9726309830466013,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83277,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9403110927716679,
+            "recall": 0.9353804339527568,
+            "f1": 0.9378392827133312,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55739,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9322033898305084
+          },
+          "30": {
+            "precision": 0.9159422887355497,
+            "recall": 0.8173489487105099,
+            "f1": 0.8638415179212464,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33477,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8248587570621468
+          }
+        },
+        "nearest_source": {
+          "10": {
+            "precision": 0.9507873542493088,
+            "recall": 0.9960452581270709,
+            "f1": 0.9728902522659401,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83190,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9405147005966501,
+            "recall": 0.9395489456566551,
+            "f1": 0.9400315750811659,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55644,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9378531073446328
+          },
+          "30": {
+            "precision": 0.915918171167653,
+            "recall": 0.8137759386785971,
+            "f1": 0.8618311934484114,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33289,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8192090395480226
+          }
+        },
+        "selected_A": {
+          "10": {
+            "precision": 0.9496548240444519,
+            "recall": 0.99555664137057,
+            "f1": 0.9720641523006242,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83146,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9375357449242208,
+            "recall": 0.9435189568032248,
+            "f1": 0.9405178352381653,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55952,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9322033898305084
+          },
+          "30": {
+            "precision": 0.9094477651886876,
+            "recall": 0.8132873219220962,
+            "f1": 0.8586837789654644,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33627,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.807909604519774
+          }
+        },
+        "result_B": {
+          "10": {
+            "precision": 0.9496548240444519,
+            "recall": 0.99555664137057,
+            "f1": 0.9720641523006242,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83146,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9375357449242208,
+            "recall": 0.9435189568032248,
+            "f1": 0.9405178352381653,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55952,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9322033898305084
+          },
+          "30": {
+            "precision": 0.9094477651886876,
+            "recall": 0.8132873219220962,
+            "f1": 0.8586837789654644,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33627,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.807909604519774
+          }
+        }
+      },
+      "alignment_diagnostic_half_resolution": {
+        "dx": 0.021146095259439335,
+        "dy": 0.0027735135918760534,
+        "response": 0.939115593050733
+      },
+      "comparison": "gt-10423.jpg",
+      "occlusion_challenge_applied": true
+    },
+    {
+      "gt_index": 18212,
+      "gt_time": 607.6737333333334,
+      "state_id": "b00161",
+      "selected_frame_id": "f001205",
+      "selected_time": 603.1025,
+      "selected_time_delta": -4.571233333333453,
+      "nearest_source_time": 607.607,
+      "reconstruction_status": "fallback",
+      "warnings": [
+        "model_free_masks_require_review",
+        "unobserved_foreground_original_used"
+      ],
+      "metrics": {
+        "gt_raw_calibration": {
+          "10": {
+            "precision": 0.9357095321374955,
+            "recall": 0.9948515992700029,
+            "f1": 0.9643746674009703,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64613,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9870967741935484
+          },
+          "20": {
+            "precision": 0.9196900982615268,
+            "recall": 0.9286908077994429,
+            "f1": 0.9241685385073688,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42336,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9161290322580645
+          },
+          "30": {
+            "precision": 0.8870004776309505,
+            "recall": 0.7696474882335991,
+            "f1": 0.8241674800408146,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25124,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7741935483870968
+          }
+        },
+        "nearest_source": {
+          "10": {
+            "precision": 0.9350048874338645,
+            "recall": 0.9950244933243685,
+            "f1": 0.9640814524897958,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64451,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9187708940891955,
+            "recall": 0.9268466045528768,
+            "f1": 0.9227910812236267,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42177,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9161290322580645
+          },
+          "30": {
+            "precision": 0.8866802378956612,
+            "recall": 0.7671117087695707,
+            "f1": 0.8225735937291219,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25053,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7677419354838709
+          }
+        },
+        "selected_A": {
+          "10": {
+            "precision": 0.9336865519478513,
+            "recall": 0.9946594947651523,
+            "f1": 0.9632090626187133,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64738,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9174283757292331,
+            "recall": 0.9342042070886563,
+            "f1": 0.9257402967109652,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42339,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9225806451612903
+          },
+          "30": {
+            "precision": 0.8816728461507795,
+            "recall": 0.766343290750168,
+            "f1": 0.819972638805375,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25083,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7612903225806451
+          }
+        },
+        "result_B": {
+          "10": {
+            "precision": 0.9336865519478513,
+            "recall": 0.9946594947651523,
+            "f1": 0.9632090626187133,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64738,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9174283757292331,
+            "recall": 0.9342042070886563,
+            "f1": 0.9257402967109652,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42339,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9225806451612903
+          },
+          "30": {
+            "precision": 0.8816728461507795,
+            "recall": 0.766343290750168,
+            "f1": 0.819972638805375,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25083,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7612903225806451
+          }
+        }
+      },
+      "alignment_diagnostic_half_resolution": {
+        "dx": -0.00235799353896482,
+        "dy": -0.008750890146643542,
+        "response": 0.9300542544141228
+      },
+      "comparison": "gt-18212.jpg",
+      "occlusion_challenge_applied": true
+    },
+    {
+      "gt_index": 21894,
+      "gt_time": 730.5298,
+      "state_id": "b00182",
+      "selected_frame_id": "f001461",
+      "selected_time": 731.2305,
+      "selected_time_delta": 0.7006999999999834,
+      "nearest_source_time": 730.73,
+      "reconstruction_status": "fallback",
+      "warnings": [
+        "not_an_occlusion_challenge"
+      ],
+      "metrics": {
+        "gt_raw_calibration": {
+          "10": {
+            "precision": 0.9429432064104813,
+            "recall": 0.9964569775849602,
+            "f1": 0.9689617906071808,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68388,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 1.0
+          },
+          "20": {
+            "precision": 0.9294348180276977,
+            "recall": 0.9311641359363703,
+            "f1": 0.9302986733321064,
+            "gt_pixels": 55320,
+            "predicted_pixels": 45419,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9312169312169312
+          },
+          "30": {
+            "precision": 0.9044875793490625,
+            "recall": 0.7893709327548807,
+            "f1": 0.8430175236881421,
+            "gt_pixels": 55320,
+            "predicted_pixels": 27253,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8253968253968254
+          }
+        },
+        "nearest_source": {
+          "10": {
+            "precision": 0.9432773720503943,
+            "recall": 0.9948481561822126,
+            "f1": 0.9683766512362992,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68738,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.929835359286044,
+            "recall": 0.9283622559652929,
+            "f1": 0.9290982237175374,
+            "gt_pixels": 55320,
+            "predicted_pixels": 45493,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9259259259259259
+          },
+          "30": {
+            "precision": 0.9058728586625582,
+            "recall": 0.7873282718727405,
+            "f1": 0.8424507868379815,
+            "gt_pixels": 55320,
+            "predicted_pixels": 27261,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8253968253968254
+          }
+        },
+        "selected_A": {
+          "10": {
+            "precision": 0.9417453002706458,
+            "recall": 0.9951373825018076,
+            "f1": 0.9677054386724655,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68355,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.9265266112682959,
+            "recall": 0.9298987707881418,
+            "f1": 0.9282096282981093,
+            "gt_pixels": 55320,
+            "predicted_pixels": 44887,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9206349206349206
+          },
+          "30": {
+            "precision": 0.8987895090786819,
+            "recall": 0.7774403470715835,
+            "f1": 0.833722446022091,
+            "gt_pixels": 55320,
+            "predicted_pixels": 26766,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.798941798941799
+          }
+        },
+        "result_B": {
+          "10": {
+            "precision": 0.9417453002706458,
+            "recall": 0.9951373825018076,
+            "f1": 0.9677054386724655,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68355,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.9265266112682959,
+            "recall": 0.9298987707881418,
+            "f1": 0.9282096282981093,
+            "gt_pixels": 55320,
+            "predicted_pixels": 44887,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9206349206349206
+          },
+          "30": {
+            "precision": 0.8987895090786819,
+            "recall": 0.7774403470715835,
+            "f1": 0.833722446022091,
+            "gt_pixels": 55320,
+            "predicted_pixels": 26766,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.798941798941799
+          }
+        }
+      },
+      "alignment_diagnostic_half_resolution": {
+        "dx": -0.008264830083135166,
+        "dy": 0.006554437139186575,
+        "response": 0.8939988788557641
+      },
+      "comparison": "gt-21894.jpg",
+      "occlusion_challenge_applied": false
+    }
+  ],
+  "gt_segment_boundary_diagnostics": [
+    {
+      "gt_boundary_time": 392.29190000000006,
+      "nearest_app_boundary_distance": 4.904900000000055,
+      "containing_state_id": "b00112",
+      "containing_state_interval": [
+        387.387,
+        407.407
+      ]
+    },
+    {
+      "gt_boundary_time": 657.1565,
+      "nearest_app_boundary_distance": 2.0020000000000664,
+      "containing_state_id": "b00165",
+      "containing_state_interval": [
+        655.1545,
+        666.1655
+      ]
+    },
+    {
+      "gt_boundary_time": 885.3511333333335,
+      "nearest_app_boundary_distance": 1.0343666666665285,
+      "containing_state_id": "b00214",
+      "containing_state_interval": [
+        878.3775,
+        886.3855
+      ]
+    }
+  ],
+  "boundary_time_conversion": "First-part FPS, checked against every in-scope annotated AbsTime within 1ms",
+  "occlusion_stress_test": {
+    "anchor": null,
+    "case_count": 38,
+    "gt_affected_state_ids": [
+      "b00092",
+      "b00161"
+    ],
+    "warning": "Source-subset stress test; unmodified GT states may also appear. Not the native application score."
+  }
+}

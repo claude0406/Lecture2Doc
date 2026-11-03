@@ -1,0 +1,1165 @@
+{
+  "scope": "Manual audit of 26 selected text regions on four real pages; includes one missed line.",
+  "normalization": "Unicode NFC, whitespace collapsed/trimmed; case and punctuation preserved.",
+  "selection": "Post-run diagnostic sample; 25 detected regions plus one manually located missed sentence.",
+  "summary": {
+    "lecture01": {
+      "regions": 13,
+      "character_edits": 74,
+      "characters": 214,
+      "cer": 0.34579439252336447,
+      "word_edits": 19,
+      "words": 33,
+      "wer": 0.5757575757575758,
+      "exact": 8
+    },
+    "lecture02-testing": {
+      "regions": 13,
+      "character_edits": 9,
+      "characters": 208,
+      "cer": 0.04326923076923077,
+      "word_edits": 9,
+      "words": 35,
+      "wer": 0.2571428571428571,
+      "exact": 11
+    },
+    "all": {
+      "regions": 26,
+      "character_edits": 83,
+      "characters": 422,
+      "cer": 0.1966824644549763,
+      "word_edits": 28,
+      "words": 68,
+      "wer": 0.4117647058823529,
+      "exact": 19
+    }
+  },
+  "regions": [
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        900,
+        214,
+        533,
+        93
+      ],
+      "polygon": [
+        [
+          900.0,
+          218.0
+        ],
+        [
+          1431.0,
+          214.0
+        ],
+        [
+          1432.0,
+          302.0
+        ],
+        [
+          900.0,
+          306.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0003.png",
+      "gt": "① Geometrical Interpretation",
+      "prediction": "① Geometrical Interpretation",
+      "score": 0.96392
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        884,
+        284,
+        540,
+        119
+      ],
+      "polygon": [
+        [
+          884.0,
+          297.0
+        ],
+        [
+          1420.0,
+          284.0
+        ],
+        [
+          1423.0,
+          389.0
+        ],
+        [
+          886.0,
+          402.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0004.png",
+      "gt": "② Algebraic Interpretation.",
+      "prediction": "②Algebraic Interpretation",
+      "score": 0.90013
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        247,
+        314,
+        642,
+        107
+      ],
+      "polygon": [
+        [
+          247.0,
+          320.0
+        ],
+        [
+          887.0,
+          314.0
+        ],
+        [
+          888.0,
+          414.0
+        ],
+        [
+          248.0,
+          420.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0005.png",
+      "gt": "System of Linear equations.",
+      "prediction": "Sys am of Linear equations.",
+      "score": 0.91989
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        883,
+        482,
+        786,
+        112
+      ],
+      "polygon": [
+        [
+          883.0,
+          492.0
+        ],
+        [
+          1667.0,
+          482.0
+        ],
+        [
+          1668.0,
+          583.0
+        ],
+        [
+          884.0,
+          593.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0008.png",
+      "gt": "What is represented by this equation ?",
+      "prediction": "Wh?",
+      "score": 0.55281
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        878,
+        580,
+        141,
+        85
+      ],
+      "polygon": [
+        [
+          882.0,
+          580.0
+        ],
+        [
+          1018.0,
+          587.0
+        ],
+        [
+          1014.0,
+          664.0
+        ],
+        [
+          878.0,
+          657.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0010.png",
+      "gt": "1-dim",
+      "prediction": "1-dim",
+      "score": 0.99499
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        1369,
+        588,
+        133,
+        68
+      ],
+      "polygon": [
+        [
+          1369.0,
+          588.0
+        ],
+        [
+          1501.0,
+          588.0
+        ],
+        [
+          1501.0,
+          655.0
+        ],
+        [
+          1369.0,
+          655.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0011.png",
+      "gt": "3rd-dim",
+      "prediction": "3-din",
+      "score": 0.89275
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        1566,
+        592,
+        116,
+        68
+      ],
+      "polygon": [
+        [
+          1566.0,
+          592.0
+        ],
+        [
+          1681.0,
+          592.0
+        ],
+        [
+          1681.0,
+          659.0
+        ],
+        [
+          1566.0,
+          659.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0012.png",
+      "gt": "plane",
+      "prediction": "plane",
+      "score": 0.99804
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-000684.png",
+        "sha256": "5d4d4d510a6044ada854e132aeb6b232fae4e0536d33905147aac6fd31c0afe8",
+        "output": "B",
+        "source_frame_ids": [
+          "f000684"
+        ],
+        "selected_frame_id": "f000684",
+        "time": 342.342,
+        "provenance": null
+      },
+      "bbox": [
+        884,
+        669,
+        143,
+        88
+      ],
+      "polygon": [
+        [
+          888.0,
+          669.0
+        ],
+        [
+          1026.0,
+          676.0
+        ],
+        [
+          1022.0,
+          756.0
+        ],
+        [
+          884.0,
+          749.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/eb34ff45678a2d357367/region-0015.png",
+      "gt": "2-dim",
+      "prediction": "2-dim",
+      "score": 0.99981
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00003",
+      "input": {
+        "board_page_id": "p00003",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-002063.png",
+        "sha256": "59b663dbd92da80bbeba79a53cff7c15b8fb77fec1b761049b1c7885e463b2d6",
+        "output": "B",
+        "source_frame_ids": [
+          "f002063"
+        ],
+        "selected_frame_id": "f002063",
+        "time": 1032.5315,
+        "provenance": null
+      },
+      "bbox": [
+        216,
+        656,
+        132,
+        43
+      ],
+      "polygon": [
+        [
+          216.0,
+          656.0
+        ],
+        [
+          347.0,
+          656.0
+        ],
+        [
+          347.0,
+          698.0
+        ],
+        [
+          216.0,
+          698.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/b2dbc8529e362d729047/region-0001.png",
+      "gt": "UNIQUE",
+      "prediction": "UNIQUE",
+      "score": 0.99986
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00003",
+      "input": {
+        "board_page_id": "p00003",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-002063.png",
+        "sha256": "59b663dbd92da80bbeba79a53cff7c15b8fb77fec1b761049b1c7885e463b2d6",
+        "output": "B",
+        "source_frame_ids": [
+          "f002063"
+        ],
+        "selected_frame_id": "f002063",
+        "time": 1032.5315,
+        "provenance": null
+      },
+      "bbox": [
+        649,
+        674,
+        277,
+        60
+      ],
+      "polygon": [
+        [
+          649.0,
+          676.0
+        ],
+        [
+          925.0,
+          674.0
+        ],
+        [
+          925.0,
+          730.0
+        ],
+        [
+          650.0,
+          733.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/b2dbc8529e362d729047/region-0002.png",
+      "gt": "PARALLEL lines",
+      "prediction": "PARALLEL lines",
+      "score": 0.99637
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00003",
+      "input": {
+        "board_page_id": "p00003",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-002063.png",
+        "sha256": "59b663dbd92da80bbeba79a53cff7c15b8fb77fec1b761049b1c7885e463b2d6",
+        "output": "B",
+        "source_frame_ids": [
+          "f002063"
+        ],
+        "selected_frame_id": "f002063",
+        "time": 1032.5315,
+        "provenance": null
+      },
+      "bbox": [
+        244,
+        692,
+        118,
+        53
+      ],
+      "polygon": [
+        [
+          244.0,
+          692.0
+        ],
+        [
+          361.0,
+          692.0
+        ],
+        [
+          361.0,
+          744.0
+        ],
+        [
+          244.0,
+          744.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/b2dbc8529e362d729047/region-0003.png",
+      "gt": "solution",
+      "prediction": "solution",
+      "score": 0.87
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00003",
+      "input": {
+        "board_page_id": "p00003",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-002063.png",
+        "sha256": "59b663dbd92da80bbeba79a53cff7c15b8fb77fec1b761049b1c7885e463b2d6",
+        "output": "B",
+        "source_frame_ids": [
+          "f002063"
+        ],
+        "selected_frame_id": "f002063",
+        "time": 1032.5315,
+        "provenance": null
+      },
+      "bbox": [
+        648,
+        727,
+        191,
+        60
+      ],
+      "polygon": [
+        [
+          648.0,
+          727.0
+        ],
+        [
+          838.0,
+          727.0
+        ],
+        [
+          838.0,
+          786.0
+        ],
+        [
+          648.0,
+          786.0
+        ]
+      ],
+      "image": "../lecture01/cache/ocr/b2dbc8529e362d729047/region-0004.png",
+      "gt": "no solution.",
+      "prediction": "no solution.",
+      "score": 0.92521
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        252,
+        213,
+        495,
+        109
+      ],
+      "polygon": [
+        [
+          252.0,
+          218.0
+        ],
+        [
+          744.0,
+          213.0
+        ],
+        [
+          746.0,
+          316.0
+        ],
+        [
+          253.0,
+          321.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0001.png",
+      "gt": "Lecture 2 (mimio)",
+      "prediction": "Lecture 2 (mimio)",
+      "score": 0.94104
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        252,
+        323,
+        255,
+        108
+      ],
+      "polygon": [
+        [
+          252.0,
+          323.0
+        ],
+        [
+          506.0,
+          323.0
+        ],
+        [
+          506.0,
+          430.0
+        ],
+        [
+          252.0,
+          430.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0002.png",
+      "gt": "Recall:",
+      "prediction": "Recall:",
+      "score": 0.9998
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        228,
+        387,
+        910,
+        169
+      ],
+      "polygon": [
+        [
+          228.0,
+          415.0
+        ],
+        [
+          1133.0,
+          387.0
+        ],
+        [
+          1137.0,
+          527.0
+        ],
+        [
+          232.0,
+          555.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0003.png",
+      "gt": "1) System of linear Equations",
+      "prediction": "SystemoflinearEquations",
+      "score": 0.97722
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        226,
+        521,
+        788,
+        129
+      ],
+      "polygon": [
+        [
+          226.0,
+          532.0
+        ],
+        [
+          1012.0,
+          521.0
+        ],
+        [
+          1013.0,
+          638.0
+        ],
+        [
+          228.0,
+          649.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0004.png",
+      "gt": "2) Number of solutions",
+      "prediction": "2) Number of solutions",
+      "score": 0.98168
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        206,
+        592,
+        717,
+        224
+      ],
+      "polygon": [
+        [
+          206.0,
+          622.0
+        ],
+        [
+          913.0,
+          592.0
+        ],
+        [
+          922.0,
+          785.0
+        ],
+        [
+          215.0,
+          815.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0005.png",
+      "gt": "3) Row picture &",
+      "prediction": "3) Row picture &",
+      "score": 0.95816
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00000",
+      "input": {
+        "board_page_id": "p00000",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-000362.png",
+        "sha256": "2d96007458c8418c9693d8312098f9ed7374478e7d37a676d9c4c0a9b1d2db85",
+        "output": "B",
+        "source_frame_ids": [
+          "f000362"
+        ],
+        "selected_frame_id": "f000362",
+        "time": 181.181,
+        "provenance": null
+      },
+      "bbox": [
+        874,
+        655,
+        482,
+        153
+      ],
+      "polygon": [
+        [
+          876.0,
+          655.0
+        ],
+        [
+          1355.0,
+          662.0
+        ],
+        [
+          1353.0,
+          807.0
+        ],
+        [
+          874.0,
+          800.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/83f30c9cfb21efacfa2b/region-0006.png",
+      "gt": "Column picture",
+      "prediction": "Column picture",
+      "score": 0.99946
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        841,
+        176,
+        765,
+        131
+      ],
+      "polygon": [
+        [
+          841.0,
+          197.0
+        ],
+        [
+          1602.0,
+          176.0
+        ],
+        [
+          1605.0,
+          285.0
+        ],
+        [
+          844.0,
+          306.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0001.png",
+      "gt": "at least one solution",
+      "prediction": "atleastonesolution",
+      "score": 0.99963
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        252,
+        226,
+        567,
+        113
+      ],
+      "polygon": [
+        [
+          252.0,
+          242.0
+        ],
+        [
+          815.0,
+          226.0
+        ],
+        [
+          818.0,
+          322.0
+        ],
+        [
+          255.0,
+          338.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0002.png",
+      "gt": "Consistent system",
+      "prediction": "Consistent system",
+      "score": 0.99988
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        928,
+        351,
+        478,
+        116
+      ],
+      "polygon": [
+        [
+          928.0,
+          369.0
+        ],
+        [
+          1402.0,
+          351.0
+        ],
+        [
+          1405.0,
+          449.0
+        ],
+        [
+          931.0,
+          466.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0003.png",
+      "gt": "→ no solution",
+      "prediction": "→ no solution",
+      "score": 0.9566
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        253,
+        377,
+        702,
+        107
+      ],
+      "polygon": [
+        [
+          253.0,
+          380.0
+        ],
+        [
+          954.0,
+          377.0
+        ],
+        [
+          954.0,
+          481.0
+        ],
+        [
+          253.0,
+          483.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0004.png",
+      "gt": "Inconsistent system",
+      "prediction": "Inconsistent system",
+      "score": 0.99781
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        838,
+        603,
+        283,
+        85
+      ],
+      "polygon": [
+        [
+          840.0,
+          603.0
+        ],
+        [
+          1120.0,
+          612.0
+        ],
+        [
+          1118.0,
+          687.0
+        ],
+        [
+          838.0,
+          678.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0009.png",
+      "gt": "Multiplication",
+      "prediction": "Multiplication",
+      "score": 0.99996
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        894,
+        677,
+        245,
+        70
+      ],
+      "polygon": [
+        [
+          894.0,
+          681.0
+        ],
+        [
+          1137.0,
+          677.0
+        ],
+        [
+          1138.0,
+          742.0
+        ],
+        [
+          895.0,
+          746.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0010.png",
+      "gt": "by a non-zero",
+      "prediction": "by a non-zero",
+      "score": 0.98189
+    },
+    {
+      "record": "lecture02-testing",
+      "page_id": "p00005",
+      "input": {
+        "board_page_id": "p00005",
+        "image": "cache/decode/b091b8b96fbdbb634b26/frame-001260.png",
+        "sha256": "6afb06c4dda50efa5e6fe449e40da7f37aca76ac1616dd8199596de57ea8250d",
+        "output": "B",
+        "source_frame_ids": [
+          "f001260"
+        ],
+        "selected_frame_id": "f001260",
+        "time": 630.63,
+        "provenance": null
+      },
+      "bbox": [
+        1010,
+        726,
+        117,
+        52
+      ],
+      "polygon": [
+        [
+          1010.0,
+          726.0
+        ],
+        [
+          1126.0,
+          726.0
+        ],
+        [
+          1126.0,
+          777.0
+        ],
+        [
+          1010.0,
+          777.0
+        ]
+      ],
+      "image": "../lecture02-testing/cache/ocr/5a5a3e31529f876ad7bd/region-0011.png",
+      "gt": "scalar",
+      "prediction": "scalar",
+      "score": 0.99979
+    },
+    {
+      "record": "lecture01",
+      "page_id": "p00003",
+      "input": {
+        "board_page_id": "p00003",
+        "image": "cache/decode/ef04c180dd0c4b7b5280/frame-002063.png",
+        "sha256": "59b663dbd92da80bbeba79a53cff7c15b8fb77fec1b761049b1c7885e463b2d6",
+        "output": "B",
+        "source_frame_ids": [
+          "f002063"
+        ],
+        "selected_frame_id": "f002063",
+        "time": 1032.5315,
+        "provenance": null
+      },
+      "bbox": [
+        235,
+        300,
+        600,
+        100
+      ],
+      "image": "missed-line.jpg",
+      "gt": "two lines ⇒ two linear equations",
+      "prediction": "",
+      "score": null
+    }
+  ]
+}

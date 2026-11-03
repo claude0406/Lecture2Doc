@@ -1,0 +1,471 @@
+[
+  {
+    "state": "b00000",
+    "start": 0.0,
+    "end": 0.5005,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "insufficient_observations"
+    ]
+  },
+  {
+    "state": "b00001",
+    "start": 0.5005,
+    "end": 1.5015,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00002",
+    "start": 1.5015,
+    "end": 3.003,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00003",
+    "start": 3.003,
+    "end": 4.004,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00004",
+    "start": 4.004,
+    "end": 5.005,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00005",
+    "start": 5.005,
+    "end": 6.006,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00006",
+    "start": 6.006,
+    "end": 7.007,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00007",
+    "start": 7.007,
+    "end": 8.008,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00008",
+    "start": 8.008,
+    "end": 8.5085,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00009",
+    "start": 8.5085,
+    "end": 9.009,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00010",
+    "start": 9.009,
+    "end": 9.5095,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00011",
+    "start": 9.5095,
+    "end": 10.5105,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00012",
+    "start": 10.5105,
+    "end": 11.5115,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00013",
+    "start": 11.5115,
+    "end": 12.5125,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00014",
+    "start": 12.5125,
+    "end": 13.5135,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00015",
+    "start": 13.5135,
+    "end": 14.5145,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00016",
+    "start": 14.5145,
+    "end": 15.5155,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00017",
+    "start": 15.5155,
+    "end": 16.5165,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00018",
+    "start": 16.5165,
+    "end": 17.5175,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00019",
+    "start": 17.5175,
+    "end": 18.5185,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00020",
+    "start": 18.5185,
+    "end": 19.019,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00021",
+    "start": 19.019,
+    "end": 19.5195,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00022",
+    "start": 19.5195,
+    "end": 20.02,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00023",
+    "start": 20.02,
+    "end": 21.021,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00024",
+    "start": 21.021,
+    "end": 22.022,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00025",
+    "start": 22.022,
+    "end": 23.023,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00026",
+    "start": 23.023,
+    "end": 23.5235,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00027",
+    "start": 23.5235,
+    "end": 24.024,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00028",
+    "start": 24.024,
+    "end": 24.5245,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00029",
+    "start": 24.5245,
+    "end": 25.025,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00030",
+    "start": 25.025,
+    "end": 27.027,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00031",
+    "start": 27.027,
+    "end": 31.5315,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00032",
+    "start": 31.5315,
+    "end": 34.034,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00033",
+    "start": 34.034,
+    "end": 35.5355,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unverified_regions_original_retained",
+      "no_verified_improvement"
+    ]
+  },
+  {
+    "state": "b00034",
+    "start": 35.5355,
+    "end": 36.036,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00035",
+    "start": 36.036,
+    "end": 36.5365,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00036",
+    "start": 36.5365,
+    "end": 37.5375,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00037",
+    "start": 37.5375,
+    "end": 38.5385,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00038",
+    "start": 38.5385,
+    "end": 39.5395,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00039",
+    "start": 39.5395,
+    "end": 40.5405,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00040",
+    "start": 40.5405,
+    "end": 41.5415,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00041",
+    "start": 41.5415,
+    "end": 42.5425,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00042",
+    "start": 42.5425,
+    "end": 43.5435,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "inconsistent_writing_original_used"
+    ]
+  },
+  {
+    "state": "b00043",
+    "start": 43.5435,
+    "end": 44.044,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00044",
+    "start": 44.044,
+    "end": 44.5445,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  },
+  {
+    "state": "b00045",
+    "start": 44.5445,
+    "end": 45.011,
+    "status": "fallback",
+    "flags": [
+      "model_free_masks_require_review",
+      "unsafe_state_original_used"
+    ]
+  }
+]

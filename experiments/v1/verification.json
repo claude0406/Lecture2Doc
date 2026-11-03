@@ -1,0 +1,42 @@
+{
+  "records": [
+    {
+      "record": "lecture01",
+      "pages": 4,
+      "regions": 52,
+      "ocr_seconds": 24.625999999999998,
+      "AB_manifest_equal": true,
+      "baseline_manifest_sha256": "fd7dcc42fa2669f9c2a7c90541a16155f5a0feedaba1bc7abf6b781a87fcc5fe",
+      "input_hashes_match": true
+    },
+    {
+      "record": "lecture02-testing",
+      "pages": 16,
+      "regions": 230,
+      "ocr_seconds": 101.158,
+      "AB_manifest_equal": true,
+      "baseline_manifest_sha256": "f951998f041ece904fd76e887a23183add37da9120eec46af4fe43671615479c",
+      "input_hashes_match": true
+    }
+  ],
+  "versions": {
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.4.6",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "automated_tests": 52,
+  "test_log": "tests.txt",
+  "synthetic_pipeline": "synthetic-pipeline/manifest.json",
+  "korean_engine_smoke": "korean-engine-smoke.json",
+  "runtime_measurement_tests": "timing/tests.txt",
+  "runtime_measurement_test_result": "4 passed, 1 deselected",
+  "timing_benchmark": {
+    "cold": "timing/cold.json",
+    "warm": "timing/warm.json",
+    "cold_wall_seconds": 751.4415234090011,
+    "warm_wall_seconds": 1.3249045540014777,
+    "cold_has_no_stage_cache_hits": true,
+    "original_A_frame_selection_preserved": true
+  }
+}

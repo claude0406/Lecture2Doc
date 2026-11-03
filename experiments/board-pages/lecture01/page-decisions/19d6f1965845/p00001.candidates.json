@@ -1,0 +1,62 @@
+{
+  "page": {
+    "id": "p00001",
+    "scene": 1,
+    "start": 20.5205,
+    "end": 21.5215,
+    "source_frame_ids": [
+      "f000041",
+      "f000042"
+    ],
+    "selected_frame_id": "f000042",
+    "selection_reason": "terminal_readable_writing",
+    "selection_candidates": [
+      {
+        "source_frame_id": "f000042",
+        "time": 21.021,
+        "score": 0.907288309888512,
+        "readable_fraction": 1.0,
+        "hidden_fraction": 0.0,
+        "extra_fraction": 0.14398513701811425,
+        "foreground_fraction": 0.22907552083333332
+      },
+      {
+        "source_frame_id": "f000041",
+        "time": 20.5205,
+        "score": 0.7955898587656605,
+        "readable_fraction": 1.0,
+        "hidden_fraction": 0.0,
+        "extra_fraction": 0.330236878773804,
+        "foreground_fraction": 0.2268315972222222
+      }
+    ],
+    "boundary_reason": "confirmed_erasure_or_revision",
+    "quality_flags": [
+      "foreground_present_original_used",
+      "terminal_content_uncertain"
+    ],
+    "transcript_ids": [],
+    "target_ink_pixels": 2153,
+    "original_complete_estimate": false
+  },
+  "candidates": [
+    {
+      "source_frame_id": "f000041",
+      "time": 20.5205,
+      "score": 0.7955898587656605,
+      "readable_fraction": 1.0,
+      "hidden_fraction": 0.0,
+      "extra_fraction": 0.330236878773804,
+      "foreground_fraction": 0.2268315972222222
+    },
+    {
+      "source_frame_id": "f000042",
+      "time": 21.021,
+      "score": 0.907288309888512,
+      "readable_fraction": 1.0,
+      "hidden_fraction": 0.0,
+      "extra_fraction": 0.14398513701811425,
+      "foreground_fraction": 0.22907552083333332
+    }
+  ]
+}

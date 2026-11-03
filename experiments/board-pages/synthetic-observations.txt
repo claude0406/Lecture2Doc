@@ -1,0 +1,8 @@
+progressive [(0.0, 12, '23', [])]
+occlusion [(0.0, 12, '23', ['complete_original_not_observed', 'foreground_present_original_used'])]
+partial_erase [(0.0, 6.0, '11', []), (6.0, 12, '23', [])]
+rewrite [(0.0, 6.0, '11', []), (6.0, 12, '23', [])]
+cut [(0.0, 12, '23', [])]
+motion_only [(0.0, 12, '18', ['foreground_present_original_used'])]
+long_hold [(0.0, 12, '23', [])]
+never_visible [(0.0, 12, '23', ['persistent_foreground_unobserved'])]

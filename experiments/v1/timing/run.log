@@ -1,0 +1,58 @@
+    0.00s 입력 확인
+    0.67s 원본 해상도 프레임 추출 (캐시 확인)
+  194.09s 판서 변화 분석
+  414.26s 누적 판서 구간과 완성 원본 선정
+  424.18s 완성 판서 관측 128/2090
+  434.07s 완성 판서 관측 256/2090
+  444.06s 완성 판서 관측 384/2090
+  454.21s 완성 판서 관측 512/2090
+  464.41s 완성 판서 관측 640/2090
+  474.59s 완성 판서 관측 768/2090
+  484.39s 완성 판서 관측 896/2090
+  494.29s 완성 판서 관측 1024/2090
+  504.45s 완성 판서 관측 1152/2090
+  514.35s 완성 판서 관측 1280/2090
+  524.24s 완성 판서 관측 1408/2090
+  534.13s 완성 판서 관측 1536/2090
+  544.00s 완성 판서 관측 1664/2090
+  553.83s 완성 판서 관측 1792/2090
+  563.44s 완성 판서 관측 1920/2090
+  573.24s 완성 판서 관측 2048/2090
+  576.60s 완성 판서 관측 2090/2090
+  586.09s 음성 전사 / 자막 입력
+  586.09s 판서 복원
+  608.96s 판서 복원 25/180
+  631.29s 판서 복원 50/180
+  647.63s 판서 복원 75/180
+  671.47s 판서 복원 100/180
+  689.74s 판서 복원 125/180
+  702.67s 판서 복원 150/180
+  722.55s 판서 복원 175/180
+  725.60s 판서 복원 180/180
+  725.62s 누적 판서 B 복원
+  725.74s 누적 판서 복원 1/4 · original · no_substantial_board_occluder
+  725.83s 누적 판서 복원 2/4 · original · clear_original_sufficient
+  725.92s 누적 판서 복원 3/4 · original · clear_original_sufficient
+  726.00s 누적 판서 복원 4/4 · original · no_observed_hidden_writing
+  726.17s 판서 텍스트 인식
+  726.55s 판서 OCR 1/4
+[0;93m2026-11-02 13:45:14.358435203 [W:onnxruntime:Default, telemetry_1ds.cc:600 operator()] Failed to persist telemetry device ID; using an in-memory identifier[m
+  734.54s 판서 OCR 2/4
+  740.29s 판서 OCR 3/4
+  749.59s 판서 OCR 4/4
+  751.44s 완료
+{"mode": "cold", "wall_seconds": 751.4415234090011, "pipeline_seconds": 751.277, "duration_seconds": 1046.0783666666666, "frames": 2090, "pages": 4, "ocr_regions": 52, "timings": {"input": {"elapsed_seconds": 0.671, "cache_hit": false}, "decode": {"elapsed_seconds": 193.423, "cache_hit": false}, "analysis": {"elapsed_seconds": 220.156, "cache_hit": false}, "pages": {"elapsed_seconds": 171.834, "cache_hit": false}, "transcript": {"elapsed_seconds": 0.0, "status": "skipped"}, "reconstruction": {"elapsed_seconds": 139.525, "cache_hit": false}, "page-restoration": {"elapsed_seconds": 0.387, "cache_hit": false}, "ocr": {"elapsed_seconds": 25.108, "status": "complete", "cache_hits": 0}}, "ocr_cache_hits": 0, "platform": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43", "cpu_model": "Intel(R) Core(TM) Ultra 7 268V", "max_rss_kib": 600700, "model_download_included": false, "asr": false, "config": {"sample_seconds": 0.5, "analysis_width": 640, "board": "auto", "roi": [0.0, 0.0, 1.0, 1.0], "confirm": 2, "change_pixels": 35, "change_fraction": 0.001, "cut_fraction": 0.65, "tile_size": 32, "reconstruction": true}}
+  751.64s 입력 확인
+  752.50s 원본 해상도 프레임 추출 (캐시 확인)
+  752.50s 판서 변화 분석
+  752.55s 누적 판서 구간과 완성 원본 선정
+  752.55s 음성 전사 / 자막 입력
+  752.55s 판서 복원
+  752.55s 누적 판서 B 복원
+  752.72s 판서 텍스트 인식
+  752.80s 판서 OCR 1/4
+  752.80s 판서 OCR 2/4
+  752.80s 판서 OCR 3/4
+  752.80s 판서 OCR 4/4
+  752.96s 완료
+{"mode": "warm", "wall_seconds": 1.3249045540014777, "pipeline_seconds": 1.161, "duration_seconds": 1046.0783666666666, "frames": 2090, "pages": 4, "ocr_regions": 52, "timings": {"input": {"elapsed_seconds": 0.858, "cache_hit": false}, "decode": {"elapsed_seconds": 0.003, "cache_hit": true}, "analysis": {"elapsed_seconds": 0.022, "cache_hit": true}, "pages": {"elapsed_seconds": 0.001, "cache_hit": true}, "transcript": {"elapsed_seconds": 0.0, "status": "skipped"}, "reconstruction": {"elapsed_seconds": 0.005, "cache_hit": true}, "page-restoration": {"elapsed_seconds": 0.005, "cache_hit": true}, "ocr": {"elapsed_seconds": 0.084, "status": "complete", "cache_hits": 4}}, "ocr_cache_hits": 4, "platform": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43", "cpu_model": "Intel(R) Core(TM) Ultra 7 268V", "max_rss_kib": 600700, "model_download_included": false, "asr": false, "config": {"sample_seconds": 0.5, "analysis_width": 640, "board": "auto", "roi": [0.0, 0.0, 1.0, 1.0], "confirm": 2, "change_pixels": 35, "change_fraction": 0.001, "cut_fraction": 0.65, "tile_size": 32, "reconstruction": true}}

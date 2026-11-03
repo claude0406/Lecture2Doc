@@ -1,0 +1,763 @@
+{
+  "record": "experiments/board-pages/lecture01",
+  "baseline": "experiments/accessmath/lecture01_part1",
+  "revised_micro": "experiments/accessmath-improvement/v4/auto",
+  "pages": 4,
+  "baseline_microstates": 141,
+  "previous_microstates": 266,
+  "scoring_unchanged": true,
+  "scoring_source_sha256": "3df106d71fd9817ddbf338d43560fd2db5a6b6f2c605ec3ddb449114ce328b00",
+  "prediction_policy": "Completed page containing GT timestamp, no GT candidate optimization. B is explicit original fallback, not a new reconstruction.",
+  "caveat": "A completed page can contain writing added after an official snapshot. This is a page-output diagnosis, not the official unique-CC metric.",
+  "aggregate": {
+    "10": {
+      "GT": {
+        "recall": 0.9955759315875891,
+        "precision": 0.9431718405964826,
+        "f1": 0.9686558136849174
+      },
+      "nearest": {
+        "recall": 0.9953059692112173,
+        "precision": 0.9430232045778558,
+        "f1": 0.968449451997345
+      },
+      "baseline_A": {
+        "recall": 0.964174683241167,
+        "precision": 0.7424385020960789,
+        "f1": 0.8328115709929037
+      },
+      "baseline_B": {
+        "recall": 0.964174683241167,
+        "precision": 0.7424453936642346,
+        "f1": 0.8328163628311396
+      },
+      "previous_micro_A": {
+        "recall": 0.9951178395458432,
+        "precision": 0.9416955587543163,
+        "f1": 0.9676595511972677
+      },
+      "page_A": {
+        "recall": 0.9950645379703467,
+        "precision": 0.9424713775993604,
+        "f1": 0.9680450834502602
+      },
+      "page_B_original_fallback": {
+        "recall": 0.9950645379703467,
+        "precision": 0.9424713775993604,
+        "f1": 0.9680450834502602
+      }
+    },
+    "20": {
+      "GT": {
+        "recall": 0.9317451258961901,
+        "precision": 0.9298120030202974,
+        "f1": 0.9307688315176023
+      },
+      "nearest": {
+        "recall": 0.9315859353916083,
+        "precision": 0.9297069846572965,
+        "f1": 0.9306402933407766
+      },
+      "baseline_A": {
+        "recall": 0.9004064105164988,
+        "precision": 0.7558359553696756,
+        "f1": 0.8177986394318134
+      },
+      "baseline_B": {
+        "recall": 0.9004064105164988,
+        "precision": 0.7558544794589005,
+        "f1": 0.8178100997969091
+      },
+      "previous_micro_A": {
+        "recall": 0.9358739782266743,
+        "precision": 0.9271635773072499,
+        "f1": 0.9314892534157466
+      },
+      "page_A": {
+        "recall": 0.93191504782931,
+        "precision": 0.9278861842282025,
+        "f1": 0.9298732100824573
+      },
+      "page_B_original_fallback": {
+        "recall": 0.93191504782931,
+        "precision": 0.9278861842282025,
+        "f1": 0.9298732100824573
+      }
+    },
+    "30": {
+      "GT": {
+        "recall": 0.79212245656633,
+        "precision": 0.9024767819051877,
+        "f1": 0.8436755072167342
+      },
+      "nearest": {
+        "recall": 0.7894053064403027,
+        "precision": 0.902823755908624,
+        "f1": 0.8422851913385049
+      },
+      "baseline_A": {
+        "recall": 0.7584309947338532,
+        "precision": 0.7395693005117082,
+        "f1": 0.7463470057035148
+      },
+      "baseline_B": {
+        "recall": 0.7584370202821781,
+        "precision": 0.7395795904696282,
+        "f1": 0.7463553327520542
+      },
+      "previous_micro_A": {
+        "recall": 0.7856903199146159,
+        "precision": 0.8966367068060497,
+        "f1": 0.8374596212643102
+      },
+      "page_A": {
+        "recall": 0.7860157378596081,
+        "precision": 0.8979969334650847,
+        "f1": 0.8382505882732355
+      },
+      "page_B_original_fallback": {
+        "recall": 0.7860157378596081,
+        "precision": 0.8979969334650847,
+        "f1": 0.8382505882732355
+      }
+    }
+  },
+  "rows": [
+    {
+      "gt_time": 347.78076666666664,
+      "gt_index": 10423,
+      "page_id": "p00000",
+      "selected_time": 359.359,
+      "baseline_selected_time": 348.348,
+      "metrics": {
+        "GT": {
+          "10": {
+            "precision": 0.9508627832414712,
+            "recall": 0.9954192179078041,
+            "f1": 0.9726309830466013,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83277,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9403110927716679,
+            "recall": 0.9353804339527568,
+            "f1": 0.9378392827133312,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55739,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9322033898305084
+          },
+          "30": {
+            "precision": 0.9159422887355497,
+            "recall": 0.8173489487105099,
+            "f1": 0.8638415179212464,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33477,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8248587570621468
+          }
+        },
+        "nearest": {
+          "10": {
+            "precision": 0.9507873542493088,
+            "recall": 0.9960452581270709,
+            "f1": 0.9728902522659401,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83190,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9405147005966501,
+            "recall": 0.9395489456566551,
+            "f1": 0.9400315750811659,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55644,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9378531073446328
+          },
+          "30": {
+            "precision": 0.915918171167653,
+            "recall": 0.8137759386785971,
+            "f1": 0.8618311934484114,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33289,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8192090395480226
+          }
+        },
+        "baseline_A": {
+          "10": {
+            "precision": 0.9503433129397,
+            "recall": 0.9957551419278985,
+            "f1": 0.9725193893346796,
+            "gt_pixels": 65491,
+            "predicted_pixels": 82869,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9386215958385082,
+            "recall": 0.9439159579178819,
+            "f1": 0.9412613320679251,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55557,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.943502824858757
+          },
+          "30": {
+            "precision": 0.9130724094126187,
+            "recall": 0.8129819364492831,
+            "f1": 0.8601251487849435,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33062,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.807909604519774
+          }
+        },
+        "baseline_B": {
+          "10": {
+            "precision": 0.9503433129397,
+            "recall": 0.9957551419278985,
+            "f1": 0.9725193893346796,
+            "gt_pixels": 65491,
+            "predicted_pixels": 82869,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9386215958385082,
+            "recall": 0.9439159579178819,
+            "f1": 0.9412613320679251,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55557,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.943502824858757
+          },
+          "30": {
+            "precision": 0.9130724094126187,
+            "recall": 0.8129819364492831,
+            "f1": 0.8601251487849435,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33062,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.807909604519774
+          }
+        },
+        "previous_micro_A": {
+          "10": {
+            "precision": 0.9496548240444519,
+            "recall": 0.99555664137057,
+            "f1": 0.9720641523006242,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83146,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9375357449242208,
+            "recall": 0.9435189568032248,
+            "f1": 0.9405178352381653,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55952,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9322033898305084
+          },
+          "30": {
+            "precision": 0.9094477651886876,
+            "recall": 0.8132873219220962,
+            "f1": 0.8586837789654644,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33627,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.807909604519774
+          }
+        },
+        "page_A": {
+          "10": {
+            "precision": 0.9501633202036699,
+            "recall": 0.9961368737689148,
+            "f1": 0.9726071263710805,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83272,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9385045422781272,
+            "recall": 0.9403124093386878,
+            "f1": 0.93940760601018,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55809,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.943502824858757
+          },
+          "30": {
+            "precision": 0.914003521021693,
+            "recall": 0.8127376280710327,
+            "f1": 0.8604011714367876,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33513,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8248587570621468
+          }
+        },
+        "page_B_original_fallback": {
+          "10": {
+            "precision": 0.9501633202036699,
+            "recall": 0.9961368737689148,
+            "f1": 0.9726071263710805,
+            "gt_pixels": 65491,
+            "predicted_pixels": 83272,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.9943502824858758
+          },
+          "20": {
+            "precision": 0.9385045422781272,
+            "recall": 0.9403124093386878,
+            "f1": 0.93940760601018,
+            "gt_pixels": 65491,
+            "predicted_pixels": 55809,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.943502824858757
+          },
+          "30": {
+            "precision": 0.914003521021693,
+            "recall": 0.8127376280710327,
+            "f1": 0.8604011714367876,
+            "gt_pixels": 65491,
+            "predicted_pixels": 33513,
+            "gt_components_area_ge_10": 177,
+            "component_coverage_at_80pct": 0.8248587570621468
+          }
+        }
+      }
+    },
+    {
+      "gt_time": 607.6737333333334,
+      "gt_index": 18212,
+      "page_id": "p00001",
+      "selected_time": 644.644,
+      "baseline_selected_time": 616.1155,
+      "metrics": {
+        "GT": {
+          "10": {
+            "precision": 0.9357095321374955,
+            "recall": 0.9948515992700029,
+            "f1": 0.9643746674009703,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64613,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9870967741935484
+          },
+          "20": {
+            "precision": 0.9196900982615268,
+            "recall": 0.9286908077994429,
+            "f1": 0.9241685385073688,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42336,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9161290322580645
+          },
+          "30": {
+            "precision": 0.8870004776309505,
+            "recall": 0.7696474882335991,
+            "f1": 0.8241674800408146,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25124,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7741935483870968
+          }
+        },
+        "nearest": {
+          "10": {
+            "precision": 0.9350048874338645,
+            "recall": 0.9950244933243685,
+            "f1": 0.9640814524897958,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64451,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9187708940891955,
+            "recall": 0.9268466045528768,
+            "f1": 0.9227910812236267,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42177,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9161290322580645
+          },
+          "30": {
+            "precision": 0.8866802378956612,
+            "recall": 0.7671117087695707,
+            "f1": 0.8225735937291219,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25053,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7677419354838709
+          }
+        },
+        "baseline_A": {
+          "10": {
+            "precision": 0.6042941144737551,
+            "recall": 0.9302468542887331,
+            "f1": 0.7326525788460889,
+            "gt_pixels": 52055,
+            "predicted_pixels": 92685,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.864516129032258
+          },
+          "20": {
+            "precision": 0.6006948624894652,
+            "recall": 0.8447219287292287,
+            "f1": 0.7021090745625167,
+            "gt_pixels": 52055,
+            "predicted_pixels": 58141,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7741935483870968
+          },
+          "30": {
+            "precision": 0.5840508835618493,
+            "recall": 0.6851599270002882,
+            "f1": 0.6305780842954759,
+            "gt_pixels": 52055,
+            "predicted_pixels": 33331,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.6129032258064516
+          }
+        },
+        "baseline_B": {
+          "10": {
+            "precision": 0.6042941144737551,
+            "recall": 0.9302468542887331,
+            "f1": 0.7326525788460889,
+            "gt_pixels": 52055,
+            "predicted_pixels": 92685,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.864516129032258
+          },
+          "20": {
+            "precision": 0.6006948624894652,
+            "recall": 0.8447219287292287,
+            "f1": 0.7021090745625167,
+            "gt_pixels": 52055,
+            "predicted_pixels": 58141,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7741935483870968
+          },
+          "30": {
+            "precision": 0.5840508835618493,
+            "recall": 0.6851599270002882,
+            "f1": 0.6305780842954759,
+            "gt_pixels": 52055,
+            "predicted_pixels": 33331,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.6129032258064516
+          }
+        },
+        "previous_micro_A": {
+          "10": {
+            "precision": 0.9336865519478513,
+            "recall": 0.9946594947651523,
+            "f1": 0.9632090626187133,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64738,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9174283757292331,
+            "recall": 0.9342042070886563,
+            "f1": 0.9257402967109652,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42339,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9225806451612903
+          },
+          "30": {
+            "precision": 0.8816728461507795,
+            "recall": 0.766343290750168,
+            "f1": 0.819972638805375,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25083,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7612903225806451
+          }
+        },
+        "page_A": {
+          "10": {
+            "precision": 0.934122013453955,
+            "recall": 0.9940639708001152,
+            "f1": 0.9631612774792183,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64665,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9168114988961436,
+            "recall": 0.9330900009605225,
+            "f1": 0.9248791272961333,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42578,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9290322580645162
+          },
+          "30": {
+            "precision": 0.8810593708991132,
+            "recall": 0.7698395927384497,
+            "f1": 0.8217030868768246,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25147,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7806451612903226
+          }
+        },
+        "page_B_original_fallback": {
+          "10": {
+            "precision": 0.934122013453955,
+            "recall": 0.9940639708001152,
+            "f1": 0.9631612774792183,
+            "gt_pixels": 52055,
+            "predicted_pixels": 64665,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9935483870967742
+          },
+          "20": {
+            "precision": 0.9168114988961436,
+            "recall": 0.9330900009605225,
+            "f1": 0.9248791272961333,
+            "gt_pixels": 52055,
+            "predicted_pixels": 42578,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.9290322580645162
+          },
+          "30": {
+            "precision": 0.8810593708991132,
+            "recall": 0.7698395927384497,
+            "f1": 0.8217030868768246,
+            "gt_pixels": 52055,
+            "predicted_pixels": 25147,
+            "gt_components_area_ge_10": 155,
+            "component_coverage_at_80pct": 0.7806451612903226
+          }
+        }
+      }
+    },
+    {
+      "gt_time": 730.5298,
+      "gt_index": 21894,
+      "page_id": "p00002",
+      "selected_time": 773.2725,
+      "baseline_selected_time": 728.728,
+      "metrics": {
+        "GT": {
+          "10": {
+            "precision": 0.9429432064104813,
+            "recall": 0.9964569775849602,
+            "f1": 0.9689617906071808,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68388,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 1.0
+          },
+          "20": {
+            "precision": 0.9294348180276977,
+            "recall": 0.9311641359363703,
+            "f1": 0.9302986733321064,
+            "gt_pixels": 55320,
+            "predicted_pixels": 45419,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9312169312169312
+          },
+          "30": {
+            "precision": 0.9044875793490625,
+            "recall": 0.7893709327548807,
+            "f1": 0.8430175236881421,
+            "gt_pixels": 55320,
+            "predicted_pixels": 27253,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8253968253968254
+          }
+        },
+        "nearest": {
+          "10": {
+            "precision": 0.9432773720503943,
+            "recall": 0.9948481561822126,
+            "f1": 0.9683766512362992,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68738,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.929835359286044,
+            "recall": 0.9283622559652929,
+            "f1": 0.9290982237175374,
+            "gt_pixels": 55320,
+            "predicted_pixels": 45493,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9259259259259259
+          },
+          "30": {
+            "precision": 0.9058728586625582,
+            "recall": 0.7873282718727405,
+            "f1": 0.8424507868379815,
+            "gt_pixels": 55320,
+            "predicted_pixels": 27261,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8253968253968254
+          }
+        },
+        "baseline_A": {
+          "10": {
+            "precision": 0.6726780788747816,
+            "recall": 0.9665220535068691,
+            "f1": 0.7932627447979427,
+            "gt_pixels": 55320,
+            "predicted_pixels": 94986,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9312169312169312
+          },
+          "20": {
+            "precision": 0.7281914077810535,
+            "recall": 0.9125813449023861,
+            "f1": 0.8100255116649985,
+            "gt_pixels": 55320,
+            "predicted_pixels": 58681,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.873015873015873
+          },
+          "30": {
+            "precision": 0.7215846085606564,
+            "recall": 0.7771511207519884,
+            "f1": 0.7483377840301251,
+            "gt_pixels": 55320,
+            "predicted_pixels": 36072,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.7566137566137566
+          }
+        },
+        "baseline_B": {
+          "10": {
+            "precision": 0.6726987535792488,
+            "recall": 0.9665220535068691,
+            "f1": 0.7932771203126502,
+            "gt_pixels": 55320,
+            "predicted_pixels": 94992,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9312169312169312
+          },
+          "20": {
+            "precision": 0.7282469800487281,
+            "recall": 0.9125813449023861,
+            "f1": 0.8100598927602857,
+            "gt_pixels": 55320,
+            "predicted_pixels": 58693,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.873015873015873
+          },
+          "30": {
+            "precision": 0.7216154784344162,
+            "recall": 0.7771691973969631,
+            "f1": 0.7483627651757435,
+            "gt_pixels": 55320,
+            "predicted_pixels": 36076,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.7566137566137566
+          }
+        },
+        "previous_micro_A": {
+          "10": {
+            "precision": 0.9417453002706458,
+            "recall": 0.9951373825018076,
+            "f1": 0.9677054386724655,
+            "gt_pixels": 55320,
+            "predicted_pixels": 68355,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.9265266112682959,
+            "recall": 0.9298987707881418,
+            "f1": 0.9282096282981093,
+            "gt_pixels": 55320,
+            "predicted_pixels": 44887,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9206349206349206
+          },
+          "30": {
+            "precision": 0.8987895090786819,
+            "recall": 0.7774403470715835,
+            "f1": 0.833722446022091,
+            "gt_pixels": 55320,
+            "predicted_pixels": 26766,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.798941798941799
+          }
+        },
+        "page_A": {
+          "10": {
+            "precision": 0.943128799140456,
+            "recall": 0.9949927693420101,
+            "f1": 0.9683668465004819,
+            "gt_pixels": 55320,
+            "predicted_pixels": 67943,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.9283425115103368,
+            "recall": 0.9223427331887202,
+            "f1": 0.9253328969410584,
+            "gt_pixels": 55320,
+            "predicted_pixels": 44308,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9206349206349206
+          },
+          "30": {
+            "precision": 0.8989279084744478,
+            "recall": 0.775469992769342,
+            "f1": 0.8326475065060946,
+            "gt_pixels": 55320,
+            "predicted_pixels": 26397,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8042328042328042
+          }
+        },
+        "page_B_original_fallback": {
+          "10": {
+            "precision": 0.943128799140456,
+            "recall": 0.9949927693420101,
+            "f1": 0.9683668465004819,
+            "gt_pixels": 55320,
+            "predicted_pixels": 67943,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9947089947089947
+          },
+          "20": {
+            "precision": 0.9283425115103368,
+            "recall": 0.9223427331887202,
+            "f1": 0.9253328969410584,
+            "gt_pixels": 55320,
+            "predicted_pixels": 44308,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.9206349206349206
+          },
+          "30": {
+            "precision": 0.8989279084744478,
+            "recall": 0.775469992769342,
+            "f1": 0.8326475065060946,
+            "gt_pixels": 55320,
+            "predicted_pixels": 26397,
+            "gt_components_area_ge_10": 189,
+            "component_coverage_at_80pct": 0.8042328042328042
+          }
+        }
+      }
+    }
+  ]
+}
