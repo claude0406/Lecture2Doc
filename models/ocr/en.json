@@ -1,0 +1,21 @@
+{
+  "language": "en",
+  "engine": "rapidocr",
+  "engine_version": "3.10.0",
+  "models": {
+    "det": "PP-OCRv6-small",
+    "rec": "PP-OCRv6-medium"
+  },
+  "files": {
+    "det": {
+      "path": "PP-OCRv6_det_small.onnx",
+      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx"
+    },
+    "rec": {
+      "path": "PP-OCRv6_rec_medium.onnx",
+      "sha256": "eef444829dbbe18d7fea59a3f6eb75647518d2b3a9568d27c92e42940204894b",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/rec/PP-OCRv6_rec_medium.onnx"
+    }
+  }
+}
