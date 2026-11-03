@@ -2,6 +2,7 @@
 __pycache__/
 .pytest_cache/
 *.egg-info/
+*.download
 data/
 experiments/**/source*
 experiments/**/cache/
@@ -16,7 +17,6 @@ experiments/**/inputs/
 experiments/**/models/
 .cache/
 datasets/
-
 models/ocr/
 !models/ocr/
 models/ocr/*
@@ -25,3 +25,4 @@ models/whisper/
 !models/whisper/
 models/whisper/*
 !models/whisper/index.json
+
