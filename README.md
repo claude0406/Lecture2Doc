@@ -2,7 +2,7 @@
 
 강의 영상을 분석해 판서가 완성되는 흐름을 기록하고, 각 결과를 원본 영상과 확인하는 로컬 웹 앱입니다. 누적 판서를 구간별로 정리하고(A), 같은 판서 상태의 여러 관측에서 가려진 부분을 보완하며(B), 판서 이미지에서 문자를 인식합니다(C). A/B와 OCR은 CPU에서 로컬로 실행합니다.
 
-현재 버전은 **V1 = A + B + C(OCR)**입니다. 음성 전사와 자막 입력도 선택 기능으로 제공하며, 수식의 LaTeX 변환과 강의 노트 작성은 아직 포함하지 않습니다. 기능과 실험 결과는 아래 문서에서 확인할 수 있습니다.
+기본 기록 파이프라인은 **V1 = A + B + C(OCR)**입니다. 선택적 음성 전사·자막 입력을 지원합니다. 이 브랜치에는 추가로 **D · 강의 학습 분석**을 포함합니다. D는 판서 OCR과 음성 전사를 연결해 판서 구간 중요도, 관련 설명, 개념별 등장 시간을 제공합니다. 중요도는 강조 표현·반복·필기와 음성의 일치 신호를 이용하는 규칙 기반 추정이며, 음성 전사나 OCR이 없으면 일부 결과는 산정되지 않습니다. 수식의 LaTeX 변환과 강의 노트 자동 작성은 아직 포함하지 않습니다. 기능과 실험 결과는 아래 문서에서 확인할 수 있습니다.
 
 ## A/B/C
 
@@ -111,6 +111,7 @@ data/              로컬 업로드·처리 결과(Git 제외)
 - `lecture2doc/page_restore.py`: 같은 판서 상태에서의 부분 복원(B)
 - `lecture2doc/ocr.py`: OCR 모델, 텍스트 영역, 원본 crop(C)
 - `lecture2doc/transcript.py`: 자막과 선택적 Whisper 전사
+- `lecture2doc/learning_analysis.py`: 판서·음성 연결, 강의 중요도 및 개념 등장 시간 분석
 - `lecture2doc/server.py`, `lecture2doc/static/`: 로컬 API와 웹 UI
 - `lecture2doc/launcher.py`, `serve.sh`: 저장소 위치를 기준으로 앱 실행
 
@@ -131,6 +132,7 @@ OCR과 음성 전사는 각각 `.[ocr]`, `.[stt]` 선택 의존성입니다. 고
 - [A/B 개선 보고서와 최신 결과](docs/AB_REFINEMENT.md)
 - [V1 OCR 구현과 실행 결과](docs/V1_OCR.md)
 - [검증 기록과 남은 한계](docs/VALIDATION.md)
+- [강의 중요도와 개념 시간 연결](docs/LEARNING_ANALYSIS.md)
 - [AccessMath 재현 및 비교](docs/ACCESSMATH.md)
 - [문서·실험 인덱스](docs/)
 - [제3자 구성 요소와 라이선스](THIRD_PARTY.md)
