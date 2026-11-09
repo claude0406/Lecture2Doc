@@ -237,7 +237,11 @@ def analyze_learning(manifest: dict) -> dict:
                 "matched_concepts": matched,
             })
 
-        score, signals, reasons = _score_page(page_segments, terms, regions, has_ocr)
+        linked_ids = {item["segment_id"] for item in links if item.get("segment_id")}
+        scoring_segments = [
+            segment for segment in segments if segment.get("id") in linked_ids
+        ]
+        score, signals, reasons = _score_page(scoring_segments, terms, regions, has_ocr)
         if score is None:
             level = "unrated"
         elif score >= 65:
