@@ -173,5 +173,5 @@ def test_fallback_concepts_filters_filler_words_and_limits_count():
         for i in range(10)
     ]
     selected = _fallback_concepts(concepts)
-    assert len(selected) <= 8
+    assert len(selected) <= 5
     assert all(item["name"] not in {"한번", "것도"} for item in selected)
