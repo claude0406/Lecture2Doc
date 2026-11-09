@@ -35,7 +35,7 @@ def main():
     run.add_argument("--reconstruct", action="store_true", help="누적 판서 B 복원 (기본값)")
     run.add_argument("--make-playback", action="store_true", help="H.264/AAC 브라우저 재생 사본 생성")
     run.add_argument("--ocr", choices=["en", "ko", "off"], default="en", help="C OCR 언어; off는 A/B만 실행")
-    run.add_argument("--rerun", choices=["decode", "analysis", "pages", "transcript", "reconstruction", "page-restoration", "playback", "ocr"],
+    run.add_argument("--rerun", choices=["decode", "analysis", "pages", "transcript", "reconstruction", "page-restoration", "playback", "ocr", "learning-analysis"],
                      action="append", default=[], help="지정 단계를 새 캐시 폴더에서 재실행 (반복 지정 가능)")
     args = parser.parse_args()
     if args.command in ("ocr-models", "ocr"):
