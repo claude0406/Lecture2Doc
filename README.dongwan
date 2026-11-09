@@ -41,9 +41,11 @@ A 단계에서 이미 계산한 다음 정보를 캐시에 기록하고 Pages가
 
 ## 4. Git 커밋 기록
 
-### 커밋 1 — 03a0ace
+이번 최적화 브랜치에서 작성한 커밋 제목은 모두 한국어로 통일했다.
 
-원래 커밋 제목: Optimize page analysis by sharing frame feature cache
+### 커밋 1 — 5bfc39d
+
+**프레임 특징 공용 캐시로 페이지 분석 최적화**
 
 주요 내용:
 - feature_cache.py 신규 추가
@@ -52,27 +54,57 @@ A 단계에서 이미 계산한 다음 정보를 캐시에 기록하고 Pages가
 - storage.py의 분석 캐시 버전 갱신
 - test_feature_cache.py 신규 추가
 
-커밋: https://github.com/claude0406/Lecture2Doc/commit/03a0aced14b29b490567b87648581ca02486f61c
+커밋: https://github.com/claude0406/Lecture2Doc/commit/5bfc39dc3ab045483992dff86b9543aa25ac3398
 
-### 커밋 2 — 4cea50d
+### 커밋 2 — 9f87d81
 
-원래 커밋 제목: Fix shared feature cache test shape assertion
-
-주요 내용:
-- 테스트에서 캐시의 shape가 압축 배열 길이가 아니라 실제 분석 이미지의 높이·너비인지 검증하도록 수정
-
-커밋: https://github.com/claude0406/Lecture2Doc/commit/4cea50d66e427cddd8dea9a0caa2d7208fbf7209
-
-### 커밋 3 — b2a3ab3
-
-원래 커밋 제목: Handle invalid shared feature cache archives safely
+**공용 특징 캐시 테스트의 이미지 크기 검증 수정**
 
 주요 내용:
-- 손상된 NPZ/ZIP 파일에서 발생하는 zipfile.BadZipFile을 처리
+- 테스트에서 압축 배열의 길이가 아닌 실제 분석 이미지의 높이와 너비를 검증하도록 수정
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/9f87d81c230e1d917ad624ea70b2d9a1143a9b46
+
+### 커밋 3 — 60f797e
+
+**손상된 특징 캐시 파일의 안전한 처리 추가**
+
+주요 내용:
+- 손상된 NPZ/ZIP 파일에서 발생하는 오류를 처리
 - 잘못된 캐시를 재사용하지 않고 기존 계산 경로로 안전하게 복귀
 - 사용하지 않는 임시 변수 제거
 
-커밋: https://github.com/claude0406/Lecture2Doc/commit/b2a3ab3f7f2fc6f00285ec649fdbe6b6d18528df
+커밋: https://github.com/claude0406/Lecture2Doc/commit/60f797e17b018abd68d69c483741554eadbacce5
+
+### 커밋 4 — f2c68ad
+
+**프레임 처리 속도 성능 보고서 한국어 작성**
+
+주요 내용:
+- 5분 합성 영상의 성능 비교 결과를 한국어 보고서로 정리
+- 측정 조건, 결과 동일성, 수치 해석의 한계 기록
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/f2c68adf53f561a09ec451196ccbf04c37a89901
+
+### 커밋 5 — 66d5ade
+
+**프레임 처리 최적화 및 커밋 이력 문서화**
+
+주요 내용:
+- README.dongwan 개발 기록 파일 추가
+- 캐시 설계와 수정 파일, 성능 실험 및 후속 작업 기록
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/66d5ade99d0e823cec02c60f3f1624333654f000
+
+### 커밋 6 — 4d4c792
+
+**한국어 보고서와 개발 기록 커밋 내용 정리**
+
+주요 내용:
+- 한국어 보고서와 개발 기록의 구성 정리
+- 각 작업의 커밋 이력 기록
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/4d4c79287a442fc16ffa869888e3718aeddba040
 
 ## 5. 성능 실험 요약
 
@@ -124,22 +156,30 @@ A 단계에서 이미 계산한 다음 정보를 캐시에 기록하고 Pages가
 5. 실제 영상 검증이 끝난 뒤에만 main 병합을 검토한다.
 
 
-## 8. 한국어 문서 추가 및 문서화 커밋
+## 8. 한국어 문서 및 제목 통일 기록
 
 ### benchmark_report_ko.md
 
-- 기존 성능 측정 결과를 한국어로 다시 정리한 상세 보고서
+- 기존 성능 측정 결과를 한국어로 정리한 상세 보고서
 - 테스트 입력, 측정 수치, 결과 동일성, 코드 변경 사항, 한계 및 후속 검증 절차 기록
-- 커밋 제목: Add Korean frame speed benchmark report
-- 커밋: https://github.com/claude0406/Lecture2Doc/commit/2c9a8d8d5670ec7b9528e6d0c94f4faebd7d47d2
+- 최초 추가 커밋 제목: 프레임 처리 속도 성능 보고서 한국어 작성
+- 최초 추가 커밋: https://github.com/claude0406/Lecture2Doc/commit/f2c68adf53f561a09ec451196ccbf04c37a89901
+- 커밋 제목 및 이력 링크 한국어 통일: https://github.com/claude0406/Lecture2Doc/commit/f3ae79f5d4fac362ca516693cc944a1c6cae12da
 
 ### README.dongwan
 
 - 이번 최적화의 목적과 브랜치 정보
 - 추가·수정된 코드 파일과 각 파일의 역할
 - 기존 기능과 캐시의 저장·복구 설계
-- 기존 3개 코드 커밋의 제목과 변경 내용
+- 한국어 커밋 제목과 변경 내용
 - 성능 실험 결과, 검증 상태 및 다음 작업
-- 커밋 제목: Document frame speed optimization and commit history
-- 커밋: https://github.com/claude0406/Lecture2Doc/commit/b66591cb6e24088af63725a04c0c253df018680f
+- 최초 추가 커밋 제목: 프레임 처리 최적화 및 커밋 이력 문서화
+- 최초 추가 커밋: https://github.com/claude0406/Lecture2Doc/commit/66d5ade99d0e823cec02c60f3f1624333654f000
 
+## 9. 커밋 제목 한국어 통일 원칙
+
+- 이번 최적화 작업에서 새로 만든 커밋 제목 6개를 모두 한국어로 다시 작성했다.
+- 한국어 보고서와 개발 기록에 표시된 커밋 제목 및 링크도 새 커밋 ID에 맞춰 갱신했다.
+- 원본 저장소에서 가져온 기존 커밋과 main 브랜치의 이력은 변경하지 않았다.
+- 이후 이 프로젝트에서 새로 만드는 커밋 제목과 설명은 한국어를 기본으로 작성한다.
+- Python 함수명, 변수명, 파일명 및 라이브러리 이름은 기존 코드와의 호환성을 위해 영어를 유지한다.
