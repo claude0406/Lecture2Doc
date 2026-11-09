@@ -13,7 +13,12 @@ from .storage import stage
 LEARNING_ANALYSIS_VERSION = "2026-11-09.learning-importance-1"
 
 _TOKEN = re.compile(
-    r"[가-힣]{2,}|[A-Za-z][A-Za-z0-9_+-]*|\\d+(?:\\.\\d+)?|[∫∑∏√∂∆∇∞≤≥≠≈→←↔⊂∈]+"
+    r"[가-힣]{2,}|[A-Za-z][A-Za-z0-9_+-]*|\d+(?:\.\d+)?|[∫∑∏√∂∆∇∞≤≥≠≈→←↔⊂∈]+"
+)
+_KOREAN_PARTICLES = (
+    "으로부터", "에게서", "이라고", "이라는", "이라면", "으로", "에서",
+    "에게", "까지", "부터", "처럼", "보다", "만큼", "이고", "이며",
+    "은", "는", "이", "가", "을", "를", "의", "에", "와", "과", "도", "로", "만",
 )
 _STOPWORDS = {
     "그리고", "그러나", "그래서", "이것", "저것", "그것", "있다", "한다",
@@ -41,6 +46,11 @@ def _tokens(value: str) -> list[str]:
     output = []
     for token in _TOKEN.findall(str(value)):
         token = token.strip().lower()
+        if re.fullmatch(r"[가-힣]+", token):
+            for particle in _KOREAN_PARTICLES:
+                if token.endswith(particle) and len(token) - len(particle) >= 2:
+                    token = token[:-len(particle)]
+                    break
         if token in _STOPWORDS:
             continue
         if token.isascii() and token.isalpha() and len(token) < 2:
@@ -202,7 +212,7 @@ def analyze_learning(manifest: dict) -> dict:
             board_terms = _extract_terms(board_text, include_pairs=True)
             terms = board_terms[:12]
         else:
-            terms = _extract_terms("\n".join(str(s.get("text", "")) for s in page_segments), include_pairs=True)[:10]
+            terms = _extract_terms("\n".join(str(s.get("text", "")) for s in page_segments), include_pairs=False)[:10]
 
         # Find all speech occurrences, including explanations outside the page's
         # exact display interval, when they explicitly mention a written concept.
