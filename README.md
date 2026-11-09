@@ -133,6 +133,7 @@ OCR과 음성 전사는 각각 `.[ocr]`, `.[stt]` 선택 의존성입니다. 고
 - [V1 OCR 구현과 실행 결과](docs/V1_OCR.md)
 - [검증 기록과 남은 한계](docs/VALIDATION.md)
 - [강의 중요도와 개념 시간 연결](docs/LEARNING_ANALYSIS.md)
+- [강의 학습 분석 및 캐시 최적화 보고서](docs/LEARNING_ANALYSIS_REPORT_KO.md)
 - [AccessMath 재현 및 비교](docs/ACCESSMATH.md)
 - [문서·실험 인덱스](docs/)
 - [제3자 구성 요소와 라이선스](THIRD_PARTY.md)
