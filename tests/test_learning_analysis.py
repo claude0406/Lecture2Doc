@@ -76,3 +76,28 @@ def test_no_board_or_transcript_returns_insufficient_evidence():
     assert result["status"] == "insufficient_evidence"
     assert result["pages"] == []
     assert result["concepts"] == []
+
+
+def test_low_confidence_ocr_text_is_not_treated_as_board_evidence():
+    manifest = {
+        "board_pages": [{"id": "p00004", "start": 2.0, "end": 12.0}],
+        "transcript": {
+            "segments": [
+                {"id": "t000020", "start": 3.0, "end": 6.0, "text": "고유값은 중요하니 기억하세요."},
+            ],
+        },
+        "ocr": {
+            "pages": [{
+                "board_page_id": "p00004",
+                "regions": [{"text": "고유값", "score": 0.45, "review": True}],
+            }],
+        },
+    }
+
+    result = analyze_learning(manifest)
+
+    assert result["status"] == "partial"
+    assert result["pages"][0]["ocr_available"] is False
+    assert result["pages"][0]["importance_score"] is not None
+    concept = next(item for item in result["concepts"] if item["name"] == "고유값")
+    assert concept["board_appearances"] == []
