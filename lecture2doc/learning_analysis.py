@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import hashlib
 import re
-from collections import Counter, defaultdict
 
 from .storage import stage
 
@@ -103,6 +102,11 @@ def _extract_terms(text: str, include_pairs: bool = False) -> list[str]:
 
 def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict], has_ocr: bool) -> tuple[int | None, dict, list[str]]:
     cue_count, reasons = _cue_counts(segments)
+    if not segments:
+        return None, {
+            "emphasis": None, "repetition": None,
+            "board_speech_alignment": None, "board_concepts": len(terms),
+        }, ["음성 전사가 없어 교수자 설명의 중요도를 산정하지 않았습니다"]
     matched_segments = [
         segment for segment in segments
         if any(_matches(term, segment.get("text", "")) for term in terms)
@@ -328,7 +332,8 @@ def analyze_learning(manifest: dict) -> dict:
         reverse=True,
     )
 
-    status = "complete" if segments and ocr_pages else "partial" if segments or ocr_pages else "insufficient_evidence"
+    has_readable_ocr = any(_page_text(item)[0].strip() for item in ocr_pages.values())
+    status = "complete" if segments and has_readable_ocr else "partial" if segments or has_readable_ocr else "insufficient_evidence"
     messages = []
     if not segments:
         messages.append("음성 전사 또는 자막이 없어 교수자 설명과 중요도 신호를 분석하지 못했습니다.")
