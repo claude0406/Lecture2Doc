@@ -96,11 +96,16 @@ feature/frame-speed 브랜치에 적용한 공용 특징 캐시가 A 단계(visi
 
 ## 6. Git 커밋 기록
 
-| 커밋 | 제목 | 주요 내용 |
+작업 브랜치의 이번 최적화 관련 커밋 제목은 모두 한국어로 통일했다. 커밋 메시지뿐 아니라 이 문서에 표시하는 제목과 링크도 최신 커밋 ID를 사용한다.
+
+| 커밋 | 한국어 제목 | 주요 내용 |
 |---|---|---|
-| 03a0ace | Optimize page analysis by sharing frame feature cache | 공용 특징 캐시 추가, A 단계 저장, Pages 단계 재사용, 회귀 테스트 추가 |
-| 4cea50d | Fix shared feature cache test shape assertion | 테스트에서 특징 이미지의 2차원 shape 검증을 올바르게 수정 |
-| b2a3ab3 | Handle invalid shared feature cache archives safely | 손상된 NPZ/ZIP 캐시를 감지해 안전하게 기존 계산 경로로 복귀하도록 보완 |
+| [5bfc39d](https://github.com/claude0406/Lecture2Doc/commit/5bfc39dc3ab045483992dff86b9543aa25ac3398) | 프레임 특징 공용 캐시로 페이지 분석 최적화 | 공용 특징 캐시 추가, A 단계 저장, Pages 단계 재사용, 회귀 테스트 추가 |
+| [9f87d81](https://github.com/claude0406/Lecture2Doc/commit/9f87d81c230e1d917ad624ea70b2d9a1143a9b46) | 공용 특징 캐시 테스트의 이미지 크기 검증 수정 | 실제 분석 이미지의 높이와 너비를 검증하도록 테스트 수정 |
+| [60f797e](https://github.com/claude0406/Lecture2Doc/commit/60f797e17b018abd68d69c483741554eadbacce5) | 손상된 특징 캐시 파일의 안전한 처리 추가 | 손상된 NPZ/ZIP 캐시를 감지하고 기존 계산 경로로 안전하게 복귀 |
+| [f2c68ad](https://github.com/claude0406/Lecture2Doc/commit/f2c68adf53f561a09ec451196ccbf04c37a89901) | 프레임 처리 속도 성능 보고서 한국어 작성 | 한국어 성능 비교 보고서 추가 |
+| [66d5ade](https://github.com/claude0406/Lecture2Doc/commit/66d5ade99d0e823cec02c60f3f1624333654f000) | 프레임 처리 최적화 및 커밋 이력 문서화 | 개인 개발 기록 파일 추가 |
+| [4d4c792](https://github.com/claude0406/Lecture2Doc/commit/4d4c79287a442fc16ffa869888e3718aeddba040) | 한국어 보고서와 개발 기록 커밋 내용 정리 | 문서의 구성과 커밋 기록 정리 |
 
 작업 브랜치: feature/frame-speed  
 기준 브랜치: main  
