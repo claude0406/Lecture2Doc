@@ -175,7 +175,7 @@ def process(video, root, config=None, subtitles=None, model=None, language=None,
         status=result["learning_analysis"]["status"],
     )
     result.update(product_version="V1", timings=timings, elapsed_seconds=round(time.monotonic()-started, 3),
-                  elapsed_scope="video_input_through_ocr_excluding_final_manifest_write")
+                  elapsed_scope="video_input_through_learning_analysis_excluding_final_manifest_write")
     write(root / "manifest.json", result)
     report("완료")
     return result
