@@ -72,7 +72,7 @@ function renderLearningAnalysis(){
  const data=manifest?.learning_analysis;
  const pagesBox=$('learning-pages'),conceptsBox=$('learning-concepts');
  pagesBox.replaceChildren();conceptsBox.replaceChildren();
- $('learning-links').replaceChildren();
+ 
  if(!data){
   $('run-learning-analysis').textContent='분석 실행';
   $('learning-status').textContent='분석 결과 없음';
@@ -84,7 +84,14 @@ function renderLearningAnalysis(){
  $('run-learning-analysis').textContent='분석 다시 실행';
  const statusText={complete:'분석 완료',partial:'일부 자료 기반',insufficient_evidence:'근거 부족',failed:'분석 실패'};
  $('learning-status').textContent=statusText[data.status]||data.status||'분석 결과';
- $('learning-message').textContent=data.message||'중요도는 반복·강조 표현과 필기·음성의 연결 근거를 바탕으로 계산합니다.';
+ const ai=data.ai_curation||{};
+ $('learning-message').textContent=[
+  data.message||'반복·강조 표현과 필기·음성의 근거를 바탕으로 분석합니다.',
+  ai.status==='complete'&&ai.topic?'강의 주제: '+ai.topic:''
+ ].filter(Boolean).join(' · ');
+ if(ai.status==='complete') $('learning-status').textContent+=' · AI 개념 선별';
+ else if(ai.status==='not_configured') $('learning-status').textContent+=' · 기본 필터';
+ else if(ai.status==='failed') $('learning-status').textContent+=' · 기본 필터 대체';
  const visible=records();
  const ranked=(data.pages||[]).map(item=>({item,index:visible.findIndex(page=>page.id===item.board_page_id)}))
   .filter(row=>row.index>=0)
@@ -105,13 +112,14 @@ function renderLearningAnalysis(){
  const visibleIds=new Set(visible.map(page=>page.id));
  const concepts=(data.concepts||[]).filter(item=>
    !(item.board_page_ids||[]).length||(item.board_page_ids||[]).some(id=>visibleIds.has(id))
- ).slice(0,16);
+ ).slice(0,8);
  if(!concepts.length)conceptsBox.append(text('p','연결된 개념을 찾지 못했습니다. OCR 또는 음성 전사 자료를 확인해 주세요.','hint'));
  for(const concept of concepts){
   const card=text('article','','learning-card'),head=text('div','','learning-card-heading');
   head.append(text('strong',concept.name),
    text('span',concept.importance_score==null?'중요도 미산정':`중요도 ${concept.importance_score}/100`,'importance-value'));
   card.append(head);
+  if(concept.ai_reason)card.append(text('p',concept.ai_reason,'hint'));
   const appearances=[];
   for(const board of concept.board_appearances||[]){
    const idx=visible.findIndex(page=>page.id===board.board_page_id);
@@ -133,23 +141,7 @@ function renderLearningAnalysis(){
   }
   conceptsBox.append(card);
  }
- renderLearningLinks();
-}
-function renderLearningLinks(){
- const box=$('learning-links');box.replaceChildren();
- const page=records()[currentState];
- const item=page&&manifest?.learning_analysis?.pages?.find(row=>row.board_page_id===page.id);
- if(!item){box.append(text('p','현재 판서와 연결된 설명을 표시할 수 없습니다.','hint'));return}
- const links=item.transcript_links||[];
- if(!links.length){box.append(text('p','연결된 음성 설명이 없습니다. 음성 전사를 실행하거나 OCR 결과를 확인해 주세요.','hint'));return}
- for(const link of links.slice(0,20)){
-  const button=text('button','','learning-link');
-  button.append(text('time',`${fmt(link.start)} — ${fmt(link.end)}`),
-   text('span',link.text),
-   text('small',`${link.relation}${link.matched_concepts?.length?' · '+link.matched_concepts.join(', '):''}`));
-  button.onclick=()=>seek(link.start);
-  box.append(button);
- }
+ 
 }
 function renderStates(){const q=$('search').value.toLocaleLowerCase();$('states').replaceChildren();records().forEach((s,i)=>{
  const segs=manifest.transcript.segments.filter(t=>s.transcript_ids.includes(t.id));if(q&&!segs.some(t=>t.text.toLocaleLowerCase().includes(q)))return;
@@ -173,7 +165,7 @@ async function editBoards(ids,deleting=true){
  }catch(e){notice(e.message)}
 }
 function selectState(index){
- currentState=index;const s=records()[index];$('board-empty').hidden=!!s;$('board-content').hidden=!s;if(!s){$('evidence').replaceChildren();$('ocr-regions').replaceChildren();renderStates();renderTranscript();renderLearningLinks();return;}
+ currentState=index;const s=records()[index];$('board-empty').hidden=!!s;$('board-content').hidden=!s;if(!s){$('evidence').replaceChildren();$('ocr-regions').replaceChildren();renderStates();renderTranscript();return;}
  const r=manifest.board_pages?manifest.page_reconstructions?.find(r=>r.board_page_id===s.id):manifest.reconstructed_boards.find(r=>r.board_state_id===s.id);
  const f=manifest.source_frames.find(f=>f.id===s.selected_frame_id);
  const restored=$('mode').value==='restored'&&!!r;
@@ -192,7 +184,7 @@ function selectState(index){
   if(!all&&ids.length>32){const chosen=new Set([f.id,...(restored?r.source_frame_ids:[]),...(restored?r.verification_frame_ids||[]:[]),...(s.selection_candidates||[]).map(c=>c.source_frame_id)]);for(let j=0;j<24;j++)chosen.add(ids[Math.round(j*(ids.length-1)/23)]);ids=ids.filter(id=>chosen.has(id));}
   for(const fid of ids){const sf=manifest.source_frames.find(f=>f.id===fid);const b=text('button','');const im=document.createElement('img');im.src=file(sf.image);im.loading='lazy';im.alt=`원본 ${fmt(sf.time)}`;const candidate=s.selection_candidates?.find(c=>c.source_frame_id===fid);b.append(im,text('small',`${fmt(sf.time)}${fid===f.id?' · A 선택 원본':''}${restored&&r.source_frame_ids.includes(fid)?' · B 사용':''}${restored&&r.verification_frame_ids?.includes(fid)?' · B 대조 관측':''}${candidate?.readable_fraction!==undefined?` · 노출 ${(candidate.readable_fraction*100).toFixed(1)}%`:''}`));b.onclick=()=>seek(sf.time);$('evidence').append(b)}
   if(!all&&ids.length<s.source_frame_ids.length){const show=text('button',`모든 원본 관측 ${s.source_frame_ids.length}개 보기`);show.onclick=()=>drawEvidence(true);$('evidence').append(show)}
- };drawEvidence(false);renderStates();renderTranscript();renderOCR();renderLearningLinks()
+ };drawEvidence(false);renderStates();renderTranscript();renderOCR();
 }
 function renderTranscript(){const s=records()[currentState],all=$('all-transcript').checked;const tr=manifest.transcript;$('transcript-status').textContent=`${tr.status}${tr.language?' · '+tr.language:''}${tr.message?' · '+tr.message:''}`;$('transcript').replaceChildren();const segments=tr.segments.filter(t=>all||s?.transcript_ids.includes(t.id));if(!segments.length)$('transcript').append(text('p','표시할 전사문이 없습니다.','hint'));segments.forEach(t=>{const b=text('button','','cue');b.dataset.start=t.start;b.dataset.end=t.end;b.append(text('time',`${fmt(t.start)} — ${fmt(t.end)}`),document.createTextNode(t.text));b.onclick=()=>seek(t.start);$('transcript').append(b)})}
 function seek(t){$('video').currentTime=t;$('video').play().catch(()=>{})}
