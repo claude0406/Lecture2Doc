@@ -85,10 +85,11 @@ function renderLearningAnalysis(){
  const statusText={complete:'분석 완료',partial:'일부 자료 기반',insufficient_evidence:'근거 부족',failed:'분석 실패'};
  $('learning-status').textContent=statusText[data.status]||data.status||'분석 결과';
  const ai=data.ai_curation||{};
- $('learning-message').textContent=[
-  data.message||'반복·강조 표현과 필기·음성의 근거를 바탕으로 분석합니다.',
-  ai.status==='complete'&&ai.topic?'강의 주제: '+ai.topic:''
- ].filter(Boolean).join(' · ');
+ $('learning-message').textContent=data.message||'반복·강조 표현과 필기·음성의 근거를 바탕으로 분석합니다.';
+ if(!data.ai_curation){
+  $('learning-status').textContent+=' · 새 분석 필요';
+  $('learning-message').textContent='이전 분석 결과입니다. 아래의 분석 다시 실행을 눌러 AI 핵심 개념 선별을 적용해 주세요.';
+ }
  if(ai.status==='complete') $('learning-status').textContent+=' · AI 개념 선별';
  else if(ai.status==='not_configured') $('learning-status').textContent+=' · 기본 필터';
  else if(ai.status==='failed') $('learning-status').textContent+=' · 기본 필터 대체';
@@ -110,10 +111,11 @@ function renderLearningAnalysis(){
   card.append(reasons);pagesBox.append(card);
  }
  const visibleIds=new Set(visible.map(page=>page.id));
- const concepts=(data.concepts||[]).filter(item=>
+ const concepts=(data.ai_curation?(data.concepts||[]):[]).filter(item=>
    !(item.board_page_ids||[]).length||(item.board_page_ids||[]).some(id=>visibleIds.has(id))
  ).slice(0,8);
- if(!concepts.length)conceptsBox.append(text('p','연결된 개념을 찾지 못했습니다. OCR 또는 음성 전사 자료를 확인해 주세요.','hint'));
+ if(!data.ai_curation)conceptsBox.append(text('p','이전 결과의 개념 목록은 새 분석 전까지 숨겼습니다. 분석 다시 실행을 눌러 주제에 맞는 개념만 추려 주세요.','hint'));
+ else if(!concepts.length)conceptsBox.append(text('p','주제와 연결되는 개념을 찾지 못했습니다. OCR 또는 음성 전사 자료를 확인해 주세요.','hint'));
  for(const concept of concepts){
   const card=text('article','','learning-card'),head=text('div','','learning-card-heading');
   head.append(text('strong',concept.name),
