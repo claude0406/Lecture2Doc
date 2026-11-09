@@ -74,12 +74,14 @@ function renderLearningAnalysis(){
  pagesBox.replaceChildren();conceptsBox.replaceChildren();
  $('learning-links').replaceChildren();
  if(!data){
+  $('run-learning-analysis').textContent='분석 실행';
   $('learning-status').textContent='분석 결과 없음';
   $('learning-message').textContent='이 기록에는 학습 분석 결과가 없습니다. 새 브랜치의 코드로 강의를 다시 처리해 주세요.';
   pagesBox.append(text('p','표시할 중요도 분석이 없습니다.','hint'));
   conceptsBox.append(text('p','표시할 개념이 없습니다.','hint'));
   return;
  }
+ $('run-learning-analysis').textContent='분석 다시 실행';
  const statusText={complete:'분석 완료',partial:'일부 자료 기반',insufficient_evidence:'근거 부족',failed:'분석 실패'};
  $('learning-status').textContent=statusText[data.status]||data.status||'분석 결과';
  $('learning-message').textContent=data.message||'중요도는 반복·강조 표현과 필기·음성의 연결 근거를 바탕으로 계산합니다.';
@@ -197,6 +199,19 @@ function seek(t){$('video').currentTime=t;$('video').play().catch(()=>{})}
 $('video').ontimeupdate=()=>{const t=$('video').currentTime;document.querySelectorAll('.cue').forEach(e=>e.classList.toggle('playing',t>=Number(e.dataset.start)&&t<Number(e.dataset.end)))};
 $('video').onerror=()=>{$('video-error').textContent='이 브라우저에서 재생할 수 없는 코덱입니다. 등록 시 H.264/AAC 사본 생성을 선택하거나 원본을 외부 플레이어에서 여세요.'};
 $('mode').onchange=()=>selectState(currentState);$('search').oninput=renderStates;$('all-transcript').onchange=renderTranscript;$('back').onclick=()=>{$('workspace').hidden=true;$('library').hidden=false;$('video').pause();history.replaceState(null,'',location.pathname);library()};
+$('run-learning-analysis').onclick=async()=>{
+ const job=currentId,button=$('run-learning-analysis');if(!job)return;
+ button.disabled=true;button.textContent='분석 중…';
+ try{
+  await api(`/api/jobs/${job}/learning-analysis`,editOptions('POST'));
+  if(currentId!==job)return;
+  manifest=await api(`/api/jobs/${job}/manifest`);
+  renderLearningAnalysis();
+  selectState(Math.min(currentState,Math.max(0,records().length-1)));
+  notice('강의 중요도와 개념 등장 시간 분석을 업데이트했습니다.');
+ }catch(e){notice(e.message)}
+ finally{button.disabled=false;button.textContent=manifest?.learning_analysis?'분석 다시 실행':'분석 실행'}
+};
 library();if(/^[a-f0-9]{24}$/.test(location.hash.slice(1)))openJob(location.hash.slice(1));
 
 function renderOCR(){
