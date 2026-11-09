@@ -12,6 +12,12 @@ from .storage import stage
 
 LEARNING_ANALYSIS_VERSION = "2026-11-10.learning-importance-2-ai"
 _TOKEN = re.compile(r"[가-힣]{2,}|[A-Za-z][A-Za-z0-9_+-]*|\d+(?:\.\d+)?|[∫∑∏√∂∆∇∞≤≥≠≈→←↔⊂∈]+")
+_KOREAN_ENDINGS = (
+    "했습니다", "하였습니다", "이었습니다", "였습니다", "입니다", "습니다",
+    "합니다", "됩니다", "했습니다", "했다", "한다", "하면", "하며", "하고",
+    "해서", "했어", "했죠", "했네", "했지", "되는", "있어요", "없어요",
+    "이에요", "예요", "이죠", "인데", "인", "된", "하는", "해서",
+)
 _KOREAN_PARTICLES = (
     "으로부터", "에게서", "이라고", "이라는", "이라면", "으로", "에서",
     "에게", "까지", "부터", "처럼", "보다", "만큼", "이고", "이며",
@@ -53,6 +59,10 @@ def _tokens(value: str) -> list[str]:
         if token in _STOPWORDS:
             continue
         if re.fullmatch(r"[가-힣]+", token):
+            for ending in _KOREAN_ENDINGS:
+                if token.endswith(ending) and len(token) - len(ending) >= 2:
+                    token = token[:-len(ending)]
+                    break
             for particle in _KOREAN_PARTICLES:
                 if token.endswith(particle) and len(token) - len(particle) >= 2:
                     token = token[:-len(particle)]
