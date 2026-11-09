@@ -534,7 +534,7 @@ def _curate_concepts_with_ai(manifest: dict, result: dict) -> dict:
     except Exception as exc:
         return fallback(
             "failed",
-            f"AI 선별에 실패해 기본 필터 결과를 표시합니다. 오류: {type(exc).__name__}",
+            f"AI 선별에 실패해 기본 필터 결과를 표시합니다. 오류: {type(exc).__name__} - {str(exc)[:180]}",
         )
 
 
@@ -549,7 +549,7 @@ def build_learning_analysis(root, manifest: dict, force: bool = False) -> dict:
         for item in (manifest.get("transcript") or {}).get("segments", [])
     ]
     ocr_signature = [
-        [page.get("board_page_id"), [(region.get("text"), region.get("score"), region.get("review")) for region in page.get("regions", [])]]
+        [page.get("board_page_id"), page.get("text"), [(region.get("text"), region.get("score"), region.get("review")) for region in page.get("regions", [])]]
         for page in (manifest.get("ocr") or {}).get("pages", [])
     ]
     api_key_configured = bool(os.environ.get("OPENAI_API_KEY", "").strip())
