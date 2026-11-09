@@ -85,12 +85,16 @@ def _cue_counts(segments: list[dict]) -> tuple[int, list[str]]:
 
 
 def _matches(term: str, text: str) -> bool:
-    needle, haystack = _normal(term), _normal(text)
-    if not needle or not haystack:
+    needle = _normal(term)
+    raw_text = str(text).lower()
+    if not needle or not raw_text.strip():
         return False
     if needle.isascii() and needle.isalpha():
-        return bool(re.search(r"(?<![a-z0-9])" + re.escape(needle) + r"(?![a-z0-9])", haystack))
-    return needle in haystack
+        return bool(re.search(
+            r"(?<![a-z0-9])" + re.escape(needle) + r"(?![a-z0-9])",
+            raw_text,
+        ))
+    return needle in _normal(raw_text)
 
 
 def _extract_terms(text: str, include_pairs: bool = False) -> list[str]:
