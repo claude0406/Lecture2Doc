@@ -107,16 +107,18 @@ def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict],
             "emphasis": None, "repetition": None,
             "board_speech_alignment": None, "board_concepts": len(terms),
         }, ["음성 전사가 없어 교수자 설명의 중요도를 산정하지 않았습니다"]
+    term_counts = [
+        sum(1 for segment in segments if _matches(term, segment.get("text", "")))
+        for term in terms
+    ]
     matched_segments = [
         segment for segment in segments
         if any(_matches(term, segment.get("text", "")) for term in terms)
     ]
-    match_count = sum(
-        1 for term in terms
-        if any(_matches(term, segment.get("text", "")) for segment in segments)
-    )
+    match_count = sum(count > 0 for count in term_counts)
+    repeated_term_mentions = sum(max(0, count - 1) for count in term_counts)
     emphasis = min(1.0, cue_count / 2.0)
-    repetition = min(1.0, len(matched_segments) / 4.0)
+    repetition = min(1.0, repeated_term_mentions / 3.0)
     alignment = match_count / max(1, len(terms)) if terms else 0.0
     board_signal = min(1.0, len(terms) / 5.0) if has_ocr else 0.0
 
@@ -138,8 +140,8 @@ def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict],
     if cue_count:
         # Keep the detailed cue reasons and make them visible to users.
         pass
-    if len(matched_segments) >= 2:
-        reasons.append(f"관련 개념이 음성에서 {len(matched_segments)}개 구간에 반복 등장")
+    if repeated_term_mentions:
+        reasons.append(f"관련 개념이 음성에서 {repeated_term_mentions}회 반복 언급")
     if has_ocr and match_count:
         reasons.append(f"칠판 개념 {match_count}개가 음성 설명과 연결")
     if has_ocr and terms:
@@ -153,6 +155,7 @@ def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict],
         "board_concepts": len(terms),
         "emphasis_cue_count": cue_count,
         "matched_speech_segments": len(matched_segments),
+        "repeated_term_mentions": repeated_term_mentions,
     }, reasons
 
 
