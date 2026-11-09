@@ -44,7 +44,7 @@ _IMPORTANCE_CUES = (
     ("유도·증명 과정", re.compile(r"유도|증명|도출")),
     ("대표 문제·예제", re.compile(r"예제|대표 문제|연습문제|문제 풀")),
 )
-_MAX_CONCEPTS = 8
+_MAX_CONCEPTS = 5
 _AI_MODEL_DEFAULT = "gpt-6-luna"
 
 
