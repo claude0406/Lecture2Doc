@@ -1,0 +1,124 @@
+# Lecture2Doc 개인 개발 기록
+
+이 문서는 claude0406/Lecture2Doc에서 진행한 개인 개발 변경사항과 성능 실험을 기록한다. 현재 기록된 작업은 feature/frame-speed 브랜치에만 반영되어 있으며, main에는 병합하지 않았다.
+
+## 1. 이번 작업 목표
+
+Lecture2Doc의 A 단계(vision.analyze)와 Pages 단계(pages.observations)가 동일한 프레임에 대해 measure_features()를 반복 실행하는 중복을 제거한다.
+
+A 단계에서 이미 계산한 다음 정보를 캐시에 기록하고 Pages가 재사용하도록 한다.
+
+- 잉크 마스크(압축 비트 배열)
+- 전경 마스크(압축 비트 배열)
+- 프레임별 잉크 선명도
+
+## 2. 브랜치 정보
+
+- 저장소: claude0406/Lecture2Doc
+- 기준 브랜치: main
+- 작업 브랜치: feature/frame-speed
+- 작업 방식: 별도 기능 브랜치에서 수정 및 테스트 후, 실제 강의 영상 검증을 거쳐 병합 여부 결정
+
+## 3. 추가·수정 파일
+
+| 파일 | 변경 유형 | 설명 |
+|---|---|---|
+| lecture2doc/feature_cache.py | 신규 | 공용 특징 캐시의 경로, 버전, 128프레임 단위 저장·읽기, 손상 캐시 검사 담당 |
+| lecture2doc/vision.py | 수정 | A 단계에서 계산한 특징을 공용 캐시에 저장 |
+| lecture2doc/pages.py | 수정 | Pages 단계가 공용 캐시를 우선 읽고, 없거나 잘못된 경우 기존 경로로 복귀 |
+| lecture2doc/storage.py | 수정 | 분석 단계 캐시 버전 갱신 |
+| tests/test_feature_cache.py | 신규 | 캐시 데이터 동일성과 Pages의 중복 특징 계산 방지 검증 |
+
+### 캐시 설계
+
+- 캐시 위치: 각 강의 결과 폴더의 cache/board-features/
+- 청크 크기: 128프레임
+- 저장 형식: NumPy .npz
+- 원자적 저장: 임시 파일 기록 후 os.replace()
+- 캐시 버전: 2026-11-09.board-features-1
+- 캐시 검증: 프레임 수, 이미지 shape, 배열 shape, 버전 확인
+- 복구 정책: 캐시 누락·불일치·손상 시 Pages의 기존 계산 경로 사용
+
+## 4. Git 커밋 기록
+
+### 커밋 1 — 03a0ace
+
+원래 커밋 제목: Optimize page analysis by sharing frame feature cache
+
+주요 내용:
+- feature_cache.py 신규 추가
+- vision.py에서 A 단계 특징 계산 결과를 청크 단위로 저장
+- pages.py에서 공용 캐시 재사용
+- storage.py의 분석 캐시 버전 갱신
+- test_feature_cache.py 신규 추가
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/03a0aced14b29b490567b87648581ca02486f61c
+
+### 커밋 2 — 4cea50d
+
+원래 커밋 제목: Fix shared feature cache test shape assertion
+
+주요 내용:
+- 테스트에서 캐시의 shape가 압축 배열 길이가 아니라 실제 분석 이미지의 높이·너비인지 검증하도록 수정
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/4cea50d66e427cddd8dea9a0caa2d7208fbf7209
+
+### 커밋 3 — b2a3ab3
+
+원래 커밋 제목: Handle invalid shared feature cache archives safely
+
+주요 내용:
+- 손상된 NPZ/ZIP 파일에서 발생하는 zipfile.BadZipFile을 처리
+- 잘못된 캐시를 재사용하지 않고 기존 계산 경로로 안전하게 복귀
+- 사용하지 않는 임시 변수 제거
+
+커밋: https://github.com/claude0406/Lecture2Doc/commit/b2a3ab3f7f2fc6f00285ec649fdbe6b6d18528df
+
+## 5. 성능 실험 요약
+
+테스트 입력:
+
+- 합성 화이트보드 영상 5분
+- 1480 × 924, 25 FPS, H.264
+- 샘플 간격 2초, 비교 프레임 150장
+- 분석 해상도 640 × 400
+
+| 측정 구간 | 기존 main | 개선 브랜치 |
+|---|---:|---:|
+| A 분석 | 15.453초 | 15.310초 |
+| Pages 특징 계산/캐시 읽기 | 11.602초 | 0.019초 |
+| 두 측정 구간 합계 | 약 27.06초 | 약 15.33초 |
+
+- 두 측정 구간 합계 감소율: 약 43.34%
+- Pages 특징 계산/캐시 읽기 감소율: 약 99.84%
+- 잉크 마스크와 전경 마스크: 바이트 단위 동일
+- 잉크 선명도 배열: 동일
+- 판서 상태 수: 양쪽 10개
+- 분석 프레임 지표 수: 양쪽 150개
+- 공용 캐시 회귀 테스트: 1개 통과
+
+**해석 주의:** 43.34%는 전체 Lecture2Doc 처리 시간 감소율이 아니다. A 분석과 Pages의 특징 관측 구간만 측정했다. 영상 디코딩, group_pages, 복원, STT, OCR은 이 비교에서 제외했다. 0.5초 간격의 600프레임 전체 비교와 MacBook 실측은 아직 완료하지 않았다.
+
+한국어 상세 보고서: benchmark_report_ko.md
+
+## 6. 현재 검증 상태
+
+- [x] 최적화 브랜치 생성
+- [x] 공용 특징 캐시 구현
+- [x] Pages 캐시 재사용 구현
+- [x] 캐시 손상 시 복귀 처리
+- [x] 결과 배열 동일성 비교
+- [x] 캐시 재사용 회귀 테스트 1개 통과
+- [ ] 전체 기존 테스트 스위트 실행
+- [ ] 기본 0.5초 간격 600프레임 비교
+- [ ] 사용자 MacBook에서 실제 강의 영상 비교
+- [ ] 실제 65분 강의 영상 검증
+- [ ] main 병합 여부 결정
+
+## 7. 다음 작업
+
+1. 사용자의 MacBook에서 feature/frame-speed 브랜치로 전환한다.
+2. 기존 강의 데이터는 보존한 채 동일한 영상으로 개선 브랜치를 실행한다.
+3. A, Pages, Reconstruction, 전체 처리 시간을 각각 기록한다.
+4. 캐시 재사용 메시지와 결과 동일성을 확인한다.
+5. 실제 영상 검증이 끝난 뒤에만 main 병합을 검토한다.
