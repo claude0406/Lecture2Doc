@@ -364,7 +364,7 @@ def create_app(data_dir=None, record_dir=None):
             started = time.monotonic()
             try:
                 from .learning_analysis import build_learning_analysis
-                analysis = build_learning_analysis(folder, manifest_data)
+                analysis = build_learning_analysis(folder, manifest_data, force=True)
             except Exception as exc:
                 raise HTTPException(500, f"학습 분석 실패: {type(exc).__name__}: {exc}")
             manifest_data["learning_analysis"] = analysis
