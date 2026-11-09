@@ -355,8 +355,8 @@ def analyze_learning(manifest: dict) -> dict:
     messages = []
     if not segments:
         messages.append("음성 전사 또는 자막이 없어 교수자 설명과 중요도 신호를 분석하지 못했습니다.")
-    if not ocr_pages:
-        messages.append("OCR 자료가 없어 판서 텍스트와 음성의 직접 연결은 제한됩니다.")
+    if not has_readable_ocr:
+        messages.append("신뢰 가능한 OCR 텍스트가 없어 판서와 음성의 직접 개념 연결은 제한됩니다.")
     return {
         "status": status,
         "version": LEARNING_ANALYSIS_VERSION,
