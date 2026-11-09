@@ -62,11 +62,92 @@ async function deleteLecture(id){try{
  notice('강의를 삭제했습니다. 휴지통에서 복원할 수 있습니다.');await library(true);
  }catch(e){notice(e.message)}}
 $('upload').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.disabled=true;showProcessingStatus({status:'running',message:'영상 업로드 중…',elapsed_seconds:0});try{const form=new FormData(e.target);if(!form.get('subtitles').size)form.delete('subtitles');const job=await api('/api/jobs',{method:'POST',headers:{'X-Lecture2Doc':'1'},body:form});showProcessingStatus({status:'queued',message:'처리 대기',elapsed_seconds:0});poll=setInterval(async()=>{try{const s=await api(`/api/jobs/${job.id}`);showProcessingStatus(s);await library(true);if(s.status==='complete'||s.status==='failed'){clearInterval(poll);b.disabled=false;if(s.status==='complete')await openJob(job.id)}}catch(err){clearInterval(poll);b.disabled=false;$('upload-status').textContent=err.message}},1800)}catch(err){$('upload-status').textContent=err.message;b.disabled=false}};
-async function openJob(id){try{currentId=id;manifest=await api(`/api/jobs/${id}/manifest`);$('library').hidden=true;$('workspace').hidden=false;$('title').textContent=manifest.source.name;$('global-flags').textContent=manifest.quality_flags.filter(x=>!['fixed_camera_and_board_roi_require_review','sampling_can_miss_short_lived_writing','persistence_can_miss_short_lived_writing'].includes(x)).map(x=>labels[x]||x).join(' · ');$('video').src=file(manifest.playback);$('video-error').textContent='';$('source-download').href=file(manifest.source.path);$('manifest-download').href=`/api/jobs/${id}/manifest`;$('manifest-download').download='manifest.json';$('state-count').textContent=records().length;$('mode').querySelector('[value=restored]').textContent=manifest.board_pages?'B · 누적 판서 복원':'B · 기존 중간 상태 복원';$('mode').value=pageBAvailable()?'restored':'source';$('mode').querySelector('[value=restored]').disabled=!!manifest.board_pages&&!pageBAvailable();if(!manifest.board_pages)$('global-flags').textContent+=' · 이전 형식: 중간 관측 상태 목록입니다. 누적 판서는 재분석 후 표시됩니다.';$('global-flags').hidden=!$('global-flags').textContent;$('search').value='';selectedBoards.clear();renderDeletedBoards();renderStates();selectState(0);history.replaceState(null,'',`#${id}`)}catch(e){$('upload-status').textContent=e.message}}
+async function openJob(id){try{currentId=id;manifest=await api(`/api/jobs/${id}/manifest`);$('library').hidden=true;$('workspace').hidden=false;$('title').textContent=manifest.source.name;$('global-flags').textContent=manifest.quality_flags.filter(x=>!['fixed_camera_and_board_roi_require_review','sampling_can_miss_short_lived_writing','persistence_can_miss_short_lived_writing'].includes(x)).map(x=>labels[x]||x).join(' · ');$('video').src=file(manifest.playback);$('video-error').textContent='';$('source-download').href=file(manifest.source.path);$('manifest-download').href=`/api/jobs/${id}/manifest`;$('manifest-download').download='manifest.json';$('state-count').textContent=records().length;$('mode').querySelector('[value=restored]').textContent=manifest.board_pages?'B · 누적 판서 복원':'B · 기존 중간 상태 복원';$('mode').value=pageBAvailable()?'restored':'source';$('mode').querySelector('[value=restored]').disabled=!!manifest.board_pages&&!pageBAvailable();if(!manifest.board_pages)$('global-flags').textContent+=' · 이전 형식: 중간 관측 상태 목록입니다. 누적 판서는 재분석 후 표시됩니다.';$('global-flags').hidden=!$('global-flags').textContent;$('search').value='';selectedBoards.clear();renderDeletedBoards();renderStates();renderLearningAnalysis();selectState(0);history.replaceState(null,'',`#${id}`)}catch(e){$('upload-status').textContent=e.message}}
 function updateBoardSelection(){
  $('selected-count').textContent=selectedBoards.size?`${selectedBoards.size}개 선택`:'';
  $('delete-selected-boards').disabled=selectedBoards.size===0;
  $('select-all-boards').disabled=records().length===0;
+}
+function renderLearningAnalysis(){
+ const data=manifest?.learning_analysis;
+ const pagesBox=$('learning-pages'),conceptsBox=$('learning-concepts');
+ pagesBox.replaceChildren();conceptsBox.replaceChildren();
+ $('learning-links').replaceChildren();
+ if(!data){
+  $('learning-status').textContent='분석 결과 없음';
+  $('learning-message').textContent='이 기록에는 학습 분석 결과가 없습니다. 새 브랜치의 코드로 강의를 다시 처리해 주세요.';
+  pagesBox.append(text('p','표시할 중요도 분석이 없습니다.','hint'));
+  conceptsBox.append(text('p','표시할 개념이 없습니다.','hint'));
+  return;
+ }
+ const statusText={complete:'분석 완료',partial:'일부 자료 기반',insufficient_evidence:'근거 부족',failed:'분석 실패'};
+ $('learning-status').textContent=statusText[data.status]||data.status||'분석 결과';
+ $('learning-message').textContent=data.message||'중요도는 반복·강조 표현과 필기·음성의 연결 근거를 바탕으로 계산합니다.';
+ const visible=records();
+ const ranked=(data.pages||[]).map(item=>({item,index:visible.findIndex(page=>page.id===item.board_page_id)}))
+  .filter(row=>row.index>=0)
+  .sort((a,b)=>(b.item.importance_score??-1)-(a.item.importance_score??-1));
+ if(!ranked.length)pagesBox.append(text('p','중요도를 표시할 판서 구간이 없습니다.','hint'));
+ for(const row of ranked.slice(0,12)){
+  const item=row.item,page=visible[row.index],card=text('article','','learning-card');
+  const head=text('div','','learning-card-heading');
+  head.append(text('strong',`판서 ${boardNumber(page,row.index)}`),
+   text('span',item.importance_score==null?'근거 부족':`중요도 ${item.importance_score}/100`,'importance-value'));
+  const jump=text('button',`${fmt(item.start)} — ${fmt(item.end)} · 해당 판서 보기`,'learning-time-button');
+  jump.onclick=()=>{selectState(row.index);seek(item.start)};
+  card.append(head,jump);
+  if(item.importance_score!=null){const meter=document.createElement('progress');meter.max=100;meter.value=item.importance_score;meter.setAttribute('aria-label','중요도');card.append(meter)}
+  const reasons=text('p',(item.reasons||[]).slice(0,3).join(' · ')||'판단 근거가 충분하지 않습니다.','hint');
+  card.append(reasons);pagesBox.append(card);
+ }
+ const visibleIds=new Set(visible.map(page=>page.id));
+ const concepts=(data.concepts||[]).filter(item=>
+   !(item.board_page_ids||[]).length||(item.board_page_ids||[]).some(id=>visibleIds.has(id))
+ ).slice(0,16);
+ if(!concepts.length)conceptsBox.append(text('p','연결된 개념을 찾지 못했습니다. OCR 또는 음성 전사 자료를 확인해 주세요.','hint'));
+ for(const concept of concepts){
+  const card=text('article','','learning-card'),head=text('div','','learning-card-heading');
+  head.append(text('strong',concept.name),
+   text('span',concept.importance_score==null?'중요도 미산정':`중요도 ${concept.importance_score}/100`,'importance-value'));
+  card.append(head);
+  const appearances=[];
+  for(const board of concept.board_appearances||[]){
+   const idx=visible.findIndex(page=>page.id===board.board_page_id);
+   if(idx>=0)appearances.push({kind:'board',start:board.start,end:board.end,index:idx,label:`필기 ${fmt(board.start)}`});
+  }
+  for(const speech of concept.speech_occurrences||[]){
+   appearances.push({kind:'speech',start:speech.start,end:speech.end,label:`음성 ${fmt(speech.start)}`,excerpt:speech.text});
+  }
+  appearances.sort((a,b)=>a.start-b.start);
+  if(!appearances.length)card.append(text('p','확인된 등장 시점이 없습니다.','hint'));
+  for(const entry of appearances.slice(0,8)){
+   const button=text('button',`${entry.label}${entry.end>entry.start?' — '+fmt(entry.end):''}`,'learning-time-button');
+   if(entry.excerpt)button.append(text('small',entry.excerpt,'learning-excerpt'));
+   button.onclick=()=>{
+    if(entry.kind==='board'&&entry.index!==undefined)selectState(entry.index);
+    seek(entry.start);
+   };
+   card.append(button);
+  }
+  conceptsBox.append(card);
+ }
+ renderLearningLinks();
+}
+function renderLearningLinks(){
+ const box=$('learning-links');box.replaceChildren();
+ const page=records()[currentState];
+ const item=page&&manifest?.learning_analysis?.pages?.find(row=>row.board_page_id===page.id);
+ if(!item){box.append(text('p','현재 판서와 연결된 설명을 표시할 수 없습니다.','hint'));return}
+ const links=item.transcript_links||[];
+ if(!links.length){box.append(text('p','연결된 음성 설명이 없습니다. 음성 전사를 실행하거나 OCR 결과를 확인해 주세요.','hint'));return}
+ for(const link of links.slice(0,20)){
+  const button=text('button','','learning-link');
+  button.append(text('time',`${fmt(link.start)} — ${fmt(link.end)}`),
+   text('span',link.text),
+   text('small',`${link.relation}${link.matched_concepts?.length?' · '+link.matched_concepts.join(', '):''}`));
+  button.onclick=()=>seek(link.start);
+  box.append(button);
+ }
 }
 function renderStates(){const q=$('search').value.toLocaleLowerCase();$('states').replaceChildren();records().forEach((s,i)=>{
  const segs=manifest.transcript.segments.filter(t=>s.transcript_ids.includes(t.id));if(q&&!segs.some(t=>t.text.toLocaleLowerCase().includes(q)))return;
@@ -90,7 +171,7 @@ async function editBoards(ids,deleting=true){
  }catch(e){notice(e.message)}
 }
 function selectState(index){
- currentState=index;const s=records()[index];$('board-empty').hidden=!!s;$('board-content').hidden=!s;if(!s){$('evidence').replaceChildren();$('ocr-regions').replaceChildren();renderStates();renderTranscript();return;}
+ currentState=index;const s=records()[index];$('board-empty').hidden=!!s;$('board-content').hidden=!s;if(!s){$('evidence').replaceChildren();$('ocr-regions').replaceChildren();renderStates();renderTranscript();renderLearningLinks();return;}
  const r=manifest.board_pages?manifest.page_reconstructions?.find(r=>r.board_page_id===s.id):manifest.reconstructed_boards.find(r=>r.board_state_id===s.id);
  const f=manifest.source_frames.find(f=>f.id===s.selected_frame_id);
  const restored=$('mode').value==='restored'&&!!r;
@@ -109,7 +190,7 @@ function selectState(index){
   if(!all&&ids.length>32){const chosen=new Set([f.id,...(restored?r.source_frame_ids:[]),...(restored?r.verification_frame_ids||[]:[]),...(s.selection_candidates||[]).map(c=>c.source_frame_id)]);for(let j=0;j<24;j++)chosen.add(ids[Math.round(j*(ids.length-1)/23)]);ids=ids.filter(id=>chosen.has(id));}
   for(const fid of ids){const sf=manifest.source_frames.find(f=>f.id===fid);const b=text('button','');const im=document.createElement('img');im.src=file(sf.image);im.loading='lazy';im.alt=`원본 ${fmt(sf.time)}`;const candidate=s.selection_candidates?.find(c=>c.source_frame_id===fid);b.append(im,text('small',`${fmt(sf.time)}${fid===f.id?' · A 선택 원본':''}${restored&&r.source_frame_ids.includes(fid)?' · B 사용':''}${restored&&r.verification_frame_ids?.includes(fid)?' · B 대조 관측':''}${candidate?.readable_fraction!==undefined?` · 노출 ${(candidate.readable_fraction*100).toFixed(1)}%`:''}`));b.onclick=()=>seek(sf.time);$('evidence').append(b)}
   if(!all&&ids.length<s.source_frame_ids.length){const show=text('button',`모든 원본 관측 ${s.source_frame_ids.length}개 보기`);show.onclick=()=>drawEvidence(true);$('evidence').append(show)}
- };drawEvidence(false);renderStates();renderTranscript();renderOCR()
+ };drawEvidence(false);renderStates();renderTranscript();renderOCR();renderLearningLinks()
 }
 function renderTranscript(){const s=records()[currentState],all=$('all-transcript').checked;const tr=manifest.transcript;$('transcript-status').textContent=`${tr.status}${tr.language?' · '+tr.language:''}${tr.message?' · '+tr.message:''}`;$('transcript').replaceChildren();const segments=tr.segments.filter(t=>all||s?.transcript_ids.includes(t.id));if(!segments.length)$('transcript').append(text('p','표시할 전사문이 없습니다.','hint'));segments.forEach(t=>{const b=text('button','','cue');b.dataset.start=t.start;b.dataset.end=t.end;b.append(text('time',`${fmt(t.start)} — ${fmt(t.end)}`),document.createTextNode(t.text));b.onclick=()=>seek(t.start);$('transcript').append(b)})}
 function seek(t){$('video').currentTime=t;$('video').play().catch(()=>{})}
