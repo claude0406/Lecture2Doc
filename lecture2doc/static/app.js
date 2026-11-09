@@ -98,7 +98,7 @@ function renderLearningAnalysis(){
   .filter(row=>row.index>=0)
   .sort((a,b)=>(b.item.importance_score??-1)-(a.item.importance_score??-1));
  if(!ranked.length)pagesBox.append(text('p','중요도를 표시할 판서 구간이 없습니다.','hint'));
- for(const row of ranked.slice(0,12)){
+ for(const row of ranked.slice(0,8)){
   const item=row.item,page=visible[row.index],card=text('article','','learning-card');
   const head=text('div','','learning-card-heading');
   head.append(text('strong',`판서 ${boardNumber(page,row.index)}`),
@@ -113,7 +113,7 @@ function renderLearningAnalysis(){
  const visibleIds=new Set(visible.map(page=>page.id));
  const concepts=(data.ai_curation?(data.concepts||[]):[]).filter(item=>
    !(item.board_page_ids||[]).length||(item.board_page_ids||[]).some(id=>visibleIds.has(id))
- ).slice(0,8);
+ ).slice(0,5);
  if(!data.ai_curation)conceptsBox.append(text('p','이전 결과의 개념 목록은 새 분석 전까지 숨겼습니다. 분석 다시 실행을 눌러 주제에 맞는 개념만 추려 주세요.','hint'));
  else if(!concepts.length)conceptsBox.append(text('p','주제와 연결되는 개념을 찾지 못했습니다. OCR 또는 음성 전사 자료를 확인해 주세요.','hint'));
  for(const concept of concepts){
