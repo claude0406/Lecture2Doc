@@ -119,7 +119,7 @@ function renderLearningAnalysis(){
  for(const concept of concepts){
   const card=text('article','','learning-card'),head=text('div','','learning-card-heading');
   head.append(text('strong',concept.name),
-   text('span',concept.importance_score==null?'중요도 미산정':`중요도 ${concept.importance_score}/100`,'importance-value'));
+   text('span',concept.relevance_score==null?'관련도 미산정':`주제 관련도 ${concept.relevance_score}/100`,'importance-value'));
   card.append(head);
   if(concept.ai_reason)card.append(text('p',concept.ai_reason,'hint'));
   const appearances=[];
