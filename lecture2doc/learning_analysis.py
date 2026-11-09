@@ -23,7 +23,7 @@ _STOPWORDS = {
     "이제", "여기", "다음", "경우", "말씀", "이렇게", "그런", "어떤",
     "무엇", "정도", "부분", "내용", "설명", "강의", "오늘", "여러분",
     "이거", "저거", "거죠", "겁니다", "합니다", "됩니다", "입니다",
-    "것", "수", "번", "한번", "한번더", "일단", "그냥", "약간", "조금",
+    "것", "것도", "수", "번", "한번", "한번더", "일단", "그냥", "약간", "조금",
     "정말", "매우", "굉장히", "그러면", "그러니까", "그럼", "그런데",
     "저희", "우리", "여기서", "이렇게요", "맞아요", "아니", "예", "네",
     "이런", "저런", "무슨", "그게", "이게", "저게", "the", "this", "that",
@@ -50,15 +50,13 @@ def _tokens(value: str) -> list[str]:
     output = []
     for token in _TOKEN.findall(str(value)):
         token = token.strip().lower()
+        if token in _STOPWORDS:
+            continue
         if re.fullmatch(r"[가-힣]+", token):
-            changed = True
-            while changed:
-                changed = False
-                for particle in _KOREAN_PARTICLES:
-                    if token.endswith(particle) and len(token) - len(particle) >= 1:
-                        token = token[:-len(particle)]
-                        changed = True
-                        break
+            for particle in _KOREAN_PARTICLES:
+                if token.endswith(particle) and len(token) - len(particle) >= 2:
+                    token = token[:-len(particle)]
+                    break
         if token in _STOPWORDS:
             continue
         if token.isascii() and token.isalpha() and len(token) < 2:
