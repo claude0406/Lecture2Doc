@@ -351,6 +351,30 @@ def create_app(data_dir=None, record_dir=None):
             raise HTTPException(404, "분석 결과가 아직 없습니다")
         return visible_manifest(p.parent)
 
+    @app.post("/api/jobs/{job_id}/learning-analysis")
+    def run_learning_analysis(job_id: str):
+        with edit_lock:
+            folder = job_dir(job_id)
+            if active(job_id):
+                raise HTTPException(409, "강의 처리 중에는 학습 분석을 실행할 수 없습니다")
+            path = folder / "manifest.json"
+            if not path.is_file():
+                raise HTTPException(404, "분석 결과가 아직 없습니다")
+            manifest_data = read(path)
+            started = time.monotonic()
+            try:
+                from .learning_analysis import build_learning_analysis
+                analysis = build_learning_analysis(folder, manifest_data)
+            except Exception as exc:
+                raise HTTPException(500, f"학습 분석 실패: {type(exc).__name__}: {exc}")
+            manifest_data["learning_analysis"] = analysis
+            manifest_data.setdefault("timings", {})["learning_analysis"] = dict(
+                elapsed_seconds=round(time.monotonic() - started, 3),
+                status=analysis["status"],
+            )
+            write(path, manifest_data)
+        return dict(status="complete", analysis_status=analysis["status"], message=analysis.get("message", ""))
+
     @app.get("/api/jobs/{job_id}/files/{name:path}")
     def files(job_id: str, name: str):
         folder = job_dir(job_id)
