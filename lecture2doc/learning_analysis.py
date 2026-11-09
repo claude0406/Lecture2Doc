@@ -230,7 +230,7 @@ def analyze_learning(manifest: dict) -> dict:
             occurrences = concept_occurrences.get(normalized, [])
             cue_count, cue_reasons = _cue_counts(occurrences)
             concept_score = (
-                round(100 * (0.62 * min(1.0, len(occurrences) / 4.0) + 0.38 * min(1.0, cue_count / 2.0))
+                round(100 * (0.62 * min(1.0, len(occurrences) / 4.0) + 0.38 * min(1.0, cue_count / 2.0)))
                 if segments else None
             )
             region_matches = [region for region in regions if _matches(term, region.get("text", ""))]
