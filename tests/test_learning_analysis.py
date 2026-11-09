@@ -111,6 +111,9 @@ def test_discourse_fillers_are_not_extracted_as_concepts():
     assert "한번" not in terms
     assert "것도" not in terms
     assert "설명" not in terms
+    assert "설명하면" not in terms
+    assert "내용입니다" not in terms
+    assert "중요한" in terms
 
 
 def test_ai_selection_keeps_only_supported_topic_concepts():
