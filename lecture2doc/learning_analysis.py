@@ -66,9 +66,13 @@ def _tokens(value: str) -> list[str]:
 def _page_text(ocr_page: dict | None) -> tuple[str, list[dict]]:
     if not ocr_page:
         return "", []
-    regions = ocr_page.get("regions") or []
+    all_regions = ocr_page.get("regions") or []
+    # OCR marks scores below its review threshold as uncertain. Keep those
+    # regions out of concept matching so a likely misread does not become
+    # a supposedly important lecture concept.
+    regions = [region for region in all_regions if not region.get("review", False)]
     text = "\n".join(str(region.get("text", "")) for region in regions if region.get("text"))
-    if not text:
+    if not all_regions:
         text = str(ocr_page.get("text", ""))
     return text, regions
 
@@ -134,7 +138,7 @@ def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict],
     emphasis = min(1.0, cue_count / 2.0)
     repetition = min(1.0, repeated_term_mentions / 3.0)
     alignment = match_count / max(1, len(terms)) if terms else 0.0
-    board_signal = min(1.0, len(terms) / 5.0) if has_ocr else 0.0
+    board_signal = 1.0 if has_ocr and terms else 0.0
 
     weights = []
     if segments:
@@ -151,9 +155,6 @@ def _score_page(segments: list[dict], terms: list[str], ocr_regions: list[dict],
 
     score = round(100 * sum(weight * value for weight, value in weights) /
                   sum(weight for weight, _ in weights))
-    if cue_count:
-        # Keep the detailed cue reasons and make them visible to users.
-        pass
     if repeated_term_mentions:
         reasons.append(f"관련 개념이 음성에서 {repeated_term_mentions}회 반복 언급")
     if has_ocr and match_count:
@@ -206,12 +207,8 @@ def analyze_learning(manifest: dict) -> dict:
         ocr_page = ocr_pages.get(page_id)
         board_text, regions = _page_text(ocr_page)
         has_ocr = bool(board_text.strip())
-        candidate_text = board_text + "\n" + "\n".join(
-            str(segment.get("text", "")) for segment in page_segments
-        )
-        terms = _extract_terms(candidate_text, include_pairs=has_ocr)
-        # A page with OCR uses its written concepts first; transcript-only terms
-        # are retained as a fallback when OCR returned no readable text.
+        # Prefer readable OCR terms; transcript-only terms are a fallback
+        # when OCR returned no confidently readable text.
         if has_ocr:
             board_terms = _extract_terms(board_text, include_pairs=True)
             terms = board_terms[:12]
