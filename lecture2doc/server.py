@@ -40,6 +40,10 @@ class PurgeConfirmation(BaseModel):
     confirmed: bool = False
 
 
+class QwenReviewRequest(BaseModel):
+    board_page_id: str = Field(min_length=1, max_length=128)
+
+
 def create_app(data_dir=None, record_dir=None):
     project_root = Path(__file__).resolve().parent.parent
     root = Path(data_dir).expanduser().resolve() if data_dir is not None else project_root / "data"
@@ -400,6 +404,56 @@ def create_app(data_dir=None, record_dir=None):
             recognizer=recognizer,
             elapsed_seconds=result.get("elapsed_seconds"),
             message=f"OCR 재실행 완료 · {recognizer or '모델 정보 없음'}",
+        )
+
+    @app.post("/api/jobs/{job_id}/qwen-review")
+    def run_qwen_review(job_id: str, request: QwenReviewRequest):
+        with edit_lock:
+            folder = job_dir(job_id)
+            if active(job_id):
+                raise HTTPException(409, "강의 처리 중에는 Qwen 판서 재검토를 실행할 수 없습니다")
+            manifest_path = folder / "manifest.json"
+            if not manifest_path.is_file():
+                raise HTTPException(404, "분석 결과가 아직 없습니다")
+            manifest_data = read(manifest_path)
+            ocr_data = manifest_data.get("ocr") or {}
+            ocr_page = next(
+                (page for page in ocr_data.get("pages", [])
+                 if page.get("board_page_id") == request.board_page_id),
+                None,
+            )
+            if ocr_page is None:
+                raise HTTPException(404, "선택한 판서의 OCR 결과가 없습니다")
+            image_name = (ocr_page.get("input") or {}).get("image")
+            if not image_name:
+                raise HTTPException(404, "판서 원본 이미지 경로가 없습니다")
+            image_path = (folder / image_name).resolve()
+            if not image_path.is_relative_to(folder.resolve()) or not image_path.is_file():
+                raise HTTPException(404, "판서 이미지 파일을 찾을 수 없습니다")
+            started = time.monotonic()
+            try:
+                from .qwen_vision import review_board_image
+                result = review_board_image(
+                    image_path,
+                    ocr_regions=ocr_page.get("regions", []),
+                )
+            except Exception as exc:
+                raise HTTPException(500, f"Qwen 판서 재검토 실패: {type(exc).__name__}: {exc}")
+            ocr_page["qwen_review"] = result
+            manifest_data.setdefault("timings", {})["qwen_review"] = dict(
+                elapsed_seconds=round(time.monotonic() - started, 3),
+                status=result.get("status"),
+                model=result.get("model"),
+                board_page_id=request.board_page_id,
+            )
+            write(manifest_path, manifest_data)
+        return dict(
+            status="complete",
+            board_page_id=request.board_page_id,
+            model=result.get("model"),
+            blocks=len(result.get("blocks", [])),
+            elapsed_seconds=result.get("elapsed_seconds"),
+            message=f"Qwen 판서 재검토 완료 · {result.get('model')}",
         )
 
     @app.post("/api/jobs/{job_id}/learning-analysis")
