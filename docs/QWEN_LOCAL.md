@@ -135,7 +135,7 @@ export LECTURE2DOC_QWEN_MODEL=qwen3.8:27b-mlx
 unset LECTURE2DOC_QWEN_MODEL
 ```
 
-환경 변수를 바꾼 뒤에는 Lecture2Doc 서버를 재시작한다. 이미 설치된 모델을 다른 태그로 선택한 경우 해당 모델도 `lecture2doc qwen-models --model <모델명>`으로 내려받아야 한다.
+모델 다운로드가 성공하면 선택된 모델명이 저장소의 `models/qwen/selection.json`에 기록되어 다음 실행에도 유지된다. 이 파일은 Git에서 제외된다. 환경 변수 `LECTURE2DOC_QWEN_MODEL`은 저장된 선택보다 우선한다. 모델을 새로 자동 추천하려면 `lecture2doc setup-models`를 다시 실행한다. 환경 변수를 바꾼 뒤에는 Lecture2Doc 서버를 재시작한다. 이미 설치된 모델을 다른 태그로 선택한 경우 해당 모델도 `lecture2doc qwen-models --model <모델명>`으로 내려받아야 한다.
 
 ## 로컬 실행과 네트워크
 
