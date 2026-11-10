@@ -267,7 +267,7 @@ function renderOCR(){
   const heading=text('div','','qwen-review-heading');
   heading.append(text('h3','Qwen 이미지 재검토 결과'),text('small',`${qwen.model||'Qwen'} · ${Number(qwen.elapsed_seconds||0).toFixed(1)}초 · 원본 OCR 유지`));
   box.append(heading);
-  if(qwen.text)box.append(text('pre',qwen.text,'qwen-review-text'));
+  if(!(qwen.blocks||[]).length&&qwen.text)box.append(text('pre',qwen.text,'qwen-review-text'));
   for(const block of qwen.blocks||[]){
    const row=text('div','','qwen-review-block');
    row.append(text('span',block.kind==='formula'?'수식':block.kind==='title'?'제목':block.kind==='list'?'목록':'문장','qwen-block-kind'));
