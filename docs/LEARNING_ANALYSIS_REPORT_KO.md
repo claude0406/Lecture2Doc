@@ -221,13 +221,14 @@ lecture2doc ocr-models --language ko
 
 ### 8.4 AI 키 설정 및 웹 앱 실행
 
-AI 선별을 사용할 때만 API 키를 터미널 환경 변수로 설정한다. 키는 코드나 저장소에 입력하지 않는다.
+로컬 Qwen 기능을 사용할 때는 Ollama 0.12.7 이상을 설치하고 앱을 실행한 다음 모델을 내려받는다.
 
 ```bash
-export OPENAI_API_KEY="발급받은_API_키"
-export LECTURE2DOC_AI_MODEL="gpt-6-luna"  # 기본값을 사용할 경우 생략 가능
+lecture2doc qwen-models
 ./serve.sh
 ```
+
+기본 모델은 `qwen3-vl:4b`이며 약 3.3GB다. 모델 설치 안내는 `docs/QWEN_LOCAL.md`에 기록했다.
 
 키를 설정하지 않으면 기본 필터만 사용하고 외부 AI 호출은 하지 않는다.
 
@@ -286,3 +287,11 @@ python -m pytest -q
 - D · 학습 분석의 핵심 개념 선별도 OpenAI API 대신 같은 로컬 Qwen 모델을 사용한다. Ollama가 없으면 기존 기본 필터로 대체한다.
 - `lecture2doc/qwen_vision.py`, Qwen API 연결 테스트, 웹 재검토 API 테스트를 추가했다.
 - Ollama 로컬 서버는 `127.0.0.1:11434`를 사용한다. 외부 AI API와 토큰 과금은 사용하지 않는다. 최초 모델 다운로드에만 인터넷 연결이 필요하다.
+
+## 11. 로컬 Qwen Vision 통합
+
+- `lecture2doc qwen-models` 명령으로 Ollama의 `qwen3-vl:4b` 기본 모델을 내려받는다. 모델 파일은 Ollama가 관리하며 Git에 포함하지 않는다.
+- C · 판서 텍스트에 **Qwen 판서 재검토** 버튼을 추가했다. 선택 판서 이미지와 기존 OCR 후보를 전달하고 결과는 `qwen_review`에 별도 보존한다. 기존 OCR 결과와 영역 좌표는 덮어쓰지 않는다.
+- D · 학습 분석의 핵심 개념 선별도 로컬 Qwen으로 처리한다. Ollama가 실행되지 않거나 모델이 없으면 기존 문자열 기반 필터로 대체한다.
+- `lecture2doc/qwen_vision.py`, `tests/test_qwen_vision.py`, 웹 API 및 UI 연결을 추가했다.
+- 로컬 추론 주소는 `127.0.0.1:11434`이며 외부 AI API 토큰 비용은 발생하지 않는다. 최초 모델 다운로드는 인터넷을 사용한다.
