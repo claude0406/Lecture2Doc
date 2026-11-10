@@ -43,13 +43,9 @@
 lecture2doc ocr-models --language ko
 ```
 
-이 명령은 `models/ocr/ko.json`을 새 모델의 파일명·SHA-256·출처 정보로 갱신한다. 이전 PP-OCRv5 인식기 파일은 자동 삭제하지 않는다. 인식 단계는 계속 로컬 ONNX Runtime CPU로 실행하며 새 필수 패키지를 추가하지 않았다.
+이 명령은 `models/ocr/ko.json`을 기본·실험 인식 모델의 파일명·SHA-256·출처 정보로 갱신한다. 이전 PP-OCRv5 인식기 파일은 자동 삭제하지 않는다. 인식 단계는 계속 로컬 ONNX Runtime CPU로 실행하며 새 필수 패키지를 추가하지 않았다.
 
-모델 파일은 다음 위치에 저장된다.
-
-- `models/ocr/rec_korean_hw.onnx`
-- `models/ocr/ppocrv5_korean_dict.txt`
-- `models/ocr/ko.json`
+모델과 사전은 `models/ocr/`에 저장된다. 기본 PP-OCRv5 Korean Mobile의 인식 모델·사전과 실험용 `rec_korean_hw.onnx`, `ppocrv5_korean_dict.txt`, 모델 인덱스 `ko.json`을 함께 보관한다.
 
 기본 모델과 실험 모델을 같은 `ko.json` 인덱스에 함께 기록한다. 기본은 PP-OCRv5 Korean Mobile이며, `LECTURE2DOC_KO_RECOGNIZER=handwriting`을 설정한 경우에만 손글씨 실험 모델을 선택한다. OCR 알고리즘 버전을 올려 모델 선택이 바뀌면 이전 인식 결과 캐시를 재사용하지 않는다.
 
@@ -67,7 +63,7 @@ lecture2doc ocr data/<강의ID> --language ko --rerun
 
 ### 적용 한계
 
-이 모델의 높은 공개 수치는 종이 문서의 단어·문장 손글씨 평가다. 칠판·분필·화이트보드·낮은 대비·장거리 촬영·수학 기호 인식이 같은 수준으로 개선된다고 보장할 수 없다. 특히 글자 검출 단계가 한 줄을 너무 작게 나누거나 긴 문장을 놓치면, 인식기만 교체해서는 해결되지 않는다. 수식의 구조적 해석과 LaTeX 변환도 제공하지 않는다.
+손글씨 실험 모델의 높은 공개 수치는 종이 문서의 단어·문장 손글씨 평가다. 칠판·분필·화이트보드·낮은 대비·장거리 촬영·수학 기호 인식이 같은 수준으로 개선된다고 보장할 수 없다. 특히 글자 검출 단계가 한 줄을 너무 작게 나누거나 긴 문장을 놓치면, 인식기만 교체해서는 해결되지 않는다. 수식의 구조적 해석과 LaTeX 변환도 제공하지 않는다.
 
 따라서 현재는 기본값이 아니며, 실제 강의에서 기준 모델과 CER/WER를 비교한 뒤 선택 여부를 판단해야 한다.
 
