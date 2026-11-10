@@ -250,6 +250,66 @@ def pull_model(model: str | None = None, profile: str = "auto") -> dict:
     return status
 
 
+def _parse_json_object(content: str, source: str = "Qwen") -> dict:
+    """Parse a JSON object even when a model adds a think block or short preamble."""
+    if not isinstance(content, str) or not content.strip():
+        raise RuntimeError(f"{source} 응답 내용이 비어 있습니다.")
+
+    # Some reasoning-capable models put private reasoning before the final JSON.
+    cleaned = re.sub(r"<think\\b[^>]*>.*?</think\\s*>", "", content, flags=re.IGNORECASE | re.DOTALL)
+    cleaned = re.sub(r"</?think\\s*>", "", cleaned, flags=re.IGNORECASE).strip()
+    if not cleaned:
+        raise RuntimeError(f"{source} 응답에 JSON 본문이 없습니다.")
+
+    candidates = [cleaned]
+    fenced = re.search(r"```(?:json)?\\s*(.*?)\\s*```", cleaned, flags=re.IGNORECASE | re.DOTALL)
+    if fenced:
+        candidates.insert(0, fenced.group(1).strip())
+
+    # First accept a clean response or a fenced JSON block.
+    for candidate in candidates:
+        try:
+            parsed = json.loads(candidate)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, dict):
+            return parsed
+
+    # Otherwise extract the first balanced object, ignoring braces inside strings.
+    for start in (index for index, char in enumerate(cleaned) if char == "{"):
+        depth = 0
+        in_string = False
+        escaped = False
+        for index in range(start, len(cleaned)):
+            char = cleaned[index]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif char == "\\\\":
+                    escaped = True
+                elif char == '"':
+                    in_string = False
+                continue
+            if char == '"':
+                in_string = True
+            elif char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+                if depth == 0:
+                    candidate = cleaned[start:index + 1]
+                    try:
+                        parsed = json.loads(candidate)
+                    except json.JSONDecodeError:
+                        break
+                    if isinstance(parsed, dict):
+                        return parsed
+                    break
+
+    preview = re.sub(r"\\s+", " ", cleaned)[:180]
+    raise RuntimeError(f"{source} 응답을 JSON 객체로 읽지 못했습니다. 응답 앞부분: {preview!r}")
+
+
 def _image_as_base64(image_path: Path, max_side: int = 2200) -> str:
     image = cv2.imread(str(image_path))
     if image is None:
@@ -341,15 +401,13 @@ def review_board_image(
         }],
         "format": schema,
         "stream": False,
+        "think": False,
         "keep_alive": "5m",
         "options": {"temperature": 0, "num_ctx": 8192},
     }
     response = _request_json("/api/chat", payload, timeout=240)
-    content = (response.get("message") or {}).get("content", "")
-    try:
-        parsed = json.loads(content)
-    except json.JSONDecodeError as exc:
-        raise RuntimeError("Qwen 응답을 JSON으로 읽지 못했습니다.") from exc
+    message = response.get("message") or {}
+    parsed = _parse_json_object(message.get("content", ""), source="Qwen 판서 재검토")
     blocks = parsed.get("blocks")
     if not isinstance(blocks, list):
         raise RuntimeError("Qwen 응답에 blocks 목록이 없습니다.")
@@ -390,16 +448,11 @@ def structured_chat(prompt: str, schema: dict, model: str | None = None, timeout
             }],
             "format": schema,
             "stream": False,
+            "think": False,
             "keep_alive": "5m",
             "options": {"temperature": 0, "num_ctx": 8192},
         },
         timeout=timeout,
     )
-    content = (response.get("message") or {}).get("content", "")
-    try:
-        parsed = json.loads(content)
-    except json.JSONDecodeError as exc:
-        raise RuntimeError("Qwen 응답을 JSON으로 읽지 못했습니다.") from exc
-    if not isinstance(parsed, dict):
-        raise RuntimeError("Qwen 응답이 JSON 객체가 아닙니다.")
-    return parsed
+    message = response.get("message") or {}
+    return _parse_json_object(message.get("content", ""), source="Qwen 개념 선별")
