@@ -32,7 +32,7 @@ lecture2doc ocr-models --language en
 lecture2doc serve
 ```
 
-[http://127.0.0.1:8765](http://127.0.0.1:8765)에서 영상을 등록합니다. 기존 SRT/VTT/JSON 자막을 넣거나 분석 설정에서 Whisper 모델을 지정할 수 있습니다. 한글 OCR은 한국어 손글씨 특화 인식기를 사용합니다. `lecture2doc ocr-models --language ko`를 실행하면 새 모델과 사전을 준비하거나 기존 모델 인덱스를 갱신합니다. 음성 전사가 필요하면 `python -m pip install -e '.[stt]'`를 추가로 실행한 뒤 첫 다운로드를 허용합니다. 모델 파일은 각자 저장소의 `models/`에 쌓이며 이후에는 네트워크 없이 사용합니다. 로컬 CTranslate2 모델 폴더도 지정할 수 있습니다.
+[http://127.0.0.1:8765](http://127.0.0.1:8765)에서 영상을 등록합니다. 기존 SRT/VTT/JSON 자막을 넣거나 분석 설정에서 Whisper 모델을 지정할 수 있습니다. 한글·영문이 섞인 판서의 기본 OCR은 PP-OCRv5 Korean Mobile입니다. `lecture2doc ocr-models --language ko`를 실행하면 기본 모델과 선택 실험용 한국어 손글씨 모델을 함께 준비합니다. 손글씨 모델은 `LECTURE2DOC_KO_RECOGNIZER=handwriting`을 설정한 경우에만 선택됩니다. 음성 전사가 필요하면 `python -m pip install -e '.[stt]'`를 추가로 실행한 뒤 첫 다운로드를 허용합니다. 모델 파일은 각자 저장소의 `models/`에 쌓이며 이후에는 네트워크 없이 사용합니다. 로컬 CTranslate2 모델 폴더도 지정할 수 있습니다.
 
 Whisper 모델은 첫 실행에서 내려받을 수 있습니다. 예를 들어 `lecture2doc process lecture.mp4 --out data/my-lecture --model base --language ko --allow-download`는 모델을 `models/whisper/base/`에 저장합니다. 웹 화면에서도 전사 설정에서 모델을 지정하고 첫 다운로드를 허용할 수 있습니다. 다른 저장 위치는 `LECTURE2DOC_WHISPER_MODELS`로 바꿀 수 있습니다.
 
@@ -90,7 +90,7 @@ lecture2doc ocr data/my-v1 --language ko --preprocessing adaptive
 
 각 실행의 전체 시간과 단계별 캐시 사용 여부는 `manifest.json`의 `elapsed_seconds`, `timings`에 기록합니다. 기존 기록에 OCR만 추가하면 이번 시간은 `ocr.elapsed_seconds`로 따로 남깁니다. [실제 실행 시간](V1_OCR.md)을 참고하세요.
 
-OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. 한글 손글씨 인식기 업데이트 뒤에는 기존 강의의 C · 판서 텍스트에서 **OCR 다시 실행**을 누르거나 CLI에서 `--rerun`으로 다시 생성해야 합니다. 결과 상태 줄에 실제 인식기 이름이 표시됩니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
+OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. OCR 모델 선택을 바꾼 뒤에는 기존 강의의 C · 판서 텍스트에서 **OCR 다시 실행**을 누르거나 CLI에서 `--rerun`으로 다시 생성해야 합니다. 결과 상태 줄에 실제 인식기 이름이 표시됩니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
 
 B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고치는 기능·통합 검색은 D에서 다룹니다. OCR에 수식이 문자열로 나타날 수 있지만 LaTeX로 변환하지 않습니다.
 
@@ -143,6 +143,22 @@ B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고
 ```
 
 입력 SHA-256·설정·알고리즘 버전으로 캐시를 분리합니다. 자막 내용이나 로컬 모델 파일이 바뀌면 전사 캐시가 달라집니다. `--rerun`은 이전 캐시를 삭제하지 않습니다. 다른 영상을 같은 결과 폴더에 넣으면 거부합니다. 디스크 절약을 위한 자동 원본 삭제 기능은 없습니다. 기본 0.5초 PNG 추출은 장시간 1080p 영상에서 많은 저장 공간과 디코딩 시간이 필요합니다.
+
+### 기본·실험 OCR 모델 선택
+
+기본값은 한국어와 영어 혼합 텍스트용 PP-OCRv5 Korean Mobile입니다. 손글씨 특화 모델을 비교하려면 서버 실행 전에 다음을 설정합니다.
+
+```bash
+export LECTURE2DOC_KO_RECOGNIZER=handwriting
+```
+
+기본 모델로 돌아가려면 다음을 실행합니다.
+
+```bash
+unset LECTURE2DOC_KO_RECOGNIZER
+```
+
+설정 변경 후 서버를 재시작하고 OCR을 다시 실행해야 합니다.
 
 ### 기존 강의의 OCR만 다시 실행
 
