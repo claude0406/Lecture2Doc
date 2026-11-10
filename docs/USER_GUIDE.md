@@ -92,6 +92,18 @@ lecture2doc ocr data/my-v1 --language ko --preprocessing adaptive
 
 OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. OCR 모델 선택을 바꾼 뒤에는 기존 강의의 C · 판서 텍스트에서 **OCR 다시 실행**을 누르거나 CLI에서 `--rerun`으로 다시 생성해야 합니다. 결과 상태 줄에 실제 인식기 이름이 표시됩니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
 
+### 전체 필수 모델 한 번에 준비
+
+OCR과 Qwen 모델을 한 번에 내려받으려면 Ollama 앱을 설치하고 실행한 뒤 저장소 루트에서 다음 명령을 실행합니다.
+
+```bash
+lecture2doc setup-models
+```
+
+이 명령은 영문·한글 OCR 모델을 모두 준비한 다음 Mac 메모리에 맞는 Qwen 비전 모델을 내려받습니다. 기본 Qwen 자동 선택은 32GB 이상 Apple Silicon에서 최신 Qwen3.8-27B MLX, 24GB 이상에서 8B, 16GB 이상 24GB 미만에서 4B, 16GB 미만에서 2B를 사용합니다. Ollama 버전이나 연결 상태를 먼저 검사하므로 조건을 만족하지 않으면 모델 다운로드를 시작하지 않습니다.
+
+기존처럼 모델을 개별 설치할 수도 있습니다. OCR은 `lecture2doc ocr-models --language ko`, Qwen은 `lecture2doc qwen-models`를 사용합니다.
+
 ### 로컬 Qwen Vision 설치와 사용
 
 Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 앱을 설치하고 실행합니다. `lecture2doc qwen-models`는 Mac 메모리를 감지해 최신 Qwen3.8-27B MLX 또는 기기 메모리에 따라 Qwen3-VL 8B/4B/2B를 자동 선택합니다. Qwen3.8-27B는 약 18GB 다운로드와 Ollama 0.40.0 이상이 필요합니다.
