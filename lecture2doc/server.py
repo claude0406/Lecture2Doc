@@ -18,7 +18,7 @@ from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .pipeline import process
-from .storage import key, read, write
+from .storage import digest, key, read, write
 from .vision import Config
 
 
