@@ -74,6 +74,7 @@ QWEN_MODEL_CATALOG = {
     },
 }
 QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-2-qwen38"
+MODEL_SELECTION_PATH = Path(__file__).resolve().parent.parent / "models" / "qwen" / "selection.json"
 
 
 def ollama_url() -> str:
@@ -132,9 +133,29 @@ def recommend_model(profile: str = "auto", memory_gb: float | None = None,
     return COMPACT_QWEN_MODEL
 
 
+def _saved_model() -> str | None:
+    try:
+        value = json.loads(MODEL_SELECTION_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    model = value.get("model") if isinstance(value, dict) else None
+    return model.strip() if isinstance(model, str) and model.strip() else None
+
+
+def _save_model_selection(model: str) -> None:
+    """Persist a successfully installed model choice for the next app launch."""
+    MODEL_SELECTION_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = MODEL_SELECTION_PATH.with_suffix(".json.tmp")
+    temporary.write_text(
+        json.dumps({"model": model, "updated_at": time.time()}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    temporary.replace(MODEL_SELECTION_PATH)
+
+
 def selected_model() -> str:
     override = os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
-    return override or recommend_model("auto")
+    return override or _saved_model() or recommend_model("auto")
 
 
 def model_download_info(model: str | None = None) -> dict:
@@ -225,6 +246,7 @@ def pull_model(model: str | None = None, profile: str = "auto") -> dict:
     status = ollama_status(name)
     if not status["installed"]:
         raise RuntimeError(f"다운로드 명령은 끝났지만 {name} 모델이 설치 목록에 없습니다.")
+    _save_model_selection(name)
     return status
 
 
