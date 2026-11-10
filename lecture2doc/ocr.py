@@ -13,7 +13,20 @@ import numpy as np
 
 from .storage import digest, key, read, write
 
-OCR_VERSION = "2026-11-02.ocr-1"
+
+KOREAN_HANDWRITING_MODEL_REPO = "Rebeccaaaaaaaa/korean-handwriting-rec"
+KOREAN_HANDWRITING_MODEL_FILES = {
+    "rec": (
+        "https://huggingface.co/Rebeccaaaaaaaa/korean-handwriting-rec/"
+        "resolve/main/model/rec_korean_hw.onnx"
+    ),
+    "dictionary": (
+        "https://huggingface.co/Rebeccaaaaaaaa/korean-handwriting-rec/"
+        "resolve/main/model/ppocrv5_korean_dict.txt"
+    ),
+}
+
+OCR_VERSION = "2026-11-10.ocr-2-korean-handwriting"
 
 
 @dataclass(frozen=True)
@@ -43,40 +56,73 @@ def models_dir():
 
 
 def prepare_models(language="en", directory=None):
-    """Explicit download step; recognition itself uses only these local files."""
+    """Download local detector and language-specific recognizer models."""
     OCRConfig(language=language).validate()
     from rapidocr.inference_engine.base import FileInfo, InferSession
     from rapidocr.utils.typings import EngineType, LangDet, LangRec, ModelType, OCRVersion, TaskType
+
     root = Path(directory or models_dir()).resolve()
     root.mkdir(parents=True, exist_ok=True)
-    choices = {
-        "det": FileInfo(EngineType.ONNXRUNTIME, OCRVersion.PPOCRV6, TaskType.DET, LangDet.CH, ModelType.SMALL),
-        "rec": FileInfo(EngineType.ONNXRUNTIME, OCRVersion.PPOCRV5 if language == "ko" else OCRVersion.PPOCRV6,
-                        TaskType.REC, LangRec.KOREAN if language == "ko" else LangRec.EN,
-                        ModelType.MOBILE if language == "ko" else ModelType.MEDIUM),
-    }
+
+    detector = FileInfo(
+        EngineType.ONNXRUNTIME, OCRVersion.PPOCRV6,
+        TaskType.DET, LangDet.CH, ModelType.SMALL,
+    )
     files = {}
+
     def fetch(url, expected=None):
         path = root / Path(url).name
         if not path.exists() or (expected and digest(path) != expected):
-            temp = path.with_suffix(path.suffix + ".download")
+            temporary = path.with_name(path.name + ".download")
             try:
-                with urllib.request.urlopen(url, timeout=60) as response, temp.open("wb") as dest:
+                with urllib.request.urlopen(url, timeout=90) as response, temporary.open("wb") as dest:
                     shutil.copyfileobj(response, dest)
-                if expected and digest(temp) != expected:
+                if expected and digest(temporary) != expected:
                     raise ValueError(f"OCR 모델 해시 불일치: {path.name}")
-                temp.replace(path)
+                temporary.replace(path)
             finally:
-                temp.unlink(missing_ok=True)
+                temporary.unlink(missing_ok=True)
         return dict(path=path.name, sha256=digest(path), url=url)
-    for task, choice in choices.items():
-        info = InferSession.get_model_url(choice)
-        files[task] = fetch(info["model_dir"], info.get("SHA256"))
-        if task == "rec" and info.get("dict_url"):
-            files["dictionary"] = fetch(info["dict_url"])
-    result = dict(language=language, engine="rapidocr", engine_version=version("rapidocr"),
-                  models=dict(det="PP-OCRv6-small", rec="korean-PP-OCRv5-mobile" if language == "ko" else "PP-OCRv6-medium"),
-                  files=files)
+
+    detector_info = InferSession.get_model_url(detector)
+    files["det"] = fetch(detector_info["model_dir"], detector_info.get("SHA256"))
+
+    if language == "ko":
+        # Same PP-OCRv5 Korean recognizer interface and 11,945-token dictionary,
+        # fine-tuned for handwritten Hangul. Keep detector and post-processing.
+        files["rec"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["rec"])
+        files["dictionary"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["dictionary"])
+        recognizer = "korean-handwriting-rec"
+        recognizer_source = {
+            "repository": KOREAN_HANDWRITING_MODEL_REPO,
+            "license": "Apache-2.0",
+            "base_model": "PP-OCRv5 Korean Mobile",
+            "task": "Korean handwriting and printed-text recognition",
+        }
+    else:
+        recognizer_config = FileInfo(
+            EngineType.ONNXRUNTIME, OCRVersion.PPOCRV6,
+            TaskType.REC, LangRec.EN, ModelType.MEDIUM,
+        )
+        recognizer_info = InferSession.get_model_url(recognizer_config)
+        files["rec"] = fetch(recognizer_info["model_dir"], recognizer_info.get("SHA256"))
+        if recognizer_info.get("dict_url"):
+            files["dictionary"] = fetch(recognizer_info["dict_url"])
+        recognizer = "PP-OCRv6-medium"
+        recognizer_source = {
+            "repository": "RapidOCR model registry",
+            "license": "See upstream model metadata",
+            "task": "English text recognition",
+        }
+
+    result = dict(
+        language=language,
+        engine="rapidocr",
+        engine_version=version("rapidocr"),
+        models=dict(det="PP-OCRv6-small", rec=recognizer),
+        model_sources=dict(det="RapidOCR PP-OCRv6-small", rec=recognizer_source),
+        files=files,
+    )
     write(root / f"{language}.json", result)
     return result
 
