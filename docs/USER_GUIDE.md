@@ -32,7 +32,7 @@ lecture2doc ocr-models --language en
 lecture2doc serve
 ```
 
-[http://127.0.0.1:8765](http://127.0.0.1:8765)에서 영상을 등록합니다. 기존 SRT/VTT/JSON 자막을 넣거나 분석 설정에서 Whisper 모델을 지정할 수 있습니다. 한글 OCR 모델은 `lecture2doc ocr-models --language ko`로 준비합니다. 음성 전사가 필요하면 `python -m pip install -e '.[stt]'`를 추가로 실행한 뒤 첫 다운로드를 허용합니다. 모델 파일은 각자 저장소의 `models/`에 쌓이며 이후에는 네트워크 없이 사용합니다. 로컬 CTranslate2 모델 폴더도 지정할 수 있습니다.
+[http://127.0.0.1:8765](http://127.0.0.1:8765)에서 영상을 등록합니다. 기존 SRT/VTT/JSON 자막을 넣거나 분석 설정에서 Whisper 모델을 지정할 수 있습니다. 한글 OCR은 한국어 손글씨 특화 인식기를 사용합니다. `lecture2doc ocr-models --language ko`를 실행하면 새 모델과 사전을 준비하거나 기존 모델 인덱스를 갱신합니다. 음성 전사가 필요하면 `python -m pip install -e '.[stt]'`를 추가로 실행한 뒤 첫 다운로드를 허용합니다. 모델 파일은 각자 저장소의 `models/`에 쌓이며 이후에는 네트워크 없이 사용합니다. 로컬 CTranslate2 모델 폴더도 지정할 수 있습니다.
 
 Whisper 모델은 첫 실행에서 내려받을 수 있습니다. 예를 들어 `lecture2doc process lecture.mp4 --out data/my-lecture --model base --language ko --allow-download`는 모델을 `models/whisper/base/`에 저장합니다. 웹 화면에서도 전사 설정에서 모델을 지정하고 첫 다운로드를 허용할 수 있습니다. 다른 저장 위치는 `LECTURE2DOC_WHISPER_MODELS`로 바꿀 수 있습니다.
 
@@ -83,13 +83,14 @@ lecture2doc ocr experiments/ab-refinement/accepted/lecture01 \
 lecture2doc process lecture.mp4 --out data/my-v1 --ocr ko
 
 # 기존 V1의 OCR 재실행 / 전처리 비교
+lecture2doc ocr-models --language ko
 lecture2doc ocr data/my-v1 --language ko --rerun
 lecture2doc ocr data/my-v1 --language ko --preprocessing adaptive
 ```
 
 각 실행의 전체 시간과 단계별 캐시 사용 여부는 `manifest.json`의 `elapsed_seconds`, `timings`에 기록합니다. 기존 기록에 OCR만 추가하면 이번 시간은 `ocr.elapsed_seconds`로 따로 남깁니다. [실제 실행 시간](V1_OCR.md)을 참고하세요.
 
-OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
+OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. 한글 손글씨 인식기 업데이트 뒤에는 기존 강의 OCR을 `--rerun`으로 다시 생성해야 합니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
 
 B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고치는 기능·통합 검색은 D에서 다룹니다. OCR에 수식이 문자열로 나타날 수 있지만 LaTeX로 변환하지 않습니다.
 
