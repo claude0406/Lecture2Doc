@@ -17,7 +17,7 @@ def test_ollama_status_checks_minimum_version_and_model(monkeypatch):
         raise AssertionError(path)
 
     monkeypatch.setattr(qwen_vision, "_request_json", fake_request)
-    status = qwen_vision.ollama_status()
+    status = qwen_vision.ollama_status('qwen3-vl:4b')
     assert status["installed"] is True
     assert status["model"] == "qwen3-vl:4b"
     assert status["ollama_version"] == "0.12.7"
@@ -31,7 +31,7 @@ def test_ollama_status_rejects_old_version(monkeypatch):
         ),
     )
     with pytest.raises(RuntimeError, match="이상"):
-        qwen_vision.ollama_status()
+        qwen_vision.ollama_status('qwen3-vl:4b')
 
 
 def test_qwen_review_sends_board_image_and_preserves_ocr_hints(tmp_path, monkeypatch):
@@ -72,6 +72,7 @@ def test_qwen_review_sends_board_image_and_preserves_ocr_hints(tmp_path, monkeyp
     result = qwen_vision.review_board_image(
         image_path,
         ocr_regions=[{"order": 1, "text": "y''+y'+2y=0", "score": 0.62}],
+        model="qwen3-vl:4b",
     )
 
     payload = captured["payload"]
@@ -96,3 +97,64 @@ def test_qwen_review_requires_model_download(tmp_path, monkeypatch):
     )
     with pytest.raises(RuntimeError, match="qwen-models"):
         qwen_vision.review_board_image(tmp_path / "not-read.png")
+
+
+
+def test_recommended_qwen_model_uses_latest_for_large_apple_silicon():
+    model = qwen_vision.recommend_model(
+        "auto", memory_gb=32, system="Darwin", machine="arm64"
+    )
+    assert model == "qwen3.8:27b-mlx"
+
+
+def test_recommended_qwen_model_uses_balanced_and_compact_for_smaller_macs():
+    assert qwen_vision.recommend_model(
+        "auto", memory_gb=24, system="Darwin", machine="arm64"
+    ) == "qwen3-vl:8b"
+    assert qwen_vision.recommend_model(
+        "auto", memory_gb=16, system="Darwin", machine="arm64"
+    ) == "qwen3-vl:4b"
+    assert qwen_vision.recommend_model(
+        "auto", memory_gb=None, system="Darwin", machine="arm64"
+    ) == "qwen3-vl:4b"
+
+
+def test_recommended_model_profiles_can_be_selected_explicitly():
+    assert qwen_vision.recommend_model(
+        "latest", memory_gb=8, system="Darwin", machine="arm64"
+    ) == "qwen3.8:27b-mlx"
+    assert qwen_vision.recommend_model("balanced", memory_gb=16) == "qwen3-vl:8b"
+    assert qwen_vision.recommend_model("compact", memory_gb=64) == "qwen3-vl:4b"
+
+
+def test_selected_model_environment_override(monkeypatch):
+    monkeypatch.setenv("LECTURE2DOC_QWEN_MODEL", "qwen3-vl:8b")
+    assert qwen_vision.selected_model() == "qwen3-vl:8b"
+
+
+def test_qwen38_requires_newer_ollama(monkeypatch):
+    def fake_request(path, payload=None, timeout=15):
+        if path == "/api/version":
+            return {"version": "0.39.9"}
+        if path == "/api/tags":
+            return {"models": [{"name": "qwen3.8:27b-mlx"}]}
+        raise AssertionError(path)
+
+    monkeypatch.setattr(qwen_vision, "_request_json", fake_request)
+    with pytest.raises(RuntimeError, match="0.40.0"):
+        qwen_vision.ollama_status("qwen3.8:27b-mlx")
+
+
+def test_qwen38_status_accepts_current_ollama_and_reports_model_size(monkeypatch):
+    def fake_request(path, payload=None, timeout=15):
+        if path == "/api/version":
+            return {"version": "0.40.14"}
+        if path == "/api/tags":
+            return {"models": [{"name": "qwen3.8:27b-mlx"}]}
+        raise AssertionError(path)
+
+    monkeypatch.setattr(qwen_vision, "_request_json", fake_request)
+    status = qwen_vision.ollama_status("qwen3.8:27b-mlx")
+    assert status["installed"] is True
+    assert status["download_gb"] == 18.0
+    assert status["recommended_memory_gb"] == 32
