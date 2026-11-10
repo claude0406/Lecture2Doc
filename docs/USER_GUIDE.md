@@ -165,7 +165,7 @@ unset LECTURE2DOC_KO_RECOGNIZER
 1. `lecture2doc ocr-models --language ko`로 새 모델을 준비합니다.
 2. 서버를 종료하고 다시 실행합니다.
 3. 기존 강의의 **C · 판서 텍스트**에서 **OCR 다시 실행**을 누릅니다.
-4. 완료 후 상태에 `korean-handwriting-rec`이 표시되는지 확인합니다.
+4. 기본 모델을 사용했다면 상태에 `korean-PP-OCRv5-mobile`이 표시되는지 확인합니다. 실험 손글씨 모델을 선택한 경우에만 `korean-handwriting-rec`이 표시됩니다.
 
 이 기능은 저장된 A/B 판서 이미지를 다시 읽습니다. 영상 프레임 추출·A/B 복원·음성 전사는 다시 실행하지 않습니다. 이전 OCR 파일은 캐시에 남고 새 결과만 manifest에 연결됩니다.
 
