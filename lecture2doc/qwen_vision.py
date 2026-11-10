@@ -21,6 +21,7 @@ from .storage import digest
 LATEST_QWEN_MODEL = "qwen3.8:27b-mlx"
 BALANCED_QWEN_MODEL = "qwen3-vl:8b"
 COMPACT_QWEN_MODEL = "qwen3-vl:4b"
+ULTRA_COMPACT_QWEN_MODEL = "qwen3-vl:2b"
 DEFAULT_QWEN_MODEL = LATEST_QWEN_MODEL
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434"
 MIN_OLLAMA_VERSION = (0, 12, 7)
@@ -61,6 +62,15 @@ QWEN_MODEL_CATALOG = {
         "platform": "다중 플랫폼",
         "vision": True,
         "description": "저메모리 Mac용 Qwen3-VL 4B",
+    },
+    ULTRA_COMPACT_QWEN_MODEL: {
+        "profile": "ultra-compact",
+        "parameters": "2B",
+        "download_gb": 1.9,
+        "recommended_memory_gb": 8,
+        "platform": "다중 플랫폼",
+        "vision": True,
+        "description": "메모리가 매우 작은 장치용 Qwen3-VL 2B",
     },
 }
 QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-2-qwen38"
@@ -115,6 +125,8 @@ def recommend_model(profile: str = "auto", memory_gb: float | None = None,
             return "qwen3.8:27b"
     if memory is not None and memory >= 24:
         return BALANCED_QWEN_MODEL
+    if memory is not None and memory < 16:
+        return ULTRA_COMPACT_QWEN_MODEL
     return COMPACT_QWEN_MODEL
 
 
@@ -190,7 +202,12 @@ def ollama_status(model: str | None = None) -> dict:
 
 def pull_model(model: str | None = None, profile: str = "auto") -> dict:
     """Download a recommended or explicitly selected Qwen vision model locally."""
-    name = model or selected_model() if profile == "auto" else model or recommend_model(profile)
+    if model:
+        name = model
+    elif profile == "auto":
+        name = selected_model()
+    else:
+        name = recommend_model(profile)
     executable = shutil.which("ollama")
     if not executable:
         raise RuntimeError(
