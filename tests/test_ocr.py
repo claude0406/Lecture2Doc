@@ -177,3 +177,54 @@ def test_korean_ocr_rejects_old_recognizer_index(tmp_path):
     )
     with pytest.raises(RuntimeError, match="ocr-models --language ko"):
         RapidEngine(OCRConfig(language="ko"), directory=tmp_path)
+
+
+
+def test_web_api_reruns_existing_korean_ocr_with_current_model(tmp_path, monkeypatch):
+    from lecture2doc import ocr
+
+    data = tmp_path / "data"
+    job_id = "a" * 24
+    folder = data / job_id
+    manifest = record(folder)
+    previous = recognize_pages(folder, manifest, OCRConfig(language="ko"), engine=Engine())
+    manifest["ocr"] = previous
+    write(folder / "manifest.json", manifest)
+
+    called = {}
+
+    def rerun(root, current_manifest, config, progress=None, force=False):
+        called["root"] = Path(root)
+        called["language"] = config.language
+        called["force"] = force
+        return {
+            "status": "complete",
+            "language": config.language,
+            "version": "test-new-version",
+            "elapsed_seconds": 0.25,
+            "cache_hits": 0,
+            "inference_pages": 1,
+            "pages": [{
+                "board_page_id": "p1",
+                "regions": [],
+                "engine": {
+                    "models": {"det": "PP-OCRv6-small", "rec": "korean-handwriting-rec"}
+                },
+            }],
+        }
+
+    monkeypatch.setattr(ocr, "recognize_pages", rerun)
+    with TestClient(create_app(data)) as client:
+        response = client.post(
+            f"/api/jobs/{job_id}/ocr",
+            headers={"x-lecture2doc": "1"},
+        )
+
+    assert response.status_code == 200
+    assert called["root"] == folder
+    assert called["language"] == "ko"
+    assert called["force"] is True
+    assert response.json()["recognizer"] == "korean-handwriting-rec"
+    updated = read(folder / "manifest.json")
+    assert updated["ocr"]["version"] == "test-new-version"
+    assert updated["timings"]["ocr"]["status"] == "complete"
