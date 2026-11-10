@@ -183,3 +183,57 @@ def test_environment_model_override_has_priority_over_saved_choice(tmp_path, mon
     qwen_vision._save_model_selection("qwen3-vl:8b")
     monkeypatch.setenv("LECTURE2DOC_QWEN_MODEL", "qwen3-vl:4b")
     assert qwen_vision.selected_model() == "qwen3-vl:4b"
+
+
+
+def test_qwen_json_parser_removes_thinking_and_markdown_fence():
+    content = (
+        "<think>먼저 강의 주제를 검토합니다.</think>\n"
+        + chr(96) * 3 + "json\n"
+        + '{"topic":"미분방정식","concepts":[]}\n'
+        + chr(96) * 3
+    )
+    parsed = qwen_vision._parse_json_object(content)
+    assert parsed == {"topic": "미분방정식", "concepts": []}
+
+
+def test_qwen_json_parser_extracts_object_after_short_preamble():
+    content = '분석 결과입니다: {"topic":"선형대수","concepts":[{"name":"고유값"}]} 끝'
+    parsed = qwen_vision._parse_json_object(content)
+    assert parsed["topic"] == "선형대수"
+    assert parsed["concepts"][0]["name"] == "고유값"
+
+
+def test_structured_chat_disables_thinking_and_uses_robust_json_parser(monkeypatch):
+    captured = {}
+
+    monkeypatch.setattr(
+        qwen_vision, "ollama_status",
+        lambda model=None: {"installed": True, "model": model or "qwen3-vl:4b"},
+    )
+
+    def fake_request(path, payload=None, timeout=15):
+        captured["path"] = path
+        captured["payload"] = payload
+        return {
+            "message": {
+                "content": (
+                    "<think>핵심 개념 후보를 검토합니다.</think>\n"
+                    + chr(96) * 3 + "json\n"
+                    + '{"topic":"미분방정식","concepts":[]}\n'
+                    + chr(96) * 3
+                )
+            }
+        }
+
+    monkeypatch.setattr(qwen_vision, "_request_json", fake_request)
+    parsed = qwen_vision.structured_chat(
+        "강의 핵심 개념을 골라 주세요.",
+        {"type": "object", "properties": {"topic": {"type": "string"}}},
+        model="qwen3-vl:4b",
+    )
+
+    assert parsed["topic"] == "미분방정식"
+    assert captured["path"] == "/api/chat"
+    assert captured["payload"]["think"] is False
+    assert captured["payload"]["stream"] is False
