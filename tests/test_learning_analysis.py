@@ -256,3 +256,46 @@ def test_curation_falls_back_when_local_qwen_is_not_installed(monkeypatch):
     assert curated["ai_curation"]["status"] == "not_configured"
     assert curated["ai_curation"]["provider"] is None
     assert curated["concepts"][0]["name"] == "고유값"
+
+
+
+def test_ai_selection_uses_candidate_ids_when_term_spelling_differs():
+    from lecture2doc.learning_analysis import _apply_ai_selection
+
+    result = {
+        "pages": [{
+            "concepts": [{"name": "미분방정식", "importance_score": 75}],
+        }],
+        "concepts": [{
+            "id": "c-board-001",
+            "name": "미분 방정식",
+            "importance_score": 75,
+            "speech_occurrences": [
+                {"segment_id": "t1", "start": 12.0, "end": 15.0, "text": "미분 방정식의 분류를 설명하겠습니다."}
+            ],
+            "board_appearances": [{"board_page_id": "p1", "start": 10.0, "end": 20.0}],
+            "board_page_ids": ["p1"],
+            "reasons": ["음성에서 1회 언급"],
+        }],
+    }
+
+    curated = _apply_ai_selection(
+        result,
+        {
+            "topic": "미분 방정식 분류",
+            "concepts": [{
+                "name": "미분 방정식의 분류",
+                "candidate_ids": ["c-board-001"],
+                "source_terms": ["미분방정식의 분류"],
+                "reason": "강의에서 분류 방법을 설명하는 핵심 내용입니다.",
+                "relevance": 96,
+            }],
+        },
+        "qwen3-vl:4b",
+    )
+
+    assert len(curated["concepts"]) == 1
+    assert curated["concepts"][0]["speech_occurrences"][0]["segment_id"] == "t1"
+    assert curated["concepts"][0]["board_page_ids"] == ["p1"]
+    assert curated["concepts"][0]["source_terms"] == ["미분 방정식"]
+    assert curated["ai_curation"]["selected_count"] == 1
