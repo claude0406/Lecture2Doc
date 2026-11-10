@@ -8,7 +8,7 @@ import re
 
 from .storage import stage
 
-LEARNING_ANALYSIS_VERSION = "2026-11-10.learning-importance-3-local-qwen"
+LEARNING_ANALYSIS_VERSION = "2026-11-10.learning-importance-4-qwen38"
 _TOKEN = re.compile(r"[가-힣]{2,}|[A-Za-z][A-Za-z0-9_+-]*|\d+(?:\.\d+)?|[∫∑∏√∂∆∇∞≤≥≠≈→←↔⊂∈]+")
 _KOREAN_ENDINGS = (
     "했습니다", "하였습니다", "이었습니다", "였습니다", "입니다", "습니다",
@@ -43,7 +43,7 @@ _IMPORTANCE_CUES = (
     ("대표 문제·예제", re.compile(r"예제|대표 문제|연습문제|문제 풀")),
 )
 _MAX_CONCEPTS = 5
-_AI_MODEL_DEFAULT = "qwen3-vl:4b"
+_AI_MODEL_DEFAULT = "qwen3.8:27b-mlx"
 
 
 def _normal(value: str) -> str:
