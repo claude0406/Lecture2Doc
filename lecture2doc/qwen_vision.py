@@ -214,3 +214,38 @@ def review_board_image(
         "elapsed_seconds": round(time.monotonic() - started, 3),
         "local_only": True,
     }
+
+
+
+def structured_chat(prompt: str, schema: dict, model: str | None = None, timeout: int = 180) -> dict:
+    """Run text-only structured generation locally with the same Qwen vision model."""
+    model_name = model or selected_model()
+    status = ollama_status(model_name)
+    if not status["installed"]:
+        raise RuntimeError(
+            f"Qwen 모델 {model_name}이 설치되어 있지 않습니다. "
+            "lecture2doc qwen-models를 먼저 실행하세요."
+        )
+    response = _request_json(
+        "/api/chat",
+        {
+            "model": model_name,
+            "messages": [{
+                "role": "user",
+                "content": prompt + "\n\n반드시 JSON 형식으로만 답변하세요.",
+            }],
+            "format": schema,
+            "stream": False,
+            "keep_alive": "5m",
+            "options": {"temperature": 0, "num_ctx": 8192},
+        },
+        timeout=timeout,
+    )
+    content = (response.get("message") or {}).get("content", "")
+    try:
+        parsed = json.loads(content)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError("Qwen 응답을 JSON으로 읽지 못했습니다.") from exc
+    if not isinstance(parsed, dict):
+        raise RuntimeError("Qwen 응답이 JSON 객체가 아닙니다.")
+    return parsed
