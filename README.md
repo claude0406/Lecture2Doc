@@ -19,10 +19,11 @@
 - Python 3.11 이상
 - FFmpeg와 `ffprobe`
 - Bash 셸(Linux/macOS 또는 Windows WSL)
+- Qwen Vision 기능을 사용할 때는 Ollama 0.12.7 이상(macOS 앱)
 
 ### 설치 및 실행
 
-저장소 루트에서 앱과 OCR을 설치합니다. Qwen Vision 기능을 사용하려면 별도로 Ollama를 설치하고 Qwen 모델도 내려받습니다. 모델 파일 자체는 Git에 포함하지 않습니다.
+저장소 루트에서 앱과 OCR을 설치합니다. Qwen Vision 기능을 사용하려면 Ollama 0.12.7 이상을 설치하고 앱을 실행한 뒤 Qwen 모델도 내려받습니다. 모델 파일 자체는 Git에 포함하지 않습니다.
 
 ```bash
 python3.11 -m venv .venv
