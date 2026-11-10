@@ -115,6 +115,9 @@ def test_recommended_qwen_model_uses_balanced_and_compact_for_smaller_macs():
         "auto", memory_gb=16, system="Darwin", machine="arm64"
     ) == "qwen3-vl:4b"
     assert qwen_vision.recommend_model(
+        "auto", memory_gb=8, system="Darwin", machine="arm64"
+    ) == "qwen3-vl:2b"
+    assert qwen_vision.recommend_model(
         "auto", memory_gb=None, system="Darwin", machine="arm64"
     ) == "qwen3-vl:4b"
 
@@ -125,6 +128,7 @@ def test_recommended_model_profiles_can_be_selected_explicitly():
     ) == "qwen3.8:27b-mlx"
     assert qwen_vision.recommend_model("balanced", memory_gb=16) == "qwen3-vl:8b"
     assert qwen_vision.recommend_model("compact", memory_gb=64) == "qwen3-vl:4b"
+    assert qwen_vision.recommend_model("ultra-compact", memory_gb=32) == "qwen3-vl:2b"
 
 
 def test_selected_model_environment_override(monkeypatch):
