@@ -133,8 +133,6 @@ class RapidEngine:
         index = root / f"{config.language}.json"
         if not index.exists():
             raise FileNotFoundError(f"OCR 모델을 준비하세요: lecture2doc ocr-models --language {config.language}")
-        from rapidocr import RapidOCR
-        from rapidocr.utils.typings import LangRec, ModelType, OCRVersion
         self.identity = read(index)
         if (
             config.language == "ko"
@@ -144,6 +142,8 @@ class RapidEngine:
                 "기존 한글 OCR 모델이 준비되어 있습니다. 새 한국어 손글씨 모델로 바꾸려면 "
                 "'lecture2doc ocr-models --language ko'를 먼저 실행하세요."
             )
+        from rapidocr import RapidOCR
+        from rapidocr.utils.typings import LangRec, ModelType, OCRVersion
         for item in self.identity["files"].values():
             path = root / item["path"]
             if not path.is_file() or digest(path) != item["sha256"]:
