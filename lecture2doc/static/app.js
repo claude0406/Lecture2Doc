@@ -108,7 +108,40 @@ function renderLearningAnalysis(){
   card.append(head,jump);
   if(item.importance_score!=null){const meter=document.createElement('progress');meter.max=100;meter.value=item.importance_score;meter.setAttribute('aria-label','중요도');card.append(meter)}
   const reasons=text('p',(item.reasons||[]).slice(0,3).join(' · ')||'판단 근거가 충분하지 않습니다.','hint');
-  card.append(reasons);pagesBox.append(card);
+  card.append(reasons);
+  const previewLabel=text('p','중요 구간 미리보기','learning-preview-label');
+  const preview=document.createElement('video');
+  preview.className='learning-preview-video';
+  preview.controls=true;
+  preview.playsInline=true;
+  preview.preload='none';
+  preview.setAttribute('aria-label',`판서 ${boardNumber(page,row.index)} 중요 구간 미리보기`);
+  preview.dataset.start=String(Math.max(0,Number(item.start)||0));
+  preview.dataset.end=String(Math.max(Number(item.start)||0,Number(item.end)||0));
+  preview.src=file(manifest.playback);
+  preview.addEventListener('loadedmetadata',()=>{
+   const startTime=Number(preview.dataset.start);
+   const requestedEnd=Number(preview.dataset.end);
+   const duration=Number.isFinite(preview.duration)?preview.duration:requestedEnd;
+   const clipEnd=Math.min(requestedEnd,duration);
+   preview.dataset.clipEnd=String(clipEnd);
+   preview.currentTime=Math.min(startTime,Math.max(0,duration-0.1));
+  },{once:true});
+  preview.addEventListener('play',()=>{
+   document.querySelectorAll('.learning-preview-video').forEach(other=>{
+    if(other!==preview)other.pause();
+   });
+   $('video').pause();
+  });
+  preview.addEventListener('timeupdate',()=>{
+   const clipEnd=Number(preview.dataset.clipEnd||preview.dataset.end);
+   if(Number.isFinite(clipEnd)&&preview.currentTime>=clipEnd-0.08){
+    preview.pause();
+    preview.currentTime=Number(preview.dataset.start);
+   }
+  });
+  card.append(previewLabel,preview);
+  pagesBox.append(card);
  }
  const visibleIds=new Set(visible.map(page=>page.id));
  const concepts=(data.ai_curation?(data.concepts||[]):[]).filter(item=>
