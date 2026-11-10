@@ -94,7 +94,7 @@ OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `
 
 ### 로컬 Qwen Vision 설치와 사용
 
-Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 0.12.7 이상을 설치하고 앱을 실행합니다. Qwen Vision 모델은 기본 `qwen3-vl:4b`이며 약 3.3GB입니다.
+Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 앱을 설치하고 실행합니다. `lecture2doc qwen-models`는 Mac 메모리를 감지해 최신 Qwen3.8-27B MLX 또는 저메모리용 Qwen3-VL 8B/4B를 자동 선택합니다. Qwen3.8-27B는 약 18GB 다운로드와 Ollama 0.40.0 이상이 필요합니다.
 
 ```bash
 lecture2doc qwen-models
@@ -102,7 +102,7 @@ lecture2doc qwen-models
 
 기존 강의에서 C · 판서 텍스트의 **Qwen 판서 재검토**를 누르면 선택된 판서 이미지와 OCR 후보를 로컬 모델이 다시 읽습니다. Qwen 결과는 기존 OCR을 덮어쓰지 않고 별도 영역에 저장합니다. D · 학습 분석의 **분석 다시 실행**도 동일한 Qwen 모델을 사용해 주제 핵심 개념을 최대 5개 선별합니다.
 
-기본 모델보다 큰 모델을 사용하려면 서버 실행 전에 `LECTURE2DOC_QWEN_MODEL=qwen3-vl:8b`를 설정하고, 그 모델을 `lecture2doc qwen-models --model qwen3-vl:8b`로 내려받습니다. Qwen 추론은 로컬 Ollama에서만 실행되므로 API 키나 외부 AI 토큰 비용이 필요하지 않습니다. 최초 다운로드에는 인터넷이 필요합니다. [자세한 안내](QWEN_LOCAL.md)
+모델 목록은 `lecture2doc qwen-models --list`, 설치 여부는 `lecture2doc qwen-models --check`로 확인합니다. 최신 모델을 강제하려면 `lecture2doc qwen-models --profile latest`, 8B 균형형은 `--profile balanced`, 4B 저메모리 모델은 `--profile compact`를 사용합니다. 모델을 바꾼 뒤에는 서버 실행 전에 `LECTURE2DOC_QWEN_MODEL` 환경 변수를 지정하고 해당 모델을 내려받습니다. Qwen 추론은 로컬 Ollama에서만 실행되므로 API 키나 외부 AI 토큰 비용이 필요하지 않습니다. 최초 다운로드에는 인터넷이 필요합니다. [자세한 안내](QWEN_LOCAL.md)
 
 B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고치는 기능·통합 검색은 D에서 다룹니다. OCR에 수식이 문자열로 나타날 수 있지만 LaTeX로 변환하지 않습니다.
 
