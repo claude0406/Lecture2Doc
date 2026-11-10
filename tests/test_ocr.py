@@ -303,3 +303,60 @@ def test_korean_recognizer_defaults_to_base_and_handwriting_is_optional(tmp_path
     handwriting_engine = ocr.RapidEngine(OCRConfig(language="ko"), directory=tmp_path)
     assert handwriting_engine.identity["models"]["rec"] == "korean-handwriting-rec"
     assert handwriting_engine.engine["Rec.model_path"].endswith("rec_korean_hw.onnx")
+
+
+
+def test_web_api_stores_qwen_review_without_replacing_original_ocr(tmp_path, monkeypatch):
+    from lecture2doc import qwen_vision
+
+    data = tmp_path / "data"
+    data.mkdir()
+    job_id = "b" * 24
+    folder = data / job_id
+    manifest = record(folder)
+    original_text = "미분방정식 (Dffrential Eqtation)"
+    manifest["ocr"] = {
+        "status": "complete",
+        "language": "ko",
+        "pages": [{
+            "board_page_id": "p1",
+            "input": {"image": "b.png", "sha256": digest(folder / "b.png")},
+            "regions": [{"order": 1, "text": original_text, "score": 0.56}],
+            "text": original_text,
+        }],
+    }
+    write(folder / "manifest.json", manifest)
+
+    def fake_review(image_path, ocr_regions=None, model=None):
+        assert Path(image_path) == folder / "b.png"
+        assert ocr_regions[0]["text"] == original_text
+        return {
+            "status": "complete",
+            "model": "qwen3-vl:4b",
+            "text": "미분방정식 (Differential Equation)",
+            "blocks": [{
+                "kind": "title",
+                "text": "미분방정식 (Differential Equation)",
+                "latex": "",
+                "confidence": "medium",
+                "source_ocr_regions": [1],
+            }],
+            "local_only": True,
+        }
+
+    monkeypatch.setattr(qwen_vision, "review_board_image", fake_review)
+    with TestClient(create_app(data)) as client:
+        response = client.post(
+            f"/api/jobs/{job_id}/qwen-review",
+            headers={"x-lecture2doc": "1", "content-type": "application/json"},
+            json={"board_page_id": "p1"},
+        )
+
+    assert response.status_code == 200
+    assert response.json()["model"] == "qwen3-vl:4b"
+    updated = read(folder / "manifest.json")
+    page = updated["ocr"]["pages"][0]
+    assert page["text"] == original_text
+    assert page["qwen_review"]["text"] == "미분방정식 (Differential Equation)"
+    assert page["qwen_review"]["local_only"] is True
+    assert updated["timings"]["qwen_review"]["board_page_id"] == "p1"
