@@ -299,3 +299,63 @@ def test_ai_selection_uses_candidate_ids_when_term_spelling_differs():
     assert curated["concepts"][0]["board_page_ids"] == ["p1"]
     assert curated["concepts"][0]["source_terms"] == ["미분 방정식"]
     assert curated["ai_curation"]["selected_count"] == 1
+
+
+
+def test_empty_qwen_selection_links_candidates_matching_the_detected_topic():
+    from lecture2doc.learning_analysis import _apply_ai_selection
+
+    result = {
+        "pages": [{
+            "concepts": [
+                {"name": "미분", "importance_score": 60},
+                {"name": "방정식", "importance_score": 80},
+                {"name": "분류", "importance_score": 45},
+                {"name": "다음", "importance_score": 5},
+            ],
+        }],
+        "concepts": [
+            {
+                "id": "c1", "name": "미분", "importance_score": 60,
+                "speech_occurrences": [
+                    {"segment_id": "t1", "start": 12.0, "end": 14.0, "text": "미분 방정식의 분류를 설명하겠습니다."}
+                ],
+                "board_appearances": [], "board_page_ids": [], "reasons": [],
+            },
+            {
+                "id": "c2", "name": "방정식", "importance_score": 80,
+                "speech_occurrences": [
+                    {"segment_id": "t1", "start": 12.0, "end": 14.0, "text": "미분 방정식의 분류를 설명하겠습니다."}
+                ],
+                "board_appearances": [{"board_page_id": "p1", "start": 10.0, "end": 20.0}],
+                "board_page_ids": ["p1"], "reasons": [],
+            },
+            {
+                "id": "c3", "name": "분류", "importance_score": 45,
+                "speech_occurrences": [
+                    {"segment_id": "t2", "start": 15.0, "end": 17.0, "text": "미분 방정식은 여러 가지로 분류합니다."}
+                ],
+                "board_appearances": [], "board_page_ids": [], "reasons": [],
+            },
+            {
+                "id": "c4", "name": "다음", "importance_score": 5,
+                "speech_occurrences": [], "board_appearances": [],
+                "board_page_ids": [], "reasons": [],
+            },
+        ],
+    }
+
+    curated = _apply_ai_selection(
+        result, {"topic": "미분 방정식 분류", "concepts": []}, "qwen3-vl:4b"
+    )
+
+    assert curated["ai_curation"]["status"] == "partial"
+    assert curated["ai_curation"]["selection_mode"] == "topic_candidate_match"
+    assert curated["ai_curation"]["candidate_count"] == 4
+    assert curated["ai_curation"]["matched_candidate_count"] >= 2
+    assert len(curated["concepts"]) == 1
+    concept = curated["concepts"][0]
+    assert concept["name"] == "미분 방정식 분류"
+    assert concept["speech_occurrences"]
+    assert any(item["board_page_id"] == "p1" for item in concept["board_appearances"])
+    assert "다음" not in concept["source_terms"]
