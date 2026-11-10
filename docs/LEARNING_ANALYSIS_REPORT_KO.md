@@ -124,26 +124,32 @@ AI가 선별한 개념의 원문 표현을 전체 음성 전사에서 검색해 
 | 파일 | 변경 내용 |
 |---|---|
 | `lecture2doc/learning_analysis.py` | 중요도 계산, 불필요 단어 필터, 로컬 Qwen 기반 핵심 개념 선별, 등장 시각, 학습 분석 캐시 |
+| `lecture2doc/qwen_vision.py` | Ollama 모델 다운로드 상태 확인, 로컬 Qwen 이미지·텍스트 분석 |
+| `tests/test_qwen_vision.py` | 로컬 모델 상태, 이미지 전송, 결과 JSON 처리 테스트 |
 | `lecture2doc/pipeline.py` | OCR 이후 학습 분석 실행 단계 추가 및 처리 시간 기록 |
 | `lecture2doc/server.py` | 기존 강의의 OCR·Qwen 재검토·학습 분석 API |
 | `lecture2doc/static/index.html` | 학습 분석 화면 구성 |
 | `lecture2doc/static/app.js` | 중요도·개념 표시, 판서별 미니 영상, Qwen 재검토 결과 표시 |
 | `lecture2doc/static/style.css` | 학습 분석 화면 스타일 |
 | `lecture2doc/cli.py` | `--rerun learning-analysis` 선택지 추가 |
-| `tests/test_learning_analysis.py` | 분석·시간 연결·AI 선별 관련 단위 테스트 8개 |
+| `tests/test_learning_analysis.py` | 분석·시간 연결·AI 선별 관련 단위 테스트 10개 |
 | `docs/LEARNING_ANALYSIS.md` | 신규 기능 설명 |
 | `docs/ARCHITECTURE.md` | 파이프라인 및 저장 데이터 계약 반영 |
 | `README.md` | 신규 기능과 주요 코드 안내 |
 
 ## 6. 테스트 및 검증 상태
 
-이번 브랜치에는 다음 내용을 확인하도록 단위 테스트 8개를 추가했다.
+이번 브랜치에는 분석 로직 단위 테스트 10개를 추가했다. Qwen 연결 테스트 4개와 OCR 웹 API 테스트도 별도로 보강했다.
 
 1. 판서 개념이 음성에서 언급된 시간과 해당 발언을 연결하는지
 2. 음성 전사만 있는 경우 부분 분석으로 동작하는지
 3. 음성 없이 OCR만 있는 경우 중요도를 임의로 만들어내지 않는지
 4. 판서·음성 자료가 모두 없는 경우 근거 부족으로 처리하는지
 5. 낮은 신뢰도로 검수 표시된 OCR 텍스트가 판서 근거로 사용되지 않는지
+6. 일반 표현을 핵심 개념에서 제외하는지
+7. 로컬 Qwen이 기존 후보 중에서만 개념을 선별하는지
+8. Qwen 모델이 없는 경우 기본 필터로 대체하는지
+9. OCR 원본 결과를 보존하면서 Qwen 결과를 별도 저장하는지
 6. '한번', '것도' 등 일반 표현을 개념 후보에서 제외하는지
 7. AI가 기존 후보 안에서만 핵심 개념을 선별하고 관련 시간 정보를 보존하는지
 8. AI가 설정되지 않은 경우 기본 필터로 최대 5개만 표시하는지
