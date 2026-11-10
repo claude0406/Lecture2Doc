@@ -32,7 +32,7 @@ lecture2doc ocr-models --language en
 ./serve.sh
 ```
 
-OCR 모델 준비 명령은 네트워크에서 파일을 내려받아 `models/ocr/`에 저장합니다. `lecture2doc ocr-models --language ko  # 한국어 손글씨 인식 모델`를 추가로 실행하면 한글 모델도 준비됩니다. 앱은 `http://127.0.0.1:8765`에서 열립니다. `./serve.sh --port 8888`로 포트를 바꿀 수 있고, `./serve.sh --no-browser`는 브라우저를 자동으로 열지 않습니다. 서버 종료는 실행한 터미널에서 `Ctrl+C`입니다.
+OCR 모델 준비 명령은 네트워크에서 파일을 내려받아 `models/ocr/`에 저장합니다. `lecture2doc ocr-models --language ko`를 실행하면 한국어 손글씨 인식 모델도 준비됩니다. 앱은 `http://127.0.0.1:8765`에서 열립니다. `./serve.sh --port 8888`로 포트를 바꿀 수 있고, `./serve.sh --no-browser`는 브라우저를 자동으로 열지 않습니다. 서버 종료는 실행한 터미널에서 `Ctrl+C`입니다.
 
 `ffmpeg`와 `ffprobe`는 운영체제 패키지 관리자로 설치합니다. MP4V·MKV 등 브라우저에서 재생하기 어려운 영상은 H.264/AAC 사본을 만들 수 있습니다. 이때 FFmpeg 빌드에 `libx264`와 AAC 인코더가 필요합니다.
 
