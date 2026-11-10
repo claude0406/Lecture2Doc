@@ -32,7 +32,7 @@ lecture2doc ocr-models --language en
 ./serve.sh
 ```
 
-OCR 모델 준비 명령은 네트워크에서 파일을 내려받아 `models/ocr/`에 저장합니다. `lecture2doc ocr-models --language ko`를 추가로 실행하면 한글 모델도 준비됩니다. 앱은 `http://127.0.0.1:8765`에서 열립니다. `./serve.sh --port 8888`로 포트를 바꿀 수 있고, `./serve.sh --no-browser`는 브라우저를 자동으로 열지 않습니다. 서버 종료는 실행한 터미널에서 `Ctrl+C`입니다.
+OCR 모델 준비 명령은 네트워크에서 파일을 내려받아 `models/ocr/`에 저장합니다. `lecture2doc ocr-models --language ko  # 한국어 손글씨 인식 모델`를 추가로 실행하면 한글 모델도 준비됩니다. 앱은 `http://127.0.0.1:8765`에서 열립니다. `./serve.sh --port 8888`로 포트를 바꿀 수 있고, `./serve.sh --no-browser`는 브라우저를 자동으로 열지 않습니다. 서버 종료는 실행한 터미널에서 `Ctrl+C`입니다.
 
 `ffmpeg`와 `ffprobe`는 운영체제 패키지 관리자로 설치합니다. MP4V·MKV 등 브라우저에서 재생하기 어려운 영상은 H.264/AAC 사본을 만들 수 있습니다. 이때 FFmpeg 빌드에 `libx264`와 AAC 인코더가 필요합니다.
 
@@ -131,6 +131,7 @@ OCR과 음성 전사는 각각 `.[ocr]`, `.[stt]` 선택 의존성입니다. 고
 - [개발 범위와 로드맵](docs/ROADMAP.md)
 - [A/B 개선 보고서와 최신 결과](docs/AB_REFINEMENT.md)
 - [V1 OCR 구현과 실행 결과](docs/V1_OCR.md)
+- [OCR 모델 비교 및 한국어 손글씨 모델 교체](docs/OCR_MODEL_EVALUATION.md)
 - [검증 기록과 남은 한계](docs/VALIDATION.md)
 - [강의 중요도와 개념 시간 연결](docs/LEARNING_ANALYSIS.md)
 - [강의 학습 분석 및 캐시 최적화 보고서](docs/LEARNING_ANALYSIS_REPORT_KO.md)
