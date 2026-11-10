@@ -301,3 +301,26 @@ python -m pytest -q
 - D · 학습 분석의 핵심 개념 선별도 로컬 Qwen으로 처리한다. Ollama가 실행되지 않거나 모델이 없으면 기존 문자열 기반 필터로 대체한다.
 - `lecture2doc/qwen_vision.py`, `tests/test_qwen_vision.py`, 웹 API 및 UI 연결을 추가했다.
 - 로컬 추론 주소는 `127.0.0.1:11434`이며 외부 AI API 토큰 비용은 발생하지 않는다. 최초 모델 다운로드는 인터넷을 사용한다.
+
+## 12. 최신 Qwen 모델 자동 선택 및 필수 다운로드 세트 통합
+
+2026년 11월 기준 최신 공개 Qwen 비전·언어 모델 Qwen3.8-27B를 로컬 Ollama 실행 후보에 추가했다. Apple Silicon용 `qwen3.8:27b-mlx`는 약 18GB이며 이미지 입력을 지원한다. Qwen3.8-27B 가중치의 공개 라이선스는 Apache-2.0이다.
+
+Mac 메모리별 자동 선택은 다음과 같다.
+
+| 통합 메모리 | 선택 모델 | 대략적인 다운로드 크기 |
+|---|---|---:|
+| Apple Silicon 32GB 이상 | `qwen3.8:27b-mlx` | 약 18GB |
+| 24GB 이상 | `qwen3-vl:8b` | 약 6.2GB |
+| 16GB 이상 24GB 미만 | `qwen3-vl:4b` | 약 3.3GB |
+| 16GB 미만 | `qwen3-vl:2b` | 약 1.9GB |
+| 메모리 감지 실패 | `qwen3-vl:4b` | 약 3.3GB |
+
+`lecture2doc setup-models` 통합 명령을 추가했다. Ollama 실행 및 버전을 먼저 확인한 뒤 영문·한글 OCR 모델과 메모리에 맞는 Qwen 모델을 함께 내려받는다. OCR 모델만 또는 Qwen 모델만 필요한 경우 기존 `ocr-models`, `qwen-models` 명령도 유지한다.
+
+다운로드에 성공한 Qwen 모델 선택은 `models/qwen/selection.json`에 기록해 프로그램을 재실행해도 같은 모델을 계속 사용한다. 이 설정 파일과 모델 가중치는 Git에서 제외한다. `LECTURE2DOC_QWEN_MODEL` 환경 변수는 저장된 선택보다 우선한다. 메모리 사양이 바뀌거나 자동 추천을 다시 적용하려면 `lecture2doc setup-models`를 다시 실행한다.
+
+Qwen 비전 모델 하나가 C · 판서 이미지 재검토와 D · 핵심 개념 선별의 텍스트 분석을 함께 담당한다. 추론은 Ollama 로컬 서버에서 실행하며 외부 AI API 토큰 비용은 발생하지 않는다. 최초 다운로드에는 인터넷 연결이 필요하고, 이후 추론은 Mac의 메모리·연산 자원을 사용한다.
+
+추가된 테스트는 메모리별 자동 선택, Ollama 버전 확인, 로컬 모델 선택 저장·재사용, 필수 모델 통합 다운로드 경로를 확인한다. 테스트 코드는 추가했으나 이 대화의 원격 GitHub 편집 환경에서는 실제 pytest를 실행하지 않았다.
+
