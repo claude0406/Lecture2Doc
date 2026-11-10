@@ -91,6 +91,7 @@ function renderLearningAnalysis(){
   $('learning-message').textContent='이전 분석 결과입니다. 아래의 분석 다시 실행을 눌러 AI 핵심 개념 선별을 적용해 주세요.';
  }
  if(ai.status==='complete') $('learning-status').textContent+=' · AI 개념 선별';
+ else if(ai.status==='partial') $('learning-status').textContent+=' · Qwen 주제 기반 후보 연결';
  else if(ai.status==='not_configured') $('learning-status').textContent+=' · 기본 필터';
  else if(ai.status==='failed') $('learning-status').textContent+=' · 기본 필터 대체';
  const visible=records();
