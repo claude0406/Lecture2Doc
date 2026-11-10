@@ -351,6 +351,57 @@ def create_app(data_dir=None, record_dir=None):
             raise HTTPException(404, "분석 결과가 아직 없습니다")
         return visible_manifest(p.parent)
 
+    @app.post("/api/jobs/{job_id}/ocr")
+    def rerun_ocr(job_id: str):
+        with edit_lock:
+            folder = job_dir(job_id)
+            if active(job_id):
+                raise HTTPException(409, "강의 처리 중에는 OCR을 실행할 수 없습니다")
+            path = folder / "manifest.json"
+            if not path.is_file():
+                raise HTTPException(404, "분석 결과가 아직 없습니다")
+            manifest_data = read(path)
+            previous = manifest_data.get("ocr") or {}
+            language = previous.get("language") or manifest_data.get("config", {}).get("ocr_language") or "ko"
+            previous_pages = previous.get("pages") or []
+            previous_config = next(
+                (page.get("config") for page in previous_pages if page.get("config")),
+                {},
+            )
+            try:
+                from .ocr import OCRConfig, recognize_pages
+                config = OCRConfig(
+                    language=language,
+                    min_score=float(previous_config.get("min_score", 0.5)),
+                    review_score=float(previous_config.get("review_score", 0.75)),
+                    preprocessing=previous_config.get("preprocessing", "rgb"),
+                    threads=int(previous_config.get("threads", 4)),
+                ).validate()
+                started = time.monotonic()
+                result = recognize_pages(
+                    folder, manifest_data, config=config, progress=lambda message: None, force=True
+                )
+                manifest_data["ocr"] = result
+                manifest_data.setdefault("timings", {})["ocr"] = dict(
+                    elapsed_seconds=result.get("elapsed_seconds", round(time.monotonic() - started, 3)),
+                    status=result.get("status"),
+                    cache_hits=result.get("cache_hits", 0),
+                    inference_pages=result.get("inference_pages", 0),
+                )
+                write(path, manifest_data)
+            except Exception as exc:
+                raise HTTPException(500, f"OCR 재실행 실패: {type(exc).__name__}: {exc}")
+        first_page = next(iter(result.get("pages", [])), {})
+        recognizer = (first_page.get("engine") or {}).get("models", {}).get("rec")
+        return dict(
+            status="complete",
+            language=result.get("language"),
+            pages=len(result.get("pages", [])),
+            recognizer=recognizer,
+            elapsed_seconds=result.get("elapsed_seconds"),
+            message=f"OCR 재실행 완료 · {recognizer or '모델 정보 없음'}",
+        )
+
     @app.post("/api/jobs/{job_id}/learning-analysis")
     def run_learning_analysis(job_id: str):
         with edit_lock:
