@@ -118,6 +118,8 @@ function renderLearningAnalysis(){
   preview.setAttribute('aria-label',`판서 ${boardNumber(page,row.index)} 중요 구간 미리보기`);
   preview.dataset.start=String(Math.max(0,Number(item.start)||0));
   preview.dataset.end=String(Math.max(Number(item.start)||0,Number(item.end)||0));
+  const posterFrame=manifest.source_frames.find(frame=>frame.id===page.selected_frame_id);
+  if(posterFrame)preview.poster=file(posterFrame.image);
   preview.src=file(manifest.playback);
   preview.addEventListener('loadedmetadata',()=>{
    const startTime=Number(preview.dataset.start);
