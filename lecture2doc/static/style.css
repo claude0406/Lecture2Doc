@@ -36,3 +36,6 @@ dialog{max-width:480px;width:calc(100vw - 40px);padding:0;border:1px solid var(-
 .learning-preview-label{font-size:11px;color:var(--muted);margin:10px 0 5px}
 .learning-preview-video{display:block;width:100%;max-width:320px;aspect-ratio:16/9;height:auto;object-fit:contain;background:#101512;border:1px solid var(--line);border-radius:9px}
 @media(max-width:800px){.learning-preview-video{max-width:100%}}
+
+#ocr-rerun{margin-left:auto;white-space:nowrap;font-size:11px;padding:7px 10px}
+#ocr-rerun:disabled{opacity:.55;cursor:wait}
