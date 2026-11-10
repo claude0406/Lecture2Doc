@@ -396,42 +396,55 @@ def _fallback_concepts(concepts: list[dict]) -> list[dict]:
 
 
 def _apply_ai_selection(result: dict, selection: dict, model: str) -> dict:
+    """Apply Qwen choices to evidence candidates without losing timestamp links."""
     candidates = result.get("concepts", [])
     by_name = {_normal(item.get("name", "")): item for item in candidates}
     by_id = {str(item.get("id")): item for item in candidates if item.get("id")}
     chosen, used = [], set()
-    for entry in selection.get("concepts", [])[:_MAX_CONCEPTS]:
-        if not isinstance(entry, dict):
-            continue
-        matched = []
-        # Stable candidate IDs avoid losing a valid concept when the model
-        # changes spacing or punctuation in the displayed/source term.
-        for candidate_id in entry.get("candidate_ids", []):
-            item = by_id.get(str(candidate_id))
-            if item and item["id"] not in used and item not in matched:
-                matched.append(item)
-        aliases = entry.get("source_terms") or [entry.get("name", "")]
-        for alias in aliases:
-            item = by_name.get(_normal(alias))
-            if item and item["id"] not in used and item not in matched:
-                matched.append(item)
-        if not matched:
-            continue
-        used.update(item["id"] for item in matched)
+    topic = str(selection.get("topic", "")).strip()[:100]
+    raw_entries = selection.get("concepts", [])
+    if not isinstance(raw_entries, list):
+        raw_entries = []
+
+    def match_alias(alias: str) -> list[dict]:
+        alias_norm = _normal(alias)
+        if len(alias_norm) < 2:
+            return []
+        exact = by_name.get(alias_norm)
+        if exact:
+            return [exact]
+        # Korean spacing/compound-word variants often differ between OCR,
+        # transcript tokenization, and the model's display label.
+        matches = [
+            item for item in candidates
+            if len(_normal(item.get("name", ""))) >= 2
+            and (
+                _normal(item.get("name", "")) in alias_norm
+                or alias_norm in _normal(item.get("name", ""))
+            )
+        ]
+        return matches
+
+    def merge_candidates(matched: list[dict], entry: dict) -> dict:
         merged = dict(matched[0])
         if len(matched) > 1:
             merged["speech_occurrences"] = sorted(
-                {row.get("segment_id"): row for item in matched for row in item.get("speech_occurrences", []) if row.get("segment_id")}.values(),
+                {row.get("segment_id"): row for item in matched
+                 for row in item.get("speech_occurrences", []) if row.get("segment_id")}.values(),
                 key=lambda row: row["start"],
             )
             merged["board_appearances"] = sorted(
-                {row.get("board_page_id"): row for item in matched for row in item.get("board_appearances", [])}.values(),
+                {row.get("board_page_id"): row for item in matched
+                 for row in item.get("board_appearances", [])}.values(),
                 key=lambda row: row["start"],
             )
             merged["board_page_ids"] = list(dict.fromkeys(
                 page_id for item in matched for page_id in item.get("board_page_ids", [])
             ))
-            scores = [item.get("importance_score") for item in matched if item.get("importance_score") is not None]
+            scores = [
+                item.get("importance_score") for item in matched
+                if item.get("importance_score") is not None
+            ]
             merged["importance_score"] = max(scores) if scores else None
             merged["reasons"] = list(dict.fromkeys(
                 reason for item in matched for reason in item.get("reasons", [])
@@ -440,10 +453,77 @@ def _apply_ai_selection(result: dict, selection: dict, model: str) -> dict:
         merged["source_terms"] = [item["name"] for item in matched]
         merged["ai_reason"] = str(entry.get("reason", "")).strip()[:180]
         try:
-            merged["relevance_score"] = max(0, min(100, int(entry.get("relevance", 0))))
-        except (TypeError, ValueError):
-            merged["relevance_score"] = 0
-        chosen.append(merged)
+            merged["relevance_score"] = max(0, min(100, int(entry["relevance"])))
+        except (KeyError, TypeError, ValueError):
+            merged["relevance_score"] = None
+        return merged
+
+    explicit_match_count = 0
+    for entry in raw_entries[:_MAX_CONCEPTS]:
+        if not isinstance(entry, dict):
+            continue
+        matched, matched_ids = [], set()
+        for candidate_id in entry.get("candidate_ids", []):
+            item = by_id.get(str(candidate_id))
+            if item and item["id"] not in used and item["id"] not in matched_ids:
+                matched.append(item)
+                matched_ids.add(item["id"])
+        aliases = list(entry.get("source_terms") or [])
+        aliases.append(entry.get("name", ""))
+        for alias in aliases:
+            for item in match_alias(str(alias)):
+                if item.get("id") not in used and item.get("id") not in matched_ids:
+                    matched.append(item)
+                    matched_ids.add(item["id"])
+        if not matched:
+            continue
+        used.update(item["id"] for item in matched if item.get("id"))
+        chosen.append(merge_candidates(matched, entry))
+        explicit_match_count += len(matched)
+
+    topic_fallback = False
+    # Small local models can correctly identify the lecture topic but return
+    # an empty concepts array. In that case connect only terms already present
+    # in the evidence candidates; never invent a new occurrence or timestamp.
+    if not chosen and topic and candidates:
+        topic_norm = _normal(topic)
+        topic_tokens = set(_tokens(topic))
+        related = []
+        for item in candidates:
+            name = str(item.get("name", ""))
+            name_norm = _normal(name)
+            if not name_norm:
+                continue
+            matched_by_phrase = len(name_norm) >= 2 and (
+                name_norm in topic_norm or topic_norm in name_norm
+            )
+            candidate_tokens = set(_tokens(name))
+            overlap = topic_tokens & candidate_tokens
+            matched_by_tokens = bool(overlap) and (
+                len(candidate_tokens) == 1 or len(overlap) / max(1, len(candidate_tokens)) >= 0.5
+            )
+            if matched_by_phrase or matched_by_tokens:
+                related.append((item, len(overlap), len(item.get("speech_occurrences", []))))
+        related.sort(
+            key=lambda pair: (
+                pair[1],
+                bool(pair[0].get("board_page_ids")),
+                pair[2],
+                pair[0].get("importance_score") or 0,
+            ),
+            reverse=True,
+        )
+        topic_matches = [item for item, _, _ in related[:_MAX_CONCEPTS]]
+        if topic_matches:
+            chosen.append(merge_candidates(
+                topic_matches,
+                {
+                    "name": topic,
+                    "reason": "Qwen이 파악한 강의 주제와 실제 음성·판서에서 추출한 후보 표현을 연결했습니다.",
+                },
+            ))
+            used.update(item.get("id") for item in topic_matches if item.get("id"))
+            topic_fallback = True
 
     result = dict(result)
     result["concepts"] = chosen
@@ -456,17 +536,40 @@ def _apply_ai_selection(result: dict, selection: dict, model: str) -> dict:
             item for item in page.get("concepts", [])
             if _normal(item.get("name", "")) in selected_terms
         ]
-    topic = str(selection.get("topic", "")).strip()[:100]
+
+    if topic_fallback:
+        status = "partial"
+        message = (
+            f"강의 주제: {topic}. Qwen의 직접 개념 선택은 비어 있어, "
+            f"주제와 일치하는 실제 후보 {len(topic_matches)}개를 음성·판서 근거에 연결했습니다."
+        )
+    elif chosen:
+        status = "complete"
+        message = (
+            f"강의 주제: {topic}. Qwen이 핵심 개념 {len(chosen)}개를 선별했습니다."
+            if topic else f"Qwen이 핵심 개념 {len(chosen)}개를 선별했습니다."
+        )
+    else:
+        status = "partial"
+        message = (
+            f"Qwen이 강의 주제 '{topic or '미확인'}'를 파악했지만, "
+            f"연결 가능한 후보가 없습니다. 추출 후보 {len(candidates)}개, "
+            f"Qwen 선택 {len(raw_entries)}개, 실제 연결 0개입니다. OCR과 음성 전사 내용을 확인하세요."
+        )
     result["ai_curation"] = {
-        "status": "complete", "provider": "ollama-qwen", "model": model,
-        "topic": topic, "selected_count": len(chosen),
-        "message": "AI가 강의 문맥과 판서 근거를 바탕으로 핵심 개념을 선별했습니다.",
+        "status": status,
+        "provider": "ollama-qwen",
+        "model": model,
+        "topic": topic,
+        "selected_count": len(chosen),
+        "candidate_count": len(candidates),
+        "raw_selected_count": len(raw_entries),
+        "matched_candidate_count": explicit_match_count if not topic_fallback else len(topic_matches),
+        "selection_mode": "topic_candidate_match" if topic_fallback else "qwen_candidate_ids",
+        "message": message,
     }
-    result["method"] = "evidence_rules+ai_curated"
-    result["message"] = (
-        f"강의 주제: {topic}. AI가 핵심 개념 {len(chosen)}개를 선별했습니다."
-        if topic else f"AI가 핵심 개념 {len(chosen)}개를 선별했습니다."
-    )
+    result["method"] = "evidence_rules+qwen_topic_match" if topic_fallback else "evidence_rules+ai_curated"
+    result["message"] = message
     return result
 
 
