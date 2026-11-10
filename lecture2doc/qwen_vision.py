@@ -73,7 +73,7 @@ QWEN_MODEL_CATALOG = {
         "description": "메모리가 매우 작은 장치용 Qwen3-VL 2B",
     },
 }
-QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-2-qwen38"
+QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-3-json-robust"
 MODEL_SELECTION_PATH = Path(__file__).resolve().parent.parent / "models" / "qwen" / "selection.json"
 
 
