@@ -82,7 +82,7 @@ Qwen은 외부 API가 아닌 Ollama 로컬 서버에서 실행합니다. Ollama 
 lecture2doc qwen-models
 ```
 
-기본 명령은 메모리별로 최신 `qwen3.8:27b-mlx`(32GB 이상), `qwen3-vl:8b`(24GB 이상), `qwen3-vl:4b`(그보다 작거나 메모리 감지 실패)를 자동 선택합니다. 지원 모델은 `lecture2doc qwen-models --list`, 설치 상태는 `lecture2doc qwen-models --check`로 확인할 수 있고, `--profile latest|balanced|compact|ultra-compact`로 직접 고를 수도 있습니다. Qwen3.8-27B에는 Ollama 0.40.0 이상이 필요합니다. 모델을 받은 뒤 강의의 C · 판서 텍스트에서 **Qwen 판서 재검토**를 누르면 원본 이미지와 기존 OCR 후보를 비교합니다. D · 학습 분석의 **분석 다시 실행**은 동일한 Qwen 모델로 핵심 개념을 최대 5개 선별합니다.
+기본 명령은 메모리별로 `qwen3.8:27b-mlx`(Apple Silicon 32GB 이상), `qwen3-vl:8b`(24GB 이상), `qwen3-vl:4b`(16GB 이상 24GB 미만 또는 메모리 감지 실패), `qwen3-vl:2b`(16GB 미만)를 자동 선택합니다. 지원 모델은 `lecture2doc qwen-models --list`, 설치 상태는 `lecture2doc qwen-models --check`로 확인할 수 있고, `--profile latest|balanced|compact|ultra-compact`로 직접 고를 수도 있습니다. Qwen3.8-27B에는 Ollama 0.40.0 이상이 필요합니다. 모델을 받은 뒤 강의의 C · 판서 텍스트에서 **Qwen 판서 재검토**를 누르면 원본 이미지와 기존 OCR 후보를 비교합니다. D · 학습 분석의 **분석 다시 실행**은 동일한 Qwen 모델로 핵심 개념을 최대 5개 선별합니다.
 
 자세한 설치·오류 해결은 [로컬 Qwen 안내](docs/QWEN_LOCAL.md)를 참고하세요.
 
