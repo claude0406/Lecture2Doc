@@ -153,7 +153,7 @@ def test_ai_selection_keeps_only_supported_topic_concepts():
                 "relevance": 96,
             }],
         },
-        "gpt-6-luna",
+        "qwen3-vl:4b",
     )
     assert [item["name"] for item in curated["concepts"]] == ["미분방정식"]
     assert curated["concepts"][0]["speech_occurrences"][0]["segment_id"] == "t1"
@@ -175,3 +175,84 @@ def test_fallback_concepts_filters_filler_words_and_limits_count():
     selected = _fallback_concepts(concepts)
     assert len(selected) <= 5
     assert all(item["name"] not in {"한번", "것도"} for item in selected)
+
+
+
+def test_curation_uses_local_qwen_without_openai_key(monkeypatch):
+    from lecture2doc import learning_analysis, qwen_vision
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setenv("LECTURE2DOC_QWEN_MODEL", "qwen3-vl:4b")
+    monkeypatch.setattr(
+        qwen_vision, "ollama_status",
+        lambda model=None: {"installed": True, "model": model},
+    )
+    monkeypatch.setattr(
+        learning_analysis, "_ai_request",
+        lambda payload, model: {
+            "topic": "미분방정식",
+            "concepts": [{
+                "name": "미분방정식",
+                "source_terms": ["미분방정식"],
+                "reason": "강의 전체에서 반복적으로 정의와 풀이를 다룹니다.",
+                "relevance": 95,
+            }],
+        },
+    )
+    result = {
+        "pages": [{
+            "concepts": [{
+                "name": "미분방정식", "importance_score": 80,
+            }],
+        }],
+        "concepts": [{
+            "id": "c1",
+            "name": "미분방정식",
+            "importance_score": 80,
+            "speech_occurrences": [
+                {"segment_id": "t1", "start": 1, "end": 3, "text": "미분방정식의 정의입니다."}
+            ],
+            "board_appearances": [{"board_page_id": "p1", "start": 0, "end": 4}],
+            "board_page_ids": ["p1"],
+            "reasons": ["음성에서 1회 언급"],
+        }],
+    }
+    manifest = {
+        "transcript": {"segments": [{"id": "t1", "start": 1, "end": 3, "text": "미분방정식의 정의입니다."}]},
+        "ocr": {"pages": [{"board_page_id": "p1", "text": "미분방정식", "regions": [{"text": "미분방정식", "score": 0.95}]}]},
+    }
+
+    curated = learning_analysis._curate_concepts_with_ai(manifest, result)
+
+    assert curated["ai_curation"]["status"] == "complete"
+    assert curated["ai_curation"]["provider"] == "ollama-qwen"
+    assert curated["ai_curation"]["model"] == "qwen3-vl:4b"
+    assert curated["ai_curation"]["topic"] == "미분방정식"
+    assert [item["name"] for item in curated["concepts"]] == ["미분방정식"]
+
+
+def test_curation_falls_back_when_local_qwen_is_not_installed(monkeypatch):
+    from lecture2doc import learning_analysis, qwen_vision
+
+    monkeypatch.setattr(
+        qwen_vision, "ollama_status",
+        lambda model=None: {"installed": False, "model": model},
+    )
+    result = {
+        "pages": [{"concepts": [{"name": "고유값"}]}],
+        "concepts": [{
+            "id": "c1", "name": "고유값", "importance_score": 80,
+            "speech_occurrences": [
+                {"segment_id": "t1", "start": 1, "end": 2, "text": "고유값은 중요합니다."},
+                {"segment_id": "t2", "start": 3, "end": 4, "text": "고유값을 기억하세요."},
+            ],
+            "board_appearances": [], "board_page_ids": [], "reasons": [],
+        }],
+    }
+    curated = learning_analysis._curate_concepts_with_ai(
+        {"transcript": {"segments": []}, "ocr": {"pages": []}},
+        result,
+    )
+    assert curated["ai_curation"]["status"] == "not_configured"
+    assert curated["ai_curation"]["provider"] is None
+    assert curated["concepts"][0]["name"] == "고유값"
