@@ -327,12 +327,18 @@ def test_web_api_stores_qwen_review_without_replacing_original_ocr(tmp_path, mon
     }
     write(folder / "manifest.json", manifest)
 
+    called = {"count": 0}
+
     def fake_review(image_path, ocr_regions=None, model=None):
+        called["count"] += 1
         assert Path(image_path) == folder / "b.png"
         assert ocr_regions[0]["text"] == original_text
+        assert model == "qwen3-vl:4b"
         return {
             "status": "complete",
+            "version": qwen_vision.QWEN_REVIEW_VERSION,
             "model": "qwen3-vl:4b",
+            "source_sha256": digest(image_path),
             "text": "미분방정식 (Differential Equation)",
             "blocks": [{
                 "kind": "title",
@@ -344,6 +350,7 @@ def test_web_api_stores_qwen_review_without_replacing_original_ocr(tmp_path, mon
             "local_only": True,
         }
 
+    monkeypatch.setattr(qwen_vision, "selected_model", lambda: "qwen3-vl:4b")
     monkeypatch.setattr(qwen_vision, "review_board_image", fake_review)
     with TestClient(create_app(data)) as client:
         response = client.post(
@@ -351,9 +358,17 @@ def test_web_api_stores_qwen_review_without_replacing_original_ocr(tmp_path, mon
             headers={"x-lecture2doc": "1", "content-type": "application/json"},
             json={"board_page_id": "p1"},
         )
+        cached = client.post(
+            f"/api/jobs/{job_id}/qwen-review",
+            headers={"x-lecture2doc": "1", "content-type": "application/json"},
+            json={"board_page_id": "p1"},
+        )
 
     assert response.status_code == 200
     assert response.json()["model"] == "qwen3-vl:4b"
+    assert cached.status_code == 200
+    assert cached.json()["cached"] is True
+    assert called["count"] == 1
     updated = read(folder / "manifest.json")
     page = updated["ocr"]["pages"][0]
     assert page["text"] == original_text
