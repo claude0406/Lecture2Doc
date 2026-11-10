@@ -94,7 +94,7 @@ OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `
 
 ### 로컬 Qwen Vision 설치와 사용
 
-Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 앱을 설치하고 실행합니다. `lecture2doc qwen-models`는 Mac 메모리를 감지해 최신 Qwen3.8-27B MLX 또는 저메모리용 Qwen3-VL 8B/4B를 자동 선택합니다. Qwen3.8-27B는 약 18GB 다운로드와 Ollama 0.40.0 이상이 필요합니다.
+Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 앱을 설치하고 실행합니다. `lecture2doc qwen-models`는 Mac 메모리를 감지해 최신 Qwen3.8-27B MLX 또는 기기 메모리에 따라 Qwen3-VL 8B/4B/2B를 자동 선택합니다. Qwen3.8-27B는 약 18GB 다운로드와 Ollama 0.40.0 이상이 필요합니다.
 
 ```bash
 lecture2doc qwen-models
