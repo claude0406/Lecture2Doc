@@ -268,6 +268,10 @@ python -m pytest tests/test_feature_cache.py -q
 python -m pytest -q
 ```
 
+## 10. 한국어 OCR 모델 기본값 조정
+
+초기 `korean-handwriting-rec` 기본 적용 후 실제 강의 화면에서 한국어·영어 혼합 문장과 영문 표기가 악화되는 사례를 확인했다. 이에 기본 인식기를 한국어와 영어를 지원하는 PP-OCRv5 Korean Mobile로 되돌리고, 손글씨 파인튜닝 모델은 `LECTURE2DOC_KO_RECOGNIZER=handwriting`으로 선택하는 비교용 모델로 유지한다. 기존 강의는 서버 재시작 후 C · 판서 텍스트의 **OCR 다시 실행** 버튼으로 다시 인식해야 하며, 화면에서 실제 선택된 모델명을 확인한다.
+
 ## 9. GitHub
 
 - 새 브랜치: https://github.com/claude0406/Lecture2Doc/tree/기능/강의-중요도-시간연결.time
