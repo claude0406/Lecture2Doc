@@ -15,6 +15,8 @@ def main():
     models = sub.add_parser("ocr-models", help="로컬 OCR 모델 준비 (첫 다운로드)")
     models.add_argument("--language", choices=["en", "ko"], default="en")
     models.add_argument("--dir", type=Path)
+    qwen = sub.add_parser("qwen-models", help="로컬 Qwen Vision 모델 다운로드 (Ollama 필요)")
+    qwen.add_argument("--model", help="Qwen 모델 이름 (기본값: qwen3-vl:4b)")
     ocr = sub.add_parser("ocr", help="기존 A/B 판서에 C 텍스트 인식 추가")
     ocr.add_argument("record", type=Path)
     ocr.add_argument("--out", type=Path, help="기존 결과를 보존하고 새 폴더에 OCR 기록")
@@ -38,6 +40,14 @@ def main():
     run.add_argument("--rerun", choices=["decode", "analysis", "pages", "transcript", "reconstruction", "page-restoration", "playback", "ocr", "learning-analysis"],
                      action="append", default=[], help="지정 단계를 새 캐시 폴더에서 재실행 (반복 지정 가능)")
     args = parser.parse_args()
+    if args.command == "qwen-models":
+        from .qwen_vision import DEFAULT_QWEN_MODEL, pull_model
+        try:
+            result = pull_model(args.model or DEFAULT_QWEN_MODEL)
+            print(f"Qwen 모델 준비 완료: {result['model']} · Ollama {result['ollama_version']} · 로컬 설치 확인")
+        except Exception as exc:
+            parser.exit(1, f"Qwen 모델 준비 실패: {exc}\n")
+        return
     if args.command in ("ocr-models", "ocr"):
         from .ocr import OCRConfig, annotate_record, prepare_models
         try:
