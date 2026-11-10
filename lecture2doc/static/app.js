@@ -285,6 +285,7 @@ function renderOCR(){
   }
   $('qwen-review-result').append(box);
  }
+}
 
 $('ocr-rerun').onclick=async()=>{
  const job=currentId,button=$('ocr-rerun');if(!job)return;
