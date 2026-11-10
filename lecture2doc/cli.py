@@ -1,4 +1,5 @@
 import argparse
+import os
 from pathlib import Path
 
 from .pipeline import process
@@ -53,12 +54,13 @@ def main():
     if args.command == "setup-models":
         from .ocr import prepare_models
         from .qwen_vision import (
-            ollama_status, pull_model, recommend_model, selected_model,
+            ollama_status, pull_model, recommend_model,
         )
         try:
-            model = args.qwen_model or (
-                selected_model() if args.qwen_profile == "auto"
-                else recommend_model(args.qwen_profile)
+            model = (
+                args.qwen_model
+                or os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
+                or recommend_model(args.qwen_profile)
             )
             # Check Ollama before downloading OCR files, avoiding a half-complete setup.
             ollama_status(model)
@@ -78,7 +80,7 @@ def main():
     if args.command == "qwen-models":
         from .qwen_vision import (
             QWEN_MODEL_CATALOG, detect_memory_gb, model_download_info,
-            ollama_status, pull_model, recommend_model, selected_model,
+            ollama_status, pull_model, recommend_model,
         )
         try:
             if args.list:
@@ -90,7 +92,11 @@ def main():
                         f"권장 메모리 {details['recommended_memory_gb']}GB · {details['description']}"
                     )
                 return
-            selected = args.model or (selected_model() if args.profile == "auto" else recommend_model(args.profile))
+            selected = (
+                args.model
+                or os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
+                or recommend_model(args.profile)
+            )
             details = model_download_info(selected)
             print(f"선택 모델: {selected}")
             print(f"모델 유형: {details['profile']} · 다운로드 약 {details['download_gb'] or '확인 불가'}GB")
