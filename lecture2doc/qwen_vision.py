@@ -1,10 +1,11 @@
-"""Local Qwen vision review for OCR pages through the Ollama API."""
+"""Local Qwen vision and text analysis through the Ollama API."""
 from __future__ import annotations
 
 import base64
 import json
 import os
 from pathlib import Path
+import platform
 import re
 import shutil
 import subprocess
@@ -16,18 +17,129 @@ import cv2
 
 from .storage import digest
 
-DEFAULT_QWEN_MODEL = "qwen3-vl:4b"
+# Latest local open-weight Qwen vision-language model as of 2026-11.
+LATEST_QWEN_MODEL = "qwen3.8:27b-mlx"
+BALANCED_QWEN_MODEL = "qwen3-vl:8b"
+COMPACT_QWEN_MODEL = "qwen3-vl:4b"
+DEFAULT_QWEN_MODEL = LATEST_QWEN_MODEL
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434"
 MIN_OLLAMA_VERSION = (0, 12, 7)
-QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-1"
+MIN_QWEN38_OLLAMA_VERSION = (0, 40, 0)
+QWEN_MODEL_CATALOG = {
+    LATEST_QWEN_MODEL: {
+        "profile": "latest",
+        "parameters": "27B",
+        "download_gb": 18.0,
+        "recommended_memory_gb": 32,
+        "platform": "Apple Silicon",
+        "vision": True,
+        "description": "최신 Qwen3.8-27B MLX 4비트 계열 비전·언어 모델",
+    },
+    "qwen3.8:27b": {
+        "profile": "latest",
+        "parameters": "27B",
+        "download_gb": 18.0,
+        "recommended_memory_gb": 40,
+        "platform": "다중 플랫폼",
+        "vision": True,
+        "description": "최신 Qwen3.8-27B 비전·언어 모델",
+    },
+    BALANCED_QWEN_MODEL: {
+        "profile": "balanced",
+        "parameters": "8B",
+        "download_gb": 6.2,
+        "recommended_memory_gb": 24,
+        "platform": "다중 플랫폼",
+        "vision": True,
+        "description": "메모리가 제한된 장치용 Qwen3-VL 8B",
+    },
+    COMPACT_QWEN_MODEL: {
+        "profile": "compact",
+        "parameters": "4B",
+        "download_gb": 3.3,
+        "recommended_memory_gb": 16,
+        "platform": "다중 플랫폼",
+        "vision": True,
+        "description": "저메모리 Mac용 Qwen3-VL 4B",
+    },
+}
+QWEN_REVIEW_VERSION = "2026-11-10.qwen-board-review-2-qwen38"
 
 
 def ollama_url() -> str:
     return os.environ.get("LECTURE2DOC_OLLAMA_URL", DEFAULT_OLLAMA_URL).rstrip("/")
 
 
+def detect_memory_gb() -> float | None:
+    """Detect unified/system memory without requiring psutil."""
+    system = platform.system()
+    try:
+        if system == "Darwin":
+            result = subprocess.run(
+                ["sysctl", "-n", "hw.memsize"],
+                capture_output=True, text=True, check=True, timeout=5,
+            )
+            return round(int(result.stdout.strip()) / (1024 ** 3), 1)
+        if system == "Linux":
+            with open("/proc/meminfo", "r", encoding="ascii") as handle:
+                for line in handle:
+                    if line.startswith("MemTotal:"):
+                        return round(int(line.split()[1]) / (1024 ** 2), 1)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+    return None
+
+
+def recommend_model(profile: str = "auto", memory_gb: float | None = None,
+                    system: str | None = None, machine: str | None = None) -> str:
+    """Choose the newest practical local vision model for available memory."""
+    system = system or platform.system()
+    machine = machine or platform.machine().lower()
+    memory = detect_memory_gb() if memory_gb is None else memory_gb
+
+    if profile == "latest":
+        return LATEST_QWEN_MODEL if system == "Darwin" and machine in ("arm64", "aarch64") else "qwen3.8:27b"
+    if profile == "balanced":
+        return BALANCED_QWEN_MODEL
+    if profile == "compact":
+        return COMPACT_QWEN_MODEL
+    if profile != "auto":
+        raise ValueError("Qwen 프로필은 auto, latest, balanced, compact 중 하나여야 합니다")
+
+    # The 27B 4-bit artifact occupies about 18GB on disk. Keep a margin
+    # for macOS, Ollama, the image context, and the rest of Lecture2Doc.
+    if memory is not None and memory >= 32:
+        if system == "Darwin" and machine in ("arm64", "aarch64"):
+            return LATEST_QWEN_MODEL
+        if memory >= 40:
+            return "qwen3.8:27b"
+    if memory is not None and memory >= 24:
+        return BALANCED_QWEN_MODEL
+    return COMPACT_QWEN_MODEL
+
+
 def selected_model() -> str:
-    return os.environ.get("LECTURE2DOC_QWEN_MODEL", DEFAULT_QWEN_MODEL).strip() or DEFAULT_QWEN_MODEL
+    override = os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
+    return override or recommend_model("auto")
+
+
+def model_download_info(model: str | None = None) -> dict:
+    name = model or selected_model()
+    details = QWEN_MODEL_CATALOG.get(name, {})
+    return {
+        "model": name,
+        "profile": details.get("profile", "custom"),
+        "download_gb": details.get("download_gb"),
+        "recommended_memory_gb": details.get("recommended_memory_gb"),
+        "system_memory_gb": detect_memory_gb(),
+        "description": details.get("description", "사용자가 지정한 Ollama 모델"),
+        "vision": details.get("vision", name.startswith("qwen")),
+    }
+
+
+def _version_tuple(version_text: str) -> tuple[int, int, int]:
+    numbers = tuple(int(part) for part in re.findall(r"\d+", version_text)[:3])
+    return numbers + (0,) * (3 - len(numbers))
 
 
 def _request_json(path: str, payload: dict | None = None, timeout: int = 15) -> dict:
@@ -55,40 +167,42 @@ def _request_json(path: str, payload: dict | None = None, timeout: int = 15) -> 
 
 def ollama_status(model: str | None = None) -> dict:
     """Return local Ollama version and whether the requested model is installed."""
+    wanted = model or selected_model()
     info = _request_json("/api/version")
     version_text = str(info.get("version", ""))
-    numbers = tuple(int(part) for part in re.findall(r"\d+", version_text)[:3])
-    padded = numbers + (0,) * (3 - len(numbers))
-    if padded < MIN_OLLAMA_VERSION:
+    minimum = MIN_QWEN38_OLLAMA_VERSION if wanted.startswith("qwen3.8") else MIN_OLLAMA_VERSION
+    if _version_tuple(version_text) < minimum:
+        required = ".".join(str(part) for part in minimum)
         raise RuntimeError(
-            f"Ollama {MIN_OLLAMA_VERSION[0]}.{MIN_OLLAMA_VERSION[1]}.{MIN_OLLAMA_VERSION[2]} 이상이 필요합니다. "
+            f"Ollama {required} 이상이 필요합니다. "
             f"현재 버전: {version_text or '확인 불가'}"
         )
     tags = _request_json("/api/tags")
     installed = {item.get("name") or item.get("model") for item in tags.get("models", [])}
-    wanted = model or selected_model()
     return {
         "ollama_version": version_text,
         "model": wanted,
         "installed": wanted in installed,
         "base_url": ollama_url(),
+        **model_download_info(wanted),
     }
 
 
-def pull_model(model: str | None = None) -> dict:
-    """Download a Qwen vision model into Ollama's managed local model store."""
-    name = model or selected_model()
+def pull_model(model: str | None = None, profile: str = "auto") -> dict:
+    """Download a recommended or explicitly selected Qwen vision model locally."""
+    name = model or selected_model() if profile == "auto" else model or recommend_model(profile)
     executable = shutil.which("ollama")
     if not executable:
         raise RuntimeError(
             "Ollama 명령을 찾을 수 없습니다. https://ollama.com/download 에서 macOS용 Ollama를 설치하세요."
         )
-    ollama_status(name)
-    completed = subprocess.run([executable, "pull", name], check=False, text=True)
-    if completed.returncode:
-        raise RuntimeError(
-            f"Qwen 모델 다운로드 실패(exit={completed.returncode}). Ollama 앱과 네트워크를 확인하세요."
-        )
+    status = ollama_status(name)
+    if not status["installed"]:
+        completed = subprocess.run([executable, "pull", name], check=False, text=True)
+        if completed.returncode:
+            raise RuntimeError(
+                f"Qwen 모델 다운로드 실패(exit={completed.returncode}). Ollama 앱과 네트워크를 확인하세요."
+            )
     status = ollama_status(name)
     if not status["installed"]:
         raise RuntimeError(f"다운로드 명령은 끝났지만 {name} 모델이 설치 목록에 없습니다.")
@@ -119,7 +233,7 @@ def review_board_image(
     ocr_regions: list[dict] | None = None,
     model: str | None = None,
 ) -> dict:
-    """Read a single board image and compare the visual evidence with local OCR text."""
+    """Read a single board image and compare visual evidence with local OCR text."""
     started = time.monotonic()
     image_path = Path(image_path).resolve()
     model_name = model or selected_model()
@@ -214,7 +328,6 @@ def review_board_image(
         "elapsed_seconds": round(time.monotonic() - started, 3),
         "local_only": True,
     }
-
 
 
 def structured_chat(prompt: str, schema: dict, model: str | None = None, timeout: int = 180) -> dict:
