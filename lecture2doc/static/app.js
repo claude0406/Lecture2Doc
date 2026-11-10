@@ -248,7 +248,8 @@ function renderOCR(){
  const result=ocr?.pages?.find(p=>p.board_page_id===page.id);
  $('ocr-regions').replaceChildren();$('ocr-actions').hidden=true;$('ocr-message').textContent='';
  if(!result){$('ocr-status').textContent=ocr?.status==='failed'?'처리 실패':'미실행';$('ocr-message').textContent=ocr?.message||'이 기록에는 OCR 결과가 없습니다.';return}
- $('ocr-status').textContent=`${result.regions.length}개 영역 · ${ocr.language==='ko'?'한글·영문':'영문'}`;
+ const recognizer=(result.engine||{}).models?.rec;
+ $('ocr-status').textContent=`${result.regions.length}개 영역 · ${ocr.language==='ko'?'한글·영문':'영문'}${recognizer?' · '+recognizer:''}`;
  $('ocr-message').textContent=`${result.input.output} 이미지에서 인식 · 원본 ${fmt(result.input.time)}`;
  $('ocr-actions').hidden=false;$('ocr-text').href=file(result.text_file);$('ocr-json').href=file(result.json_file);$('ocr-overlay').href=file(result.overlay);
  $('ocr-copy').onclick=async()=>{try{await navigator.clipboard.writeText(result.text);$('ocr-message').textContent='텍스트를 복사했습니다.'}catch(e){$('ocr-message').textContent='TXT 파일에서 텍스트를 복사할 수 있습니다.'}};
@@ -261,6 +262,22 @@ function renderOCR(){
  }
 }
 
+$('ocr-rerun').onclick=async()=>{
+ const job=currentId,button=$('ocr-rerun');if(!job)return;
+ button.disabled=true;button.textContent='OCR 재인식 중…';
+ $('ocr-message').textContent='새 OCR 모델로 기존 판서 이미지를 다시 읽고 있습니다. A/B 판서와 원본 영상은 변경하지 않습니다.';
+ try{
+  const result=await api(`/api/jobs/${job}/ocr`,editOptions('POST'));
+  if(currentId!==job)return;
+  manifest=await api(`/api/jobs/${job}/manifest`);
+  renderOCR();
+  $('ocr-message').textContent=result.message+` · 판서 ${result.pages}장 · ${Number(result.elapsed_seconds||0).toFixed(1)}초`;
+ }catch(e){
+  $('ocr-message').textContent=e.message;
+ }finally{
+  button.disabled=false;button.textContent='OCR 다시 실행';
+ }
+};
 $('delete-lecture').onclick=()=>deleteLecture(currentId);
 $('delete-current-board').onclick=()=>{const s=records()[currentState];if(s)editBoards([s.id])};
 $('delete-selected-boards').onclick=()=>editBoards([...selectedBoards]);
