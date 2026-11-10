@@ -246,7 +246,8 @@ library();if(/^[a-f0-9]{24}$/.test(location.hash.slice(1)))openJob(location.hash
 function renderOCR(){
  const page=records()[currentState],ocr=manifest.ocr;
  const result=ocr?.pages?.find(p=>p.board_page_id===page.id);
- $('ocr-regions').replaceChildren();$('ocr-actions').hidden=true;$('ocr-message').textContent='';
+ $('ocr-regions').replaceChildren();$('qwen-review-result').replaceChildren();$('ocr-actions').hidden=true;$('ocr-message').textContent='';
+ $('qwen-review').disabled=!result;
  if(!result){$('ocr-status').textContent=ocr?.status==='failed'?'처리 실패':'미실행';$('ocr-message').textContent=ocr?.message||'이 기록에는 OCR 결과가 없습니다.';return}
  const recognizer=(result.engine||{}).models?.rec;
  $('ocr-status').textContent=`${result.regions.length}개 영역 · ${ocr.language==='ko'?'한글·영문':'영문'}${recognizer?' · '+recognizer:''}`;
@@ -260,7 +261,30 @@ function renderOCR(){
   const body=text('div','');body.append(text('p',region.text),text('small',`${region.order} · 인식 점수 ${(region.score*100).toFixed(0)}%${region.review?' · 낮은 점수':''}`));
   row.append(a,body);$('ocr-regions').append(row);
  }
-}
+ const qwen=result.qwen_review;
+ if(qwen){
+  const box=text('section','','qwen-review-box');
+  const heading=text('div','','qwen-review-heading');
+  heading.append(text('h3','Qwen 이미지 재검토 결과'),text('small',`${qwen.model||'Qwen'} · ${Number(qwen.elapsed_seconds||0).toFixed(1)}초 · 원본 OCR 유지`));
+  box.append(heading);
+  if(qwen.text)box.append(text('pre',qwen.text,'qwen-review-text'));
+  for(const block of qwen.blocks||[]){
+   const row=text('div','','qwen-review-block');
+   row.append(text('span',block.kind==='formula'?'수식':block.kind==='title'?'제목':block.kind==='list'?'목록':'문장','qwen-block-kind'));
+   row.append(text('p',block.text||''));
+   if(block.latex)row.append(text('code',block.latex,'qwen-latex'));
+   const refs=(block.source_ocr_regions||[]).join(', ');
+   row.append(text('small',`판독 ${block.confidence||'미표시'}${refs?' · 기존 OCR 영역 '+refs:''}`));
+   box.append(row);
+  }
+  if((qwen.unreadable_regions||[]).length){
+   const unreadable=text('div','','qwen-unreadable');
+   unreadable.append(text('strong','판독이 어려운 부분'));
+   for(const item of qwen.unreadable_regions)unreadable.append(text('p',item));
+   box.append(unreadable);
+  }
+  $('qwen-review-result').append(box);
+ }
 
 $('ocr-rerun').onclick=async()=>{
  const job=currentId,button=$('ocr-rerun');if(!job)return;
@@ -276,6 +300,22 @@ $('ocr-rerun').onclick=async()=>{
   $('ocr-message').textContent=e.message;
  }finally{
   button.disabled=false;button.textContent='OCR 다시 실행';
+ }
+};
+$('qwen-review').onclick=async()=>{
+ const job=currentId,page=records()[currentState],button=$('qwen-review');if(!job||!page)return;
+ button.disabled=true;button.textContent='Qwen 분석 중…';
+ $('ocr-message').textContent='선택 판서 이미지와 기존 OCR 후보를 로컬 Qwen 모델에 전달하고 있습니다. 외부 API는 사용하지 않습니다.';
+ try{
+  const result=await api(`/api/jobs/${job}/qwen-review`,editOptions('POST',{board_page_id:page.id}));
+  if(currentId!==job)return;
+  manifest=await api(`/api/jobs/${job}/manifest`);
+  renderOCR();
+  $('ocr-message').textContent=result.message+` · ${result.blocks}개 인식 블록 · ${Number(result.elapsed_seconds||0).toFixed(1)}초`;
+ }catch(e){
+  $('ocr-message').textContent=e.message;
+ }finally{
+  button.disabled=false;button.textContent='Qwen 판서 재검토';
  }
 };
 $('delete-lecture').onclick=()=>deleteLecture(currentId);
