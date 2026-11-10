@@ -26,7 +26,7 @@ KOREAN_HANDWRITING_MODEL_FILES = {
     ),
 }
 
-OCR_VERSION = "2026-11-10.ocr-2-korean-handwriting"
+OCR_VERSION = "2026-11-10.ocr-3-korean-base-default"
 
 
 @dataclass(frozen=True)
@@ -56,7 +56,7 @@ def models_dir():
 
 
 def prepare_models(language="en", directory=None):
-    """Download local detector and language-specific recognizer models."""
+    """Download the detector, default recognizer, and optional Korean handwriting recognizer."""
     OCRConfig(language=language).validate()
     from rapidocr.inference_engine.base import FileInfo, InferSession
     from rapidocr.utils.typings import EngineType, LangDet, LangRec, ModelType, OCRVersion, TaskType
@@ -88,16 +88,32 @@ def prepare_models(language="en", directory=None):
     files["det"] = fetch(detector_info["model_dir"], detector_info.get("SHA256"))
 
     if language == "ko":
-        # Same PP-OCRv5 Korean recognizer interface and 11,945-token dictionary,
-        # fine-tuned for handwritten Hangul. Keep detector and post-processing.
-        files["rec"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["rec"])
-        files["dictionary"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["dictionary"])
-        recognizer = "korean-handwriting-rec"
+        # Default remains the official Korean+English PP-OCRv5 model.
+        base_config = FileInfo(
+            EngineType.ONNXRUNTIME, OCRVersion.PPOCRV5,
+            TaskType.REC, LangRec.KOREAN, ModelType.MOBILE,
+        )
+        base_info = InferSession.get_model_url(base_config)
+        files["rec"] = fetch(base_info["model_dir"], base_info.get("SHA256"))
+        if base_info.get("dict_url"):
+            files["dictionary"] = fetch(base_info["dict_url"])
+
+        # Keep the Korean handwriting fine-tune as an explicit experiment only.
+        files["rec_handwriting"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["rec"])
+        files["dictionary_handwriting"] = fetch(KOREAN_HANDWRITING_MODEL_FILES["dictionary"])
+        recognizer = "korean-PP-OCRv5-mobile"
         recognizer_source = {
+            "repository": "PaddleOCR PP-OCRv5 Korean",
+            "license": "Apache-2.0",
+            "supported_languages": ["Korean", "English"],
+            "task": "Korean and English mixed text recognition",
+        }
+        experimental_source = {
             "repository": KOREAN_HANDWRITING_MODEL_REPO,
             "license": "Apache-2.0",
             "base_model": "PP-OCRv5 Korean Mobile",
             "task": "Korean handwriting and printed-text recognition",
+            "selection": "LECTURE2DOC_KO_RECOGNIZER=handwriting",
         }
     else:
         recognizer_config = FileInfo(
@@ -114,6 +130,7 @@ def prepare_models(language="en", directory=None):
             "license": "See upstream model metadata",
             "task": "English text recognition",
         }
+        experimental_source = None
 
     result = dict(
         language=language,
@@ -121,6 +138,10 @@ def prepare_models(language="en", directory=None):
         engine_version=version("rapidocr"),
         models=dict(det="PP-OCRv6-small", rec=recognizer),
         model_sources=dict(det="RapidOCR PP-OCRv6-small", rec=recognizer_source),
+        experimental_models=(
+            {"rec": "korean-handwriting-rec", "source": experimental_source}
+            if experimental_source else {}
+        ),
         files=files,
     )
     write(root / f"{language}.json", result)
@@ -134,47 +155,83 @@ class RapidEngine:
         if not index.exists():
             raise FileNotFoundError(f"OCR 모델을 준비하세요: lecture2doc ocr-models --language {config.language}")
         self.identity = read(index)
-        if (
-            config.language == "ko"
-            and self.identity.get("models", {}).get("rec") != "korean-handwriting-rec"
-        ):
-            raise RuntimeError(
-                "기존 한글 OCR 모델이 준비되어 있습니다. 새 한국어 손글씨 모델로 바꾸려면 "
-                "'lecture2doc ocr-models --language ko'를 먼저 실행하세요."
-            )
-        from rapidocr import RapidOCR
-        from rapidocr.utils.typings import LangRec, ModelType, OCRVersion
-        for item in self.identity["files"].values():
+        files = self.identity.get("files", {})
+
+        recognizer_key = "rec"
+        dictionary_key = "dictionary"
+        selected_recognizer = self.identity.get("models", {}).get("rec", "")
+        if config.language == "ko":
+            if not {"rec_handwriting", "dictionary_handwriting"} <= files.keys():
+                raise RuntimeError(
+                    "한국어 OCR 모델 구성이 오래되었습니다. "
+                    "'lecture2doc ocr-models --language ko'를 다시 실행하세요."
+                )
+            mode = os.environ.get("LECTURE2DOC_KO_RECOGNIZER", "base").strip().lower()
+            if mode in ("handwriting", "korean-handwriting-rec"):
+                recognizer_key = "rec_handwriting"
+                dictionary_key = "dictionary_handwriting"
+                selected_recognizer = "korean-handwriting-rec"
+            elif mode not in ("", "base", "ppocrv5"):
+                raise ValueError(
+                    "LECTURE2DOC_KO_RECOGNIZER는 base 또는 handwriting이어야 합니다"
+                )
+            else:
+                selected_recognizer = "korean-PP-OCRv5-mobile"
+
+        for item in files.values():
             path = root / item["path"]
             if not path.is_file() or digest(path) != item["sha256"]:
                 raise ValueError(f"OCR 모델 파일 확인 실패: {path.name}")
+
+        from rapidocr import RapidOCR
+        from rapidocr.utils.typings import LangRec, ModelType, OCRVersion
+        selected_model = files.get(recognizer_key)
+        if not selected_model:
+            raise RuntimeError(
+                "선택한 OCR 인식 모델이 준비되지 않았습니다. "
+                "'lecture2doc ocr-models --language ko'를 실행하세요."
+            )
         params = {
             "Global.use_cls": False, "Global.text_score": config.min_score,
             "Global.max_side_len": 4096, "Global.log_level": "warning",
             "Det.limit_side_len": 1600, "Det.limit_type": "max",
-            "Det.model_path": str(root / self.identity["files"]["det"]["path"]),
-            "Rec.model_path": str(root / self.identity["files"]["rec"]["path"]),
+            "Det.model_path": str(root / files["det"]["path"]),
+            "Rec.model_path": str(root / selected_model["path"]),
             "Rec.lang_type": LangRec.KOREAN if config.language == "ko" else LangRec.EN,
             "Rec.ocr_version": OCRVersion.PPOCRV5 if config.language == "ko" else OCRVersion.PPOCRV6,
             "Rec.model_type": ModelType.MOBILE if config.language == "ko" else ModelType.MEDIUM,
             "EngineConfig.onnxruntime.intra_op_num_threads": config.threads,
             "EngineConfig.onnxruntime.inter_op_num_threads": 1,
         }
-        if "dictionary" in self.identity["files"]:
-            params["Rec.rec_keys_path"] = str(root / self.identity["files"]["dictionary"]["path"])
-        self.identity = dict(self.identity, runtime="onnxruntime", runtime_version=version("onnxruntime"),
-                             installed_engine_version=version("rapidocr"), parameters=params)
-        # Paths vary between machines; model bytes, not their location, identify the engine.
-        self.identity["parameters"] = {k: getattr(v, "value", v) for k, v in params.items()
-                                       if not k.endswith(("model_path", "rec_keys_path"))}
+        selected_dictionary = files.get(dictionary_key)
+        if selected_dictionary:
+            params["Rec.rec_keys_path"] = str(root / selected_dictionary["path"])
+
+        identity_models = dict(self.identity.get("models", {}))
+        identity_models["rec"] = selected_recognizer
+        self.identity = dict(
+            self.identity,
+            models=identity_models,
+            selected_recognizer=selected_recognizer,
+            runtime="onnxruntime",
+            runtime_version=version("onnxruntime"),
+            installed_engine_version=version("rapidocr"),
+        )
+        # Paths vary between machines; model bytes and selected recognizer identify the engine.
+        self.identity["parameters"] = {
+            k: getattr(v, "value", v) for k, v in params.items()
+            if not k.endswith(("model_path", "rec_keys_path"))
+        }
         self.engine = RapidOCR(params=params)
 
     def __call__(self, image):
         result = self.engine(image, use_cls=False)
         if result.boxes is None or result.txts is None:
             return []
-        return [dict(polygon=np.asarray(box).tolist(), text=text, score=float(score))
-                for box, text, score in zip(result.boxes, result.txts, result.scores)]
+        return [
+            dict(polygon=np.asarray(box).tolist(), text=text, score=float(score))
+            for box, text, score in zip(result.boxes, result.txts, result.scores)
+        ]
 
 
 def _path(root, name):
