@@ -8,7 +8,7 @@ import re
 
 from .storage import stage
 
-LEARNING_ANALYSIS_VERSION = "2026-11-10.learning-importance-5-qwen-json"
+LEARNING_ANALYSIS_VERSION = "2026-11-10.learning-importance-6-qwen-candidate-ids"
 _TOKEN = re.compile(r"[가-힣]{2,}|[A-Za-z][A-Za-z0-9_+-]*|\d+(?:\.\d+)?|[∫∑∏√∂∆∇∞≤≥≠≈→←↔⊂∈]+")
 _KOREAN_ENDINGS = (
     "했습니다", "하였습니다", "이었습니다", "였습니다", "입니다", "습니다",
