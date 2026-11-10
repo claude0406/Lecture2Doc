@@ -163,3 +163,23 @@ def test_qwen38_status_accepts_current_ollama_and_reports_model_size(monkeypatch
     assert status["installed"] is True
     assert status["download_gb"] == 18.0
     assert status["recommended_memory_gb"] == 32
+
+
+
+def test_selected_model_reads_persisted_download_choice(tmp_path, monkeypatch):
+    selection = tmp_path / "qwen" / "selection.json"
+    monkeypatch.setattr(qwen_vision, "MODEL_SELECTION_PATH", selection)
+    monkeypatch.delenv("LECTURE2DOC_QWEN_MODEL", raising=False)
+    qwen_vision._save_model_selection("qwen3-vl:8b")
+    assert qwen_vision.selected_model() == "qwen3-vl:8b"
+    saved = json.loads(selection.read_text(encoding="utf-8"))
+    assert saved["model"] == "qwen3-vl:8b"
+
+
+def test_environment_model_override_has_priority_over_saved_choice(tmp_path, monkeypatch):
+    selection = tmp_path / "qwen" / "selection.json"
+    monkeypatch.setattr(qwen_vision, "MODEL_SELECTION_PATH", selection)
+    monkeypatch.delenv("LECTURE2DOC_QWEN_MODEL", raising=False)
+    qwen_vision._save_model_selection("qwen3-vl:8b")
+    monkeypatch.setenv("LECTURE2DOC_QWEN_MODEL", "qwen3-vl:4b")
+    assert qwen_vision.selected_model() == "qwen3-vl:4b"
