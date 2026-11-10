@@ -107,7 +107,8 @@ def test_recommended_qwen_model_uses_latest_for_large_apple_silicon():
     assert model == "qwen3.8:27b-mlx"
 
 
-def test_recommended_qwen_model_uses_balanced_and_compact_for_smaller_macs():
+def test_recommended_qwen_model_uses_balanced_and_compact_for_smaller_macs(monkeypatch):
+    monkeypatch.setattr(qwen_vision, "detect_memory_gb", lambda: None)
     assert qwen_vision.recommend_model(
         "auto", memory_gb=24, system="Darwin", machine="arm64"
     ) == "qwen3-vl:8b"
