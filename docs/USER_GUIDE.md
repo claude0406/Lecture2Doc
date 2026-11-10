@@ -90,7 +90,7 @@ lecture2doc ocr data/my-v1 --language ko --preprocessing adaptive
 
 각 실행의 전체 시간과 단계별 캐시 사용 여부는 `manifest.json`의 `elapsed_seconds`, `timings`에 기록합니다. 기존 기록에 OCR만 추가하면 이번 시간은 `ocr.elapsed_seconds`로 따로 남깁니다. [실제 실행 시간](V1_OCR.md)을 참고하세요.
 
-OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. 한글 손글씨 인식기 업데이트 뒤에는 기존 강의 OCR을 `--rerun`으로 다시 생성해야 합니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
+OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. 한글 손글씨 인식기 업데이트 뒤에는 기존 강의의 C · 판서 텍스트에서 **OCR 다시 실행**을 누르거나 CLI에서 `--rerun`으로 다시 생성해야 합니다. 결과 상태 줄에 실제 인식기 이름이 표시됩니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
 
 B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고치는 기능·통합 검색은 D에서 다룹니다. OCR에 수식이 문자열로 나타날 수 있지만 LaTeX로 변환하지 않습니다.
 
@@ -143,6 +143,15 @@ B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고
 ```
 
 입력 SHA-256·설정·알고리즘 버전으로 캐시를 분리합니다. 자막 내용이나 로컬 모델 파일이 바뀌면 전사 캐시가 달라집니다. `--rerun`은 이전 캐시를 삭제하지 않습니다. 다른 영상을 같은 결과 폴더에 넣으면 거부합니다. 디스크 절약을 위한 자동 원본 삭제 기능은 없습니다. 기본 0.5초 PNG 추출은 장시간 1080p 영상에서 많은 저장 공간과 디코딩 시간이 필요합니다.
+
+### 기존 강의의 OCR만 다시 실행
+
+1. `lecture2doc ocr-models --language ko`로 새 모델을 준비합니다.
+2. 서버를 종료하고 다시 실행합니다.
+3. 기존 강의의 **C · 판서 텍스트**에서 **OCR 다시 실행**을 누릅니다.
+4. 완료 후 상태에 `korean-handwriting-rec`이 표시되는지 확인합니다.
+
+이 기능은 저장된 A/B 판서 이미지를 다시 읽습니다. 영상 프레임 추출·A/B 복원·음성 전사는 다시 실행하지 않습니다. 이전 OCR 파일은 캐시에 남고 새 결과만 manifest에 연결됩니다.
 
 ## 검증과 재현
 
