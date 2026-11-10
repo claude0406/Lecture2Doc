@@ -4,7 +4,7 @@
 
 ## 구현한 기능
 
-- CPU 로컬 OCR: RapidOCR 3.10.0 / ONNX Runtime. 검출은 PP-OCRv6 small, 영문 인식은 v6 medium, 한글 인식은 PP-OCRv5와 호환되는 korean-handwriting-rec ONNX 모델, 영문 인식은 PP-OCRv6 medium.
+- CPU 로컬 OCR: RapidOCR 3.10.0 / ONNX Runtime. 검출은 PP-OCRv6 small, 영문 인식은 PP-OCRv6 medium, 한글 인식은 PP-OCRv5와 호환되는 `korean-handwriting-rec` ONNX 모델.
 - B 이미지가 있으면 B를 읽고, 없으면 A를 읽는다. 분석용 축소 마스크가 아닌 원본 해상도 이미지를 사용한다.
 - 사용자 ROI를 적용하고 결과 좌표는 전체 이미지의 원본 픽셀 좌표로 돌려 저장한다.
 - 문장별 텍스트·모델 점수·polygon/bbox·원본 crop과 판서 ID, 입력 이미지 해시, 근거 프레임 ID·시각, B 영역별 출처 JSON을 연결한다.
