@@ -15,8 +15,12 @@ def main():
     models = sub.add_parser("ocr-models", help="로컬 OCR 모델 준비 (첫 다운로드)")
     models.add_argument("--language", choices=["en", "ko"], default="en")
     models.add_argument("--dir", type=Path)
-    qwen = sub.add_parser("qwen-models", help="로컬 Qwen Vision 모델 다운로드 (Ollama 필요)")
-    qwen.add_argument("--model", help="Qwen 모델 이름 (기본값: qwen3-vl:4b)")
+    qwen = sub.add_parser("qwen-models", help="기기 메모리에 맞는 최신 로컬 Qwen Vision 모델 준비 (Ollama 필요)")
+    qwen.add_argument("--model", help="Qwen 모델 이름을 직접 지정")
+    qwen.add_argument("--profile", choices=["auto", "latest", "balanced", "compact"], default="auto",
+                      help="auto는 Mac 메모리에 따라 모델 자동 선택 (기본값)")
+    qwen.add_argument("--check", action="store_true", help="선택된 모델의 설치 상태만 확인")
+    qwen.add_argument("--list", action="store_true", help="지원 모델과 권장 메모리 표시")
     ocr = sub.add_parser("ocr", help="기존 A/B 판서에 C 텍스트 인식 추가")
     ocr.add_argument("record", type=Path)
     ocr.add_argument("--out", type=Path, help="기존 결과를 보존하고 새 폴더에 OCR 기록")
@@ -41,10 +45,31 @@ def main():
                      action="append", default=[], help="지정 단계를 새 캐시 폴더에서 재실행 (반복 지정 가능)")
     args = parser.parse_args()
     if args.command == "qwen-models":
-        from .qwen_vision import DEFAULT_QWEN_MODEL, pull_model
+        from .qwen_vision import (
+            QWEN_MODEL_CATALOG, detect_memory_gb, model_download_info,
+            ollama_status, pull_model, recommend_model,
+        )
         try:
-            result = pull_model(args.model or DEFAULT_QWEN_MODEL)
-            print(f"Qwen 모델 준비 완료: {result['model']} · Ollama {result['ollama_version']} · 로컬 설치 확인")
+            if args.list:
+                memory = detect_memory_gb()
+                print(f"감지된 메모리: {memory if memory is not None else '확인 불가'} GB")
+                for name, details in QWEN_MODEL_CATALOG.items():
+                    print(
+                        f"- {name}: {details['download_gb']}GB 다운로드 · "
+                        f"권장 메모리 {details['recommended_memory_gb']}GB · {details['description']}"
+                    )
+                return
+            selected = args.model or recommend_model(args.profile)
+            details = model_download_info(selected)
+            print(f"선택 모델: {selected}")
+            print(f"모델 유형: {details['profile']} · 다운로드 약 {details['download_gb'] or '확인 불가'}GB")
+            print(f"현재 메모리: {details['system_memory_gb'] if details['system_memory_gb'] is not None else '확인 불가'}GB")
+            if args.check:
+                status = ollama_status(selected)
+                print(f"Ollama {status['ollama_version']} · 설치 상태: {'설치됨' if status['installed'] else '미설치'}")
+            else:
+                result = pull_model(selected)
+                print(f"Qwen 모델 준비 완료: {result['model']} · Ollama {result['ollama_version']} · 로컬 설치 확인")
         except Exception as exc:
             parser.exit(1, f"Qwen 모델 준비 실패: {exc}\n")
         return
