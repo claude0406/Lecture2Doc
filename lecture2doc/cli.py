@@ -17,7 +17,7 @@ def main():
     models.add_argument("--dir", type=Path)
     qwen = sub.add_parser("qwen-models", help="기기 메모리에 맞는 최신 로컬 Qwen Vision 모델 준비 (Ollama 필요)")
     qwen.add_argument("--model", help="Qwen 모델 이름을 직접 지정")
-    qwen.add_argument("--profile", choices=["auto", "latest", "balanced", "compact"], default="auto",
+    qwen.add_argument("--profile", choices=["auto", "latest", "balanced", "compact", "ultra-compact"], default="auto",
                       help="auto는 Mac 메모리에 따라 모델 자동 선택 (기본값)")
     qwen.add_argument("--check", action="store_true", help="선택된 모델의 설치 상태만 확인")
     qwen.add_argument("--list", action="store_true", help="지원 모델과 권장 메모리 표시")
