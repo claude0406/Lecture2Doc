@@ -23,15 +23,14 @@
 
 ### 설치 및 실행
 
-저장소 루트에서 앱과 OCR을 설치합니다. Qwen Vision 기능을 사용하려면 Ollama를 설치하고 앱을 실행한 뒤 `lecture2doc qwen-models`를 실행합니다. 이 명령은 Mac 통합 메모리에 맞춰 최신 Qwen3.8-27B 또는 Qwen3-VL 8B/4B를 선택해 내려받습니다. 모델 파일 자체는 크기가 커 Git에 포함하지 않습니다.
+전체 기능에 필요한 모델을 한 번에 준비하려면 먼저 Ollama를 설치하고 실행한 뒤 `lecture2doc setup-models`를 실행합니다. 이 명령은 한글·영문 OCR 모델과 Mac 메모리에 맞는 최신 Qwen 모델을 함께 내려받습니다. 기본 영상 기록 기능만 사용할 때는 Ollama 없이도 실행할 수 있지만, Qwen 판서 재검토와 AI 개념 선별을 사용하려면 Ollama가 필요합니다. 모델 파일은 크기가 커 Git에 포함하지 않습니다.
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[ocr]'
-lecture2doc ocr-models --language en
-# Qwen 로컬 판서 재검토·개념 선별을 사용할 경우 (Ollama 설치 및 실행 필요)
-lecture2doc qwen-models
+# 필수 OCR + 로컬 Qwen 모델 세트 (Ollama 앱 설치·실행 필요)
+lecture2doc setup-models
 ./serve.sh
 ```
 
@@ -63,9 +62,9 @@ lecture2doc serve --record data/my-lecture
 
 가중치 파일은 Git에서 제외합니다. 각자 필요한 모델을 내려받으면 실행한 위치와 관계없이 저장소의 `models/` 아래에 저장됩니다. 첫 다운로드에는 인터넷 연결이 필요합니다.
 
-### OCR
+### 기본 OCR 모델
 
-영문 또는 한글·영문 모델을 직접 준비합니다. 모델은 저장소의 `models/ocr/`에 저장됩니다.
+`lecture2doc setup-models`는 영문과 한글·영문 OCR 모델을 모두 준비합니다. 각각 별도로 받을 수도 있습니다. 모델은 저장소의 `models/ocr/`에 저장됩니다.
 
 ```bash
 lecture2doc ocr-models --language en
@@ -76,7 +75,7 @@ lecture2doc ocr-models --language ko
 
 ### Qwen Vision · 판서 재검토와 핵심 개념 선별
 
-Qwen은 외부 API가 아닌 Ollama 로컬 서버에서 실행합니다. Ollama 앱을 설치하고 실행한 뒤 다음 명령으로 기기 메모리에 맞는 모델을 내려받습니다.
+Qwen은 외부 API가 아닌 Ollama 로컬 서버에서 실행합니다. 전체 필수 모델 세트를 받으려면 `lecture2doc setup-models`를 사용합니다. Qwen만 별도로 설치하거나 갱신하려면 Ollama 앱을 실행한 뒤 다음 명령을 사용합니다.
 
 ```bash
 lecture2doc qwen-models
