@@ -49,10 +49,10 @@ ollama --version
 ```bash
 cd ~/Lecture2Doc
 source .venv/bin/activate
-lecture2doc qwen-models
+lecture2doc setup-models
 ```
 
-기본 명령은 메모리를 감지해 권장 모델을 고르고, 필요한 모델을 Ollama 저장소로 내려받는다. 27B Qwen3.8 모델을 선택한 경우 Ollama 0.40.0 이상이 필요하다. Qwen3-VL 4B/8B 모델은 Ollama 0.12.7 이상이 필요하다.
+통합 명령은 영문·한글 OCR 모델과 메모리에 맞는 Qwen 모델을 한 번에 준비한다. Qwen만 별도로 설치하려면 `lecture2doc qwen-models`를 사용한다. 기본 Qwen 명령은 메모리를 감지해 권장 모델을 고르고, 필요한 모델을 Ollama 저장소로 내려받는다. 27B Qwen3.8 모델을 선택한 경우 Ollama 0.40.0 이상이 필요하다. Qwen3-VL 4B/8B 모델은 Ollama 0.12.7 이상이 필요하다.
 
 지원 모델과 설치 크기를 확인하려면 다음을 실행한다.
 
