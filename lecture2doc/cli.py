@@ -80,7 +80,7 @@ def main():
     if args.command == "qwen-models":
         from .qwen_vision import (
             QWEN_MODEL_CATALOG, detect_memory_gb, model_download_info,
-            ollama_status, pull_model, recommend_model,
+            ollama_status, pull_model, recommend_model, selected_model,
         )
         try:
             if args.list:
@@ -92,11 +92,11 @@ def main():
                         f"권장 메모리 {details['recommended_memory_gb']}GB · {details['description']}"
                     )
                 return
-            selected = (
-                args.model
-                or os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
-                or recommend_model(args.profile)
-            )
+            environment_model = os.environ.get("LECTURE2DOC_QWEN_MODEL", "").strip()
+            if args.check and not args.model and not environment_model and args.profile == "auto":
+                selected = selected_model()
+            else:
+                selected = args.model or environment_model or recommend_model(args.profile)
             details = model_download_info(selected)
             print(f"선택 모델: {selected}")
             print(f"모델 유형: {details['profile']} · 다운로드 약 {details['download_gb'] or '확인 불가'}GB")
