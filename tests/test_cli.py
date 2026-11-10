@@ -15,8 +15,7 @@ def test_setup_models_downloads_both_ocr_languages_and_auto_qwen(monkeypatch, ca
     ocr.prepare_models = prepare_models
 
     qwen = types.ModuleType("lecture2doc.qwen_vision")
-    qwen.selected_model = lambda: "qwen3.8:27b-mlx"
-    qwen.recommend_model = lambda profile: f"model-for-{profile}"
+    qwen.recommend_model = lambda profile: "qwen3.8:27b-mlx"
     qwen.ollama_status = lambda model: calls.append(("check", model)) or {
         "installed": False, "model": model, "ollama_version": "0.40.14"
     }
