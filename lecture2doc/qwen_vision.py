@@ -255,14 +255,14 @@ def _parse_json_object(content: str, source: str = "Qwen") -> dict:
     if not isinstance(content, str) or not content.strip():
         raise RuntimeError(f"{source} 응답 내용이 비어 있습니다.")
 
-    # Some reasoning-capable models put private reasoning before the final JSON.
-    cleaned = re.sub(r"<think\\b[^>]*>.*?</think\\s*>", "", content, flags=re.IGNORECASE | re.DOTALL)
-    cleaned = re.sub(r"</?think\\s*>", "", cleaned, flags=re.IGNORECASE).strip()
+    # Some reasoning-capable models put reasoning before the final JSON.
+    cleaned = re.sub(r"<think\b[^>]*>.*?</think\s*>", "", content, flags=re.IGNORECASE | re.DOTALL)
+    cleaned = re.sub(r"</?think\s*>", "", cleaned, flags=re.IGNORECASE).strip()
     if not cleaned:
         raise RuntimeError(f"{source} 응답에 JSON 본문이 없습니다.")
 
     candidates = [cleaned]
-    fenced = re.search(r"```(?:json)?\\s*(.*?)\\s*```", cleaned, flags=re.IGNORECASE | re.DOTALL)
+    fenced = re.search(r"\x60{3}(?:json)?\s*(.*?)\s*\x60{3}", cleaned, flags=re.IGNORECASE | re.DOTALL)
     if fenced:
         candidates.insert(0, fenced.group(1).strip())
 
@@ -285,7 +285,7 @@ def _parse_json_object(content: str, source: str = "Qwen") -> dict:
             if in_string:
                 if escaped:
                     escaped = False
-                elif char == "\\\\":
+                elif char == "\\":
                     escaped = True
                 elif char == '"':
                     in_string = False
@@ -306,7 +306,7 @@ def _parse_json_object(content: str, source: str = "Qwen") -> dict:
                         return parsed
                     break
 
-    preview = re.sub(r"\\s+", " ", cleaned)[:180]
+    preview = re.sub(r"\s+", " ", cleaned)[:180]
     raise RuntimeError(f"{source} 응답을 JSON 객체로 읽지 못했습니다. 응답 앞부분: {preview!r}")
 
 
