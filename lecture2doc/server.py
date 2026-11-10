@@ -430,12 +430,30 @@ def create_app(data_dir=None, record_dir=None):
             image_path = (folder / image_name).resolve()
             if not image_path.is_relative_to(folder.resolve()) or not image_path.is_file():
                 raise HTTPException(404, "판서 이미지 파일을 찾을 수 없습니다")
-            started = time.monotonic()
             try:
-                from .qwen_vision import review_board_image
+                from .qwen_vision import QWEN_REVIEW_VERSION, review_board_image, selected_model
+                model_name = selected_model()
+                existing = ocr_page.get("qwen_review") or {}
+                if (
+                    existing.get("status") == "complete"
+                    and existing.get("version") == QWEN_REVIEW_VERSION
+                    and existing.get("model") == model_name
+                    and existing.get("source_sha256") == digest(image_path)
+                ):
+                    return dict(
+                        status="complete",
+                        board_page_id=request.board_page_id,
+                        model=model_name,
+                        blocks=len(existing.get("blocks", [])),
+                        elapsed_seconds=0,
+                        cached=True,
+                        message=f"기존 Qwen 결과 재사용 · {model_name}",
+                    )
+                started = time.monotonic()
                 result = review_board_image(
                     image_path,
                     ocr_regions=ocr_page.get("regions", []),
+                    model=model_name,
                 )
             except Exception as exc:
                 raise HTTPException(500, f"Qwen 판서 재검토 실패: {type(exc).__name__}: {exc}")
