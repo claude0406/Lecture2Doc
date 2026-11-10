@@ -70,7 +70,7 @@ def ollama_status(model: str | None = None) -> dict:
     return {
         "ollama_version": version_text,
         "model": wanted,
-        "installed": wanted in installed or wanted.split(":")[0] in installed,
+        "installed": wanted in installed,
         "base_url": ollama_url(),
     }
 
