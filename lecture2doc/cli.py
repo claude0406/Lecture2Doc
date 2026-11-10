@@ -47,7 +47,7 @@ def main():
     if args.command == "qwen-models":
         from .qwen_vision import (
             QWEN_MODEL_CATALOG, detect_memory_gb, model_download_info,
-            ollama_status, pull_model, recommend_model,
+            ollama_status, pull_model, recommend_model, selected_model,
         )
         try:
             if args.list:
@@ -59,7 +59,7 @@ def main():
                         f"권장 메모리 {details['recommended_memory_gb']}GB · {details['description']}"
                     )
                 return
-            selected = args.model or recommend_model(args.profile)
+            selected = args.model or (selected_model() if args.profile == "auto" else recommend_model(args.profile))
             details = model_download_info(selected)
             print(f"선택 모델: {selected}")
             print(f"모델 유형: {details['profile']} · 다운로드 약 {details['download_gb'] or '확인 불가'}GB")
@@ -69,7 +69,7 @@ def main():
                 print(f"Ollama {status['ollama_version']} · 설치 상태: {'설치됨' if status['installed'] else '미설치'}")
             else:
                 result = pull_model(selected)
-                print(f"Qwen 모델 준비 완료: {result['model']} · Ollama {result['ollama_version']} · 로컬 설치 확인")
+                print(f"Qwen 모델 준비 완료: {result['model']} · 약 {result.get('download_gb') or '사용자 지정'}GB · Ollama {result['ollama_version']} · 로컬 설치 확인")
         except Exception as exc:
             parser.exit(1, f"Qwen 모델 준비 실패: {exc}\n")
         return
