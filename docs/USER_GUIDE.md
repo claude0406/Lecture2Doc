@@ -92,6 +92,18 @@ lecture2doc ocr data/my-v1 --language ko --preprocessing adaptive
 
 OCR은 `.[ocr]` 선택 설치와 `lecture2doc ocr-models --language en` 또는 `--language ko` 모델 다운로드가 필요합니다. OCR 모델 선택을 바꾼 뒤에는 기존 강의의 C · 판서 텍스트에서 **OCR 다시 실행**을 누르거나 CLI에서 `--rerun`으로 다시 생성해야 합니다. 결과 상태 줄에 실제 인식기 이름이 표시됩니다. 기본 모델 위치는 `models/ocr`, 다른 위치는 `LECTURE2DOC_OCR_MODELS`로 지정합니다. CLI 새 영상 처리는 기본 영문 OCR이며 `--ocr off`로 생략합니다. 웹 등록에서 언어를 선택할 수 있습니다. OCR 실패 시 A/B 결과와 오류 메시지를 보존합니다.
 
+### 로컬 Qwen Vision 설치와 사용
+
+Qwen으로 판서 이미지를 재검토하고 핵심 개념을 선별하려면 Ollama 0.12.7 이상을 설치하고 앱을 실행합니다. Qwen Vision 모델은 기본 `qwen3-vl:4b`이며 약 3.3GB입니다.
+
+```bash
+lecture2doc qwen-models
+```
+
+기존 강의에서 C · 판서 텍스트의 **Qwen 판서 재검토**를 누르면 선택된 판서 이미지와 OCR 후보를 로컬 모델이 다시 읽습니다. Qwen 결과는 기존 OCR을 덮어쓰지 않고 별도 영역에 저장합니다. D · 학습 분석의 **분석 다시 실행**도 동일한 Qwen 모델을 사용해 주제 핵심 개념을 최대 5개 선별합니다.
+
+기본 모델보다 큰 모델을 사용하려면 서버 실행 전에 `LECTURE2DOC_QWEN_MODEL=qwen3-vl:8b`를 설정하고, 그 모델을 `lecture2doc qwen-models --model qwen3-vl:8b`로 내려받습니다. Qwen 추론은 로컬 Ollama에서만 실행되므로 API 키나 외부 AI 토큰 비용이 필요하지 않습니다. 최초 다운로드에는 인터넷이 필요합니다. [자세한 안내](QWEN_LOCAL.md)
+
 B 결과가 있으면 B를, 없으면 A를 읽습니다. 텍스트를 눌러 고치는 기능·통합 검색은 D에서 다룹니다. OCR에 수식이 문자열로 나타날 수 있지만 LaTeX로 변환하지 않습니다.
 
 `--roi x,y,w,h`는 영상 크기 대비 0~1 좌표입니다. 실제 칠판 영역만 지정하는 것이 권장됩니다. 자동 판별은 배경 표면과 필기 극성을 사용합니다. A의 테두리 추정은 긴 테두리 쌍이 확인되는 경우에 한하며 일반적인 칠판 위치 검출 기능은 아닙니다. 초기 기본 영역은 전체 영상입니다.
