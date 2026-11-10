@@ -1,4 +1,7 @@
 import copy
+import io
+import sys
+import types
 from pathlib import Path
 
 import cv2
@@ -101,3 +104,76 @@ def test_snapshot_preserves_baseline(tmp_path, monkeypatch):
     assert read(tmp_path / "after/manifest.json")["ocr"]["status"] == "complete"
     with pytest.raises(ValueError):
         annotate_record(root, output=tmp_path / "after")
+
+
+
+def test_prepare_korean_models_downloads_handwriting_recognizer(tmp_path, monkeypatch):
+    from lecture2doc import ocr
+
+    calls = []
+
+    class FakeFileInfo:
+        def __init__(self, *args):
+            self.args = args
+
+    class FakeInferSession:
+        @staticmethod
+        def get_model_url(_choice):
+            return {"model_dir": "https://models.example/ppocrv6-det.onnx"}
+
+    rapidocr = types.ModuleType("rapidocr")
+    rapidocr.__path__ = []
+    inference_engine = types.ModuleType("rapidocr.inference_engine")
+    inference_engine.__path__ = []
+    base = types.ModuleType("rapidocr.inference_engine.base")
+    base.FileInfo = FakeFileInfo
+    base.InferSession = FakeInferSession
+    utils = types.ModuleType("rapidocr.utils")
+    utils.__path__ = []
+    typings = types.ModuleType("rapidocr.utils.typings")
+    typings.EngineType = types.SimpleNamespace(ONNXRUNTIME="onnxruntime")
+    typings.LangDet = types.SimpleNamespace(CH="ch")
+    typings.LangRec = types.SimpleNamespace(KOREAN="korean", EN="en")
+    typings.ModelType = types.SimpleNamespace(SMALL="small", MOBILE="mobile", MEDIUM="medium")
+    typings.OCRVersion = types.SimpleNamespace(PPOCRV5="v5", PPOCRV6="v6")
+    typings.TaskType = types.SimpleNamespace(DET="det", REC="rec")
+
+    monkeypatch.setitem(sys.modules, "rapidocr", rapidocr)
+    monkeypatch.setitem(sys.modules, "rapidocr.inference_engine", inference_engine)
+    monkeypatch.setitem(sys.modules, "rapidocr.inference_engine.base", base)
+    monkeypatch.setitem(sys.modules, "rapidocr.utils", utils)
+    monkeypatch.setitem(sys.modules, "rapidocr.utils.typings", typings)
+    monkeypatch.setattr(ocr, "version", lambda _name: "3.10.0")
+
+    def fake_urlopen(url, timeout=60):
+        calls.append(url)
+        return io.BytesIO(url.encode("utf-8"))
+
+    monkeypatch.setattr(ocr.urllib.request, "urlopen", fake_urlopen)
+
+    result = ocr.prepare_models("ko", directory=tmp_path)
+
+    assert result["models"]["rec"] == "korean-handwriting-rec"
+    assert result["model_sources"]["rec"]["license"] == "Apache-2.0"
+    assert result["files"]["rec"]["path"] == "rec_korean_hw.onnx"
+    assert result["files"]["dictionary"]["path"] == "ppocrv5_korean_dict.txt"
+    assert ocr.KOREAN_HANDWRITING_MODEL_FILES["rec"] in calls
+    assert ocr.KOREAN_HANDWRITING_MODEL_FILES["dictionary"] in calls
+    assert (tmp_path / "ko.json").is_file()
+    assert (tmp_path / "rec_korean_hw.onnx").is_file()
+    assert (tmp_path / "ppocrv5_korean_dict.txt").is_file()
+
+
+def test_korean_ocr_rejects_old_recognizer_index(tmp_path):
+    from lecture2doc.ocr import OCRConfig, RapidEngine
+    from lecture2doc.storage import write
+
+    write(
+        tmp_path / "ko.json",
+        {
+            "models": {"det": "PP-OCRv6-small", "rec": "korean-PP-OCRv5-mobile"},
+            "files": {},
+        },
+    )
+    with pytest.raises(RuntimeError, match="ocr-models --language ko"):
+        RapidEngine(OCRConfig(language="ko"), directory=tmp_path)
