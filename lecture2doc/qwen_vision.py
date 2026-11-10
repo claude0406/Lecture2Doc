@@ -113,8 +113,10 @@ def recommend_model(profile: str = "auto", memory_gb: float | None = None,
         return BALANCED_QWEN_MODEL
     if profile == "compact":
         return COMPACT_QWEN_MODEL
+    if profile == "ultra-compact":
+        return ULTRA_COMPACT_QWEN_MODEL
     if profile != "auto":
-        raise ValueError("Qwen 프로필은 auto, latest, balanced, compact 중 하나여야 합니다")
+        raise ValueError("Qwen 프로필은 auto, latest, balanced, compact, ultra-compact 중 하나여야 합니다")
 
     # The 27B 4-bit artifact occupies about 18GB on disk. Keep a margin
     # for macOS, Ollama, the image context, and the rest of Lecture2Doc.
