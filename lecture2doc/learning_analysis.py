@@ -446,7 +446,7 @@ def _apply_ai_selection(result: dict, selection: dict, model: str) -> dict:
         ]
     topic = str(selection.get("topic", "")).strip()[:100]
     result["ai_curation"] = {
-        "status": "complete", "provider": "openai", "model": model,
+        "status": "complete", "provider": "ollama-qwen", "model": model,
         "topic": topic, "selected_count": len(chosen),
         "message": "AI가 강의 문맥과 판서 근거를 바탕으로 핵심 개념을 선별했습니다.",
     }
