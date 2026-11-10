@@ -27,7 +27,9 @@ Lecture2Doc은 Ollama를 통해 Qwen 비전·언어 모델을 Mac 안에서 실�
 |---|---|---:|---|
 | Apple Silicon 32GB 이상 | `qwen3.8:27b-mlx` | 약 18GB | 최신 27B 모델 |
 | 24GB 이상 | `qwen3-vl:8b` | 약 6.2GB | 균형형 |
-| 24GB 미만 또는 메모리 확인 불가 | `qwen3-vl:4b` | 약 3.3GB | 저메모리 호환 |
+| 16GB 이상 24GB 미만 | `qwen3-vl:4b` | 약 3.3GB | 저메모리 호환 |
+| 16GB 미만 | `qwen3-vl:2b` | 약 1.9GB | 초저메모리 호환 |
+| 메모리 확인 불가 | `qwen3-vl:4b` | 약 3.3GB | 안전한 기본값 |
 
 27B 모델은 약 18GB를 내려받고 실행 시 모델 가중치와 컨텍스트 메모리도 필요하다. 24GB Mac에서는 여유가 부족할 수 있어 자동 선택은 32GB부터 권장한다. 48GB 이상이면 더 여유롭게 사용할 수 있다. 메모리 자동 감지가 실패하면 작은 4B 모델을 선택한다.
 
@@ -78,6 +80,9 @@ lecture2doc qwen-models --profile balanced
 
 # 4B 저메모리 모델
 lecture2doc qwen-models --profile compact
+
+# 2B 초저메모리 모델
+lecture2doc qwen-models --profile ultra-compact
 
 # 모델을 직접 지정
 lecture2doc qwen-models --model qwen3.8:27b-mlx
@@ -146,5 +151,5 @@ unset LECTURE2DOC_QWEN_MODEL
 - **Ollama 연결 실패:** 앱이 실행 중인지 확인하고 `http://127.0.0.1:11434/api/version`을 연다.
 - **Ollama 0.40.0 미만:** Qwen3.8-27B는 최신 Ollama로 업데이트한다. 작은 Qwen3-VL 모델은 0.12.7 이상을 지원한다.
 - **모델을 찾을 수 없음:** `lecture2doc qwen-models`를 실행한다.
-- **메모리 부족 또는 처리 지연:** `lecture2doc qwen-models --profile compact`로 4B 모델을 내려받고, `unset LECTURE2DOC_QWEN_MODEL`로 환경 변수를 해제한 뒤 서버를 재시작한다.
+- **메모리 부족 또는 처리 지연:** `lecture2doc qwen-models --profile compact`로 4B 모델을 내려받는다. 메모리가 16GB보다 적다면 `lecture2doc qwen-models --profile ultra-compact`로 2B 모델을 내려받고, `unset LECTURE2DOC_QWEN_MODEL`로 환경 변수를 해제한 뒤 서버를 재시작한다.
 - **Qwen 결과가 틀림:** Qwen 결과는 보조 판독이다. 원본 이미지와 기존 OCR을 함께 비교하고 읽을 수 없는 영역은 추측하지 않는다.
